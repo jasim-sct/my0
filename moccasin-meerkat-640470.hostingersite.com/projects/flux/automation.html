@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Business Automation — FLUX</title><meta name="description" content="Zapier, Make and custom workflow automation with a runnable pipeline simulator.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="f.css">
+<script src="f.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=JetBrains+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/flux/automation.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/flux/automation.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/flux/automation.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>FLUX — AI &amp; automation studio by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<nav class="rail">
+ <div class="mark">F</div>
+ <a href="index.html" aria-label="Overview">◈<span class="tip">Overview</span></a><a href="chatbots.html" aria-label="AI Chatbots">◐<span class="tip">AI Chatbots</span></a><a href="automation.html" class='on' aria-label="Automation">⇄<span class="tip">Automation</span></a><a href="content-systems.html" aria-label="Content Systems">✦<span class="tip">Content Systems</span></a><a href="pricing.html" aria-label="Pricing">◫<span class="tip">Pricing</span></a><a href="contact.html" aria-label="Start a build">▶<span class="tip">Start a build</span></a>
+ <div class="sp"></div>
+ <button class="kbtn" onclick="palOpen()" title="Command palette">⌘K</button>
+</nav>
+<main class="app"><div class="tabbar"><a class="tab" href="index.html"><i>◈</i>overview.md</a><a class="tab" href="chatbots.html"><i>◐</i>chatbots.ts</a><a class="tab on" href="automation.html"><i>⇄</i>workflows.json</a><a class="tab" href="content-systems.html"><i>✦</i>prompts.yaml</a></div>
+<section style="padding-top:2rem"><div class="wrap">
+ <div class="crumb"><a href="index.html">flux</a> / workflows.json</div>
+ <div class="split" style="gap:2.2rem;align-items:center;margin-top:.6rem">
+  <div data-r>
+   <span class="tag l">02 · automation</span>
+   <h1 style="margin-top:.8rem">Work that moves<br>itself</h1>
+   <p class="lead">Zapier and Make where they fit, custom code where they do not.
+    Pick a workflow below and run it — every node reports as it executes.</p>
+   <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.3rem">
+    <a class="btn btn-p" href="automation.html#builder">Run a workflow</a>
+    <a class="btn" href="contact.html">Map my process</a></div>
+  </div>
+  <div data-r data-d="100"><img src="img/flow.webp" alt="Automation pipeline" width="520" height="520"
+    style="border-radius:12px;border:1px solid var(--edge2)"></div>
+ </div>
+</div></section>
+
+<section id="builder" style="padding-top:1rem"><div class="wrap">
+ <div class="panel" data-r>
+  <div class="panel-head"><div class="dots"><i></i><i></i><i></i></div>
+   <span id="wfName">lead-router.json</span><span class="sp"></span>
+   <span class="tag" id="wfStat">idle</span></div>
+  <div class="panel-body">
+   <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem" id="wfTabs"></div>
+   <div class="graph" id="wfGraph" style="min-height:320px"></div>
+   <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem;align-items:center">
+    <button class="btn btn-p btn-sm" id="runBtn" onclick="runFlow()">▶ Run workflow</button>
+    <button class="btn btn-sm" onclick="resetFlow()">↻ Reset</button>
+    <span class="sp" style="flex:1"></span>
+    <span class="note" id="wfTime">—</span>
+   </div>
+  </div>
+  <div class="trace" id="wfLog"><span class="t-d">Press run to execute the pipeline.</span></div>
+ </div>
+
+ <div class="g4" style="margin-top:1rem">
+  <div class="card" style="padding:1rem"><b class="mono" style="font-size:1.3rem;display:block" id="f1">0</b>
+   <span class="note">steps executed</span></div>
+  <div class="card" style="padding:1rem"><b class="mono" style="font-size:1.3rem;display:block;color:var(--ok)" id="f2">0</b>
+   <span class="note">records processed</span></div>
+  <div class="card" style="padding:1rem"><b class="mono" style="font-size:1.3rem;display:block;color:var(--amber)" id="f3">0</b>
+   <span class="note">retries</span></div>
+  <div class="card" style="padding:1rem"><b class="mono" style="font-size:1.3rem;display:block;color:var(--cyan)" id="f4">0m</b>
+   <span class="note">manual time saved</span></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <span class="tag" data-r>platforms</span>
+ <h2 data-r style="margin:.7rem 0 1.4rem">What we build on</h2>
+ <div class="g3">
+  <div class="card" data-r><h3>Zapier</h3>
+   <p class="lead" style="font-size:.87rem">Fastest to ship. Right for linear flows across
+    popular SaaS tools where volume is moderate.</p>
+   <p class="note" style="margin-top:.7rem">best under ~10k tasks/month</p></div>
+  <div class="card" data-r data-d="70"><h3>Make</h3>
+   <p class="lead" style="font-size:.87rem">Better for branching logic, iterators and
+    anything where you need to see the data shape at each step.</p>
+   <p class="note" style="margin-top:.7rem">best for complex branching</p></div>
+  <div class="card" data-r data-d="140"><h3>Custom code</h3>
+   <p class="lead" style="font-size:.87rem">Node or Python on your infrastructure. Right when
+    volume, cost or data residency rules out a third-party platform.</p>
+   <p class="note" style="margin-top:.7rem">best at scale · no per-task fee</p></div>
+ </div>
+ <div class="card" style="margin-top:1rem" data-r>
+  <h3>We will tell you when not to automate</h3>
+  <p class="lead" style="margin:.5rem 0 0;font-size:.9rem">If a process runs twice a month and takes
+   ten minutes, automating it costs more than it saves. Roughly a third of the workflows clients
+   ask us to build, we recommend against. That advice is free.</p>
+ </div>
+</div></section>
+
+<script>
+var FLOWS={
+ lead:{name:'lead-router.json',saved:14,
+  nodes:[
+   {id:'a',x:5,y:38,c:'var(--cyan)',t:'Webhook',s:'form submitted'},
+   {id:'b',x:30,y:12,c:'var(--indigo-lt)',t:'Enrich',s:'Clearbit lookup'},
+   {id:'c',x:30,y:64,c:'var(--indigo-lt)',t:'Score',s:'ICP fit model'},
+   {id:'d',x:57,y:38,c:'var(--amber)',t:'Branch',s:'score >= 70?'},
+   {id:'e',x:80,y:12,c:'var(--lime)',t:'Route',s:'assign AE + Slack'},
+   {id:'f',x:80,y:64,c:'var(--dim)',t:'Nurture',s:'add to sequence'}],
+  wires:[['a','b'],['a','c'],['b','d'],['c','d'],['d','e'],['d','f']],
+  log:[['t-in','→ trigger: webhook POST /forms/demo-request'],
+   ['t-d','· payload validated · 1 record'],
+   ['t-ok','✓ enrich: matched Northgate Logistics (120 staff)'],
+   ['t-d','· score: industry+2, size+3, title+4 = 74'],
+   ['t-w','! rate limit hit on enrich · retry 1/3 after 800ms'],
+   ['t-ok','✓ retry succeeded'],
+   ['t-d','· branch: 74 >= 70 → route to sales'],
+   ['t-ok','✓ assigned to AE · Slack #new-leads notified'],
+   ['t-ok','✓ workflow complete · 1 record · 0 errors']]},
+ invoice:{name:'invoice-chase.json',saved:22,
+  nodes:[
+   {id:'a',x:5,y:38,c:'var(--cyan)',t:'Schedule',s:'daily 09:00'},
+   {id:'b',x:30,y:38,c:'var(--indigo-lt)',t:'Query',s:'overdue invoices'},
+   {id:'c',x:55,y:12,c:'var(--amber)',t:'Segment',s:'by days late'},
+   {id:'d',x:55,y:64,c:'var(--indigo-lt)',t:'Compose',s:'tone by segment'},
+   {id:'e',x:80,y:38,c:'var(--ok)',t:'Send + Log',s:'email + CRM note'}],
+  wires:[['a','b'],['b','c'],['b','d'],['c','e'],['d','e']],
+  log:[['t-in','→ trigger: cron 0 9 * * 1-5'],
+   ['t-d','· query: SELECT * FROM invoices WHERE status=overdue'],
+   ['t-ok','✓ 23 overdue invoices found'],
+   ['t-d','· segment: 11 gentle, 8 firm, 4 formal'],
+   ['t-d','· compose: template per segment + merge fields'],
+   ['t-w','! 1 contact missing email · skipped, flagged for review'],
+   ['t-ok','✓ 22 emails sent · 22 CRM notes written'],
+   ['t-ok','✓ workflow complete · 22 records · 1 skipped']]},
+ onboard:{name:'client-onboard.json',saved:35,
+  nodes:[
+   {id:'a',x:5,y:38,c:'var(--cyan)',t:'Deal won',s:'CRM stage change'},
+   {id:'b',x:28,y:8,c:'var(--indigo-lt)',t:'Workspace',s:'create Slack + Drive'},
+   {id:'c',x:28,y:44,c:'var(--indigo-lt)',t:'Contract',s:'generate + send'},
+   {id:'d',x:28,y:78,c:'var(--indigo-lt)',t:'Invoice',s:'raise deposit'},
+   {id:'e',x:58,y:38,c:'var(--amber)',t:'Wait',s:'signature received'},
+   {id:'f',x:82,y:38,c:'var(--ok)',t:'Kickoff',s:'book + brief team'}],
+  wires:[['a','b'],['a','c'],['a','d'],['b','e'],['c','e'],['d','e'],['e','f']],
+  log:[['t-in','→ trigger: HubSpot deal → Closed Won'],
+   ['t-ok','✓ Slack channel #client-northgate created'],
+   ['t-ok','✓ Drive folder provisioned · 4 templates copied'],
+   ['t-d','· contract generated from template v3'],
+   ['t-ok','✓ contract sent for signature'],
+   ['t-ok','✓ deposit invoice raised in Xero'],
+   ['t-d','· waiting on signature webhook…'],
+   ['t-ok','✓ signature received · kickoff booked Tue 10:00'],
+   ['t-ok','✓ workflow complete · 6 systems touched']]}
+};
+var curFlow='lead',running=false;
+
+function buildFlow(){
+ var f=FLOWS[curFlow],g=document.getElementById('wfGraph');
+ document.getElementById('wfName').textContent=f.name;
+ g.innerHTML='<div class="gridbg"></div><svg class="wires" id="wfWires"></svg>'+
+  f.nodes.map(function(n){
+   return '<div class="node" id="wn-'+n.id+'" style="left:'+n.x+'%;top:'+n.y+'%">'+
+    '<div class="nh"><i style="background:'+n.c+'"></i><b>'+n.t+'</b></div>'+
+    '<small>'+n.s+'</small></div>'}).join('');
+ requestAnimationFrame(drawFlowWires);
+}
+function drawFlowWires(){
+ var f=FLOWS[curFlow],g=document.getElementById('wfGraph'),svg=document.getElementById('wfWires');
+ if(!g||!svg)return;
+ var gr=g.getBoundingClientRect();
+ svg.innerHTML=f.wires.map(function(p){
+  var a=document.getElementById('wn-'+p[0]),b=document.getElementById('wn-'+p[1]);
+  if(!a||!b)return '';
+  var ar=a.getBoundingClientRect(),br=b.getBoundingClientRect();
+  var x1=ar.right-gr.left,y1=ar.top-gr.top+ar.height/2;
+  var x2=br.left-gr.left,y2=br.top-gr.top+br.height/2;
+  var mx=(x1+x2)/2;
+  return '<path class="wire" id="wf-'+p[0]+p[1]+'" d="M'+x1+' '+y1+' C'+mx+' '+y1+' '+mx+' '+y2+' '+x2+' '+y2+'"/>';
+ }).join('');
+}
+function setFlow(k,b){
+ if(running)return;
+ curFlow=k;
+ document.querySelectorAll('#wfTabs button').forEach(function(x){x.className='btn btn-sm'});
+ b.className='btn btn-sm btn-p';
+ resetFlow();
+}
+function resetFlow(){
+ buildFlow();
+ document.getElementById('wfLog').innerHTML='<span class="t-d">Press run to execute the pipeline.</span>';
+ document.getElementById('wfStat').textContent='idle';
+ document.getElementById('wfStat').className='tag';
+ document.getElementById('wfTime').textContent='—';
+ ['f1','f2','f3','f4'].forEach(function(id){document.getElementById(id).textContent=id==='f4'?'0m':'0'});
+}
+function runFlow(){
+ if(running)return;
+ running=true;
+ var f=FLOWS[curFlow];
+ var btn=document.getElementById('runBtn');btn.disabled=true;btn.textContent='running…';
+ document.getElementById('wfStat').textContent='running';
+ document.getElementById('wfStat').className='tag l';
+ var logEl=document.getElementById('wfLog');logEl.innerHTML='';
+ var t0=Date.now(),retries=0;
+ f.nodes.forEach(function(n){var el=document.getElementById('wn-'+n.id);
+  if(el)el.className='node'});
+ var i=0;
+ function tick(){
+  if(i>=f.log.length){
+   f.nodes.forEach(function(n){var el=document.getElementById('wn-'+n.id);
+    if(el)el.className='node done'});
+   f.wires.forEach(function(p){var wr=document.getElementById('wf-'+p[0]+p[1]);
+    if(wr)wr.setAttribute('class','wire hot')});
+   var ms=Date.now()-t0;
+   document.getElementById('wfTime').textContent=ms+'ms';
+   document.getElementById('wfStat').textContent='complete';
+   document.getElementById('wfStat').className='tag ok';
+   countUp(document.getElementById('f1'),f.log.length);
+   countUp(document.getElementById('f2'),curFlow==='invoice'?22:curFlow==='onboard'?6:1);
+   countUp(document.getElementById('f3'),retries);
+   document.getElementById('f4').textContent=f.saved+'m';
+   btn.disabled=false;btn.textContent='▶ Run again';running=false;
+   tst('workflow complete');
+   return;
+  }
+  var line=f.log[i];
+  if(line[0]==='t-w')retries++;
+  logEl.innerHTML+='<div class="'+line[0]+'">'+line[1]+'</div>';
+  logEl.scrollTop=logEl.scrollHeight;
+  var ni=Math.min(f.nodes.length-1,Math.floor(i/f.log.length*f.nodes.length));
+  f.nodes.forEach(function(n,x){
+   var el=document.getElementById('wn-'+n.id);
+   if(!el)return;
+   el.className='node'+(x===ni?' run':x<ni?' done':'');
+  });
+  f.wires.forEach(function(p,x){
+   var wr=document.getElementById('wf-'+p[0]+p[1]);
+   if(wr)wr.setAttribute('class','wire'+(x<=ni?' flowing':''));
+  });
+  i++;
+  setTimeout(tick,340);
+ }
+ tick();
+}
+document.addEventListener('DOMContentLoaded',function(){
+ document.getElementById('wfTabs').innerHTML=
+  [['lead','lead-router'],['invoice','invoice-chase'],['onboard','client-onboard']]
+  .map(function(f,i){return '<button class="btn btn-sm'+(i===0?' btn-p':'')+
+   '" onclick="setFlow(\''+f[0]+'\',this)">'+f[1]+'</button>'}).join('');
+ buildFlow();
+ addEventListener('resize',drawFlowWires);
+});
+</script><footer class="ftr"><div class="wrap">
+ <div class="fg">
+  <div><div style="display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem">
+    <span style="width:26px;height:26px;border-radius:7px;display:grid;place-items:center;
+     background:linear-gradient(135deg,var(--indigo),var(--cyan));color:#fff;font-size:.78rem">F</span>Flux</div>
+   <p class="lead" style="font-size:.86rem;margin-top:.7rem;max-width:32ch">
+    We build the bots, the pipelines and the prompt systems — then hand you the keys and the documentation.</p></div>
+  <div><h4>Build</h4><ul>
+   <li><a href="chatbots.html">AI Chatbots</a></li>
+   <li><a href="automation.html">Business Automation</a></li>
+   <li><a href="content-systems.html">AI Content Systems</a></li></ul></div>
+  <div><h4>Studio</h4><ul>
+   <li><a href="pricing.html">Pricing</a></li>
+   <li><a href="contact.html">Start a build</a></li>
+   <li><a href="../../index.html">Premium Agency</a></li></ul></div>
+  <div><h4>Stack</h4><ul>
+   <li class="note">OpenAI · Anthropic · Gemini</li>
+   <li class="note">Zapier · Make · n8n</li>
+   <li class="note">Pinecone · Supabase</li>
+   <li class="note">Node · Python · Edge</li></ul></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> Flux — demonstration project.</span>
+  <span>Built by Premium Agency</span></div>
+</div></footer></main><div class="status">
+ <span class="s"><span class="dot"></span>connected</span>
+ <span class="s hide-s">workflows.json</span>
+ <span class="s hide-s">3 pipelines</span>
+ <span class="sp"></span>
+ <span class="s hide-s">flux-studio v2.4</span>
+ <span class="s" id="clk">--:--:--</span>
+</div><div class="pal-ovl" id="palOvl" onclick="palClose()"></div>
+<div class="pal" id="pal">
+ <input id="palInput" placeholder="Jump to a page or run a demo..." autocomplete="off" spellcheck="false">
+ <div class="pal-list" id="palList"></div>
+ <div class="pal-foot"><span><span class="kbd">↑</span><span class="kbd">↓</span> navigate</span>
+  <span><span class="kbd">↵</span> open</span><span><span class="kbd">esc</span> close</span></div>
+</div></body></html>

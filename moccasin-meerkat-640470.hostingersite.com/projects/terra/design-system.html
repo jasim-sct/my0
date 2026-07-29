@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Design System — Terra &amp; Co</title><meta name="description" content="Colour tokens, typography scale, components, spacing and design principles.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="terra.css">
+<script src="terra.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Karla:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Karla:wght@400;700&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/terra/design-system.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/terra/design-system.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/terra/design-system.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>Terra &amp; Co — website, store, web app &amp; design system by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<header class="hdr"><div class="wrap hdr-in">
+ <a class="logo" href="index.html"><span class="leaf">✦</span>Terra &amp; Co</a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+ <nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="subscription.html">Boxes</a>
+  <a href="account.html">My Account</a>
+  <a href="story.html">Our Story</a>
+  <a href="design-system.html" class="on">Design System</a>
+ </nav>
+ <div class="hdr-tools">
+  <button class="cartbtn" onclick="openCart()">Basket<span class="cart-n" data-cart-n style="display:none">0</span></button>
+ </div>
+</div></header>
+<section style="padding-bottom:1rem"><div class="wrap">
+ <div class="crumbs"><a href="index.html">Home</a> / Design system</div>
+ <div class="eyebrow" data-r>UI/UX deliverable</div>
+ <h1 data-r>The Terra design system</h1>
+ <p class="lead" data-r>The tokens, components and rules the whole brand is built from.
+  This is the document we hand over at the end of a UI/UX engagement.</p>
+</div></section>
+
+<section style="padding-top:1.4rem"><div class="wrap">
+ <h2 data-r>01 · Colour</h2>
+ <p class="lead" data-r>Earth tones with one warm accent. Every pairing below meets WCAG AA for body text.</p>
+ <div class="grid g4" style="margin-top:1.4rem" id="sw"></div>
+</div></section>
+
+<section class="band"><div class="wrap">
+ <h2 data-r>02 · Typography</h2>
+ <p class="lead" data-r>Fraunces for anything with a voice, Karla for anything with a job.</p>
+ <div class="card" style="margin-top:1.4rem" data-r>
+  <div style="padding:1rem 0;border-bottom:1px solid var(--line-soft)">
+   <div class="note">Display · Fraunces 600 · clamp(2.3rem, 5.4vw, 4.1rem)</div>
+   <div style="font-family:var(--serif);font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.12">Picked this morning</div></div>
+  <div style="padding:1rem 0;border-bottom:1px solid var(--line-soft)">
+   <div class="note">Heading · Fraunces 600 · clamp(1.7rem, 3.6vw, 2.7rem)</div>
+   <div style="font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem)">What comes when</div></div>
+  <div style="padding:1rem 0;border-bottom:1px solid var(--line-soft)">
+   <div class="note">Body · Karla 400 · 1rem / 1.68</div>
+   <div style="max-width:60ch;color:var(--ink-soft)">Body text sits at sixteen pixels with generous leading.
+    Lines are capped near sixty characters so the eye does not have to hunt for the next one.</div></div>
+  <div style="padding:1rem 0">
+   <div class="note">Eyebrow · Karla 700 · 0.7rem · 0.2em tracking · uppercase</div>
+   <div class="eyebrow" style="margin:0">Certified organic</div></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <h2 data-r>03 · Buttons &amp; inputs</h2>
+ <div class="grid g2" style="gap:1.4rem;margin-top:1.4rem">
+  <div class="card" data-r><h3>Buttons</h3>
+   <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0">
+    <button class="btn btn-p">Primary</button>
+    <button class="btn btn-o">Outline</button>
+    <button class="btn btn-clay">Accent</button>
+    <button class="btn btn-p" disabled>Disabled</button></div>
+   <p class="note">Primary is forest green and turns clay on hover — the one deliberate colour shift in the system.
+    Radius is always fully rounded. Every button lifts 2px on hover.</p></div>
+  <div class="card" data-r data-d="80"><h3>Form fields</h3>
+   <div class="field" style="margin-top:.8rem"><label>Default</label><input placeholder="Type here"></div>
+   <div class="field err"><label>Error state</label><input value="not-an-email"><span class="msg">We need a valid email</span></div>
+   <p class="note">Focus rings use sage at 18% opacity. Errors use clay, never pure red.</p></div>
+ </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+ <h2 data-r>04 · Components</h2>
+ <div class="grid g3" style="margin-top:1.4rem">
+  <div data-r><div class="note" style="margin-bottom:.5rem">Product card</div>
+   <article class="pcard"><a class="pthumb"><span class="ptag organic">Bestseller</span>
+    <img src="img/p-honey.webp" alt="" width="620" height="620"></a>
+    <div class="pbody"><span class="pkind">pantry</span><h3>Raw Wildflower Honey</h3>
+     <p class="pdesc">Unfiltered, unheated, from hives on the west meadow.</p>
+     <div class="stars">★★★★★<small>(301)</small></div>
+     <div class="pprice">$14.00</div>
+     <button class="btn btn-o btn-sm btn-full">Add to basket</button></div></article></div>
+  <div data-r data-d="80"><div class="note" style="margin-bottom:.5rem">Chips &amp; tags</div>
+   <div class="card"><div class="fchips"><button class="fchip on">Selected</button>
+    <button class="fchip">Default</button><button class="fchip">Another</button></div>
+    <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap">
+     <span class="pill-tag">Step one</span><span class="ptag organic" style="position:static">Organic</span>
+     <span class="ptag sale" style="position:static">Sale</span></div>
+    <div style="margin-top:1rem" class="seals"><span class="seal"><i>🌱</i>Trust seal</span></div></div></div>
+  <div data-r data-d="160"><div class="note" style="margin-bottom:.5rem">Accordion</div>
+   <details class="faq" open><summary>Can I skip a week?</summary>
+    <p>Yes, from your account, up to midnight two days before the delivery.</p></details>
+   <details class="faq"><summary>What about fennel?</summary><p>Leave it out when you build the box.</p></details></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <h2 data-r>05 · Spacing &amp; radius</h2>
+ <div class="grid g2" style="gap:1.4rem;margin-top:1.4rem">
+  <div class="card" data-r><h3>Scale</h3>
+   <div id="space" style="margin-top:.8rem"></div>
+   <p class="note">A 4px base. Sections breathe on a fluid clamp between 52 and 104 pixels.</p></div>
+  <div class="card" data-r data-d="80"><h3>Corner radius</h3>
+   <div style="display:flex;gap:1rem;align-items:flex-end;margin-top:1rem;flex-wrap:wrap">
+    <div><div style="width:64px;height:64px;background:var(--sand);border-radius:12px"></div><div class="note">12 — inputs</div></div>
+    <div><div style="width:64px;height:64px;background:var(--sand);border-radius:14px"></div><div class="note">14 — small</div></div>
+    <div><div style="width:64px;height:64px;background:var(--sand);border-radius:26px"></div><div class="note">26 — cards</div></div>
+    <div><div style="width:64px;height:64px;background:var(--sand);border-radius:999px"></div><div class="note">full — buttons</div></div>
+   </div>
+   <p class="note" style="margin-top:1rem">Organic shapes carry the brand: the hero image uses an arch,
+    section joins use a hand-drawn wave rather than a straight edge.</p></div>
+ </div>
+</div></section>
+
+<section class="band-forest"><div class="wrap narrow center">
+ <div class="eyebrow" data-r>06 · Principles</div>
+ <h2 data-r>Four rules we held to</h2>
+ <div class="grid g2" style="gap:1.4rem;margin-top:1.6rem;text-align:left">
+  <div data-r><h3>Warmth over contrast</h3><p style="color:rgba(250,246,239,.8);font-size:.93rem">
+   Nothing sits on pure white or pure black. Cream and ink keep the page calm on a screen at 6am.</p></div>
+  <div data-r data-d="70"><h3>Photography does the selling</h3><p style="color:rgba(250,246,239,.8);font-size:.93rem">
+   The interface stays quiet so the produce can be the loudest thing on the page.</p></div>
+  <div data-r data-d="140"><h3>Curves, not corners</h3><p style="color:rgba(250,246,239,.8);font-size:.93rem">
+   Arches, waves and full-round buttons. Nothing about a farm is a rectangle.</p></div>
+  <div data-r data-d="210"><h3>Plain words</h3><p style="color:rgba(250,246,239,.8);font-size:.93rem">
+   "Picked this morning" beats "farm-fresh quality produce" every time.</p></div>
+ </div>
+</div></section>
+
+<script>
+var SW=[['Cream','#faf6ef','Page background'],['Paper','#fffdf9','Cards and surfaces'],
+ ['Sand','#e8dfcd','Subtle fills and tags'],['Ink','#2b2724','Body text'],
+ ['Forest','#2f4033','Primary buttons, headings'],['Sage','#7d9070','Secondary, seals'],
+ ['Clay','#c96f4a','Accent, links, errors'],['Gold','#d9a441','Ratings only']];
+var SP=[4,8,12,16,24,32,48,64];
+document.addEventListener('DOMContentLoaded',function(){
+ document.getElementById('sw').innerHTML=SW.map(function(s,i){
+  return '<div data-r data-d="'+(i*45)+'"><div style="height:92px;border-radius:18px;background:'+s[1]+
+   ';border:1px solid var(--line-soft)"></div>'+
+   '<div style="margin-top:.5rem"><b style="font-family:var(--serif)">'+s[0]+'</b>'+
+   '<div class="note" style="font-family:ui-monospace,monospace">'+s[1]+'</div>'+
+   '<div class="note">'+s[2]+'</div></div></div>'}).join('');
+ document.getElementById('space').innerHTML=SP.map(function(n){
+  return '<div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.4rem">'+
+   '<span class="note" style="width:34px">'+n+'</span>'+
+   '<span style="height:12px;width:'+n*2.2+'px;background:var(--sage);border-radius:99px;opacity:.75"></span></div>'}).join('');
+ document.querySelectorAll('#sw [data-r]').forEach(function(e,i){
+  setTimeout(function(){e.classList.add('in')},i*45)});
+});
+</script><footer class="ftr"><div class="wrap">
+ <div class="fgrid">
+  <div><div class="logo"><span class="leaf">✦</span>Terra &amp; Co</div>
+   <p style="color:rgba(250,246,239,.78);font-size:.92rem;margin-top:.8rem;max-width:34ch">
+    A working farm and a small shop. We grow it, pick it in the morning and bring it to your door the same week.</p>
+   <p style="color:rgba(250,246,239,.55);font-size:.82rem">Certified organic · Est. 2011 · Ashfield Valley</p></div>
+  <div><h4>Shop</h4><ul>
+   <li><a href="shop.html@kind=boxes.html">Veg &amp; fruit boxes</a></li>
+   <li><a href="shop.html@kind=bakery.html">Bakery</a></li>
+   <li><a href="shop.html@kind=pantry.html">Pantry</a></li>
+   <li><a href="shop.html@kind=drinks.html">Drinks</a></li>
+   <li><a href="shop.html">Everything</a></li></ul></div>
+  <div><h4>Company</h4><ul>
+   <li><a href="story.html">Our story</a></li>
+   <li><a href="subscription.html">How boxes work</a></li>
+   <li><a href="account.html">My account</a></li>
+   <li><a href="design-system.html">Design system</a></li>
+   <li><a href="contact.html">Contact</a></li></ul></div>
+  <div><h4>Join the list</h4>
+   <p style="color:rgba(250,246,239,.72);font-size:.88rem">What is ready this week, plus one recipe. No more than that.</p>
+   <form onsubmit="event.preventDefault();this.innerHTML='<p style=color:#cfe0c4;font-size:.9rem>✓ You are on the list.</p>'">
+    <div class="field"><input placeholder="you@example.com" required
+      style="background:rgba(250,246,239,.1);border-color:rgba(250,246,239,.28);color:#faf6ef"></div>
+    <button class="btn btn-clay btn-full btn-sm" type="submit">Subscribe</button></form></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> Terra &amp; Co — demonstration project.</span>
+  <span>Designed &amp; built by Premium Agency</span></div>
+</div></footer>
+
+<div class="ovl" id="ovl" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer">
+ <div class="dhead"><h3>Your basket</h3><button onclick="closeCart()">×</button></div>
+ <div class="dbody" id="dbody"></div>
+ <div class="dfoot" id="dfoot"></div>
+</aside>
+
+<script>
+function openCart(){document.getElementById('drawer').classList.add('open');
+ document.getElementById('ovl').classList.add('on');paintCart()}
+function closeCart(){document.getElementById('drawer').classList.remove('open');
+ document.getElementById('ovl').classList.remove('on')}
+function paintCart(){
+ var ls=Terra.lines(),t=Terra.totals();
+ document.getElementById('dbody').innerHTML = ls.length ? ls.map(function(l){
+  return '<div class="ci"><img src="https://moccasin-meerkat-640470.hostingersite.com/projects/terra/img/'+l.p.img+'.webp" alt="">'+
+  '<div><b>'+l.p.name+'</b>'+(l.opt?'<small>'+l.opt+'</small>':'')+
+  '<div class="qty"><button onclick="Terra.setQty(\''+l.key+'\','+(l.q-1)+')">−</button>'+
+  '<span>'+l.q+'</span><button onclick="Terra.setQty(\''+l.key+'\','+(l.q+1)+')">+</button></div>'+
+  '<button class="rm" onclick="Terra.remove(\''+l.key+'\')">Remove</button></div>'+
+  '<strong>'+Terra.money(l.line)+'</strong></div>'}).join('')
+  : '<div class="empty">Your basket is empty.<br><a class="link-u" href="shop.html">See what is ready →</a></div>';
+ var f='';
+ if(ls.length){
+  f+='<div class="trow"><span>Subtotal</span><span>'+Terra.money(t.sub)+'</span></div>';
+  if(t.disc>0)f+='<div class="trow"><span class="free">Discount ('+t.code+')</span><span class="free">−'+Terra.money(t.disc)+'</span></div>';
+  f+='<div class="trow"><span>Delivery</span><span>'+(t.ship===0?'<span class="free">Free</span>':Terra.money(t.ship))+'</span></div>';
+  f+='<div class="trow big"><span>Total</span><span>'+Terra.money(t.total)+'</span></div>';
+  if(t.sub<50&&t.ship>0)f+='<p class="note" style="margin-bottom:.8rem">'+Terra.money(50-t.sub)+' more for free delivery.</p>';
+  f+='<a class="btn btn-p btn-full" href="checkout.html">Checkout</a>';
+ }
+ document.getElementById('dfoot').innerHTML=f;
+}
+document.addEventListener('cart:change',paintCart);
+document.addEventListener('DOMContentLoaded',paintCart);
+</script></body></html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Build a Box — Terra &amp; Co</title><meta name="description" content="Interactive box builder: choose size, frequency, swaps and extras with live pricing.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="terra.css">
+<script src="terra.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Karla:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Karla:wght@400;700&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/terra/subscription.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/terra/subscription.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/terra/subscription.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>Terra &amp; Co — website, store, web app &amp; design system by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<header class="hdr"><div class="wrap hdr-in">
+ <a class="logo" href="index.html"><span class="leaf">✦</span>Terra &amp; Co</a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+ <nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="subscription.html" class="on">Boxes</a>
+  <a href="account.html">My Account</a>
+  <a href="story.html">Our Story</a>
+  <a href="design-system.html">Design System</a>
+ </nav>
+ <div class="hdr-tools">
+  <button class="cartbtn" onclick="openCart()">Basket<span class="cart-n" data-cart-n style="display:none">0</span></button>
+ </div>
+</div></header>
+<section style="padding-bottom:1rem"><div class="wrap">
+ <div class="crumbs"><a href="index.html">Home</a> / Boxes</div>
+ <div class="center"><div class="eyebrow" data-r>Box builder</div>
+  <h1 data-r>Build a box that suits you</h1>
+  <p class="lead center" data-r>Pick a size, a rhythm and the things you would rather not receive.
+   The price updates as you go.</p></div>
+</div></section>
+
+<section style="padding-top:1.4rem"><div class="wrap">
+ <div class="grid" style="grid-template-columns:1.5fr 1fr;gap:1.6rem;align-items:start" id="lay">
+  <div>
+   <div class="card" data-r>
+    <h3>1 · Box size</h3>
+    <div class="grid g3" style="gap:.8rem;margin-top:.9rem" id="sizes"></div>
+   </div>
+   <div class="card" style="margin-top:1.2rem" data-r data-d="70">
+    <h3>2 · How often</h3>
+    <div class="fchips" style="margin-top:.8rem" id="freqs"></div>
+    <p class="note" style="margin-top:.7rem">Pause, skip or cancel any week. No contract.</p>
+   </div>
+   <div class="card" style="margin-top:1.2rem" data-r data-d="140">
+    <h3>3 · Anything to leave out?</h3>
+    <p class="note">Tick up to three. We will swap them for something else in season.</p>
+    <div class="fchips" style="margin-top:.8rem" id="excl"></div>
+   </div>
+   <div class="card" style="margin-top:1.2rem" data-r data-d="210">
+    <h3>4 · Add extras</h3>
+    <div class="grid g2" style="gap:.7rem;margin-top:.8rem" id="extras"></div>
+   </div>
+  </div>
+
+  <div class="card" id="sumcard" style="position:sticky;top:110px" data-r data-d="100">
+   <h3>Your box</h3>
+   <div id="sum"></div>
+  </div>
+ </div>
+</div></section>
+<style>@media(max-width:900px){#lay{grid-template-columns:1fr!important}
+ #sumcard{position:static!important}}</style>
+
+<script>
+var SIZES=[{k:'small',n:'Small',d:'1–2 people · 8–10 items',p:28},
+           {k:'family',n:'Family',d:'4–6 people · 14–16 items',p:46},
+           {k:'fruit',n:'Fruit',d:'2–4 people · 6–8 items',p:32}];
+var FREQ=[{k:'weekly',n:'Every week',mult:1,save:.1},
+          {k:'fort',n:'Every two weeks',mult:1,save:.05},
+          {k:'once',n:'One-off',mult:1,save:0}];
+var EXCL=['Beetroot','Kale','Turnip','Fennel','Celeriac','Radish','Chard','Leek'];
+var EXTRAS=[{k:'bread',n:'Sourdough loaf',p:7},{k:'eggs',n:'Half dozen eggs',p:6},
+            {k:'honey',n:'Raw honey 340g',p:14},{k:'juice',n:'Green juice',p:9}];
+var S={size:'small',freq:'weekly',excl:[],extras:[]};
+
+document.addEventListener('DOMContentLoaded',function(){
+ document.getElementById('sizes').innerHTML=SIZES.map(function(s){
+  return '<button class="fchip" data-k="'+s.k+'" onclick="pickSize(\''+s.k+'\')" '+
+   'style="display:block;text-align:left;padding:.9rem 1rem;border-radius:16px;width:100%">'+
+   '<b style="display:block;font-family:var(--serif);font-size:1.05rem">'+s.n+'</b>'+
+   '<small style="display:block;margin:.2rem 0 .3rem">'+s.d+'</small>'+
+   '<b>$'+s.p+'</b></button>'}).join('');
+ document.getElementById('freqs').innerHTML=FREQ.map(function(f){
+  return '<button class="fchip" data-f="'+f.k+'" onclick="pickFreq(\''+f.k+'\')">'+f.n+
+   (f.save?' <span style="opacity:.75">− save '+(f.save*100)+'%</span>':'')+'</button>'}).join('');
+ document.getElementById('excl').innerHTML=EXCL.map(function(e){
+  return '<button class="fchip" data-e="'+e+'" onclick="tog(\''+e+'\')">'+e+'</button>'}).join('');
+ document.getElementById('extras').innerHTML=EXTRAS.map(function(x){
+  return '<button class="fchip" data-x="'+x.k+'" onclick="togX(\''+x.k+'\')" '+
+   'style="display:flex;justify-content:space-between;padding:.7rem 1rem;border-radius:14px;width:100%">'+
+   '<span>'+x.n+'</span><b>+$'+x.p+'</b></button>'}).join('');
+ pickSize('small');pickFreq('weekly');
+});
+function pickSize(k){S.size=k;
+ document.querySelectorAll('[data-k]').forEach(function(b){b.classList.toggle('on',b.dataset.k===k)});calc()}
+function pickFreq(k){S.freq=k;
+ document.querySelectorAll('[data-f]').forEach(function(b){b.classList.toggle('on',b.dataset.f===k)});calc()}
+function tog(e){
+ var i=S.excl.indexOf(e);
+ if(i>-1)S.excl.splice(i,1);
+ else{if(S.excl.length>=3){tst('Three swaps is the limit');return}S.excl.push(e)}
+ document.querySelectorAll('[data-e]').forEach(function(b){b.classList.toggle('on',S.excl.indexOf(b.dataset.e)>-1)});
+ calc()}
+function togX(k){
+ var i=S.extras.indexOf(k);
+ if(i>-1)S.extras.splice(i,1);else S.extras.push(k);
+ document.querySelectorAll('[data-x]').forEach(function(b){b.classList.toggle('on',S.extras.indexOf(b.dataset.x)>-1)});
+ calc()}
+function calc(){
+ var sz=SIZES.filter(function(s){return s.k===S.size})[0];
+ var fq=FREQ.filter(function(f){return f.k===S.freq})[0];
+ var ex=S.extras.map(function(k){return EXTRAS.filter(function(x){return x.k===k})[0]});
+ var base=sz.p, extra=ex.reduce(function(a,x){return a+x.p},0);
+ var gross=base+extra, save=gross*fq.save, net=gross-save;
+ var ship=net>=50?0:5.5;
+ document.getElementById('sum').innerHTML=
+  '<div class="trow"><span>'+sz.n+' box</span><span>$'+base.toFixed(2)+'</span></div>'+
+  ex.map(function(x){return '<div class="trow"><span>'+x.n+'</span><span>$'+x.p.toFixed(2)+'</span></div>'}).join('')+
+  (save>0?'<div class="trow"><span class="free">'+fq.n+' discount</span><span class="free">−$'+save.toFixed(2)+'</span></div>':'')+
+  '<div class="trow"><span>Delivery</span><span>'+(ship===0?'<span class="free">Free</span>':'$'+ship.toFixed(2))+'</span></div>'+
+  '<div class="trow big"><span>'+(S.freq==='once'?'Total':'Per delivery')+'</span><span>$'+(net+ship).toFixed(2)+'</span></div>'+
+  (S.excl.length?'<p class="note">Leaving out: '+S.excl.join(', ')+'</p>':'<p class="note">No swaps — send whatever is best.</p>')+
+  '<button class="btn btn-p btn-full" onclick="addBox()">'+(S.freq==='once'?'Add to basket':'Start subscription')+'</button>'+
+  '<p class="note" style="text-align:center;margin:.7rem 0 0">Change or cancel any time.</p>';
+}
+function addBox(){
+ var id=S.size==='family'?'box-l':S.size==='fruit'?'box-fruit':'box-s';
+ var fq=FREQ.filter(function(f){return f.k===S.freq})[0];
+ Terra.add(id,1,fq.n);
+ S.extras.forEach(function(k){
+  var m={bread:'bread',eggs:'eggs',honey:'honey',juice:'juice'};
+  if(m[k])Terra.add(m[k],1,'')});
+ tst('Box added to your basket');openCart();
+}
+</script><footer class="ftr"><div class="wrap">
+ <div class="fgrid">
+  <div><div class="logo"><span class="leaf">✦</span>Terra &amp; Co</div>
+   <p style="color:rgba(250,246,239,.78);font-size:.92rem;margin-top:.8rem;max-width:34ch">
+    A working farm and a small shop. We grow it, pick it in the morning and bring it to your door the same week.</p>
+   <p style="color:rgba(250,246,239,.55);font-size:.82rem">Certified organic · Est. 2011 · Ashfield Valley</p></div>
+  <div><h4>Shop</h4><ul>
+   <li><a href="shop.html@kind=boxes.html">Veg &amp; fruit boxes</a></li>
+   <li><a href="shop.html@kind=bakery.html">Bakery</a></li>
+   <li><a href="shop.html@kind=pantry.html">Pantry</a></li>
+   <li><a href="shop.html@kind=drinks.html">Drinks</a></li>
+   <li><a href="shop.html">Everything</a></li></ul></div>
+  <div><h4>Company</h4><ul>
+   <li><a href="story.html">Our story</a></li>
+   <li><a href="subscription.html">How boxes work</a></li>
+   <li><a href="account.html">My account</a></li>
+   <li><a href="design-system.html">Design system</a></li>
+   <li><a href="contact.html">Contact</a></li></ul></div>
+  <div><h4>Join the list</h4>
+   <p style="color:rgba(250,246,239,.72);font-size:.88rem">What is ready this week, plus one recipe. No more than that.</p>
+   <form onsubmit="event.preventDefault();this.innerHTML='<p style=color:#cfe0c4;font-size:.9rem>✓ You are on the list.</p>'">
+    <div class="field"><input placeholder="you@example.com" required
+      style="background:rgba(250,246,239,.1);border-color:rgba(250,246,239,.28);color:#faf6ef"></div>
+    <button class="btn btn-clay btn-full btn-sm" type="submit">Subscribe</button></form></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> Terra &amp; Co — demonstration project.</span>
+  <span>Designed &amp; built by Premium Agency</span></div>
+</div></footer>
+
+<div class="ovl" id="ovl" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer">
+ <div class="dhead"><h3>Your basket</h3><button onclick="closeCart()">×</button></div>
+ <div class="dbody" id="dbody"></div>
+ <div class="dfoot" id="dfoot"></div>
+</aside>
+
+<script>
+function openCart(){document.getElementById('drawer').classList.add('open');
+ document.getElementById('ovl').classList.add('on');paintCart()}
+function closeCart(){document.getElementById('drawer').classList.remove('open');
+ document.getElementById('ovl').classList.remove('on')}
+function paintCart(){
+ var ls=Terra.lines(),t=Terra.totals();
+ document.getElementById('dbody').innerHTML = ls.length ? ls.map(function(l){
+  return '<div class="ci"><img src="https://moccasin-meerkat-640470.hostingersite.com/projects/terra/img/'+l.p.img+'.webp" alt="">'+
+  '<div><b>'+l.p.name+'</b>'+(l.opt?'<small>'+l.opt+'</small>':'')+
+  '<div class="qty"><button onclick="Terra.setQty(\''+l.key+'\','+(l.q-1)+')">−</button>'+
+  '<span>'+l.q+'</span><button onclick="Terra.setQty(\''+l.key+'\','+(l.q+1)+')">+</button></div>'+
+  '<button class="rm" onclick="Terra.remove(\''+l.key+'\')">Remove</button></div>'+
+  '<strong>'+Terra.money(l.line)+'</strong></div>'}).join('')
+  : '<div class="empty">Your basket is empty.<br><a class="link-u" href="shop.html">See what is ready →</a></div>';
+ var f='';
+ if(ls.length){
+  f+='<div class="trow"><span>Subtotal</span><span>'+Terra.money(t.sub)+'</span></div>';
+  if(t.disc>0)f+='<div class="trow"><span class="free">Discount ('+t.code+')</span><span class="free">−'+Terra.money(t.disc)+'</span></div>';
+  f+='<div class="trow"><span>Delivery</span><span>'+(t.ship===0?'<span class="free">Free</span>':Terra.money(t.ship))+'</span></div>';
+  f+='<div class="trow big"><span>Total</span><span>'+Terra.money(t.total)+'</span></div>';
+  if(t.sub<50&&t.ship>0)f+='<p class="note" style="margin-bottom:.8rem">'+Terra.money(50-t.sub)+' more for free delivery.</p>';
+  f+='<a class="btn btn-p btn-full" href="checkout.html">Checkout</a>';
+ }
+ document.getElementById('dfoot').innerHTML=f;
+}
+document.addEventListener('cart:change',paintCart);
+document.addEventListener('DOMContentLoaded',paintCart);
+</script></body></html>

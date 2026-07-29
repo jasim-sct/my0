@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Dashboard — VOLT</title><meta name="description" content="Working invoicing dashboard with charts, CRUD, sorting and CSV export.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="volt.css">
+<script src="volt.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@700&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/volt/app.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/volt/app.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/volt/app.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>VOLT — site, billing, dashboard &amp; design system by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<header class="hdr"><div class="wrap hdr-in">
+ <a class="logo" href="index.html"><span class="bolt">⚡</span>Volt</a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+ <nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="app.html" class="on">Dashboard</a>
+  <a href="signup.html">Sign Up</a>
+  <a href="design-system.html">Design System</a>
+ </nav>
+ <div class="hdr-tools">
+  <a class="btn btn-sm btn-lime" href="signup.html">Start free</a>
+ </div>
+</div></header>
+<div class="app">
+ <aside class="side" id="side">
+  <div class="logo" style="padding:0 .4rem 1rem"><span class="bolt">⚡</span>Volt</div>
+  <div class="lbl">Money</div>
+  <a href="app.html#" class="on" data-v="over">◈ Overview</a>
+  <a href="app.html#" data-v="inv">▤ Invoices</a>
+  <a href="app.html#" data-v="clients">◉ Clients</a>
+  <div class="lbl">Setup</div>
+  <a href="app.html#" data-v="chase">🔁 Chase rules</a>
+  <a href="app.html#" data-v="settings">⚙ Settings</a>
+  <div class="lbl">Elsewhere</div>
+  <a href="index.html">← Marketing site</a>
+ </aside>
+
+ <main class="appmain">
+  <div class="apptop">
+   <button class="btn btn-sm menub" onclick="document.getElementById('side').classList.toggle('open')">☰</button>
+   <div><h1 id="vt">Overview</h1><p class="note" id="vs">Everything owed to you, right now.</p></div>
+   <div class="sp"></div>
+   <button class="btn btn-sm btn-lime" onclick="openNew()">+ New invoice</button>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="view on" id="v-over">
+   <div class="grid g4">
+    <div class="box box-lime stat" data-r><b id="k1">$0</b><small>Paid this year</small></div>
+    <div class="box stat" data-r data-d="60"><b id="k2">$0</b><small>Outstanding</small></div>
+    <div class="box box-pink stat" data-r data-d="120"><b id="k3">$0</b><small>Overdue</small></div>
+    <div class="box box-cyan stat" data-r data-d="180"><b id="k4">0</b><small>Invoices total</small></div>
+   </div>
+   <div class="grid" style="grid-template-columns:1.6fr 1fr;margin-top:1.3rem" id="r2">
+    <div class="chartbox" data-r><h3 style="margin:0">Paid per month</h3>
+     <div class="bars" id="bars"></div><div class="baxis"></div></div>
+    <div class="box" data-r data-d="80"><h3>By status</h3><div id="statusBars" style="margin-top:.9rem"></div></div>
+   </div>
+   <div class="box" style="margin-top:1.3rem;padding:0" data-r>
+    <div style="padding:1.1rem 1.2rem;border-bottom:var(--bd);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem">
+     <h3 style="margin:0">Needs chasing</h3>
+     <button class="btn btn-sm btn-pink" onclick="chaseAll()">Chase all overdue</button></div>
+    <div class="tblwrap" style="border:0;box-shadow:none"><table>
+     <thead><tr><th>Invoice</th><th>Client</th><th>Amount</th><th>Due</th><th></th></tr></thead>
+     <tbody id="lateBody"></tbody></table></div>
+   </div>
+  </div>
+
+  <!-- INVOICES -->
+  <div class="view" id="v-inv">
+   <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem">
+    <input class="field" id="q" placeholder="Search invoice or client..." oninput="renderInv()"
+      style="flex:1;min-width:200px;padding:.7rem .9rem;border:var(--bd2);box-shadow:3px 3px 0 var(--ink);background:#fff;font-family:inherit">
+    <select id="fs" onchange="renderInv()" style="padding:.7rem .9rem;border:var(--bd2);box-shadow:3px 3px 0 var(--ink);background:#fff;font-family:inherit;font-weight:700">
+     <option value="all">All statuses</option><option value="paid">Paid</option>
+     <option value="due">Due</option><option value="late">Overdue</option><option value="draft">Draft</option></select>
+    <button class="btn btn-sm" onclick="csv()">↓ CSV</button>
+   </div>
+   <div class="tblwrap"><table>
+    <thead><tr>
+     <th onclick="sortBy('id')">Invoice <span class="ar" data-a="id"></span></th>
+     <th onclick="sortBy('client')">Client <span class="ar" data-a="client"></span></th>
+     <th onclick="sortBy('amount')">Amount <span class="ar" data-a="amount"></span></th>
+     <th onclick="sortBy('status')">Status <span class="ar" data-a="status"></span></th>
+     <th onclick="sortBy('due')">Due <span class="ar" data-a="due"></span></th>
+     <th></th></tr></thead>
+    <tbody id="invBody"></tbody></table></div>
+   <div class="empty" id="invEmpty" style="display:none">Nothing matches.</div>
+   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem;margin-top:1rem">
+    <span class="note" id="pinfo"></span><div style="display:flex;gap:.35rem" id="pg"></div></div>
+  </div>
+
+  <!-- CLIENTS -->
+  <div class="view" id="v-clients"><div class="grid g3" id="clientGrid"></div></div>
+
+  <!-- CHASE -->
+  <div class="view" id="v-chase">
+   <div class="box" style="max-width:760px" data-r>
+    <h3>Your chase sequence</h3>
+    <p class="note">Volt sends these automatically. Drag the tone to suit your relationship.</p>
+    <div id="chaseSteps" style="margin-top:1.2rem"></div>
+    <button class="btn btn-sm btn-lime" style="margin-top:1rem" onclick="tst('Sequence saved')">Save sequence</button>
+   </div>
+  </div>
+
+  <!-- SETTINGS -->
+  <div class="view" id="v-settings">
+   <div class="grid g2">
+    <div class="box"><h3>Business</h3>
+     <div class="field"><label>Business name</label><input value="Wray Studio"></div>
+     <div class="field"><label>Invoice prefix</label><input value="INV-"></div>
+     <div class="field"><label>Default terms</label><select><option>Net 30</option><option>Net 14</option><option>Due on receipt</option></select></div>
+     <button class="btn btn-sm btn-lime" onclick="tst('Settings saved')">Save</button></div>
+    <div class="box box-pink"><h3>Danger zone</h3>
+     <p style="font-size:.9rem">Reset the demo data back to its original 34 invoices.</p>
+     <button class="btn btn-sm btn-ink" onclick="if(confirm('Reset demo data?')){Volt.reset();location.reload()}">Reset demo data</button></div>
+   </div>
+  </div>
+ </main>
+</div>
+
+<div class="ovl" id="ovl" onclick="closeNew()"></div>
+<div class="modal" id="modal">
+ <h3 id="mT">New invoice</h3>
+ <div class="field"><label>Client *</label><input id="mC" placeholder="Northwind Co"></div>
+ <div class="field"><label>Amount ($) *</label><input id="mA" type="number" placeholder="1200"></div>
+ <div class="field"><label>Status</label><select id="mS">
+  <option value="draft">Draft</option><option value="due">Due</option>
+  <option value="paid">Paid</option><option value="late">Overdue</option></select></div>
+ <div style="display:flex;gap:.6rem;margin-top:.5rem">
+  <button class="btn btn-sm" onclick="closeNew()">Cancel</button>
+  <button class="btn btn-sm btn-lime" style="flex:1" onclick="saveInv()" id="mSave">Save invoice</button></div>
+</div>
+
+<style>#v-clients .box{transition:transform .14s var(--ease),box-shadow .14s var(--ease)}
+#v-clients .box:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--ink)}
+@media(max-width:900px){#r2{grid-template-columns:1fr!important}}
+.ar{opacity:.5;font-size:.7rem}
+.chase-step{display:grid;grid-template-columns:auto 1fr auto;gap:.9rem;align-items:center;
+ padding:.9rem;border:var(--bd2);background:#fff;margin-bottom:.7rem;box-shadow:3px 3px 0 var(--ink)}
+.chase-step b{font-family:var(--disp);font-size:1.1rem}
+</style>
+
+<script>
+var TITLES={over:['Overview','Everything owed to you, right now.'],
+ inv:['Invoices','Every invoice you have ever sent.'],
+ clients:['Clients','Who owes what.'],
+ chase:['Chase rules','What Volt sends, and when.'],
+ settings:['Settings','Business details and defaults.']};
+document.querySelectorAll('.side a[data-v]').forEach(function(a){
+ a.addEventListener('click',function(e){e.preventDefault();
+  var v=a.getAttribute('data-v');
+  document.querySelectorAll('.side a').forEach(function(x){x.classList.remove('on')});
+  a.classList.add('on');
+  document.querySelectorAll('.view').forEach(function(x){x.classList.remove('on')});
+  document.getElementById('v-'+v).classList.add('on');
+  document.getElementById('vt').textContent=TITLES[v][0];
+  document.getElementById('vs').textContent=TITLES[v][1];
+  document.getElementById('side').classList.remove('open');
+  window.scrollTo({top:0,behavior:'smooth'});
+ });
+});
+
+function countUp(el,t,pre){var t0=null;
+ requestAnimationFrame(function s(ts){if(!t0)t0=ts;
+  var p=Math.min((ts-t0)/1100,1),v=t*(1-Math.pow(1-p,3));
+  el.textContent=(pre||'')+Math.round(v).toLocaleString();
+  if(p<1)requestAnimationFrame(s)})}
+
+function drawKpis(){
+ var s=Volt.stats();
+ countUp(document.getElementById('k1'),s.paid,'$');
+ countUp(document.getElementById('k2'),s.outstanding,'$');
+ countUp(document.getElementById('k3'),s.late,'$');
+ countUp(document.getElementById('k4'),s.total,'');
+}
+function drawBars(){
+ var by={},now=new Date();
+ for(var i=5;i>=0;i--){var d=new Date(now.getFullYear(),now.getMonth()-i,1);
+  by[d.toISOString().slice(0,7)]={l:d.toLocaleString('en',{month:'short'}),v:0}}
+ Volt.all().forEach(function(x){if(x.status!=='paid')return;
+  var k=x.issued.slice(0,7); if(by[k])by[k].v+=x.amount});
+ var ks=Object.keys(by),max=Math.max.apply(null,ks.map(function(k){return by[k].v}))||1;
+ var cols=['var(--lime)','var(--violet)','var(--pink)','var(--cyan)','var(--amber)','var(--lime)'];
+ document.getElementById('bars').innerHTML=ks.map(function(k,i){
+  return '<div class="bar" style="background:'+cols[i%6]+'" data-h="'+(by[k].v/max*100)+'">'+
+   '<span>$'+Math.round(by[k].v/1000)+'k</span><i>'+by[k].l+'</i></div>'}).join('');
+ requestAnimationFrame(function(){requestAnimationFrame(function(){
+  document.querySelectorAll('#bars .bar').forEach(function(b){b.style.height=b.dataset.h+'%'})})});
+}
+function drawStatus(){
+ var s=Volt.stats(),tot=s.total||1;
+ var rows=[['Paid',s.count.paid,'var(--lime)'],['Due',s.count.due,'var(--amber)'],
+  ['Overdue',s.count.late,'var(--pink)'],['Draft',s.count.draft,'#fff']];
+ document.getElementById('statusBars').innerHTML=rows.map(function(r){
+  return '<div style="margin-bottom:.7rem"><div style="display:flex;justify-content:space-between;font-size:.84rem;font-weight:700">'+
+   '<span>'+r[0]+'</span><span>'+r[1]+'</span></div>'+
+   '<div style="height:16px;border:var(--bd2);margin-top:.25rem;background:#fff">'+
+   '<div style="height:100%;width:'+(r[1]/tot*100)+'%;background:'+r[2]+'"></div></div></div>'}).join('');
+}
+function drawLate(){
+ var late=Volt.all().filter(function(i){return i.status==='late'}).slice(0,5);
+ document.getElementById('lateBody').innerHTML=late.length?late.map(function(i){
+  return '<tr><td class="mono">'+i.id+'</td><td style="font-weight:700">'+i.client+'</td>'+
+   '<td>'+Volt.money(i.amount)+'</td><td class="mono">'+i.due+'</td>'+
+   '<td><button class="btn btn-sm btn-pink" onclick="chase(\''+i.id+'\')">Chase</button></td></tr>'}).join('')
+  : '<tr><td colspan="5" style="text-align:center;padding:1.4rem" class="note">Nothing overdue. Rare and excellent.</td></tr>';
+}
+function chase(id){tst('Reminder sent for '+id)}
+function chaseAll(){var n=Volt.all().filter(function(i){return i.status==='late'}).length;
+ tst(n?'Chased '+n+' overdue invoices':'Nothing overdue')}
+
+var sk='issued',sd=-1,pg=1,PER=8;
+function sortBy(k){if(sk===k)sd*=-1;else{sk=k;sd=1}pg=1;renderInv()}
+function renderInv(){
+ var r=Volt.query({q:document.getElementById('q').value,status:document.getElementById('fs').value,sort:sk,dir:sd});
+ var pages=Math.max(1,Math.ceil(r.length/PER)); if(pg>pages)pg=pages;
+ document.querySelectorAll('.ar').forEach(function(a){
+  a.textContent=a.dataset.a===sk?(sd>0?'▲':'▼'):'↕'});
+ var sl=r.slice((pg-1)*PER,pg*PER);
+ document.getElementById('invBody').innerHTML=sl.map(function(i){
+  return '<tr><td class="mono">'+i.id+'</td><td style="font-weight:700">'+i.client+'</td>'+
+   '<td>'+Volt.money(i.amount)+'</td>'+
+   '<td><span class="pill '+i.status+'">'+i.status+'</span></td>'+
+   '<td class="mono">'+i.due+'</td>'+
+   '<td style="white-space:nowrap"><button class="btn btn-sm" onclick="togglePaid(\''+i.id+'\')">'+
+   (i.status==='paid'?'Unpay':'Mark paid')+'</button> '+
+   '<button class="btn btn-sm btn-pink" onclick="del(\''+i.id+'\')">×</button></td></tr>'}).join('');
+ document.getElementById('invEmpty').style.display=r.length?'none':'block';
+ document.getElementById('pinfo').textContent='Showing '+(r.length?((pg-1)*PER+1):0)+'–'+Math.min(pg*PER,r.length)+' of '+r.length;
+ var b='';for(var i=1;i<=pages;i++){
+  if(pages>7&&i>3&&i<pages-1&&Math.abs(i-pg)>1){if(i===4)b+='<button class="btn btn-sm" disabled>…</button>';continue}
+  b+='<button class="btn btn-sm '+(i===pg?'btn-ink':'')+'" onclick="goP('+i+')">'+i+'</button>'}
+ document.getElementById('pg').innerHTML=b;
+}
+function goP(n){pg=n;renderInv()}
+function togglePaid(id){var i=Volt.get(id);
+ Volt.update(id,{status:i.status==='paid'?'due':'paid'});tst(id+' updated')}
+function del(id){if(!confirm('Delete '+id+'?'))return;Volt.remove(id);tst(id+' deleted')}
+function csv(){
+ var r=Volt.query({q:document.getElementById('q').value,status:document.getElementById('fs').value,sort:sk,dir:sd});
+ var c='Invoice,Client,Amount,Status,Issued,Due\n'+r.map(function(i){
+  return [i.id,i.client,i.amount,i.status,i.issued,i.due].map(function(v){
+   return '"'+String(v).replace(/"/g,'""')+'"'}).join(',')}).join('\n');
+ var a=document.createElement('a');a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(c);
+ a.download='volt-invoices.csv';a.click();tst('Exported '+r.length+' rows');
+}
+function drawClients(){
+ var by={};
+ Volt.all().forEach(function(i){
+  if(!by[i.client])by[i.client]={n:i.client,total:0,out:0,cnt:0};
+  by[i.client].cnt++; by[i.client].total+=i.amount;
+  if(i.status==='due'||i.status==='late')by[i.client].out+=i.amount});
+ var cols=['box-lime','box-cyan','box-white','box-violet','box-pink'];
+ document.getElementById('clientGrid').innerHTML=Object.keys(by).map(function(k,i){
+  var c=by[k];
+  return '<div class="box '+cols[i%5]+'"><h3 style="margin-bottom:.3em">'+c.n+'</h3>'+
+   '<p class="note" style="opacity:.8">'+c.cnt+' invoices</p>'+
+   '<div style="font-family:var(--disp);font-size:1.5rem;margin:.4rem 0">'+Volt.money(c.total)+'</div>'+
+   '<p style="margin:0;font-size:.85rem;font-weight:700">'+(c.out?Volt.money(c.out)+' outstanding':'All settled')+'</p></div>'}).join('');
+}
+function drawChase(){
+ var S=[['Day 3','Friendly nudge','A short note with the invoice attached again.'],
+        ['Day 14','Firm reminder','References the due date and payment terms.'],
+        ['Day 30','Formal notice','Mentions late fees and escalation.']];
+ document.getElementById('chaseSteps').innerHTML=S.map(function(s,i){
+  return '<div class="chase-step"><b>'+(i+1)+'</b>'+
+   '<div><b style="font-family:var(--sans);font-size:.95rem">'+s[1]+'</b>'+
+   '<div class="note">'+s[2]+'</div></div>'+
+   '<span class="pill draft">'+s[0]+'</span></div>'}).join('');
+}
+function openNew(){document.getElementById('ovl').classList.add('on');
+ document.getElementById('modal').classList.add('on')}
+function closeNew(){document.getElementById('ovl').classList.remove('on');
+ document.getElementById('modal').classList.remove('on')}
+function saveInv(){
+ var c=document.getElementById('mC').value.trim(),a=+document.getElementById('mA').value;
+ if(!c||!a){tst('Client and amount are required');return}
+ Volt.add({client:c,amount:a,status:document.getElementById('mS').value});
+ document.getElementById('mC').value='';document.getElementById('mA').value='';
+ closeNew();tst('Invoice created');
+}
+function refresh(){drawKpis();drawBars();drawStatus();drawLate();renderInv();drawClients()}
+document.addEventListener('inv:change',refresh);
+document.addEventListener('DOMContentLoaded',function(){refresh();drawChase()});
+</script><footer class="ftr"><div class="wrap">
+ <div class="fg">
+  <div><div class="logo"><span class="bolt">⚡</span>Volt</div>
+   <p style="margin-top:.9rem;max-width:34ch;font-size:.92rem;opacity:.82">
+    Invoicing that chases payment for you. Built for freelancers and small studios who would rather be working.</p>
+   <p class="note" style="color:var(--lime);opacity:1">SOC 2 · PCI DSS · Est. 2023</p></div>
+  <div><h4>Product</h4><ul>
+   <li><a href="index.html#features">Features</a></li>
+   <li><a href="pricing.html">Pricing</a></li>
+   <li><a href="app.html">Live dashboard</a></li>
+   <li><a href="signup.html">Start free</a></li></ul></div>
+  <div><h4>Company</h4><ul>
+   <li><a href="index.html#how">How it works</a></li>
+   <li><a href="index.html#faq">FAQ</a></li>
+   <li><a href="design-system.html">Design system</a></li>
+   <li><a href="../../contact.html">Built by Premium Agency</a></li></ul></div>
+  <div><h4>Get the drop</h4>
+   <p style="font-size:.9rem;opacity:.82">One email a month. Product changes, nothing else.</p>
+   <form onsubmit="event.preventDefault();this.innerHTML='<p style=color:var(--lime);font-weight:700>✓ YOU ARE IN.</p>'">
+    <div class="field"><input placeholder="you@studio.com" required></div>
+    <button class="btn btn-sm btn-lime btn-full" type="submit">Subscribe</button></form></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> VOLT — demonstration project.</span>
+  <span>Designed &amp; built by Premium Agency</span></div>
+</div></footer>
+</body></html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>FAQ — Lumen</title><meta name="description" content="Answers on delivery, returns, warranty and international shipping.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="shop.css">
+<script src="app.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/shop/faq.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/shop/faq.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/shop/faq.html"}</script>
+</head><body>
+<div class="bgfx"></div>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>Lumen Commerce — full storefront build by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<header class="s-head"><div class="wrap s-in">
+ <a class="s-logo" href="index.html">LUMEN<b>.</b></a>
+ <button class="s-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+ <nav class="s-menu">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="shop.html@cat=audio.html">Audio</a>
+  <a href="shop.html@cat=wearables.html">Wearables</a>
+  <a href="shop.html@cat=beauty.html">Beauty</a>
+  <a href="about.html">Our Story</a>
+ </nav>
+ <div class="s-tools">
+  <form class="s-search" onsubmit="event.preventDefault();location.href='shop.html?q='+encodeURIComponent(this.q.value)">
+   <input name="q" placeholder="Search products..." aria-label="Search">
+  </form>
+  <button class="icon-btn" onclick="openCart()" aria-label="Cart">🛒
+   <span class="badge-n" data-cart-count style="display:none">0</span></button>
+ </div>
+</div></header>
+<section><div class="wrap" style="max-width:780px">
+ <div class="crumbs"><a href="index.html">Home</a> / FAQ</div>
+ <h1 data-r class="in">Frequently asked questions</h1>
+ <div style="margin-top:1.4rem" id="faq"></div>
+</div></section>
+<style>details.glass{padding:1rem 1.2rem;margin-bottom:.7rem;cursor:pointer}
+summary{font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--brand2);font-size:1.3rem;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:.7rem 0 0;color:var(--dim);font-size:.92rem}</style>
+<script>
+var Q=[
+ ['How long does delivery take?','Standard delivery is 3–5 working days. Express is 1–2 days for an extra $12. Orders placed before 2pm dispatch the same working day.'],
+ ['Do you ship internationally?','Yes — we ship to the US, UK, Canada, Australia, UAE and most of the EU. Duties are calculated at checkout for non-domestic orders.'],
+ ['What is your return policy?','30 days from delivery, unused and in original packaging. We cover return postage and refund within 5 working days of receiving the item.'],
+ ['Is the warranty transferable?','Yes. The 2-year warranty follows the product, not the buyer, so second-hand owners are covered for the remainder.'],
+ ['Can I change my order after placing it?','If it has not dispatched, yes — contact us within two hours and we will amend or cancel it free of charge.'],
+ ['Do you offer bulk or corporate orders?','We do. Orders over 10 units qualify for tiered pricing. Use the contact page and we will respond within one working day.']
+];
+document.addEventListener('DOMContentLoaded',function(){
+ document.getElementById('faq').innerHTML=Q.map(function(q){
+  return '<details class="glass"><summary>'+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join('');
+});
+</script><footer class="s-foot"><div class="wrap">
+ <div class="fg">
+  <div><div class="s-logo">LUMEN<b>.</b></div>
+   <p class="lead" style="font-size:.88rem;margin-top:.7rem">Considered technology and everyday objects, built to outlast the trend cycle.</p>
+   <p class="note">Free shipping over $100 · 30-day returns · 2-year warranty</p></div>
+  <div><h4>Shop</h4><ul>
+   <li><a href="shop.html@cat=audio.html">Audio</a></li><li><a href="shop.html@cat=wearables.html">Wearables</a></li>
+   <li><a href="shop.html@cat=beauty.html">Beauty</a></li><li><a href="shop.html@cat=bags.html">Bags</a></li>
+   <li><a href="shop.html">All Products</a></li></ul></div>
+  <div><h4>Support</h4><ul>
+   <li><a href="shipping.html">Shipping &amp; Returns</a></li><li><a href="faq.html">FAQ</a></li>
+   <li><a href="contact.html">Contact Us</a></li><li><a href="track.html">Track Order</a></li></ul></div>
+  <div><h4>Company</h4><ul>
+   <li><a href="about.html">Our Story</a></li><li><a href="shop.html">New Arrivals</a></li>
+   <li><a href="../../contact.html">Built by Premium Agency</a></li></ul></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> Lumen — demonstration store.</span>
+  <span>Built by Premium Agency</span></div>
+</div></footer>
+
+<div class="overlay" id="ov" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart">
+ <div class="dhead"><strong>Your Cart</strong><button onclick="closeCart()" aria-label="Close">×</button></div>
+ <div class="dbody" id="dbody"></div>
+ <div class="dfoot" id="dfoot"></div>
+</aside>
+
+<script>
+function openCart(){document.getElementById('drawer').classList.add('open');
+ document.getElementById('ov').classList.add('on');paintCart()}
+function closeCart(){document.getElementById('drawer').classList.remove('open');
+ document.getElementById('ov').classList.remove('on')}
+function paintCart(){
+ var lines=Lumen.lines(),t=Lumen.totals();
+ document.getElementById('dbody').innerHTML = lines.length ? lines.map(function(l){
+  return '<div class="ci"><img src="https://moccasin-meerkat-640470.hostingersite.com/assets/img/'+l.product.img+'.webp" alt="">'+
+   '<div><b>'+l.product.name+'</b>'+(l.variant?'<small>'+l.variant+'</small>':'')+
+   '<div class="miniqty"><button onclick="Lumen.setQty(\''+l.key+'\','+(l.qty-1)+')">−</button>'+
+   '<span>'+l.qty+'</span><button onclick="Lumen.setQty(\''+l.key+'\','+(l.qty+1)+')">+</button></div>'+
+   '<button class="rm" onclick="Lumen.remove(\''+l.key+'\')">Remove</button></div>'+
+   '<strong>'+Lumen.money(l.line)+'</strong></div>';
+ }).join('') : '<div class="empty">Your cart is empty.<br><a href="shop.html" style="color:var(--brand2)">Browse products →</a></div>';
+ var f='';
+ if(lines.length){
+  f+='<div class="trow"><span>Subtotal</span><span>'+Lumen.money(t.sub)+'</span></div>';
+  if(t.disc>0) f+='<div class="trow"><span class="ok">Discount ('+t.code+')</span><span class="ok">−'+Lumen.money(t.disc)+'</span></div>';
+  f+='<div class="trow"><span>Shipping</span><span>'+(t.ship===0?'<span class="ok">FREE</span>':Lumen.money(t.ship))+'</span></div>';
+  f+='<div class="trow"><span>Tax (8%)</span><span>'+Lumen.money(t.tax)+'</span></div>';
+  f+='<div class="trow big"><span>Total</span><span>'+Lumen.money(t.total)+'</span></div>';
+  if(t.sub<100&&t.ship>0) f+='<p class="note" style="margin-bottom:.7rem">Add '+Lumen.money(100-t.sub)+' more for free shipping.</p>';
+  f+='<a class="btn btn-p btn-full" href="checkout.html">Checkout →</a>';
+ }
+ document.getElementById('dfoot').innerHTML=f;
+}
+document.addEventListener('cart:change',paintCart);
+document.addEventListener('DOMContentLoaded',paintCart);
+</script></body></html>

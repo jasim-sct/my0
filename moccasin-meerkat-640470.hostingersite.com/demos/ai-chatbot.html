@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>AI Chatbot &amp; Automation Demo | Premium Agency</title>
+<meta name="description" content="A working AI lead-qualifying chatbot demo with automation workflow visualisation. Built by Premium Agency.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="demo.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<style>
+.chat{max-width:520px;margin:0 auto;border-radius:20px;overflow:hidden;
+ background:#0c1024;border:1px solid var(--stroke);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.chat-head{padding:1rem 1.2rem;background:linear-gradient(120deg,var(--brand),var(--brand-2));
+ color:#06070f;display:flex;align-items:center;gap:.7rem}
+.chat-head .av{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.25);
+ display:grid;place-items:center;font-size:1.2rem}
+.chat-head b{display:block;font-size:.95rem}
+.chat-head small{font-size:.76rem;opacity:.8}
+.chat-body{height:400px;overflow-y:auto;padding:1.4rem 1.2rem;scroll-padding-top:1rem;display:flex;flex-direction:column;gap:.7rem}
+.msg{max-width:82%;padding:.7rem 1rem;border-radius:16px;font-size:.9rem;line-height:1.5;
+ animation:pop .35s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}}
+.bot{background:rgba(255,255,255,.07);border:1px solid var(--stroke);align-self:flex-start;
+ border-bottom-left-radius:5px}
+.user{background:linear-gradient(120deg,var(--brand),var(--brand-2));color:#06070f;
+ align-self:flex-end;border-bottom-right-radius:5px;font-weight:600}
+.opts{display:flex;flex-wrap:wrap;gap:.4rem;align-self:flex-start;max-width:90%}
+.opts button{background:rgba(124,92,255,.15);border:1px solid rgba(124,92,255,.45);
+ color:var(--txt);padding:.45rem .85rem;border-radius:999px;cursor:pointer;font-family:inherit;
+ font-size:.83rem;font-weight:600;transition:.2s}
+.opts button:hover{background:var(--brand);color:#06070f}
+.typing{display:flex;gap:.25rem;padding:.8rem 1rem;background:rgba(255,255,255,.07);
+ border:1px solid var(--stroke);border-radius:16px;border-bottom-left-radius:5px;align-self:flex-start}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--txt-dim);animation:bounce 1.2s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes bounce{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-6px);opacity:1}}
+.chat-foot{padding:.8rem;border-top:1px solid var(--stroke);display:flex;gap:.5rem}
+.chat-foot input{flex:1;padding:.7rem .9rem;border-radius:999px;background:rgba(255,255,255,.05);
+ border:1px solid var(--stroke);color:var(--txt);font-family:inherit;font-size:.9rem}
+.chat-foot input:focus{outline:none;border-color:var(--brand-2)}
+.chat-foot button{width:42px;height:42px;border-radius:50%;border:0;cursor:pointer;
+ background:linear-gradient(120deg,var(--brand),var(--brand-2));color:#06070f;font-size:1.1rem}
+.lead-card{background:rgba(49,224,161,.1);border:1px solid rgba(49,224,161,.4);
+ border-radius:14px;padding:1rem;font-size:.86rem;align-self:stretch}
+.lead-card b{color:var(--ok);display:block;margin-bottom:.4rem}
+.lead-card div{color:var(--txt-dim);margin-bottom:.2rem}
+/* workflow */
+.flow{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;justify-content:center;margin-top:1.5rem}
+.node{padding:.9rem 1.2rem;border-radius:14px;background:rgba(19,23,48,.8);
+ border:1px solid var(--stroke);font-size:.86rem;font-weight:700;text-align:center;min-width:120px}
+.node small{display:block;color:var(--txt-dim);font-weight:500;font-size:.75rem;margin-top:.2rem}
+.arrow{color:var(--brand-2);font-size:1.3rem}
+@media(max-width:760px){.arrow{transform:rotate(90deg)}}
+</style><link rel="canonical" href="https://www.yourdomain.com/demos/ai-chatbot.html">
+<meta property="og:url" content="https://www.yourdomain.com/demos/ai-chatbot.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/demos/ai-chatbot.html"}</script>
+</head><body>
+<div class="bg-fx"></div>
+<div class="demo-bar">
+  <strong>◆ SAMPLE PROJECT</strong>
+  <span>AI Chatbot demo — talk to it, it qualifies you like a real lead</span>
+  <a href="../index.html">← Back to agency</a>
+  <a href="../contact.html">Get this built →</a>
+</div>
+
+<section style="padding-bottom:1.5rem">
+ <div class="wrap center">
+  <div class="eyebrow" data-r>Live Interactive Demo</div>
+  <h1 data-r data-d="60">AI Chatbot that <span class="grad">qualifies leads</span></h1>
+  <p class="lead center" data-r data-d="120">This bot asks the right questions, scores the lead and hands your sales team a complete brief. Try it — it responds to the buttons and to typing.</p>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <div class="chat" data-r>
+   <div class="chat-head">
+    <div class="av">🤖</div>
+    <div><b>Ava — Sales Assistant</b><small>● Online · replies instantly</small></div>
+   </div>
+   <div class="chat-body" id="cb"></div>
+   <div class="chat-foot">
+    <input id="inp" placeholder="Type a message..." onkeydown="if(event.key==='Enter')send()">
+    <button onclick="send()">➤</button>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="center"><div class="eyebrow" data-r>Behind The Scenes</div><h2 data-r>The automation that runs after</h2>
+  <p class="lead center" data-r>Every qualified conversation triggers this workflow — no human involved until the call is booked.</p></div>
+  <div class="flow" data-r>
+   <div class="node">💬 Chat<small>Lead qualified</small></div><span class="arrow">→</span>
+   <div class="node">🧠 AI Score<small>Intent ranked</small></div><span class="arrow">→</span>
+   <div class="node">📋 CRM<small>Record created</small></div><span class="arrow">→</span>
+   <div class="node">📧 Email<small>Follow-up sent</small></div><span class="arrow">→</span>
+   <div class="node">📅 Calendar<small>Call booked</small></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="grid g3">
+   <div class="glass card" data-r><div class="ico">⏱️</div><h3>24/7 Coverage</h3><p>Leads arriving at 3am get the same response as 3pm. No missed enquiries.</p></div>
+   <div class="glass card" data-r data-d="70"><div class="ico">📉</div><h3>-70% Manual Replies</h3><p>Routine questions handled automatically so your team handles only real opportunities.</p></div>
+   <div class="glass card" data-r data-d="140"><div class="ico">🎯</div><h3>Pre-Qualified</h3><p>Budget, timeline and need captured before a human ever joins the conversation.</p></div>
+  </div>
+ </div>
+</section>
+
+<footer style="border-top:1px solid var(--stroke);padding:2.5rem 0;text-align:center">
+ <div class="wrap">
+  <p style="color:var(--txt-dim);font-size:.9rem">Chatbots and automation from <strong style="color:#fff">Premium Agency</strong> — AI packages from $399.</p>
+  <a class="btn btn-primary" href="../contact.html"><span>Automate My Business</span></a>
+ </div>
+</footer>
+
+<script src="demo.js" defer></script>
+<script>
+var cb=document.getElementById('cb'),step=0,lead={};
+function add(t,cls){var d=document.createElement('div');d.className='msg '+cls;d.textContent=t;
+ cb.appendChild(d);cb.scrollTop=cb.scrollHeight;return d}
+function opts(list){var w=document.createElement('div');w.className='opts';
+ list.forEach(function(o){var b=document.createElement('button');b.textContent=o;
+  b.onclick=function(){w.remove();pick(o)};w.appendChild(b)});
+ cb.appendChild(w);cb.scrollTop=cb.scrollHeight}
+function typing(cb2){var t=document.createElement('div');t.className='typing';
+ t.innerHTML='<i></i><i></i><i></i>';cb.appendChild(t);cb.scrollTop=cb.scrollHeight;
+ setTimeout(function(){t.remove();cb2()},800+Math.random()*500)}
+var flow=[
+ {q:"Hi! I'm Ava. I can help you scope a project in about 60 seconds. What are you looking for?",
+  o:["A new website","An online store","Marketing / SEO","Something else"],k:'need'},
+ {q:"Great choice. What's your rough budget for this?",
+  o:["Under $500","$500 – $2,000","$2,000 – $5,000","$5,000+"],k:'budget'},
+ {q:"Understood. How soon do you need it live?",
+  o:["ASAP — this month","1–3 months","Just researching"],k:'timeline'},
+ {q:"Last one — what's the best email for your proposal?",o:null,k:'email'}
+];
+function ask(){
+ if(step>=flow.length){finish();return}
+ var f=flow[step];
+ typing(function(){add(f.q,'bot');if(f.o)opts(f.o)});
+}
+function pick(v){add(v,'user');lead[flow[step].k]=v;step++;setTimeout(ask,350)}
+function send(){
+ var i=document.getElementById('inp'),v=i.value.trim();if(!v)return;i.value='';
+ add(v,'user');
+ if(step<flow.length){lead[flow[step].k]=v;step++;setTimeout(ask,350)}
+ else{typing(function(){add("Thanks! A specialist will follow up shortly. 👋",'bot')})}
+}
+function finish(){
+ typing(function(){
+  add("Perfect — I've got everything I need. Here's your summary:",'bot');
+  var c=document.createElement('div');c.className='lead-card';
+  c.innerHTML='<b>✓ QUALIFIED LEAD — sent to CRM</b>'+
+   '<div>Need: '+(lead.need||'—')+'</div>'+
+   '<div>Budget: '+(lead.budget||'—')+'</div>'+
+   '<div>Timeline: '+(lead.timeline||'—')+'</div>'+
+   '<div>Contact: '+(lead.email||'—')+'</div>'+
+   '<div style="margin-top:.5rem;color:#31e0a1">Score: 92/100 · Priority: HIGH</div>';
+  cb.appendChild(c);cb.scrollTop=cb.scrollHeight;
+  setTimeout(function(){typing(function(){
+   add("A calendar invite is on its way to your inbox. Anything else I can help with?",'bot')})},900);
+ });
+}
+setTimeout(ask,600);
+</script></body></html>

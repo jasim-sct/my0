@@ -1,0 +1,252 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>AI Chatbots — FLUX</title><meta name="description" content="Conversational agents from FAQ bots to retrieval-augmented action agents, with a live trace panel.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="f.css">
+<script src="f.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=JetBrains+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/flux/chatbots.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/flux/chatbots.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/flux/chatbots.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>FLUX — AI &amp; automation studio by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<nav class="rail">
+ <div class="mark">F</div>
+ <a href="index.html" aria-label="Overview">◈<span class="tip">Overview</span></a><a href="chatbots.html" class='on' aria-label="AI Chatbots">◐<span class="tip">AI Chatbots</span></a><a href="automation.html" aria-label="Automation">⇄<span class="tip">Automation</span></a><a href="content-systems.html" aria-label="Content Systems">✦<span class="tip">Content Systems</span></a><a href="pricing.html" aria-label="Pricing">◫<span class="tip">Pricing</span></a><a href="contact.html" aria-label="Start a build">▶<span class="tip">Start a build</span></a>
+ <div class="sp"></div>
+ <button class="kbtn" onclick="palOpen()" title="Command palette">⌘K</button>
+</nav>
+<main class="app"><div class="tabbar"><a class="tab" href="index.html"><i>◈</i>overview.md</a><a class="tab on" href="chatbots.html"><i>◐</i>chatbots.ts</a><a class="tab" href="automation.html"><i>⇄</i>workflows.json</a><a class="tab" href="content-systems.html"><i>✦</i>prompts.yaml</a></div>
+<section style="padding-top:2rem"><div class="wrap">
+ <div class="crumb"><a href="index.html">flux</a> / chatbots.ts</div>
+ <div class="split" style="gap:2.2rem;align-items:center;margin-top:.6rem">
+  <div data-r>
+   <span class="tag c">01 · chatbots</span>
+   <h1 style="margin-top:.8rem">Bots that know<br>when to stop</h1>
+   <p class="lead">From a simple FAQ responder to a retrieval-augmented agent
+    that reads your docs and takes actions. Every reply is traced —
+    you can see exactly why it said what it said.</p>
+   <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.3rem">
+    <a class="btn btn-p" href="chatbots.html#demo">Try the agent</a>
+    <a class="btn" href="contact.html">Scope a bot</a></div>
+  </div>
+  <div data-r data-d="100"><img src="img/bot.webp" alt="Conversational AI" width="520" height="520"
+    style="border-radius:12px;border:1px solid var(--edge2)"></div>
+ </div>
+</div></section>
+
+<section id="demo" style="padding-top:1rem"><div class="wrap">
+ <div class="split" style="gap:1rem">
+  <div class="panel" data-r>
+   <div class="panel-head"><div class="dots"><i></i><i></i><i></i></div>
+    <span>agent · support-v3</span><span class="sp"></span>
+    <span class="tag ok" id="modeTag">grounded</span></div>
+   <div class="chat">
+    <div class="chat-log" id="log"></div>
+    <div class="chat-quick" id="quick"></div>
+    <div class="chat-in">
+     <input id="inp" placeholder="Ask it something..." onkeydown="if(event.key==='Enter')sendMsg()">
+     <button onclick="sendMsg()">➤</button></div>
+   </div>
+  </div>
+
+  <div data-r data-d="80">
+   <div class="panel" style="margin-bottom:1rem">
+    <div class="panel-head"><span>trace</span><span class="sp"></span>
+     <span class="note" id="traceCount">0 events</span></div>
+    <div class="trace" id="trace"><span class="t-d">Waiting for input…</span></div>
+   </div>
+   <div class="g2" style="gap:.7rem">
+    <div class="card" style="padding:.9rem"><b class="mono" style="font-size:1.25rem;display:block" id="tTok">0</b>
+     <span class="note">tokens used</span></div>
+    <div class="card" style="padding:.9rem"><b class="mono" style="font-size:1.25rem;display:block;color:var(--cyan)" id="tConf">—</b>
+     <span class="note">confidence</span></div>
+    <div class="card" style="padding:.9rem"><b class="mono" style="font-size:1.25rem;display:block;color:var(--lime)" id="tLat">0ms</b>
+     <span class="note">latency</span></div>
+    <div class="card" style="padding:.9rem"><b class="mono" style="font-size:1.25rem;display:block" id="tCost">$0.000</b>
+     <span class="note">cost</span></div>
+   </div>
+  </div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <span class="tag" data-r>tiers</span>
+ <h2 data-r style="margin:.7rem 0 1.4rem">Three levels of bot</h2>
+ <div class="g3">
+  <div class="card" data-r><span class="tag">tier 1</span>
+   <h3 style="margin-top:.7rem">FAQ responder</h3>
+   <p class="lead" style="font-size:.87rem">Answers from a fixed knowledge base.
+    Deflects the top 40 questions, escalates everything else.</p>
+   <ul class="tick" style="margin-top:.7rem"><li>Website widget</li><li>Fixed knowledge base</li>
+    <li>Escalation to email</li></ul>
+   <p class="note" style="margin-top:.9rem">2 weeks · from $2,400</p></div>
+  <div class="card" data-r data-d="70" style="border-color:var(--indigo)"><span class="tag i">tier 2 · common</span>
+   <h3 style="margin-top:.7rem">RAG agent</h3>
+   <p class="lead" style="font-size:.87rem">Reads your live docs, tickets and product data.
+    Cites its sources and refuses anything it cannot ground.</p>
+   <ul class="tick" style="margin-top:.7rem"><li>Vector search over your content</li>
+    <li>Source citation on every reply</li><li>Auto re-index on change</li></ul>
+   <p class="note" style="margin-top:.9rem">4 weeks · from $6,800</p></div>
+  <div class="card" data-r data-d="140"><span class="tag l">tier 3</span>
+   <h3 style="margin-top:.7rem">Action agent</h3>
+   <p class="lead" style="font-size:.87rem">Reads and writes. Books, refunds, updates records
+    and opens tickets — inside permission boundaries you define.</p>
+   <ul class="tick" style="margin-top:.7rem"><li>Tool calling into your APIs</li>
+    <li>Per-action permission gates</li><li>Full audit log</li></ul>
+   <p class="note" style="margin-top:.9rem">6–8 weeks · from $14,000</p></div>
+ </div>
+</div></section>
+
+<script>
+var FLOW=[
+ {q:['Do you integrate with HubSpot?','What does a RAG agent cost?','Can it refund an order?'],
+  a:{'Do you integrate with HubSpot?':{t:'Yes — HubSpot is a first-class integration. We read contacts and deals, and can write back notes, tasks and lifecycle stage changes. Setup is usually half a day.',src:'integrations.md · line 42',conf:0.94},
+     'What does a RAG agent cost?':{t:'A tier-2 retrieval agent starts at $6,800 and typically takes four weeks. That includes indexing your docs, citation, guardrails and the escalation path.',src:'pricing.yaml · tier-2',conf:0.97},
+     'Can it refund an order?':{t:'A tier-3 action agent can, yes — inside limits you set. Most clients cap auto-refunds at a value threshold and route anything above it to a human with the full transcript attached.',src:'actions.md · refunds',conf:0.89}}},
+ {q:['What happens if it does not know?','How long does handover take?'],
+  a:{'What happens if it does not know?':{t:'It says so. Below 0.72 confidence the agent stops generating and escalates with the full conversation. We would rather it refuse than invent — that threshold is configurable.',src:'guardrails.ts · line 18',conf:0.96},
+     'How long does handover take?':{t:'Half a day. You get the repo, the prompt library, the eval set and a recorded walkthrough. Everything runs in your cloud account, not ours.',src:'handover.md',conf:0.91}}},
+ {q:['Book a scoping call'],
+  a:{'Book a scoping call':{t:'I can pass you to the team now. Would you rather do a 30-minute call this week, or start with a written scope? Both are free.',src:'escalation · human-handoff',conf:0.99}}}
+];
+var step=0,log,trace,tokens=0,events=0;
+
+function add(t,cls,who){
+ var d=document.createElement('div');d.className='bubble '+cls;
+ d.innerHTML=(who?'<span class="who">'+who+'</span>':'')+t;
+ log.appendChild(d);log.scrollTop=log.scrollHeight;
+}
+function typing(cb){
+ var t=document.createElement('div');t.className='typing';
+ t.innerHTML='<i></i><i></i><i></i>';log.appendChild(t);log.scrollTop=log.scrollHeight;
+ setTimeout(function(){t.remove();cb()},800+Math.random()*400);
+}
+function traceLine(cls,txt){
+ events++;
+ trace.innerHTML+='<div class="'+cls+'">'+txt+'</div>';
+ trace.scrollTop=trace.scrollHeight;
+ document.getElementById('traceCount').textContent=events+' events';
+}
+function runTrace(q,res){
+ trace.innerHTML='';events=0;
+ var lat=Math.round(320+Math.random()*260);
+ var tk=Math.round(180+Math.random()*220);
+ tokens+=tk;
+ traceLine('t-in','→ input: "'+q.slice(0,42)+(q.length>42?'…':'')+'"');
+ setTimeout(function(){traceLine('t-d','· classify → intent=question, sentiment=neutral')},220);
+ setTimeout(function(){traceLine('t-d','· embed → 1536-dim vector')},400);
+ setTimeout(function(){traceLine('t-ok','✓ retrieved 3 chunks · top match: '+res.src)},640);
+ setTimeout(function(){
+  if(res.conf<0.72)traceLine('t-w','! confidence '+res.conf+' below threshold → escalate');
+  else traceLine('t-ok','✓ grounded · confidence '+res.conf);
+ },860);
+ setTimeout(function(){
+  traceLine('t-d','· guards passed: grounding, scope, pii, cost');
+  document.getElementById('tTok').textContent=tokens.toLocaleString();
+  document.getElementById('tConf').textContent=res.conf;
+  document.getElementById('tLat').textContent=lat+'ms';
+  document.getElementById('tCost').textContent='$'+(tokens*0.000004).toFixed(3);
+ },1060);
+}
+function paintQuick(){
+ var el=document.getElementById('quick');
+ if(step>=FLOW.length){el.innerHTML='<button onclick="resetBot()">↻ restart</button>';return}
+ el.innerHTML=FLOW[step].q.map(function(x){
+  return '<button onclick="pick(\''+x.replace(/'/g,"\\'")+'\')">'+x+'</button>'}).join('');
+}
+function pick(x){
+ add(x,'usr');
+ var res=FLOW[step]&&FLOW[step].a[x];
+ step++;
+ document.getElementById('quick').innerHTML='';
+ if(res)runTrace(x,res);
+ typing(function(){
+  add((res?res.t:'Let me get that checked.')+
+   (res?'<div class="note" style="margin-top:.5rem">source: '+res.src+'</div>':''),'bot','agent · support-v3');
+  paintQuick();
+ });
+}
+function sendMsg(){
+ var i=document.getElementById('inp'),v=i.value.trim();
+ if(!v)return;i.value='';add(v,'usr');
+ document.getElementById('quick').innerHTML='';
+ var res={t:'I can only answer from the indexed knowledge base, and I did not find a confident match for that. I am escalating to a human with your full message attached — someone will pick it up shortly.',
+  src:'guardrails.ts · below-threshold',conf:0.41};
+ runTrace(v,res);
+ setTimeout(function(){document.getElementById('modeTag').textContent='escalated';
+  document.getElementById('modeTag').className='tag a'},900);
+ typing(function(){
+  add(res.t+'<div class="note" style="margin-top:.5rem">confidence 0.41 → escalated</div>','bot','agent · support-v3');
+  paintQuick();
+ });
+}
+function resetBot(){
+ step=0;tokens=0;events=0;log.innerHTML='';
+ trace.innerHTML='<span class="t-d">Waiting for input…</span>';
+ document.getElementById('tTok').textContent='0';
+ document.getElementById('tConf').textContent='—';
+ document.getElementById('tLat').textContent='0ms';
+ document.getElementById('tCost').textContent='$0.000';
+ document.getElementById('traceCount').textContent='0 events';
+ document.getElementById('modeTag').textContent='grounded';
+ document.getElementById('modeTag').className='tag ok';
+ boot();
+}
+function boot(){
+ setTimeout(function(){
+  typing(function(){
+   add('Hi — I am the Flux support agent. I answer from indexed docs and cite sources. Ask me anything, or try one of these.','bot','agent · support-v3');
+   paintQuick();
+  });
+ },450);
+}
+document.addEventListener('DOMContentLoaded',function(){
+ log=document.getElementById('log');trace=document.getElementById('trace');
+ boot();
+});
+</script><footer class="ftr"><div class="wrap">
+ <div class="fg">
+  <div><div style="display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem">
+    <span style="width:26px;height:26px;border-radius:7px;display:grid;place-items:center;
+     background:linear-gradient(135deg,var(--indigo),var(--cyan));color:#fff;font-size:.78rem">F</span>Flux</div>
+   <p class="lead" style="font-size:.86rem;margin-top:.7rem;max-width:32ch">
+    We build the bots, the pipelines and the prompt systems — then hand you the keys and the documentation.</p></div>
+  <div><h4>Build</h4><ul>
+   <li><a href="chatbots.html">AI Chatbots</a></li>
+   <li><a href="automation.html">Business Automation</a></li>
+   <li><a href="content-systems.html">AI Content Systems</a></li></ul></div>
+  <div><h4>Studio</h4><ul>
+   <li><a href="pricing.html">Pricing</a></li>
+   <li><a href="contact.html">Start a build</a></li>
+   <li><a href="../../index.html">Premium Agency</a></li></ul></div>
+  <div><h4>Stack</h4><ul>
+   <li class="note">OpenAI · Anthropic · Gemini</li>
+   <li class="note">Zapier · Make · n8n</li>
+   <li class="note">Pinecone · Supabase</li>
+   <li class="note">Node · Python · Edge</li></ul></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> Flux — demonstration project.</span>
+  <span>Built by Premium Agency</span></div>
+</div></footer></main><div class="status">
+ <span class="s"><span class="dot"></span>connected</span>
+ <span class="s hide-s">chatbots.ts</span>
+ <span class="s hide-s">agent: support-v3</span>
+ <span class="sp"></span>
+ <span class="s hide-s">flux-studio v2.4</span>
+ <span class="s" id="clk">--:--:--</span>
+</div><div class="pal-ovl" id="palOvl" onclick="palClose()"></div>
+<div class="pal" id="pal">
+ <input id="palInput" placeholder="Jump to a page or run a demo..." autocomplete="off" spellcheck="false">
+ <div class="pal-list" id="palList"></div>
+ <div class="pal-foot"><span><span class="kbd">↑</span><span class="kbd">↓</span> navigate</span>
+  <span><span class="kbd">↵</span> open</span><span><span class="kbd">esc</span> close</span></div>
+</div></body></html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Shop — Terra &amp; Co</title><meta name="description" content="Browse organic boxes, bakery, pantry and drinks.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="terra.css">
+<script src="terra.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Karla:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Karla:wght@400;700&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/terra/shop.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/terra/shop.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/terra/shop.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>Terra &amp; Co — website, store, web app &amp; design system by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<header class="hdr"><div class="wrap hdr-in">
+ <a class="logo" href="index.html"><span class="leaf">✦</span>Terra &amp; Co</a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+ <nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="shop.html" class="on">Shop</a>
+  <a href="subscription.html">Boxes</a>
+  <a href="account.html">My Account</a>
+  <a href="story.html">Our Story</a>
+  <a href="design-system.html">Design System</a>
+ </nav>
+ <div class="hdr-tools">
+  <button class="cartbtn" onclick="openCart()">Basket<span class="cart-n" data-cart-n style="display:none">0</span></button>
+ </div>
+</div></header>
+<section style="padding-bottom:1rem"><div class="wrap">
+ <div class="crumbs"><a href="index.html">Home</a> / Shop</div>
+ <h1 id="ttl" data-r>The shop</h1>
+ <p class="lead" data-r id="sub">Everything ready this week, straight off the farm.</p>
+</div></section>
+
+<section style="padding-top:1rem"><div class="wrap">
+ <div class="filters">
+  <div class="fchips" id="chips"></div>
+  <select class="sel" id="sort" onchange="run()">
+   <option value="">Sort — featured</option>
+   <option value="price-asc">Price, low to high</option>
+   <option value="price-desc">Price, high to low</option>
+   <option value="rating">Best rated</option>
+  </select>
+ </div>
+ <p class="note" id="cnt" style="margin-bottom:1.2rem"></p>
+ <div class="grid g4" id="grid"></div>
+ <div class="empty" id="none" style="display:none">Nothing matches that.
+  <a class="link-u" href="shop.html">Clear filters →</a></div>
+</div></section>
+
+<script>
+var qs=new URLSearchParams(location.search);
+var st={kind:qs.get('kind')||'all',q:qs.get('q')||'',sort:''};
+var LBL={all:'Everything',boxes:'Boxes',bakery:'Bakery',pantry:'Pantry',drinks:'Drinks'};
+document.addEventListener('DOMContentLoaded',function(){
+ var ks=['all'].concat(Terra.kinds());
+ document.getElementById('chips').innerHTML=ks.map(function(k){
+  return '<button class="fchip'+(k===st.kind?' on':'')+'" onclick="setK(\''+k+'\',this)">'+
+   (LBL[k]||k)+'</button>'}).join('');
+ if(st.kind!=='all')document.getElementById('ttl').textContent=LBL[st.kind]||st.kind;
+ run();
+});
+function setK(k,b){st.kind=k;
+ document.querySelectorAll('.fchip').forEach(function(x){x.classList.remove('on')});
+ b.classList.add('on');
+ document.getElementById('ttl').textContent=LBL[k]||k;run()}
+function run(){
+ st.sort=document.getElementById('sort').value;
+ var r=Terra.query(st);
+ document.getElementById('cnt').textContent=r.length+' item'+(r.length===1?'':'s');
+ document.getElementById('none').style.display=r.length?'none':'block';
+ document.getElementById('grid').innerHTML=r.map(function(p,i){return pcard(p,i)}).join('');
+ document.querySelectorAll('#grid [data-r]').forEach(function(e,i){
+  setTimeout(function(){e.classList.add('in')},i*55)});
+}
+function pcard(p,i){
+ var sale=p.was>p.price;
+ return '<article class="pcard" data-r>'+
+  '<a class="pthumb" href="product.html@id='+p.id+'.html">'+
+  (p.tag?'<span class="ptag '+(p.tag==='Sale'?'sale':'organic')+'">'+p.tag+'</span>':'')+
+  '<img src="https://moccasin-meerkat-640470.hostingersite.com/projects/terra/img/'+p.img+'.webp" alt="'+p.name+'" loading="lazy" width="620" height="620"></a>'+
+  '<div class="pbody"><span class="pkind">'+p.kind+'</span>'+
+  '<h3><a href="product.html@id='+p.id+'.html">'+p.name+'</a></h3>'+
+  '<p class="pdesc">'+p.blurb+'</p>'+
+  '<div class="stars">'+stars(p.rating)+'<small>('+p.rev+')</small></div>'+
+  '<div class="pprice">'+Terra.money(p.price)+(sale?'<s>'+Terra.money(p.was)+'</s>':'')+'</div>'+
+  '<button class="btn btn-o btn-sm btn-full" onclick="qa(\''+p.id+'\',this)">Add to basket</button>'+
+  '</div></article>';
+}
+function qa(id,b){Terra.add(id,1);b.textContent='✓ Added';
+ setTimeout(function(){b.textContent='Add to basket'},1300);tst('Added to your basket')}
+</script><footer class="ftr"><div class="wrap">
+ <div class="fgrid">
+  <div><div class="logo"><span class="leaf">✦</span>Terra &amp; Co</div>
+   <p style="color:rgba(250,246,239,.78);font-size:.92rem;margin-top:.8rem;max-width:34ch">
+    A working farm and a small shop. We grow it, pick it in the morning and bring it to your door the same week.</p>
+   <p style="color:rgba(250,246,239,.55);font-size:.82rem">Certified organic · Est. 2011 · Ashfield Valley</p></div>
+  <div><h4>Shop</h4><ul>
+   <li><a href="shop.html@kind=boxes.html">Veg &amp; fruit boxes</a></li>
+   <li><a href="shop.html@kind=bakery.html">Bakery</a></li>
+   <li><a href="shop.html@kind=pantry.html">Pantry</a></li>
+   <li><a href="shop.html@kind=drinks.html">Drinks</a></li>
+   <li><a href="shop.html">Everything</a></li></ul></div>
+  <div><h4>Company</h4><ul>
+   <li><a href="story.html">Our story</a></li>
+   <li><a href="subscription.html">How boxes work</a></li>
+   <li><a href="account.html">My account</a></li>
+   <li><a href="design-system.html">Design system</a></li>
+   <li><a href="contact.html">Contact</a></li></ul></div>
+  <div><h4>Join the list</h4>
+   <p style="color:rgba(250,246,239,.72);font-size:.88rem">What is ready this week, plus one recipe. No more than that.</p>
+   <form onsubmit="event.preventDefault();this.innerHTML='<p style=color:#cfe0c4;font-size:.9rem>✓ You are on the list.</p>'">
+    <div class="field"><input placeholder="you@example.com" required
+      style="background:rgba(250,246,239,.1);border-color:rgba(250,246,239,.28);color:#faf6ef"></div>
+    <button class="btn btn-clay btn-full btn-sm" type="submit">Subscribe</button></form></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> Terra &amp; Co — demonstration project.</span>
+  <span>Designed &amp; built by Premium Agency</span></div>
+</div></footer>
+
+<div class="ovl" id="ovl" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer">
+ <div class="dhead"><h3>Your basket</h3><button onclick="closeCart()">×</button></div>
+ <div class="dbody" id="dbody"></div>
+ <div class="dfoot" id="dfoot"></div>
+</aside>
+
+<script>
+function openCart(){document.getElementById('drawer').classList.add('open');
+ document.getElementById('ovl').classList.add('on');paintCart()}
+function closeCart(){document.getElementById('drawer').classList.remove('open');
+ document.getElementById('ovl').classList.remove('on')}
+function paintCart(){
+ var ls=Terra.lines(),t=Terra.totals();
+ document.getElementById('dbody').innerHTML = ls.length ? ls.map(function(l){
+  return '<div class="ci"><img src="https://moccasin-meerkat-640470.hostingersite.com/projects/terra/img/'+l.p.img+'.webp" alt="">'+
+  '<div><b>'+l.p.name+'</b>'+(l.opt?'<small>'+l.opt+'</small>':'')+
+  '<div class="qty"><button onclick="Terra.setQty(\''+l.key+'\','+(l.q-1)+')">−</button>'+
+  '<span>'+l.q+'</span><button onclick="Terra.setQty(\''+l.key+'\','+(l.q+1)+')">+</button></div>'+
+  '<button class="rm" onclick="Terra.remove(\''+l.key+'\')">Remove</button></div>'+
+  '<strong>'+Terra.money(l.line)+'</strong></div>'}).join('')
+  : '<div class="empty">Your basket is empty.<br><a class="link-u" href="shop.html">See what is ready →</a></div>';
+ var f='';
+ if(ls.length){
+  f+='<div class="trow"><span>Subtotal</span><span>'+Terra.money(t.sub)+'</span></div>';
+  if(t.disc>0)f+='<div class="trow"><span class="free">Discount ('+t.code+')</span><span class="free">−'+Terra.money(t.disc)+'</span></div>';
+  f+='<div class="trow"><span>Delivery</span><span>'+(t.ship===0?'<span class="free">Free</span>':Terra.money(t.ship))+'</span></div>';
+  f+='<div class="trow big"><span>Total</span><span>'+Terra.money(t.total)+'</span></div>';
+  if(t.sub<50&&t.ship>0)f+='<p class="note" style="margin-bottom:.8rem">'+Terra.money(50-t.sub)+' more for free delivery.</p>';
+  f+='<a class="btn btn-p btn-full" href="checkout.html">Checkout</a>';
+ }
+ document.getElementById('dfoot').innerHTML=f;
+}
+document.addEventListener('cart:change',paintCart);
+document.addEventListener('DOMContentLoaded',paintCart);
+</script></body></html>

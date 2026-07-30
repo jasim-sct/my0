@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Contact — KINETIK</title><meta name="description" content="Start a project with the studio.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="k.css">
+<script src="k.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&family=JetBrains+Mono&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/kinetik/contact.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/kinetik/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/kinetik/contact.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>KINETIK — brand, graphic, video &amp; motion studio by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<header class="hdr"><div class="wrap hdr-in">
+ <a class="logo" href="index.html">Kinetik<i></i></a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+ <nav class="nav">
+  <a href="index.html">Index</a>
+  <a href="work.html">Work</a>
+  <a href="showreel.html">Showreel</a>
+  <a href="motion-lab.html">Motion Lab</a>
+  <a href="brand-guidelines.html">Guidelines</a>
+  <a href="studio.html">Studio</a>
+ </nav>
+ <a class="btn btn-sm" href="contact.html"><span>Start a project</span></a>
+</div></header>
+<section style="padding-bottom:1.6rem"><div class="wrap">
+ <div class="crumbs"><a href="index.html">Index</a> / Contact</div>
+ <h1 data-lines="Start a|project" style="font-size:clamp(2.4rem,7.4vw,5.4rem)"></h1>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="g2" style="gap:3rem;align-items:start">
+  <form id="frm" novalidate data-r onsubmit="send(event)">
+   <div class="field"><label>Your name *</label><input name="name" required placeholder="Marit Sørensen"><span class="msg">Required</span></div>
+   <div class="field"><label>Email *</label><input name="email" type="email" required placeholder="marit@company.com"><span class="msg">Needs a valid email</span></div>
+   <div class="field"><label>Company</label><input name="co" placeholder="Aperture Optics"></div>
+   <div class="field"><label>What do you need? *</label>
+    <select name="svc" required>
+     <option value="">Select a discipline</option>
+     <option>Brand Identity</option><option>Graphic Design</option>
+     <option>Video Editing</option><option>Motion Graphics &amp; Animation</option>
+     <option>More than one of the above</option></select><span class="msg">Pick one</span></div>
+   <div class="field"><label>Budget</label>
+    <select name="bud"><option>Under $10k</option><option>$10k – $30k</option>
+     <option>$30k – $75k</option><option>$75k+</option><option>Not sure yet</option></select></div>
+   <div class="field"><label>Tell us about it *</label>
+    <textarea name="msg" required placeholder="What is the project, and when does it need to exist?"></textarea>
+    <span class="msg">Give us something to go on</span></div>
+   <button class="btn btn-red btn-full" type="submit"><span>Send it →</span></button>
+  </form>
+
+  <div data-r data-d="80">
+   <div class="lbl">Direct</div>
+   <p class="lead">hello@kinetik.demo<br>+49 30 0000 0000</p>
+   <div class="hr"></div>
+   <div class="lbl">Studios</div>
+   <p class="lead">Berlin — Oranienstraße 12<br>London — Redchurch Street 40</p>
+   <div class="hr"></div>
+   <div class="lbl">What happens next</div>
+   <ol class="lead" style="font-size:.92rem;padding-left:1.1rem;list-style:decimal">
+    <li style="margin-bottom:.5rem">We read it properly. A person, not a form router.</li>
+    <li style="margin-bottom:.5rem">If it is a fit, we book a 45-minute call within two days.</li>
+    <li>If it is not, we say so and point you somewhere better.</li>
+   </ol>
+  </div>
+ </div>
+</div></section>
+
+<script>
+function send(e){
+ e.preventDefault();
+ var f=e.target,ok=true;
+ f.querySelectorAll('[required]').forEach(function(i){
+  var bad=!i.value.trim();
+  if(i.type==='email')bad=!/^[^@]+@[^@]+\.[^@]+$/.test(i.value);
+  i.closest('.field').classList.toggle('err',bad);if(bad)ok=false});
+ if(!ok){tst('Check the highlighted fields');return}
+ f.innerHTML='<div class="lbl red">Message sent</div>'+
+  '<h2 style="font-size:clamp(1.8rem,4vw,3rem)">Thanks — we will<br>be in touch.</h2>'+
+  '<p class="lead">This is a demonstration form. On a live build it reaches the studio inbox immediately.</p>'+
+  '<a class="btn btn-sm" href="work.html" style="margin-top:1rem"><span>Look at the work meanwhile</span></a>';
+}
+</script><footer class="ftr"><div class="wrap">
+ <div class="fg">
+  <div><div class="logo">Kinetik<i></i></div>
+   <p class="lead" style="font-size:.92rem;margin-top:1rem;max-width:34ch">
+    A studio for brands that need to move. Identity, print, film and animation
+    under one roof, so nothing gets lost in the handover.</p></div>
+  <div><h4>Disciplines</h4><ul>
+   <li><a href="work.html@cat=brand.html">Brand Identity</a></li>
+   <li><a href="work.html@cat=graphic.html">Graphic Design</a></li>
+   <li><a href="work.html@cat=video.html">Video Editing</a></li>
+   <li><a href="work.html@cat=motion.html">Motion Graphics</a></li></ul></div>
+  <div><h4>Studio</h4><ul>
+   <li><a href="showreel.html">Showreel</a></li>
+   <li><a href="motion-lab.html">Motion Lab</a></li>
+   <li><a href="brand-guidelines.html">Guidelines</a></li>
+   <li><a href="studio.html">About</a></li>
+   <li><a href="contact.html">Contact</a></li></ul></div>
+  <div><h4>Elsewhere</h4><ul>
+   <li><a href="../../index.html">Premium Agency</a></li>
+   <li><a href="../../contact.html">Commission a build</a></li></ul>
+   <p class="note" style="margin-top:1rem">Berlin · London<br>hello@kinetik.demo</p></div>
+ </div>
+ <div class="bigtype">Kinetik</div>
+ <div class="fbot"><span>© <span data-year></span> Kinetik — demonstration project.</span>
+  <span>Designed &amp; built by Premium Agency</span></div>
+</div></footer>
+</body></html>

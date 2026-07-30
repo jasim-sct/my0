@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Blockchain &amp; Web3 — PROTO</title><meta name="description" content="Smart contracts, mint sites and wallet integration with a live gas cost estimator.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="p.css">
+<script src="p.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/proto/web3.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/proto/web3.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/proto/web3.html"}</script>
+</head><body>
+<div class="specbar"><strong>◆ CLIENT PROJECT</strong>
+ <span>PROTO — emerging skills lab by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<div class="docindex"><div class="docindex-in">
+ <div class="id"><b>P</b>PROTO</div>
+ <div class="secs"><a href="index.html"><i>00</i>INDEX</a><a href="no-code.html"><i>01</i>NO-CODE</a><a href="web3.html" class='on'><i>02</i>WEB3</a><a href="security.html"><i>03</i>SECURITY</a><a href="engagements.html"><i>04</i>ENGAGE</a><a href="brief.html"><i>05</i>BRIEF</a></div>
+ <div class="rev">REV 2.4 · MOD-02</div>
+</div></div>
+<div class="doc"><div class="sheet"><div class="gutter"><div class="num"><b>02</b><span>web3</span></div></div><div class="body">
+<section id="s0" style="padding-top:.6rem">
+ <div class="srule"><span class="n">02.1</span><span class="l"></span><span class="t">scope</span></div>
+ <span class="tag v">MOD-02</span>
+ <h1 style="margin-top:.7rem">Blockchain<br>&amp; Web3</h1>
+ <p class="lead">Smart contracts, mint sites and wallet integration. We model gas costs
+  before you pick a chain, because that decision is expensive to reverse and nobody
+  shows you the numbers up front.</p>
+ <div style="margin-top:1.3rem;border:1px solid var(--rule);max-width:520px">
+  <img src="img/web3.webp" alt="Blockchain module diagram" width="520" height="520">
+ </div>
+ <p class="note" style="margin-top:.5rem">FIG. 02 — contract module diagram</p>
+</section>
+
+<section id="s1">
+ <div class="srule"><span class="n">02.2</span><span class="l"></span><span class="t">gas estimator</span></div>
+ <p class="lead" style="margin-bottom:1rem">Live cost model. Pick a chain and an operation —
+  figures recalculate against the gas price you set.</p>
+ <div class="gg" style="grid-template-columns:1fr 320px;gap:1.2rem" id="gasWrap">
+  <div>
+   <div class="picker" id="chainPick" style="margin-bottom:.8rem"></div>
+   <div class="picker" id="opPick" style="margin-bottom:1rem"></div>
+   <div class="field"><label>gas price — <b id="vGwei">18</b> gwei</label>
+    <input type="range" id="gwei" min="1" max="200" step="1" value="18" oninput="calcGas()"></div>
+   <div class="field" style="margin:0"><label>token price — <b id="vUsd">$3,400</b></label>
+    <input type="range" id="usd" min="1" max="6000" step="1" value="3400" oninput="calcGas()"></div>
+   <div class="pre" style="margin-top:1rem" id="gasPre"></div>
+  </div>
+  <div class="card">
+   <span class="note">estimated cost</span>
+   <b class="mono" style="display:block;font-size:1.9rem;margin:.3rem 0;letter-spacing:-.04em"
+    id="gasUsd">$0.00</b>
+   <div class="hr" style="margin:.7rem 0"></div>
+   <dl class="dl">
+    <dt>gas units</dt><dd id="gasUnits">0</dd>
+    <dt>native</dt><dd id="gasNative">0</dd>
+    <dt>chain</dt><dd id="gasChain">—</dd>
+    <dt>×1,000 mints</dt><dd id="gasBulk">$0</dd>
+   </dl>
+   <div class="hr" style="margin:.7rem 0"></div>
+   <p class="note" id="gasNote" style="margin:0"></p>
+  </div>
+ </div>
+</section>
+
+<section id="s2">
+ <div class="srule"><span class="n">02.3</span><span class="l"></span><span class="t">contract spec</span></div>
+ <div class="gg" style="grid-template-columns:1fr 1fr;gap:1.4rem">
+  <div>
+   <h2>What ships</h2>
+   <table class="spec">
+    <tr><th>Artefact</th><th>Detail</th></tr>
+    <tr><td><b>Contract</b></td><td>ERC-721 or ERC-1155, OpenZeppelin base</td></tr>
+    <tr><td><b>Tests</b></td><td>Hardhat suite, &gt;90% coverage</td></tr>
+    <tr><td><b>Review pass</b></td><td>Reentrancy, overflow, access control, gas</td></tr>
+    <tr><td><b>Testnet deploy</b></td><td>Verified on explorer before mainnet</td></tr>
+    <tr><td><b>Mint site</b></td><td>Wallet connect, supply counter, error states</td></tr>
+    <tr><td><b>Metadata</b></td><td>IPFS pinned, frozen after reveal</td></tr>
+    <tr><td><b>Runbook</b></td><td>Deploy, pause, withdraw, transfer ownership</td></tr>
+   </table>
+  </div>
+  <div>
+   <h2>Review checklist</h2>
+   <div class="pre" style="margin-top:.6rem"><span class="c">// run before every mainnet deploy</span>
+<span class="k">✓</span> reentrancy guard on withdraw
+<span class="k">✓</span> access control on admin fns
+<span class="k">✓</span> supply cap enforced on-chain
+<span class="k">✓</span> mint price immutable after deploy
+<span class="k">✓</span> metadata URI freezable
+<span class="k">✓</span> no <span class="w">tx.origin</span> auth anywhere
+<span class="k">✓</span> withdraw uses <span class="s">call</span>, not <span class="w">transfer</span>
+<span class="k">✓</span> events emitted on state change
+<span class="w">!</span> no upgradeable proxy unless requested</div>
+   <p class="note" style="margin-top:.7rem">We are not a substitute for a formal audit on
+    high-value contracts. Above roughly $250k TVL we will tell you to commission one.</p>
+  </div>
+ </div>
+</section>
+
+<script>
+var curChain='eth',curOp='mint';
+function calcGas(){
+ var c=Proto.chains().filter(function(x){return x.k===curChain})[0];
+ var o=Proto.ops().filter(function(x){return x.k===curOp})[0];
+ var gwei=+document.getElementById('gwei').value;
+ var usd=+document.getElementById('usd').value;
+ document.getElementById('vGwei').textContent=gwei;
+ document.getElementById('vUsd').textContent='$'+usd.toLocaleString();
+ var native=o.gas*gwei/1e9;
+ var cost=native*usd;
+ document.getElementById('gasUnits').textContent=o.gas.toLocaleString();
+ document.getElementById('gasNative').textContent=native.toFixed(6)+' '+c.unit;
+ document.getElementById('gasChain').textContent=c.n;
+ document.getElementById('gasUsd').textContent='$'+cost.toFixed(2);
+ document.getElementById('gasBulk').textContent='$'+(cost*1000).toLocaleString(undefined,{maximumFractionDigits:0});
+ document.getElementById('gasPre').innerHTML=
+  '<span class="c">// '+o.n+' on '+c.n+'</span>\n'+
+  '<span class="k">gasUnits</span>  = <span class="n">'+o.gas.toLocaleString()+'</span>\n'+
+  '<span class="k">gasPrice</span>  = <span class="n">'+gwei+'</span> gwei\n'+
+  '<span class="k">native</span>    = '+native.toFixed(6)+' <span class="s">'+c.unit+'</span>\n'+
+  '<span class="k">usdPrice</span>  = <span class="n">$'+usd.toLocaleString()+'</span>\n'+
+  '<span class="k">total</span>     = <span class="s">$'+cost.toFixed(2)+'</span>';
+ var n=document.getElementById('gasNote');
+ if(cost>40){n.textContent='Prohibitive for public minting. Move to an L2 or batch the operation.';n.style.color='var(--red)'}
+ else if(cost>6){n.textContent='Acceptable for one-off deploys, painful for per-user mints.';n.style.color='var(--amber)'}
+ else{n.textContent='Comfortable. Users will not abandon at this price point.';n.style.color='var(--green)'}
+}
+function pickChain(k,b){curChain=k;
+ document.querySelectorAll('#chainPick button').forEach(function(x){x.classList.remove('on')});
+ b.classList.add('on');
+ var c=Proto.chains().filter(function(x){return x.k===k})[0];
+ document.getElementById('gwei').value=c.gwei;
+ document.getElementById('usd').value=c.usd;
+ calcGas();}
+function pickOp(k,b){curOp=k;
+ document.querySelectorAll('#opPick button').forEach(function(x){x.classList.remove('on')});
+ b.classList.add('on');calcGas();}
+document.addEventListener('DOMContentLoaded',function(){
+ document.getElementById('chainPick').innerHTML=Proto.chains().map(function(c,i){
+  return '<button class="'+(i===0?'on':'')+'" onclick="pickChain(\''+c.k+'\',this)">'+c.n+'</button>'}).join('');
+ document.getElementById('opPick').innerHTML=Proto.ops().map(function(o,i){
+  return '<button class="'+(o.k==='mint'?'on':'')+'" onclick="pickOp(\''+o.k+'\',this)">'+o.n+'</button>'}).join('');
+ calcGas();
+});
+</script>
+<style>@media(max-width:900px){#gasWrap{grid-template-columns:1fr!important}}</style></div><aside class="metarail"><div class="blk"><h4>MODULE</h4><div class="row"><span>REF</span><b>MOD-02</b></div><div class="row"><span>STATUS</span><b>ACTIVE</b></div><div class="row"><span>DEPLOYED</span><b>41</b></div></div><div class="blk"><h4>CHAINS</h4><div class="row"><span>ETHEREUM</span><b>L1</b></div><div class="row"><span>POLYGON</span><b>L2</b></div><div class="row"><span>BASE</span><b>L2</b></div><div class="row"><span>ARBITRUM</span><b>L2</b></div></div><div class="blk"><h4>STANDARDS</h4><div class="row"><span>ERC-721</span><b>YES</b></div><div class="row"><span>ERC-1155</span><b>YES</b></div><div class="row"><span>ERC-20</span><b>YES</b></div></div><div class="blk"><h4>LEAD TIME</h4><div class="row"><span>CONTRACT</span><b>2–3 WK</b></div><div class="row"><span>MINT SITE</span><b>2–3 WK</b></div><div class="row"><span>REVIEW</span><b>1 WK</b></div></div></aside></div></div><footer class="ftr"><div class="ftr-in">
+ <div class="fg">
+  <div><div style="display:flex;align-items:center;gap:.5rem;font-family:var(--mono);
+    font-size:.9rem;font-weight:600"><b style="width:22px;height:22px;background:var(--ink);
+    color:var(--paper);display:grid;place-items:center;font-size:.66rem">P</b>PROTO LAB</div>
+   <p class="lead" style="font-size:.85rem;margin-top:.7rem;max-width:32ch">
+    Three emerging disciplines, documented like engineering work rather than sold like magic.</p></div>
+  <div><h4>Documents</h4><ul>
+   <li><a href="no-code.html">01 · No-code development</a></li>
+   <li><a href="web3.html">02 · Blockchain &amp; Web3</a></li>
+   <li><a href="security.html">03 · Cybersecurity basics</a></li></ul></div>
+  <div><h4>Reference</h4><ul>
+   <li><a href="engagements.html">04 · Engagement models</a></li>
+   <li><a href="brief.html">05 · Submit a brief</a></li>
+   <li><a href="../../index.html">Premium Agency</a></li></ul></div>
+  <div><h4>Stack</h4><ul>
+   <li class="note">Webflow · Bubble · Framer</li>
+   <li class="note">Solidity · Hardhat · ethers</li>
+   <li class="note">OWASP · Lighthouse · ZAP</li></ul></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> PROTO — demonstration project</span>
+  <span>Built by Premium Agency</span></div>
+</div></footer></body></html>

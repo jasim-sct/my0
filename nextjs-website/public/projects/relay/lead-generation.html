@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Lead Generation — RELAY</title><meta name="description" content="B2B lead lists built to your ICP, verified and scored, with a filterable sample delivery.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="r.css">
+<script src="r.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Mono:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Fraunces:wght@600&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/relay/lead-generation.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/relay/lead-generation.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/relay/lead-generation.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>RELAY — business support platform by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<header class="hdr"><div class="wrap hdr-in">
+ <a class="logo" href="index.html"><span class="m">R</span>Relay</a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+ <nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="virtual-assistant.html">Virtual Assistant</a>
+  <a href="data-entry.html">Data &amp; Scraping</a>
+  <a href="lead-generation.html" class="on">Lead Gen</a>
+  <a href="customer-support.html">Support</a>
+  <a href="pricing.html">Pricing</a>
+ </nav>
+ <a class="btn btn-sm btn-p" href="contact.html">Book a call</a>
+</div></header>
+<section style="padding-bottom:1.4rem"><div class="wrap">
+ <div class="crumbs"><a href="index.html">Home</a> / Lead generation</div>
+ <span class="pill coral"><span class="dot"></span>Service 03</span>
+ <h1 data-r>B2B lists built<br>to your ICP</h1>
+ <p class="lead" data-r data-d="60" style="margin-top:.8rem">
+  Researched by people, verified by machine, scored before delivery.
+  Filter the sample below the way you would filter a real delivery.</p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="card">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:1.2rem">
+   <div><span class="pill coral"><span class="dot live"></span>Live tool</span>
+    <h2 style="margin:0">Sample delivery</h2></div>
+   <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
+    <input class="field" id="q" placeholder="Search company or contact..." oninput="renderLeads()"
+     style="margin:0;padding:.6rem .9rem;min-width:200px">
+    <select class="field" id="fs" onchange="renderLeads()" style="margin:0;padding:.6rem .9rem;width:auto">
+     <option value="all">All temperatures</option><option value="hot">Hot only</option>
+     <option value="warm">Warm only</option><option value="cold">Cold only</option></select>
+    <button class="btn btn-sm btn-o" onclick="exportLeads()">↓ CSV</button></div>
+  </div>
+
+  <div class="g4" style="margin-bottom:1.3rem">
+   <div><b class="serif" style="font-size:1.5rem" id="l1">0</b><div class="note">Leads shown</div></div>
+   <div><b class="serif" style="font-size:1.5rem;color:var(--coral)" id="l2">0</b><div class="note">Hot</div></div>
+   <div><b class="serif" style="font-size:1.5rem;color:var(--amber)" id="l3">0</b><div class="note">Warm</div></div>
+   <div><b class="serif" style="font-size:1.5rem" id="l4">0</b><div class="note">Avg. score</div></div>
+  </div>
+
+  <div class="tw"><table>
+   <thead><tr>
+    <th onclick="sortLeads('co')">Company <span class="ar" data-a="co"></span></th>
+    <th onclick="sortLeads('ct')">Contact <span class="ar" data-a="ct"></span></th>
+    <th onclick="sortLeads('ind')">Industry <span class="ar" data-a="ind"></span></th>
+    <th onclick="sortLeads('sz')">Staff <span class="ar" data-a="sz"></span></th>
+    <th>Location</th>
+    <th onclick="sortLeads('score')">Score <span class="ar" data-a="score"></span></th>
+    <th>Status</th></tr></thead>
+   <tbody id="leadBody"></tbody></table></div>
+  <p class="note" id="leadEmpty" style="display:none;text-align:center;padding:1.4rem">No leads match.</p>
+  <p class="note" style="margin-top:1rem">
+   Every email is SMTP-verified within 48 hours of delivery. Bounces above 3% are replaced free.</p>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <span class="pill" data-r>How a list is built</span>
+ <h2 data-r style="margin-bottom:1.4rem">Four stages, no shortcuts</h2>
+ <div class="g4">
+  <div class="card card-p" data-r><div class="pill coral" style="margin:0">01</div>
+   <h3 style="margin-top:.6rem">Define the ICP</h3>
+   <p style="margin:0;color:var(--ink2);font-size:.91rem">Industry, headcount, geography, tech stack
+    and the trigger that makes someone a buyer this quarter.</p></div>
+  <div class="card card-p" data-r data-d="70"><div class="pill coral" style="margin:0">02</div>
+   <h3 style="margin-top:.6rem">Source by hand</h3>
+   <p style="margin:0;color:var(--ink2);font-size:.91rem">LinkedIn, industry directories, trade bodies
+    and company filings. Never a purchased list.</p></div>
+  <div class="card card-p" data-r data-d="140"><div class="pill coral" style="margin:0">03</div>
+   <h3 style="margin-top:.6rem">Verify</h3>
+   <p style="margin:0;color:var(--ink2);font-size:.91rem">SMTP handshake on every address,
+    plus a human check that the person still holds the role.</p></div>
+  <div class="card card-p" data-r data-d="210"><div class="pill coral" style="margin:0">04</div>
+   <h3 style="margin-top:.6rem">Score</h3>
+   <p style="margin:0;color:var(--ink2);font-size:.91rem">Fit against your ICP plus observable intent —
+    hiring, funding, tech changes, expansion.</p></div>
+ </div>
+</div></section>
+
+<script>
+var lSort='score',lDir=-1;
+function sortLeads(k){if(lSort===k)lDir*=-1;else{lSort=k;lDir=1}renderLeads()}
+function filtered(){
+ var q=(document.getElementById('q').value||'').toLowerCase();
+ var st=document.getElementById('fs').value;
+ var r=Relay.leads().filter(function(l){
+  if(st!=='all'&&l.st!==st)return false;
+  if(q&&(l.co+' '+l.ct+' '+l.ind).toLowerCase().indexOf(q)<0)return false;
+  return true});
+ r.sort(function(a,b){
+  var x=a[lSort],y=b[lSort];
+  if(lSort==='sz'){x=+x;y=+y}
+  if(typeof x==='string')return x.localeCompare(y)*lDir;
+  return (x-y)*lDir});
+ return r;
+}
+function renderLeads(){
+ var r=filtered(),s=Relay.leadStats(r);
+ document.querySelectorAll('.ar').forEach(function(a){
+  a.textContent=a.dataset.a===lSort?(lDir>0?'▲':'▼'):'↕'});
+ document.getElementById('l1').textContent=s.n;
+ document.getElementById('l2').textContent=s.hot;
+ document.getElementById('l3').textContent=s.warm;
+ document.getElementById('l4').textContent=s.avg;
+ document.getElementById('leadBody').innerHTML=r.map(function(l){
+  var col=l.score>=80?'var(--coral-lt);color:var(--coral)':
+          l.score>=65?'var(--amber-lt);color:#a3701c':'var(--cream2);color:var(--dim)';
+  return '<tr><td style="font-weight:650">'+l.co+'</td>'+
+   '<td>'+l.ct+'<br><span class="note">'+l.role+'</span></td>'+
+   '<td>'+l.ind+'</td><td>'+l.sz+'</td><td class="note">'+l.loc+'</td>'+
+   '<td><span class="score" style="background:'+col+'">'+l.score+'</span></td>'+
+   '<td><span class="chip '+l.st+'">'+l.st+'</span></td></tr>'}).join('');
+ document.getElementById('leadEmpty').style.display=r.length?'none':'block';
+}
+function exportLeads(){
+ var r=filtered();
+ var c='Company,Contact,Role,Industry,Staff,Location,Score,Status,Email\n'+
+  r.map(function(l){return ['"'+l.co+'"','"'+l.ct+'"','"'+l.role+'"','"'+l.ind+'"',
+   l.sz,'"'+l.loc+'"',l.score,l.st,l.em].join(',')}).join('\n');
+ var a=document.createElement('a');a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(c);
+ a.download='relay-leads.csv';a.click();tst('Exported '+r.length+' leads');
+}
+document.addEventListener('DOMContentLoaded',renderLeads);
+</script><footer class="ftr"><div class="wrap">
+ <div class="fg">
+  <div><div class="logo"><span class="m">R</span>Relay</div>
+   <p style="color:rgba(251,248,244,.75);font-size:.91rem;margin-top:.9rem;max-width:34ch">
+    Trained support staff who work your hours, in your tools, under your process.
+    Not a ticket queue in another timezone.</p>
+   <p class="note" style="color:rgba(251,248,244,.5)">Karachi · Manila · Est. 2020</p></div>
+  <div><h4>Services</h4><ul>
+   <li><a href="virtual-assistant.html">Virtual assistant</a></li>
+   <li><a href="data-entry.html">Data entry &amp; scraping</a></li>
+   <li><a href="lead-generation.html">Lead generation</a></li>
+   <li><a href="customer-support.html">Customer support</a></li></ul></div>
+  <div><h4>Company</h4><ul>
+   <li><a href="pricing.html">Pricing</a></li>
+   <li><a href="pricing.html#calc">Cost calculator</a></li>
+   <li><a href="contact.html">Book a call</a></li>
+   <li><a href="../../contact.html">Built by Premium Agency</a></li></ul></div>
+  <div><h4>Coverage</h4><ul>
+   <li>UK &amp; EU business hours</li><li>US Eastern &amp; Pacific</li>
+   <li>24/5 support rotation</li><li>Weekend on request</li></ul></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> Relay — demonstration project.</span>
+  <span>Built by Premium Agency</span></div>
+</div></footer>
+</body></html>

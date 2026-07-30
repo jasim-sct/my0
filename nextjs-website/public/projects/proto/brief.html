@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Submit a Brief — PROTO</title><meta name="description" content="Submit a project brief and receive a written response within two working days.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="p.css">
+<script src="p.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/proto/brief.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/proto/brief.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/proto/brief.html"}</script>
+</head><body>
+<div class="specbar"><strong>◆ CLIENT PROJECT</strong>
+ <span>PROTO — emerging skills lab by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<div class="docindex"><div class="docindex-in">
+ <div class="id"><b>P</b>PROTO</div>
+ <div class="secs"><a href="index.html"><i>00</i>INDEX</a><a href="no-code.html"><i>01</i>NO-CODE</a><a href="web3.html"><i>02</i>WEB3</a><a href="security.html"><i>03</i>SECURITY</a><a href="engagements.html"><i>04</i>ENGAGE</a><a href="brief.html" class='on'><i>05</i>BRIEF</a></div>
+ <div class="rev">REV 2.4 · INTAKE</div>
+</div></div>
+<div class="doc"><div class="sheet"><div class="gutter"><div class="num"><b>05</b><span>brief</span></div></div><div class="body">
+<section id="s0" style="padding-top:.6rem">
+ <div class="srule"><span class="n">05.1</span><span class="l"></span><span class="t">submission</span></div>
+ <h1>Submit a<br>brief</h1>
+ <p class="lead">Two working days to a written response. If we think you should not build
+  the thing, that is what the response will say — and it costs you nothing either way.</p>
+</section>
+
+<section id="s1">
+ <div class="srule"><span class="n">05.2</span><span class="l"></span><span class="t">form</span></div>
+ <div class="gg" style="grid-template-columns:1fr 300px;gap:1.4rem" id="bWrap">
+  <form id="frm" novalidate onsubmit="send(event)">
+   <div class="g2" style="gap:1px;background:var(--rule2);border:1px solid var(--rule);padding:1px;margin-bottom:.8rem">
+    <div style="padding:.8rem"><div class="field" style="margin:0"><label>name *</label>
+     <input name="name" required placeholder="A. Whitfield"><span class="msg">required</span></div></div>
+    <div style="padding:.8rem"><div class="field" style="margin:0"><label>email *</label>
+     <input name="email" type="email" required placeholder="a@company.com"><span class="msg">valid email required</span></div></div>
+   </div>
+   <div class="field"><label>module *</label>
+    <div class="picker" id="modPick"></div>
+    <span class="msg" id="modMsg">select at least one</span></div>
+   <div class="g2" style="gap:1px;background:var(--rule2);border:1px solid var(--rule);padding:1px;margin-bottom:.8rem">
+    <div style="padding:.8rem"><div class="field" style="margin:0"><label>engagement</label>
+     <select name="eng"><option>ENG-A · assessment</option><option selected>ENG-B · build</option>
+      <option>ENG-C · retained</option><option>Not sure</option></select></div></div>
+    <div style="padding:.8rem"><div class="field" style="margin:0"><label>budget</label>
+     <select name="bud"><option>Under $2,000</option><option>$2,000 – $5,000</option>
+      <option>$5,000 – $15,000</option><option>$15,000+</option></select></div></div>
+   </div>
+   <div class="field"><label>specification *</label>
+    <textarea name="msg" required placeholder="What exists today, what needs to exist, and by when."
+     oninput="charCount(this)"></textarea>
+    <span class="msg">required</span>
+    <p class="note" id="cc" style="margin-top:.3rem">0 characters</p></div>
+   <button class="btn btn-s btn-full" type="submit">Transmit brief</button>
+   <p class="note" style="text-align:center;margin-top:.5rem">no card · no call required</p>
+  </form>
+
+  <div>
+   <div class="card" style="margin-bottom:1rem">
+    <h4 style="font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;
+     color:var(--dim);margin:0 0 .6rem">Response contains</h4>
+    <ul class="tick"><li>Recommended module &amp; platform</li><li>Fixed price and lead time</li>
+     <li>What we would not build, and why</li><li>Named person who would do the work</li></ul>
+   </div>
+   <div class="card">
+    <h4 style="font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;
+     color:var(--dim);margin:0 0 .6rem">Current capacity</h4>
+    <div class="dl">
+     <dt>MOD-01</dt><dd style="color:var(--green)">● open</dd>
+     <dt>MOD-02</dt><dd style="color:var(--amber)">◐ 3 wk wait</dd>
+     <dt>MOD-03</dt><dd style="color:var(--green)">● open</dd>
+    </div>
+    <div class="hr" style="margin:.8rem 0"></div>
+    <p class="note" style="margin:0">Audits usually start within a week.
+     Contract work is booking three weeks out.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<script>
+var MODS=['MOD-01 no-code','MOD-02 web3','MOD-03 security','Not sure'],picked=[];
+function pickMod(m,b){
+ var i=picked.indexOf(m);
+ if(i>-1)picked.splice(i,1);else picked.push(m);
+ b.classList.toggle('on');
+ document.getElementById('modMsg').style.display='none';
+}
+function charCount(t){
+ document.getElementById('cc').textContent=t.value.length+' characters'+
+  (t.value.length>0&&t.value.length<60?' — a little more detail helps':'');
+}
+function send(e){
+ e.preventDefault();
+ var f=e.target,ok=true;
+ f.querySelectorAll('[required]').forEach(function(i){
+  var bad=!i.value.trim();
+  if(i.type==='email')bad=!/^[^@]+@[^@]+\.[^@]+$/.test(i.value);
+  i.closest('.field').classList.toggle('err',bad);if(bad)ok=false});
+ if(!picked.length){document.getElementById('modMsg').style.display='block';ok=false}
+ if(!ok){tst('brief incomplete');return}
+ f.innerHTML='<div class="card" style="text-align:center;padding:2rem 1.2rem">'+
+  '<span class="tag g">transmitted</span>'+
+  '<h2 style="margin:.8rem 0 .4rem;font-size:1.4rem">Brief received</h2>'+
+  '<p class="lead" style="margin-inline:auto;font-size:.92rem">Reference PROTO-'+
+  Math.floor(1000+Math.random()*9000)+' · covering '+picked.length+' module'+
+  (picked.length>1?'s':'')+'. Written response within two working days.</p>'+
+  '<p class="note">Demonstration form — on a live build this reaches the lab immediately.</p>'+
+  '<a class="btn btn-sm" href="engagements.html" style="margin-top:.8rem">View price index</a></div>';
+}
+document.addEventListener('DOMContentLoaded',function(){
+ document.getElementById('modPick').innerHTML=MODS.map(function(m){
+  return '<button type="button" onclick="pickMod(\''+m+'\',this)">'+m+'</button>'}).join('');
+});
+</script>
+<style>@media(max-width:900px){#bWrap{grid-template-columns:1fr!important}}</style></div><aside class="metarail"><div class="blk"><h4>DOCUMENT</h4><div class="row"><span>REF</span><b>PROTO-05</b></div><div class="row"><span>TYPE</span><b>INTAKE</b></div><div class="row"><span>STATUS</span><b>OPEN</b></div></div><div class="blk"><h4>RESPONSE</h4><div class="row"><span>TIME</span><b>48 HRS</b></div><div class="row"><span>FORMAT</span><b>WRITTEN</b></div><div class="row"><span>COST</span><b>FREE</b></div></div><div class="blk"><h4>CAPACITY</h4><div class="row"><span>MOD-01</span><b>OPEN</b></div><div class="row"><span>MOD-02</span><b>3 WK</b></div><div class="row"><span>MOD-03</span><b>OPEN</b></div></div></aside></div></div><footer class="ftr"><div class="ftr-in">
+ <div class="fg">
+  <div><div style="display:flex;align-items:center;gap:.5rem;font-family:var(--mono);
+    font-size:.9rem;font-weight:600"><b style="width:22px;height:22px;background:var(--ink);
+    color:var(--paper);display:grid;place-items:center;font-size:.66rem">P</b>PROTO LAB</div>
+   <p class="lead" style="font-size:.85rem;margin-top:.7rem;max-width:32ch">
+    Three emerging disciplines, documented like engineering work rather than sold like magic.</p></div>
+  <div><h4>Documents</h4><ul>
+   <li><a href="no-code.html">01 · No-code development</a></li>
+   <li><a href="web3.html">02 · Blockchain &amp; Web3</a></li>
+   <li><a href="security.html">03 · Cybersecurity basics</a></li></ul></div>
+  <div><h4>Reference</h4><ul>
+   <li><a href="engagements.html">04 · Engagement models</a></li>
+   <li><a href="brief.html">05 · Submit a brief</a></li>
+   <li><a href="../../index.html">Premium Agency</a></li></ul></div>
+  <div><h4>Stack</h4><ul>
+   <li class="note">Webflow · Bubble · Framer</li>
+   <li class="note">Solidity · Hardhat · ethers</li>
+   <li class="note">OWASP · Lighthouse · ZAP</li></ul></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> PROTO — demonstration project</span>
+  <span>Built by Premium Agency</span></div>
+</div></footer></body></html>

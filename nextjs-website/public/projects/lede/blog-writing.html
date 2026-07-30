@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Blog Writing — LEDE &amp; CO</title><meta name="description" content="SEO article writing with a live readability analyser and a published sample.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="l.css">
+<script src="l.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&family=Noto+Nastaliq+Urdu:wght@400;600&family=Noto+Naskh+Arabic:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=Inter:wght@400;600&family=Noto+Nastaliq+Urdu&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/lede/blog-writing.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/lede/blog-writing.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/lede/blog-writing.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>LEDE &amp; CO — content studio with live writing tools by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<header class="hdr"><div class="wrap hdr-in">
+ <a class="logo" href="index.html">Lede<i></i>Co</a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+ <nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="blog-writing.html" class="on">Blog Writing</a>
+  <a href="copywriting.html">Copywriting</a>
+  <a href="script-writing.html">Scripts</a>
+  <a href="translation.html">Translation</a>
+  <a href="pricing.html">Rates</a>
+ </nav>
+ <a class="btn btn-sm" href="contact.html">Commission a piece</a>
+</div></header>
+<section style="padding-bottom:1.4rem"><div class="wrap">
+ <div class="crumbs"><a href="index.html">Home</a> / Blog writing</div>
+ <div class="g2" style="gap:2.6rem;align-items:center">
+  <div data-r>
+   <div class="kicker">Service 01</div>
+   <h1>SEO articles<br>people finish</h1>
+   <p class="lead">Written around what someone actually typed into Google,
+    then structured so both the reader and the crawler can follow it.</p>
+   <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.3rem">
+    <a class="btn btn-red" href="contact.html">Commission an article</a>
+    <a class="btn btn-o" href="blog-writing.html#tool">Try the analyser</a></div>
+  </div>
+  <div data-r data-d="100"><img src="img/blog.webp" alt="Printed articles" width="560" height="560"
+    style="border-radius:var(--r-lg);box-shadow:var(--sh-lg)"></div>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="g3">
+  <div class="card" data-r><h3>Search intent first</h3>
+   <p style="margin:0;color:var(--ink2);font-size:.96rem">We check what already ranks for your target phrase.
+    If the top ten are all comparison tables, an essay will not win.</p></div>
+  <div class="card" data-r data-d="70"><h3>Original input</h3>
+   <p style="margin:0;color:var(--ink2);font-size:.96rem">Every article includes something that is not already
+    on page one — a customer quote, an internal number, a tested opinion.</p></div>
+  <div class="card" data-r data-d="140"><h3>Structured to skim</h3>
+   <p style="margin:0;color:var(--ink2);font-size:.96rem">Descriptive headings, short paragraphs,
+    and a first line under every H2 that answers the heading directly.</p></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="kicker" data-r>Sample</div>
+ <h2 data-r style="margin-bottom:1.4rem">An article we published</h2>
+ <div class="samp" data-r>
+  <div class="samp-head" id="sampHead"></div>
+  <div class="samp-body" id="sampBody"></div>
+ </div>
+</div></section>
+
+<section id="tool" style="background:var(--paper2);border-block:1px solid var(--line2)"><div class="wrap">
+ <div class="kicker" data-r>Live tool</div>
+ <h2 data-r>Readability analyser</h2>
+ <p class="lead" data-r style="margin-bottom:1.6rem">
+  Paste any draft. This is the same check we run before anything leaves the studio.</p>
+ <div class="tool" data-r>
+  <textarea id="ta" oninput="analyse()" spellcheck="false"></textarea>
+  <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.8rem">
+   <button class="btn btn-sm btn-o" onclick="loadSample('good')">Load a clean draft</button>
+   <button class="btn btn-sm btn-o" onclick="loadSample('bad')">Load a bloated draft</button>
+   <button class="btn btn-sm btn-o" onclick="document.getElementById('ta').value='';analyse()">Clear</button>
+  </div>
+  <div class="readout">
+   <div><b id="rW">0</b><small>Words</small></div>
+   <div><b id="rS">0</b><small>Sentences</small></div>
+   <div><b id="rT">0</b><small>Min read</small></div>
+   <div><b id="rG">0</b><small>Grade level</small></div>
+  </div>
+  <div style="margin-top:1.2rem">
+   <div style="display:flex;justify-content:space-between;font-family:var(--sans);font-size:.82rem;font-weight:600">
+    <span>Reading ease</span><span id="rEase">0 / 100</span></div>
+   <div class="gauge"><i id="gEase"></i></div>
+   <div class="grade" id="verdict"></div>
+  </div>
+  <div class="g3" style="margin-top:1.2rem;gap:.9rem">
+   <div class="card" style="padding:.9rem"><small class="note">Avg. sentence length</small>
+    <b style="display:block;font-size:1.15rem" id="rAvg">0</b>
+    <span class="note" id="nAvg"></span></div>
+   <div class="card" style="padding:.9rem"><small class="note">Complex words</small>
+    <b style="display:block;font-size:1.15rem" id="rLong">0%</b>
+    <span class="note" id="nLong"></span></div>
+   <div class="card" style="padding:.9rem"><small class="note">Passive constructions</small>
+    <b style="display:block;font-size:1.15rem" id="rPass">0</b>
+    <span class="note" id="nPass"></span></div>
+  </div>
+ </div>
+</div></section>
+
+<script>
+var SAMPLES={
+ good:"Most companies do not have a content problem. They have a structure problem wearing a content costume.\n\nYou publish a useful article. Eleven people read it. Six months later a thinner piece outranks you. The instinct is to blame the algorithm. That is usually wrong.\n\nThe article is invisible because nothing tells Google it matters. No internal links point to it. It sits three clicks from the homepage. Fix the structure before you write another word.",
+ bad:"In today's rapidly evolving and increasingly competitive digital marketing landscape, organisations of all sizes are consistently seeking innovative methodologies through which they might optimise their content distribution strategies in order to maximise engagement metrics across multiple channels, and it is widely acknowledged by industry professionals that the implementation of a comprehensive content framework is considered to be fundamentally essential for the achievement of sustainable organic visibility improvements over an extended time horizon."
+};
+function loadSample(k){document.getElementById('ta').value=SAMPLES[k];analyse();
+ tst(k==='good'?'Clean draft loaded':'Bloated draft loaded')}
+function analyse(){
+ var r=Lede.analyse(document.getElementById('ta').value);
+ document.getElementById('rW').textContent=r.words.toLocaleString();
+ document.getElementById('rS').textContent=r.sentences;
+ document.getElementById('rT').textContent=r.words?r.readMin:0;
+ document.getElementById('rG').textContent=r.words?r.grade:0;
+ document.getElementById('rEase').textContent=(r.ease||0)+' / 100';
+ document.getElementById('gEase').style.width=(r.ease||0)+'%';
+ document.getElementById('gEase').style.background=
+  r.ease>=60?'var(--green)':r.ease>=40?'var(--gold)':'var(--red)';
+ document.getElementById('rAvg').textContent=r.avgLen||0;
+ document.getElementById('rLong').textContent=(r.longPct||0)+'%';
+ document.getElementById('rPass').textContent=r.passive||0;
+ document.getElementById('nAvg').textContent=r.avgLen>25?'Too long — break these up.':
+  r.avgLen>18?'Slightly long.':r.avgLen?'Good.':'';
+ document.getElementById('nLong').textContent=r.longPct>20?'Heavy. Swap for shorter words.':
+  r.longPct>12?'Acceptable.':r.words?'Nicely plain.':'';
+ document.getElementById('nPass').textContent=r.passive>4?'Rewrite in active voice.':
+  r.passive>0?'A few — check they are deliberate.':r.words?'None found.':'';
+ var v=document.getElementById('verdict');
+ if(!r.words){v.textContent='';return}
+ if(r.ease>=60){v.textContent='✓ Reads easily. Around grade '+r.grade+' — most business audiences will finish this.';
+  v.style.color='var(--green)'}
+ else if(r.ease>=40){v.textContent='⚠ Heavy going. Grade '+r.grade+'. Shorten the longest sentences first.';
+  v.style.color='var(--gold)'}
+ else{v.textContent='✗ Very hard to read. Grade '+r.grade+'. This needs a structural rewrite, not a polish.';
+  v.style.color='var(--red)'}
+}
+document.addEventListener('DOMContentLoaded',function(){
+ var s=Lede.samples.blog;
+ document.getElementById('sampHead').innerHTML='<span class="t">'+s.kicker+'</span><span class="chip green">Published</span>';
+ document.getElementById('sampBody').innerHTML=
+  '<h2>'+s.title+'</h2><div class="meta">'+s.meta+'</div>'+
+  '<p class="drop">'+s.body[0]+'</p>'+
+  s.body.slice(1).map(function(p){return '<p>'+p+'</p>'}).join('')+
+  '<h3 style="margin-top:1.6rem">'+s.h2+'</h3>'+
+  s.body2.map(function(p){return '<p>'+p+'</p>'}).join('');
+ document.getElementById('ta').value=SAMPLES.good;
+ analyse();
+});
+</script><footer class="ftr"><div class="wrap">
+ <div class="fg">
+  <div><div class="logo">Lede<i></i>Co</div>
+   <p style="color:rgba(251,250,247,.75);font-size:.94rem;margin-top:.9rem;max-width:34ch">
+    A writing studio. Four services, one standard: every sentence has to earn the next one.</p>
+   <p class="note" style="color:rgba(251,250,247,.5)">Karachi · London · Est. 2018</p></div>
+  <div><h4>Services</h4><ul>
+   <li><a href="blog-writing.html">Blog writing</a></li>
+   <li><a href="copywriting.html">Copywriting</a></li>
+   <li><a href="script-writing.html">Script writing</a></li>
+   <li><a href="translation.html">Translation</a></li></ul></div>
+  <div><h4>Studio</h4><ul>
+   <li><a href="pricing.html">Rates</a></li>
+   <li><a href="blog-writing.html#tool">Readability tool</a></li>
+   <li><a href="translation.html#compare">Translation samples</a></li>
+   <li><a href="contact.html">Commission a piece</a></li></ul></div>
+  <div><h4>Languages</h4><ul>
+   <li>English (UK &amp; US)</li><li>اردو — Urdu</li>
+   <li>العربية — Arabic</li><li>Español · Français</li></ul></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> Lede &amp; Co — demonstration project.</span>
+  <span>Built by Premium Agency</span></div>
+</div></footer>
+</body></html>

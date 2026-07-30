@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Design System — VOLT</title><meta name="description" content="Neo-brutalist design system: colour tokens, type scale, border and shadow rules, components and principles.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="volt.css">
+<script src="volt.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@700&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/volt/design-system.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/volt/design-system.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/volt/design-system.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>VOLT — site, billing, dashboard &amp; design system by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<header class="hdr"><div class="wrap hdr-in">
+ <a class="logo" href="index.html"><span class="bolt">⚡</span>Volt</a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+ <nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="app.html">Dashboard</a>
+  <a href="signup.html">Sign Up</a>
+  <a href="design-system.html" class="on">Design System</a>
+ </nav>
+ <div class="hdr-tools">
+  <a class="btn btn-sm btn-lime" href="signup.html">Start free</a>
+ </div>
+</div></header>
+<section style="padding-bottom:1rem"><div class="wrap">
+ <div class="crumbs"><a href="index.html">Home</a> / Design system</div>
+ <span class="tag pink" data-r>UI/UX deliverable</span>
+ <h1 data-r>The Volt<br>design system</h1>
+ <p class="lead" data-r>Neo-brutalism with rules. Every token, component and decision documented
+  so the next person to touch this does not guess.</p>
+</div></section>
+
+<section style="padding-top:1.2rem"><div class="wrap">
+ <h2 data-r>01 · Colour</h2>
+ <p class="lead" data-r>One near-white, one near-black, four electrics. Colour is structural here — it separates
+  regions rather than decorating them.</p>
+ <div class="grid g4" style="margin-top:1.4rem" id="sw"></div>
+ <div class="box box-ink" style="margin-top:1.4rem" data-r>
+  <h3 style="color:var(--paper)">Contrast rules</h3>
+  <ul style="color:var(--paper);font-size:.92rem">
+   <li style="margin-bottom:.4rem">→ Lime and cyan take <b>ink</b> text only — never white.</li>
+   <li style="margin-bottom:.4rem">→ Violet and pink take <b>white</b> text only — never ink.</li>
+   <li>→ Every combination above clears WCAG AA at 16px.</li></ul>
+ </div>
+</div></section>
+
+<section class="box-lime" style="border-block:var(--bd)"><div class="wrap">
+ <h2 data-r>02 · Type</h2>
+ <p class="lead" data-r>Archivo Black shouts, Space Grotesk speaks, Space Mono labels.</p>
+ <div class="box box-white" style="margin-top:1.4rem" data-r>
+  <div style="padding:.9rem 0;border-bottom:var(--bd2)">
+   <div class="note">Display · Archivo Black · clamp(2.6rem, 7.5vw, 6rem) · -0.03em</div>
+   <div style="font-family:var(--disp);font-size:clamp(2rem,5.4vw,3.6rem);text-transform:uppercase;line-height:.98">Get paid on time</div></div>
+  <div style="padding:.9rem 0;border-bottom:var(--bd2)">
+   <div class="note">Heading · Archivo Black · clamp(1.9rem, 4.6vw, 3.4rem)</div>
+   <div style="font-family:var(--disp);font-size:clamp(1.5rem,3vw,2.2rem);text-transform:uppercase">Four things, done properly</div></div>
+  <div style="padding:.9rem 0;border-bottom:var(--bd2)">
+   <div class="note">Body · Space Grotesk 500 · 1rem / 1.55</div>
+   <div style="max-width:58ch;font-weight:500">Body copy runs at medium weight rather than regular, because
+    thin text next to 3px borders looks anaemic. Line length caps near sixty characters.</div></div>
+  <div style="padding:.9rem 0">
+   <div class="note">Label · Space Mono 700 · 0.72rem · 0.1em · uppercase</div>
+   <div class="mono" style="font-weight:700;letter-spacing:.1em;text-transform:uppercase">INV-2140 · DUE 30 SEP</div></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <h2 data-r>03 · Borders &amp; shadows</h2>
+ <p class="lead" data-r>The whole system rests on two numbers: a 3px black border and a 6px hard offset shadow.
+  No blur, ever.</p>
+ <div class="grid g4" style="margin-top:1.4rem">
+  <div data-r><div class="box" style="height:110px;display:grid;place-items:center">Default</div>
+   <div class="note" style="margin-top:.5rem">3px border · 6px shadow</div></div>
+  <div data-r data-d="60"><div class="box" style="height:110px;display:grid;place-items:center;box-shadow:10px 10px 0 var(--ink)">Large</div>
+   <div class="note" style="margin-top:.5rem">10px — hero and modals</div></div>
+  <div data-r data-d="120"><div class="box" style="height:110px;display:grid;place-items:center;box-shadow:6px 6px 0 var(--violet)">Coloured</div>
+   <div class="note" style="margin-top:.5rem">Accent shadow — sparingly</div></div>
+  <div data-r data-d="180"><div class="box box-flat" style="height:110px;display:grid;place-items:center">Flat</div>
+   <div class="note" style="margin-top:.5rem">Nested inside another box</div></div>
+ </div>
+ <div class="box box-cyan" style="margin-top:1.4rem" data-r>
+  <h3>The press rule</h3>
+  <p style="margin:0;font-weight:500">Interactive elements move <b>−2px</b> on hover with the shadow growing to 8px,
+   then <b>+3px</b> on active with the shadow shrinking to 2px. It should feel like a physical button.
+   Hover the buttons below.</p>
+  <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1rem">
+   <button class="btn btn-lime">Press me</button><button class="btn btn-violet">And me</button>
+   <button class="btn btn-ink">Me too</button></div>
+ </div>
+</div></section>
+
+<section class="box-violet" style="border-block:var(--bd);color:#fff"><div class="wrap">
+ <h2 style="color:#fff" data-r>04 · Components</h2>
+ <div class="grid g3" style="margin-top:1.4rem">
+  <div data-r><div class="note" style="color:#fff;opacity:.8;margin-bottom:.5rem">BUTTONS</div>
+   <div class="box box-white" style="display:flex;flex-direction:column;gap:.6rem;align-items:flex-start">
+    <button class="btn btn-sm btn-lime">Primary</button>
+    <button class="btn btn-sm">Default</button>
+    <button class="btn btn-sm btn-ink">Inverse</button>
+    <button class="btn btn-sm" disabled>Disabled</button></div></div>
+  <div data-r data-d="80"><div class="note" style="color:#fff;opacity:.8;margin-bottom:.5rem">FORM FIELD</div>
+   <div class="box box-white">
+    <div class="field"><label>Default</label><input placeholder="Focus me"></div>
+    <div class="field err"><label>Error</label><input value="not-an-email"><span class="msg">Needs a real email</span></div>
+    <p class="note" style="margin:0">Focus turns the field lime and lifts it 1px.</p></div></div>
+  <div data-r data-d="160"><div class="note" style="color:#fff;opacity:.8;margin-bottom:.5rem">STATUS PILLS</div>
+   <div class="box box-white"><div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem">
+     <span class="pill paid">Paid</span><span class="pill due">Due</span>
+     <span class="pill late">Overdue</span><span class="pill draft">Draft</span></div>
+    <div style="display:flex;gap:.4rem;flex-wrap:wrap">
+     <span class="tag" style="margin:0">Lime tag</span><span class="tag violet" style="margin:0">Violet</span></div></div></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <h2 data-r>05 · Layout</h2>
+ <div class="grid g2" style="gap:1.4rem;margin-top:1.4rem">
+  <div class="box" data-r><h3>Spacing scale</h3>
+   <div id="sp" style="margin-top:.9rem"></div>
+   <p class="note" style="margin-top:.8rem">4px base. Sections use clamp(48px, 6.5vw, 96px).</p></div>
+  <div class="box" data-r data-d="80"><h3>Rotation</h3>
+   <p style="font-size:.92rem;font-weight:500">Cards rotate between −2° and +1° to break the grid.
+    Never more than 2°, never on text-heavy blocks, never on anything interactive that needs precision.</p>
+   <div style="display:flex;gap:.9rem;margin-top:1rem;flex-wrap:wrap">
+    <div class="box box-lime rot-2" style="width:80px;height:70px;display:grid;place-items:center;font-weight:800">−2°</div>
+    <div class="box box-cyan rot-1" style="width:80px;height:70px;display:grid;place-items:center;font-weight:800">−1°</div>
+    <div class="box box-pink rot1" style="width:80px;height:70px;display:grid;place-items:center;font-weight:800;color:#fff">+1°</div>
+   </div></div>
+ </div>
+</div></section>
+
+<section class="box-ink" style="border-top:var(--bd)"><div class="wrap narrow">
+ <span class="tag" data-r>06 · Principles</span>
+ <h2 style="color:var(--paper)" data-r>Five rules we held</h2>
+ <div class="grid g2" style="gap:1.3rem;margin-top:1.6rem">
+  <div data-r><h3 style="color:var(--lime)">Nothing floats</h3>
+   <p style="color:var(--paper);font-size:.92rem;opacity:.85">Every surface has a hard border and a hard shadow.
+    No blur, no gradient, no glass. If it is a thing, it has an edge.</p></div>
+  <div data-r data-d="70"><h3 style="color:var(--lime)">Colour is structure</h3>
+   <p style="color:var(--paper);font-size:.92rem;opacity:.85">Blocks of colour separate regions.
+    We never use colour purely to decorate a surface that could be white.</p></div>
+  <div data-r data-d="140"><h3 style="color:var(--lime)">Type does the shouting</h3>
+   <p style="color:var(--paper);font-size:.92rem;opacity:.85">Headlines run enormous and tight.
+    That is the personality — so the body copy can stay calm and readable.</p></div>
+  <div data-r data-d="210"><h3 style="color:var(--lime)">Motion is mechanical</h3>
+   <p style="color:var(--paper);font-size:.92rem;opacity:.85">Things translate and snap. Nothing fades slowly,
+    nothing eases for half a second. 120–250ms, always.</p></div>
+  <div data-r data-d="280"><h3 style="color:var(--lime)">Loud, still legible</h3>
+   <p style="color:var(--paper);font-size:.92rem;opacity:.85">Brutalism is not an excuse for AA failures.
+    Every pairing in this system was contrast-checked.</p></div>
+  <div data-r data-d="350"><h3 style="color:var(--lime)">One accent per screen</h3>
+   <p style="color:var(--paper);font-size:.92rem;opacity:.85">Lime leads, violet supports, pink warns.
+    Using all three at equal weight turns the page into noise.</p></div>
+ </div>
+</div></section>
+
+<script>
+var SW=[['Paper','#fdfcf7','Page background'],['Ink','#0a0a0a','Text, borders, shadows'],
+ ['Lime','#c3f53c','Primary accent, success'],['Violet','#7b3ff2','Secondary, active nav'],
+ ['Pink','#ff3d9a','Warnings, overdue'],['Cyan','#3ddbff','Info, tertiary'],
+ ['Amber','#ffb800','Due soon'],['Paper 2','#f4f1e8','Sidebar, subtle fills']];
+document.addEventListener('DOMContentLoaded',function(){
+ document.getElementById('sw').innerHTML=SW.map(function(s,i){
+  return '<div data-r data-d="'+(i*45)+'"><div class="sw" style="background:'+s[1]+'"></div>'+
+   '<div style="margin-top:.6rem"><b style="font-family:var(--disp);text-transform:uppercase;font-size:.95rem">'+s[0]+'</b>'+
+   '<div class="note mono">'+s[1]+'</div><div class="note">'+s[2]+'</div></div></div>'}).join('');
+ document.getElementById('sp').innerHTML=[4,8,12,16,24,32,48,64].map(function(n){
+  return '<div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.4rem">'+
+   '<span class="note" style="width:32px">'+n+'</span>'+
+   '<span style="height:14px;width:'+n*2.2+'px;background:var(--violet);border:2px solid var(--ink)"></span></div>'}).join('');
+ document.querySelectorAll('#sw [data-r]').forEach(function(e,i){
+  setTimeout(function(){e.classList.add('in')},i*45)});
+});
+</script><footer class="ftr"><div class="wrap">
+ <div class="fg">
+  <div><div class="logo"><span class="bolt">⚡</span>Volt</div>
+   <p style="margin-top:.9rem;max-width:34ch;font-size:.92rem;opacity:.82">
+    Invoicing that chases payment for you. Built for freelancers and small studios who would rather be working.</p>
+   <p class="note" style="color:var(--lime);opacity:1">SOC 2 · PCI DSS · Est. 2023</p></div>
+  <div><h4>Product</h4><ul>
+   <li><a href="index.html#features">Features</a></li>
+   <li><a href="pricing.html">Pricing</a></li>
+   <li><a href="app.html">Live dashboard</a></li>
+   <li><a href="signup.html">Start free</a></li></ul></div>
+  <div><h4>Company</h4><ul>
+   <li><a href="index.html#how">How it works</a></li>
+   <li><a href="index.html#faq">FAQ</a></li>
+   <li><a href="design-system.html">Design system</a></li>
+   <li><a href="../../contact.html">Built by Premium Agency</a></li></ul></div>
+  <div><h4>Get the drop</h4>
+   <p style="font-size:.9rem;opacity:.82">One email a month. Product changes, nothing else.</p>
+   <form onsubmit="event.preventDefault();this.innerHTML='<p style=color:var(--lime);font-weight:700>✓ YOU ARE IN.</p>'">
+    <div class="field"><input placeholder="you@studio.com" required></div>
+    <button class="btn btn-sm btn-lime btn-full" type="submit">Subscribe</button></form></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> VOLT — demonstration project.</span>
+  <span>Designed &amp; built by Premium Agency</span></div>
+</div></footer>
+</body></html>

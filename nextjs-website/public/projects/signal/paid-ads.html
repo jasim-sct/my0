@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Paid Ads — SIGNAL</title><meta name="description" content="Google Ads and Meta Ads management with a live campaign dashboard and budget calculator.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="s.css">
+<script src="s.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/signal/paid-ads.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/signal/paid-ads.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/signal/paid-ads.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>SIGNAL — SEO, social, ads &amp; email platform by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<header class="hdr"><div class="wrap hdr-in">
+ <a class="logo" href="index.html"><span class="m">◈</span>Signal</a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+ <nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="seo.html">SEO</a>
+  <a href="social.html">Social</a>
+  <a href="paid-ads.html" class="on">Paid Ads</a>
+  <a href="email.html">Email</a>
+  <a href="results.html">Results</a>
+  <a href="pricing.html">Pricing</a>
+ </nav>
+ <a class="btn btn-sm btn-p" href="contact.html">Free audit</a>
+</div></header>
+<section style="padding-bottom:1.4rem"><div class="wrap">
+ <div class="crumbs"><a href="index.html">Home</a> / Paid Ads</div>
+ <span class="pill ads"><span class="dot"></span>Paid media</span>
+ <h1 data-r>Google Ads and<br>Meta Ads, run on profit</h1>
+ <p class="lead" data-r data-d="60" style="margin-top:.8rem">
+  Live campaign dashboard below — switch between platforms and watch every metric recalculate.</p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="card">
+  <div class="tabs" id="tabs">
+   <button class="on" onclick="setCh('all',this)">All channels</button>
+   <button onclick="setCh('Google',this)">Google Ads</button>
+   <button onclick="setCh('Meta',this)">Meta Ads</button>
+  </div>
+
+  <div class="g4" style="margin-bottom:1.4rem">
+   <div><div class="note">Ad spend</div><b style="font-size:1.55rem;font-weight:850" id="m1">—</b></div>
+   <div><div class="note">Revenue</div><b style="font-size:1.55rem;font-weight:850;color:var(--seo)" id="m2">—</b></div>
+   <div><div class="note">ROAS</div><b style="font-size:1.55rem;font-weight:850" id="m3">—</b></div>
+   <div><div class="note">Cost per acquisition</div><b style="font-size:1.55rem;font-weight:850" id="m4">—</b></div>
+  </div>
+
+  <div class="g4" style="margin-bottom:1.6rem">
+   <div class="card card-flat" style="border:1px solid var(--line2);padding:1rem">
+    <div class="note">Impressions</div><b style="font-size:1.15rem" id="m5">—</b></div>
+   <div class="card card-flat" style="border:1px solid var(--line2);padding:1rem">
+    <div class="note">Clicks</div><b style="font-size:1.15rem" id="m6">—</b></div>
+   <div class="card card-flat" style="border:1px solid var(--line2);padding:1rem">
+    <div class="note">CTR</div><b style="font-size:1.15rem" id="m7">—</b></div>
+   <div class="card card-flat" style="border:1px solid var(--line2);padding:1rem">
+    <div class="note">Conversions</div><b style="font-size:1.15rem" id="m8">—</b></div>
+  </div>
+
+  <div class="tw"><table>
+   <thead><tr><th>Campaign</th><th>Platform</th><th>Spend</th><th>Conv.</th>
+    <th>CPA</th><th>Revenue</th><th>ROAS</th></tr></thead>
+   <tbody id="campBody"></tbody></table></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="card">
+  <span class="pill ads"><span class="dot"></span>Try it</span>
+  <h2 style="margin:0 0 .3em">Budget calculator</h2>
+  <p class="lead">Move the sliders. This is the same model we use to forecast a new account.</p>
+  <div class="calc" style="margin-top:1.6rem">
+   <div>
+    <div class="ctl"><label>Monthly ad spend <b id="vSpend">$8,000</b></label>
+     <input type="range" id="spend" min="1000" max="50000" step="500" value="8000" oninput="calc()"></div>
+    <div class="ctl"><label>Average order value <b id="vAov">$140</b></label>
+     <input type="range" id="aov" min="20" max="800" step="10" value="140" oninput="calc()"></div>
+    <div class="ctl"><label>Cost per click <b id="vCpc">$1.80</b></label>
+     <input type="range" id="cpc" min="20" max="900" step="10" value="180" oninput="calc()"></div>
+    <div class="ctl"><label>Conversion rate <b id="vCvr">2.4%</b></label>
+     <input type="range" id="cvr" min="5" max="120" step="1" value="24" oninput="calc()"></div>
+    <div class="ctl"><label>Gross margin <b id="vMar">55%</b></label>
+     <input type="range" id="mar" min="10" max="95" step="1" value="55" oninput="calc()"></div>
+   </div>
+   <div class="result">
+    <div class="note" style="color:rgba(255,255,255,.6)">Projected monthly revenue</div>
+    <div class="big" id="rRev">$0</div>
+    <hr>
+    <div class="row"><span>Clicks</span><b id="rClicks">0</b></div>
+    <div class="row"><span>Conversions</span><b id="rConv">0</b></div>
+    <div class="row"><span>Cost per acquisition</span><b id="rCpa">$0</b></div>
+    <div class="row"><span>ROAS</span><b id="rRoas">0x</b></div>
+    <hr>
+    <div class="row"><span>Gross profit</span><b id="rProfit">$0</b></div>
+    <div class="row"><span>Profit after ad spend</span><b id="rNet">$0</b></div>
+    <p class="note" id="verdict" style="margin:.8rem 0 0;color:#7ee0b0;font-weight:700"></p>
+   </div>
+  </div>
+ </div>
+</div></section>
+
+<script>
+var CH='all';
+function setCh(c,b){CH=c;
+ document.querySelectorAll('#tabs button').forEach(function(x){x.classList.remove('on')});
+ b.classList.add('on');paintAds()}
+function paintAds(){
+ var C=Signal.campaigns().filter(function(x){return CH==='all'||x.ch===CH});
+ var t={spend:0,imp:0,clicks:0,conv:0,rev:0};
+ C.forEach(function(c){t.spend+=c.spend;t.imp+=c.imp;t.clicks+=c.clicks;t.conv+=c.conv;t.rev+=c.rev});
+ document.getElementById('m1').textContent=Signal.money(t.spend);
+ document.getElementById('m2').textContent=Signal.money(t.rev);
+ document.getElementById('m3').textContent=(t.rev/t.spend).toFixed(2)+'x';
+ document.getElementById('m4').textContent='$'+(t.spend/t.conv).toFixed(2);
+ document.getElementById('m5').textContent=t.imp.toLocaleString();
+ document.getElementById('m6').textContent=t.clicks.toLocaleString();
+ document.getElementById('m7').textContent=(t.clicks/t.imp*100).toFixed(2)+'%';
+ document.getElementById('m8').textContent=t.conv.toLocaleString();
+ document.getElementById('campBody').innerHTML=C.map(function(c){
+  var roas=c.rev/c.spend;
+  return '<tr><td style="font-weight:700">'+c.n+'</td>'+
+   '<td><span class="chip flat">'+c.ch+'</span></td>'+
+   '<td>'+Signal.money(c.spend)+'</td><td>'+c.conv+'</td>'+
+   '<td>$'+(c.spend/c.conv).toFixed(2)+'</td>'+
+   '<td>'+Signal.money(c.rev)+'</td>'+
+   '<td><span class="chip '+(roas>=4?'up':roas>=2.5?'flat':'down')+'">'+roas.toFixed(2)+'x</span></td></tr>'}).join('');
+}
+function calc(){
+ var spend=+document.getElementById('spend').value,
+     aov=+document.getElementById('aov').value,
+     cpc=+document.getElementById('cpc').value/100,
+     cvr=+document.getElementById('cvr').value/1000,
+     mar=+document.getElementById('mar').value/100;
+ document.getElementById('vSpend').textContent='$'+spend.toLocaleString();
+ document.getElementById('vAov').textContent='$'+aov;
+ document.getElementById('vCpc').textContent='$'+cpc.toFixed(2);
+ document.getElementById('vCvr').textContent=(cvr*100).toFixed(1)+'%';
+ document.getElementById('vMar').textContent=(mar*100).toFixed(0)+'%';
+ var clicks=spend/cpc, conv=clicks*cvr, rev=conv*aov,
+     cpa=conv?spend/conv:0, roas=rev/spend, profit=rev*mar, net=profit-spend;
+ document.getElementById('rRev').textContent='$'+Math.round(rev).toLocaleString();
+ document.getElementById('rClicks').textContent=Math.round(clicks).toLocaleString();
+ document.getElementById('rConv').textContent=Math.round(conv).toLocaleString();
+ document.getElementById('rCpa').textContent='$'+cpa.toFixed(2);
+ document.getElementById('rRoas').textContent=roas.toFixed(2)+'x';
+ document.getElementById('rProfit').textContent='$'+Math.round(profit).toLocaleString();
+ document.getElementById('rNet').textContent='$'+Math.round(net).toLocaleString();
+ var v=document.getElementById('verdict');
+ if(net>0){v.textContent='✓ Profitable — every $1 of spend returns $'+(profit/spend).toFixed(2)+' in gross profit.';
+  v.style.color='#7ee0b0'}
+ else{v.textContent='✗ Losing money. Raise AOV, conversion rate or margin before scaling spend.';
+  v.style.color='#ff9ba0'}
+}
+document.addEventListener('DOMContentLoaded',function(){paintAds();calc()});
+</script><footer class="ftr"><div class="wrap">
+ <div class="fg">
+  <div><div class="logo"><span class="m">◈</span>Signal</div>
+   <p style="color:rgba(255,255,255,.72);font-size:.9rem;margin-top:.9rem;max-width:34ch">
+    A performance marketing agency that reports in revenue, not impressions.
+    Four channels, one team, one dashboard.</p></div>
+  <div><h4>Channels</h4><ul>
+   <li><a href="seo.html">SEO</a></li><li><a href="social.html">Social Media</a></li>
+   <li><a href="paid-ads.html">Paid Ads</a></li><li><a href="email.html">Email Marketing</a></li></ul></div>
+  <div><h4>Company</h4><ul>
+   <li><a href="results.html">Results</a></li><li><a href="pricing.html">Pricing</a></li>
+   <li><a href="contact.html">Free audit</a></li>
+   <li><a href="../../contact.html">Built by Premium Agency</a></li></ul></div>
+  <div><h4>Get the weekly</h4>
+   <p style="color:rgba(255,255,255,.72);font-size:.88rem">One channel teardown a week. No fluff.</p>
+   <form onsubmit="event.preventDefault();this.innerHTML='<p style=color:#7ee0b0;font-weight:700;font-size:.9rem>✓ Subscribed.</p>'">
+    <div class="field"><input placeholder="you@company.com" required
+      style="background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.2);color:#fff"></div>
+    <button class="btn btn-sm btn-v btn-full" type="submit">Subscribe</button></form></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> Signal — demonstration project.</span>
+  <span>Built by Premium Agency</span></div>
+</div></footer>
+</body></html>

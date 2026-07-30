@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Pricing — FLUX</title><meta name="description" content="Fixed-price AI builds with a live model run-cost estimator.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="f.css">
+<script src="f.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=JetBrains+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/flux/pricing.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/flux/pricing.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/flux/pricing.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>FLUX — AI &amp; automation studio by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<nav class="rail">
+ <div class="mark">F</div>
+ <a href="index.html" aria-label="Overview">◈<span class="tip">Overview</span></a><a href="chatbots.html" aria-label="AI Chatbots">◐<span class="tip">AI Chatbots</span></a><a href="automation.html" aria-label="Automation">⇄<span class="tip">Automation</span></a><a href="content-systems.html" aria-label="Content Systems">✦<span class="tip">Content Systems</span></a><a href="pricing.html" class='on' aria-label="Pricing">◫<span class="tip">Pricing</span></a><a href="contact.html" aria-label="Start a build">▶<span class="tip">Start a build</span></a>
+ <div class="sp"></div>
+ <button class="kbtn" onclick="palOpen()" title="Command palette">⌘K</button>
+</nav>
+<main class="app">
+<section style="padding-top:2.4rem"><div class="wrap">
+ <div class="crumb"><a href="index.html">flux</a> / pricing</div>
+ <span class="tag" data-r style="margin-top:.6rem">pricing</span>
+ <h1 data-r style="margin:.8rem 0">What a build costs</h1>
+ <p class="lead" data-r data-d="60">Fixed scope, fixed price. Ongoing support is optional
+  and priced separately so you are never paying for a retainer you do not use.</p>
+</div></section>
+
+<section style="padding-top:1rem"><div class="wrap">
+ <div class="g3" id="plans"></div>
+ <p class="note" style="margin-top:1.2rem">
+  Model usage is billed to your own provider account at cost — we never mark up tokens.</p>
+</div></section>
+
+<section><div class="wrap">
+ <div class="panel" data-r>
+  <div class="panel-head"><span>run-cost-estimator</span><span class="sp"></span>
+   <span class="tag c">live</span></div>
+  <div class="panel-body">
+   <h2 style="margin:0 0 .4em">What it costs to run</h2>
+   <p class="lead" style="margin-bottom:1.4rem">Monthly model spend for an agent at your volume.
+    This is the number most vendors will not show you before you sign.</p>
+   <div class="split" style="gap:1.4rem">
+    <div>
+     <div class="slider-row"><label>conversations / month <b id="vConv">4,000</b></label>
+      <input type="range" id="conv" min="200" max="50000" step="200" value="4000" oninput="calcRun()"></div>
+     <div class="slider-row"><label>avg. turns per conversation <b id="vTurns">6</b></label>
+      <input type="range" id="turns" min="2" max="20" step="1" value="6" oninput="calcRun()"></div>
+     <div class="slider-row"><label>context size <b id="vCtx">medium</b></label>
+      <input type="range" id="ctx" min="0" max="2" step="1" value="1" oninput="calcRun()"></div>
+     <div class="field" style="margin:0"><label>model</label>
+      <select class="sel" id="model" onchange="calcRun()">
+       <option value="0.15,0.6">small · $0.15 / $0.60 per M</option>
+       <option value="0.5,1.5" selected>mid · $0.50 / $1.50 per M</option>
+       <option value="3,15">frontier · $3.00 / $15.00 per M</option></select></div>
+    </div>
+    <div class="card" style="background:var(--bg3)">
+     <span class="note">estimated monthly model spend</span>
+     <b class="mono" style="display:block;font-size:clamp(1.8rem,3.6vw,2.4rem);margin:.3rem 0;
+      color:var(--lime)" id="rTotal">$0</b>
+     <div class="hr" style="margin:.8rem 0"></div>
+     <div style="display:flex;justify-content:space-between;font-size:.83rem;padding:.25rem 0;color:var(--txt2)">
+      <span>input tokens</span><b class="mono" id="rIn">0</b></div>
+     <div style="display:flex;justify-content:space-between;font-size:.83rem;padding:.25rem 0;color:var(--txt2)">
+      <span>output tokens</span><b class="mono" id="rOut">0</b></div>
+     <div style="display:flex;justify-content:space-between;font-size:.83rem;padding:.25rem 0;color:var(--txt2)">
+      <span>cost per conversation</span><b class="mono" id="rPer">$0</b></div>
+     <div class="hr" style="margin:.8rem 0"></div>
+     <p class="note" id="rNote" style="margin:0"></p>
+    </div>
+   </div>
+  </div>
+ </div>
+</div></section>
+
+<section><div class="wrap narrow">
+ <span class="tag" data-r>faq</span>
+ <h2 data-r style="margin:.7rem 0 1.2rem">Before you ask</h2>
+ <div id="faq"></div>
+</div></section>
+
+<script>
+var PLANS=[
+ {n:'Pilot',p:'$2,400',d:'One narrow use case, proven',
+  f:['Single workflow or FAQ bot','2 weeks','Runs on your infrastructure','Repo + docs handover','2 weeks post-launch support']},
+ {n:'Production',p:'$6,800',d:'A system, not a demo',pop:1,
+  f:['RAG agent or multi-step pipeline','4 weeks','Guardrails + eval set','Cost ceilings and logging','Escalation path to human','30 days support included']},
+ {n:'Platform',p:'from $14,000',d:'Multiple agents, shared infrastructure',
+  f:['Action agents with tool calling','6–8 weeks','Prompt library + internal tool','Observability dashboard','Team training sessions','90 days support included']}
+];
+var Q=[
+ ['Do we own what you build?','Entirely. Code lives in your repo, agents run in your cloud account, prompts are yours. We keep nothing and there is no licence to renew.'],
+ ['Which model providers do you use?','OpenAI, Anthropic and Gemini, chosen per task rather than by preference. Most production systems we ship route cheap tasks to a small model and only escalate to a frontier model when needed — that is usually where the cost savings are.'],
+ ['What happens when a model deprecates?','Every build abstracts the provider behind an interface, so swapping models is a config change and an eval run rather than a rewrite. We have migrated clients across three model generations without downtime.'],
+ ['How do you stop it hallucinating?','Grounding plus refusal. The agent can only answer from retrieved context, and below a confidence threshold it stops and escalates. It is better to say "I do not know" than to be confidently wrong, and we tune that threshold with you.'],
+ ['Can you work with our existing Zapier setup?','Yes, and often the first thing we do is delete half of it. Zaps accumulate. We audit what is actually firing, consolidate, and only rebuild in code where the volume justifies it.']
+];
+function calcRun(){
+ var conv=+document.getElementById('conv').value,
+     turns=+document.getElementById('turns').value,
+     ctx=+document.getElementById('ctx').value,
+     m=document.getElementById('model').value.split(',').map(Number);
+ var ctxNames=['small','medium','large'],ctxTok=[600,1800,4200];
+ document.getElementById('vConv').textContent=conv.toLocaleString();
+ document.getElementById('vTurns').textContent=turns;
+ document.getElementById('vCtx').textContent=ctxNames[ctx];
+ var inTok=conv*turns*(ctxTok[ctx]+120);
+ var outTok=conv*turns*180;
+ var cost=(inTok/1e6)*m[0]+(outTok/1e6)*m[1];
+ document.getElementById('rIn').textContent=(inTok/1e6).toFixed(1)+'M';
+ document.getElementById('rOut').textContent=(outTok/1e6).toFixed(1)+'M';
+ document.getElementById('rTotal').textContent='$'+cost.toFixed(0);
+ document.getElementById('rPer').textContent='$'+(cost/conv).toFixed(4);
+ var n=document.getElementById('rNote');
+ if(cost/conv>0.25){n.textContent='Cost per conversation is high. We would route simple turns to a smaller model — usually cuts this 60–70%.';n.style.color='var(--amber)'}
+ else{n.textContent='Healthy. At this rate the agent pays for itself against roughly '+Math.max(1,Math.round(cost/22))+' hours of human time a month.';n.style.color='var(--ok)'}
+}
+document.addEventListener('DOMContentLoaded',function(){
+ document.getElementById('plans').innerHTML=PLANS.map(function(p,i){
+  return '<div class="card" data-r data-d="'+(i*70)+'"'+(p.pop?' style="border-color:var(--indigo)"':'')+'>'+
+   (p.pop?'<span class="tag i">most common</span>':'<span class="tag">'+(i===0?'entry':'scale')+'</span>')+
+   '<h3 style="margin-top:.7rem">'+p.n+'</h3>'+
+   '<b class="mono" style="display:block;font-size:1.7rem;margin:.4rem 0;letter-spacing:-.03em">'+p.p+'</b>'+
+   '<p class="note" style="margin-bottom:.9rem">'+p.d+'</p>'+
+   '<ul class="tick">'+p.f.map(function(f){return '<li>'+f+'</li>'}).join('')+'</ul>'+
+   '<a class="btn '+(p.pop?'btn-p':'')+' btn-full" href="contact.html" style="margin-top:1rem">Start a build</a></div>'}).join('');
+ document.getElementById('faq').innerHTML=Q.map(function(q,i){
+  return '<details class="q"'+(i===0?' open':'')+'><summary>'+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join('');
+ document.querySelectorAll('#plans [data-r]').forEach(function(e,i){
+  setTimeout(function(){e.classList.add('in')},i*70)});
+ calcRun();
+});
+</script><footer class="ftr"><div class="wrap">
+ <div class="fg">
+  <div><div style="display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem">
+    <span style="width:26px;height:26px;border-radius:7px;display:grid;place-items:center;
+     background:linear-gradient(135deg,var(--indigo),var(--cyan));color:#fff;font-size:.78rem">F</span>Flux</div>
+   <p class="lead" style="font-size:.86rem;margin-top:.7rem;max-width:32ch">
+    We build the bots, the pipelines and the prompt systems — then hand you the keys and the documentation.</p></div>
+  <div><h4>Build</h4><ul>
+   <li><a href="chatbots.html">AI Chatbots</a></li>
+   <li><a href="automation.html">Business Automation</a></li>
+   <li><a href="content-systems.html">AI Content Systems</a></li></ul></div>
+  <div><h4>Studio</h4><ul>
+   <li><a href="pricing.html">Pricing</a></li>
+   <li><a href="contact.html">Start a build</a></li>
+   <li><a href="../../index.html">Premium Agency</a></li></ul></div>
+  <div><h4>Stack</h4><ul>
+   <li class="note">OpenAI · Anthropic · Gemini</li>
+   <li class="note">Zapier · Make · n8n</li>
+   <li class="note">Pinecone · Supabase</li>
+   <li class="note">Node · Python · Edge</li></ul></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> Flux — demonstration project.</span>
+  <span>Built by Premium Agency</span></div>
+</div></footer></main><div class="status">
+ <span class="s"><span class="dot"></span>connected</span>
+ <span class="s hide-s">pricing</span>
+ <span class="s hide-s">3 tiers</span>
+ <span class="sp"></span>
+ <span class="s hide-s">flux-studio v2.4</span>
+ <span class="s" id="clk">--:--:--</span>
+</div><div class="pal-ovl" id="palOvl" onclick="palClose()"></div>
+<div class="pal" id="pal">
+ <input id="palInput" placeholder="Jump to a page or run a demo..." autocomplete="off" spellcheck="false">
+ <div class="pal-list" id="palList"></div>
+ <div class="pal-foot"><span><span class="kbd">↑</span><span class="kbd">↓</span> navigate</span>
+  <span><span class="kbd">↵</span> open</span><span><span class="kbd">esc</span> close</span></div>
+</div></body></html>

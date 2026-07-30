@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Virtual Assistant — RELAY</title><meta name="description" content="Dedicated virtual assistants for admin, research and scheduling, with a live task board.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="r.css">
+<script src="r.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Mono:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Fraunces:wght@600&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/relay/virtual-assistant.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/relay/virtual-assistant.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/relay/virtual-assistant.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>RELAY — business support platform by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<header class="hdr"><div class="wrap hdr-in">
+ <a class="logo" href="index.html"><span class="m">R</span>Relay</a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+ <nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="virtual-assistant.html" class="on">Virtual Assistant</a>
+  <a href="data-entry.html">Data &amp; Scraping</a>
+  <a href="lead-generation.html">Lead Gen</a>
+  <a href="customer-support.html">Support</a>
+  <a href="pricing.html">Pricing</a>
+ </nav>
+ <a class="btn btn-sm btn-p" href="contact.html">Book a call</a>
+</div></header>
+<section style="padding-bottom:1.4rem"><div class="wrap">
+ <div class="crumbs"><a href="index.html">Home</a> / Virtual assistant</div>
+ <div class="g2" style="gap:2.6rem;align-items:center">
+  <div data-r>
+   <span class="pill teal"><span class="dot"></span>Service 01</span>
+   <h1>One assistant.<br>Your whole week.</h1>
+   <p class="lead">Admin, research and scheduling handled by a named person who learns
+    your process and stays on your account.</p>
+   <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.3rem">
+    <a class="btn btn-p" href="contact.html">Meet a candidate</a>
+    <a class="btn btn-o" href="virtual-assistant.html#taskboard">See a live board</a></div>
+  </div>
+  <div data-r data-d="100"><img src="img/va.webp" alt="Planner and schedule" width="560" height="560"
+    style="border-radius:var(--r-lg);box-shadow:var(--sh-lg)"></div>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="g3">
+  <div class="card" data-r><h3>Admin</h3>
+   <ul class="tick" style="margin-top:.6rem"><li>Inbox triage and drafting</li>
+   <li>Invoice chasing</li><li>Expense reconciliation</li><li>Document formatting</li></ul></div>
+  <div class="card" data-r data-d="70"><h3>Research</h3>
+   <ul class="tick" style="margin-top:.6rem"><li>Competitor tracking</li>
+   <li>Supplier sourcing</li><li>Market briefs</li><li>Meeting prep packs</li></ul></div>
+  <div class="card" data-r data-d="140"><h3>Scheduling</h3>
+   <ul class="tick" style="margin-top:.6rem"><li>Calendar ownership</li>
+   <li>Travel booking</li><li>Meeting coordination</li><li>Follow-up tracking</li></ul></div>
+ </div>
+</div></section>
+
+<section id="taskboard"><div class="wrap">
+ <div class="card">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:1.3rem">
+   <div><span class="pill teal"><span class="dot live"></span>Live tool</span>
+    <h2 style="margin:0">This week's board</h2>
+    <p class="note">Click any task to move it forward — the counters update.</p></div>
+   <button class="btn btn-sm btn-o" onclick="resetBoard()">↻ Reset board</button>
+  </div>
+  <div class="board" id="board"></div>
+  <div class="g4" style="margin-top:1.4rem">
+   <div><b class="serif" style="font-size:1.5rem" id="bTotal">0</b><div class="note">Tasks this week</div></div>
+   <div><b class="serif" style="font-size:1.5rem;color:var(--ok)" id="bDone">0</b><div class="note">Completed</div></div>
+   <div><b class="serif" style="font-size:1.5rem" id="bPct">0%</b><div class="note">Through the week</div></div>
+   <div><b class="serif" style="font-size:1.5rem" id="bHrs">0</b><div class="note">Hours saved</div></div>
+  </div>
+ </div>
+</div></section>
+
+<section style="background:var(--cream2);border-block:1px solid var(--line2)"><div class="wrap">
+ <span class="pill" data-r>The team</span>
+ <h2 data-r style="margin-bottom:1.4rem">Who you would work with</h2>
+ <div class="g4" id="team"></div>
+</div></section>
+
+<script>
+var BOARD=null;
+function resetBoard(){BOARD=JSON.parse(JSON.stringify(Relay.tasks()));paintBoard();tst('Board reset')}
+function moveTask(col,i){
+ var order=['today','progress','done'];
+ var idx=order.indexOf(col);
+ if(idx===2){BOARD.done.splice(i,1);paintBoard();tst('Task archived');return}
+ var t=BOARD[col].splice(i,1)[0];
+ BOARD[order[idx+1]].unshift(t);
+ paintBoard();
+ tst(idx===0?'Moved to in progress':'Marked complete');
+}
+function paintBoard(){
+ var cols=[['today','To do','var(--coral)'],['progress','In progress','var(--amber)'],['done','Done','var(--ok)']];
+ document.getElementById('board').innerHTML=cols.map(function(c){
+  var list=BOARD[c[0]];
+  return '<div class="col"><div class="col-head"><b style="color:'+c[2]+'">'+c[1]+'</b>'+
+   '<span>'+list.length+'</span></div>'+
+   (list.length?list.map(function(t,i){
+    return '<div class="task" onclick="moveTask(\''+c[0]+'\','+i+')">'+
+     '<b>'+t[0]+'</b><div class="meta"><span class="prio '+t[2]+'"></span>'+
+     '<small>'+t[1]+'</small><span class="chip cold">'+t[3]+'</span></div></div>'}).join('')
+    :'<p class="note" style="padding:.8rem .3rem">Nothing here.</p>')+'</div>'}).join('');
+ var tot=BOARD.today.length+BOARD.progress.length+BOARD.done.length;
+ document.getElementById('bTotal').textContent=tot;
+ document.getElementById('bDone').textContent=BOARD.done.length;
+ document.getElementById('bPct').textContent=(tot?Math.round(BOARD.done.length/tot*100):0)+'%';
+ document.getElementById('bHrs').textContent=(BOARD.done.length*2.5).toFixed(1);
+}
+document.addEventListener('DOMContentLoaded',function(){
+ BOARD=JSON.parse(JSON.stringify(Relay.tasks()));
+ paintBoard();
+ document.getElementById('team').innerHTML=Relay.team().map(function(p,i){
+  return '<div class="card person" data-r data-d="'+(i*60)+'">'+
+   '<div class="av" style="background:'+p.c+'">'+p.i+'</div>'+
+   '<h3>'+p.n+'</h3><div class="role">'+p.r+'</div>'+
+   '<div class="skills">'+p.s.map(function(s){return '<span>'+s+'</span>'}).join('')+'</div>'+
+   '<p class="note" style="margin-top:.7rem">'+p.hrs+'</p></div>'}).join('');
+ document.querySelectorAll('#team [data-r]').forEach(function(e,i){
+  setTimeout(function(){e.classList.add('in')},i*70)});
+});
+</script><footer class="ftr"><div class="wrap">
+ <div class="fg">
+  <div><div class="logo"><span class="m">R</span>Relay</div>
+   <p style="color:rgba(251,248,244,.75);font-size:.91rem;margin-top:.9rem;max-width:34ch">
+    Trained support staff who work your hours, in your tools, under your process.
+    Not a ticket queue in another timezone.</p>
+   <p class="note" style="color:rgba(251,248,244,.5)">Karachi · Manila · Est. 2020</p></div>
+  <div><h4>Services</h4><ul>
+   <li><a href="virtual-assistant.html">Virtual assistant</a></li>
+   <li><a href="data-entry.html">Data entry &amp; scraping</a></li>
+   <li><a href="lead-generation.html">Lead generation</a></li>
+   <li><a href="customer-support.html">Customer support</a></li></ul></div>
+  <div><h4>Company</h4><ul>
+   <li><a href="pricing.html">Pricing</a></li>
+   <li><a href="pricing.html#calc">Cost calculator</a></li>
+   <li><a href="contact.html">Book a call</a></li>
+   <li><a href="../../contact.html">Built by Premium Agency</a></li></ul></div>
+  <div><h4>Coverage</h4><ul>
+   <li>UK &amp; EU business hours</li><li>US Eastern &amp; Pacific</li>
+   <li>24/5 support rotation</li><li>Weekend on request</li></ul></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> Relay — demonstration project.</span>
+  <span>Built by Premium Agency</span></div>
+</div></footer>
+</body></html>

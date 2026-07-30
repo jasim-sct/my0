@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Social Media &amp; Content Demo | Premium Agency</title>
+<meta name="description" content="A social media content calendar, post grid and video editing showcase demo. Built by Premium Agency.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="demo.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<style>
+.ig{aspect-ratio:1;border-radius:12px;overflow:hidden;position:relative;cursor:pointer}
+.ig img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.ig:hover img{transform:scale(1.08)}
+.ig .ov{position:absolute;inset:0;background:rgba(5,6,15,.75);opacity:0;transition:.3s;
+ display:grid;place-items:center;color:#fff;font-weight:800;font-size:.85rem;gap:.3rem}
+.ig:hover .ov{opacity:1}
+.ig .type{position:absolute;top:.5rem;right:.5rem;font-size:.9rem}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:.4rem;margin-top:1rem}
+.cal .d{aspect-ratio:1;border-radius:9px;background:rgba(255,255,255,.04);
+ border:1px solid var(--stroke);padding:.35rem;font-size:.7rem;color:var(--txt-dim);position:relative}
+.cal .d.has{background:rgba(124,92,255,.16);border-color:rgba(124,92,255,.4)}
+.cal .d i{position:absolute;bottom:.3rem;left:.35rem;font-style:normal;font-size:.65rem}
+.cal .hd{text-align:center;font-size:.7rem;color:var(--txt-dim);text-transform:uppercase;
+ letter-spacing:.08em;font-weight:800;padding-bottom:.3rem}
+.tline{background:rgba(255,255,255,.04);border:1px solid var(--stroke);border-radius:12px;
+ padding:.8rem;margin-top:1rem}
+.track{height:34px;border-radius:7px;margin-bottom:.5rem;display:flex;align-items:center;
+ padding:0 .6rem;font-size:.75rem;font-weight:700;color:#06070f;gap:.3rem}
+.t1{background:linear-gradient(90deg,var(--brand),var(--brand-2));width:78%}
+.t2{background:linear-gradient(90deg,var(--brand-3),var(--brand));width:52%}
+.t3{background:rgba(255,255,255,.12);color:var(--txt-dim);width:100%}
+.wave{display:flex;align-items:center;gap:2px;height:100%}
+.wave i{width:2px;background:rgba(255,255,255,.5);border-radius:2px}
+.metric b{display:block;font-size:1.6rem;font-weight:900;color:var(--brand-2)}
+.metric small{color:var(--txt-dim);font-size:.76rem;text-transform:uppercase;letter-spacing:.06em}
+.metric{text-align:center;padding:1.1rem}
+</style><link rel="canonical" href="https://www.yourdomain.com/demos/social-content.html">
+<meta property="og:url" content="https://www.yourdomain.com/demos/social-content.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/demos/social-content.html"}</script>
+</head><body>
+<div class="bg-fx"></div>
+<div class="demo-bar">
+  <strong>◆ SAMPLE PROJECT</strong>
+  <span>Social Media &amp; Content demo — calendar, grid and video</span>
+  <a href="../index.html">← Back to agency</a>
+  <a href="../contact.html">Get this built →</a>
+</div>
+
+<section style="padding-bottom:1.5rem">
+ <div class="wrap">
+  <div class="eyebrow" data-r>Content Package · Premium Tier</div>
+  <h1 data-r data-d="60">Social content that <span class="grad">earns attention</span></h1>
+  <p class="lead" data-r data-d="120">A sample month for a lifestyle brand on our Premium social package — 60 posts, 40 reels, 5 platforms.</p>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <div class="grid g4">
+   <div class="glass metric" data-r><b>60</b><small>Posts / Month</small></div>
+   <div class="glass metric" data-r data-d="60"><b>+180%</b><small>Engagement</small></div>
+   <div class="glass metric" data-r data-d="120"><b>40</b><small>Reels Produced</small></div>
+   <div class="glass metric" data-r data-d="180"><b>5</b><small>Platforms</small></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2 data-r>Content Grid</h2>
+  <p class="lead" data-r>Every post designed on-brand and scheduled ahead. Hover any tile.</p>
+  <div class="grid g4" style="margin-top:1.2rem" id="grid"></div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="grid g2" style="gap:1.4rem;align-items:start">
+   <div class="glass" style="padding:1.4rem" data-r>
+    <h3>Publishing Calendar</h3>
+    <p style="color:var(--txt-dim);font-size:.88rem">Purple days have scheduled content.</p>
+    <div class="cal">
+     <div class="hd">M</div><div class="hd">T</div><div class="hd">W</div><div class="hd">T</div>
+     <div class="hd">F</div><div class="hd">S</div><div class="hd">S</div>
+    </div>
+    <div class="cal" id="cal"></div>
+   </div>
+   <div class="glass" style="padding:1.4rem" data-r data-d="80">
+    <h3>Video Edit Timeline</h3>
+    <p style="color:var(--txt-dim);font-size:.88rem">How a 30-second reel is assembled.</p>
+    <div class="tline">
+     <div class="track t1">🎬 Main footage</div>
+     <div class="track t2">✨ B-roll + effects</div>
+     <div class="track t3"><span style="margin-right:.4rem">🎵</span><div class="wave" id="wave"></div></div>
+    </div>
+    <ul style="margin-top:1rem;color:var(--txt-dim);font-size:.88rem">
+     <li style="margin-bottom:.4rem">✓ Colour graded to brand palette</li>
+     <li style="margin-bottom:.4rem">✓ Captions burned in for silent viewing</li>
+     <li style="margin-bottom:.4rem">✓ Exported for 9:16, 1:1 and 16:9</li>
+     <li>✓ Hook placed in the first 1.5 seconds</li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer style="border-top:1px solid var(--stroke);padding:2.5rem 0;text-align:center">
+ <div class="wrap">
+  <p style="color:var(--txt-dim);font-size:.9rem">Social and content packages from <strong style="color:#fff">Premium Agency</strong> — from $249/month.</p>
+  <a class="btn btn-primary" href="../contact.html"><span>Grow My Channels</span></a>
+ </div>
+</footer>
+
+<script src="demo.js" defer></script>
+<script>
+var imgs=['p-headphones','p-watch','p-serum','p-bag','p-headphones','p-watch','p-serum','p-bag'];
+var types=['📷','🎬','📷','🎠','🎬','📷','🎬','📷'];
+var labels=['1.2k likes','8.4k views','940 likes','2.1k likes','12k views','1.5k likes','6.7k views','880 likes'];
+document.getElementById('grid').innerHTML=imgs.map(function(x,i){
+ return '<div class="ig" data-r data-d="'+(i*45)+'"><img src="https://moccasin-meerkat-640470.hostingersite.com/assets/img/'+x+'.webp" alt="Social post" loading="lazy" width="600" height="600">'+
+ '<span class="type">'+types[i]+'</span><div class="ov"><span>'+labels[i]+'</span></div></div>';
+}).join('');
+var days='',has=[2,3,5,8,9,10,12,15,16,17,19,22,23,24,26,29,30];
+for(var d=1;d<=30;d++){days+='<div class="d'+(has.indexOf(d)>-1?' has':'')+'">'+d+
+ (has.indexOf(d)>-1?'<i>'+(d%3===0?'🎬':'📷')+'</i>':'')+'</div>'}
+document.getElementById('cal').innerHTML=days;
+var w='';for(var i=0;i<60;i++){w+='<i style="height:'+(20+Math.random()*70)+'%"></i>'}
+document.getElementById('wave').innerHTML=w;
+document.querySelectorAll('.ig[data-r]').forEach(function(e,i){setTimeout(function(){e.classList.add('in')},i*45)});
+</script></body></html>

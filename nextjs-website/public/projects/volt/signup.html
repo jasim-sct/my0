@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Sign Up — VOLT</title><meta name="description" content="Three-step validated signup with plan selection.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="volt.css">
+<script src="volt.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@700&display=swap"></noscript>
+<link rel="canonical" href="https://www.yourdomain.com/projects/volt/signup.html">
+<meta property="og:url" content="https://www.yourdomain.com/projects/volt/signup.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Premium Freelancing Agency">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","isPartOf":{"@type":"WebSite","name":"Premium Freelancing Agency","url":"https://www.yourdomain.com/"},"publisher":{"@type":"Organization","name":"Premium Freelancing Agency","@id":"https://www.yourdomain.com/#org"},"url":"https://www.yourdomain.com/projects/volt/signup.html"}</script>
+</head><body>
+<div class="demo-bar"><strong>◆ CLIENT PROJECT</strong>
+ <span>VOLT — site, billing, dashboard &amp; design system by Premium Agency</span>
+ <a href="../../index.html">← Agency</a><a href="../../contact.html">Get this built →</a></div>
+<header class="hdr"><div class="wrap hdr-in">
+ <a class="logo" href="index.html"><span class="bolt">⚡</span>Volt</a>
+ <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+ <nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="app.html">Dashboard</a>
+  <a href="signup.html" class="on">Sign Up</a>
+  <a href="design-system.html">Design System</a>
+ </nav>
+ <div class="hdr-tools">
+  <a class="btn btn-sm btn-lime" href="signup.html">Start free</a>
+ </div>
+</div></header>
+<section><div class="wrap narrow">
+ <div class="crumbs"><a href="index.html">Home</a> / Sign up</div>
+ <h1 data-r class="in">Start free</h1>
+ <div class="stepper"><div class="stp on" id="s1">1 · Account</div>
+  <div class="stp" id="s2">2 · Your work</div><div class="stp" id="s3">3 · Plan</div></div>
+
+ <form class="box" id="frm" novalidate data-r class="in">
+  <div id="p1">
+   <h3>Create your account</h3>
+   <div class="field"><label>Work email *</label><input name="email" type="email" required placeholder="you@studio.com"><span class="msg">Needs to be a real email</span></div>
+   <div class="grid g2" style="gap:.9rem">
+    <div class="field"><label>First name *</label><input name="first" required placeholder="Dana"><span class="msg">Required</span></div>
+    <div class="field"><label>Last name *</label><input name="last" required placeholder="Wray"><span class="msg">Required</span></div>
+   </div>
+   <div class="field"><label>Password *</label><input name="pw" type="password" required placeholder="At least 8 characters"><span class="msg">Minimum 8 characters</span></div>
+   <button type="button" class="btn btn-lime btn-full" onclick="go(2)">Next →</button>
+  </div>
+
+  <div id="p2" style="display:none">
+   <h3>What do you do?</h3>
+   <div class="field"><label>Business name</label><input name="biz" placeholder="Wray Studio"></div>
+   <div class="field"><label>Type of work</label><select name="type">
+    <option>Design</option><option>Development</option><option>Photography / video</option>
+    <option>Writing</option><option>Consulting</option><option>Something else</option></select></div>
+   <div class="field"><label>Roughly how much do you invoice a month?</label><select name="vol">
+    <option>Under $1,000</option><option>$1,000 – $5,000</option>
+    <option>$5,000 – $20,000</option><option>Over $20,000</option></select></div>
+   <div class="field"><label>Currency</label><select name="cur">
+    <option>USD ($)</option><option>GBP (£)</option><option>EUR (€)</option><option>CAD ($)</option><option>AUD ($)</option></select></div>
+   <div style="display:flex;gap:.7rem">
+    <button type="button" class="btn" onclick="go(1)">← Back</button>
+    <button type="button" class="btn btn-lime" style="flex:1" onclick="go(3)">Next →</button></div>
+  </div>
+
+  <div id="p3" style="display:none">
+   <h3>Pick your plan</h3>
+   <div id="planpick" style="display:grid;gap:.7rem;margin-bottom:1rem"></div>
+   <div id="cardbox" style="display:none">
+    <div class="box box-cyan box-flat" style="padding:.9rem;margin-bottom:1rem;border-width:2px">
+     <b class="mono" style="font-size:.8rem">DEMO CHECKOUT — NOTHING IS CHARGED</b></div>
+    <div class="field"><label>Card number</label><input name="card" placeholder="4242 4242 4242 4242" maxlength="19" oninput="fmt(this)"></div>
+    <div class="grid g2" style="gap:.9rem">
+     <div class="field"><label>Expiry</label><input name="exp" placeholder="04/29" maxlength="5"></div>
+     <div class="field"><label>CVC</label><input name="cvc" placeholder="123" maxlength="4"></div></div>
+   </div>
+   <div style="display:flex;gap:.7rem">
+    <button type="button" class="btn" onclick="go(2)">← Back</button>
+    <button type="button" class="btn btn-violet" style="flex:1" id="goBtn" onclick="finish()">Create account</button></div>
+  </div>
+ </form>
+</div></section>
+
+<script>
+var step=1,plan=new URLSearchParams(location.search).get('plan')||'solo';
+var P=[{k:'solo',n:'Solo',p:'Free',d:'Up to $1,000/month'},
+       {k:'studio',n:'Studio',p:'$19/mo',d:'Unlimited invoicing + branding'},
+       {k:'agency',n:'Agency',p:'$49/mo',d:'10 seats + accounting sync'}];
+function go(n){if(n>step&&!ok(step))return;step=n;
+ [1,2,3].forEach(function(i){document.getElementById('p'+i).style.display=i===n?'block':'none';
+  var s=document.getElementById('s'+i);s.classList.toggle('on',i===n);s.classList.toggle('done',i<n)});
+ window.scrollTo({top:60,behavior:'smooth'})}
+function ok(n){var b=document.getElementById('p'+n),good=true;
+ b.querySelectorAll('input[required]').forEach(function(i){
+  var bad=!i.value.trim();
+  if(i.type==='email')bad=!/^[^@]+@[^@]+\.[^@]+$/.test(i.value);
+  if(i.name==='pw')bad=i.value.length<8;
+  i.closest('.field').classList.toggle('err',bad);if(bad)good=false});
+ if(!good)tst('Check the highlighted fields');return good}
+function fmt(i){i.value=i.value.replace(/\D/g,'').replace(/(.{4})/g,'$1 ').trim()}
+function pick(k){plan=k;paintPlans()}
+function paintPlans(){
+ document.getElementById('planpick').innerHTML=P.map(function(p){
+  var on=p.k===plan;
+  return '<button type="button" class="box '+(on?'box-lime':'box-white')+'" onclick="pick(\''+p.k+'\')" '+
+   'style="text-align:left;padding:.9rem 1.1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;'+
+   (on?'':'box-shadow:3px 3px 0 var(--ink)')+'">'+
+   '<span><b style="font-family:var(--disp);text-transform:uppercase">'+p.n+'</b>'+
+   '<small style="display:block" class="note">'+p.d+'</small></span>'+
+   '<b class="mono">'+p.p+'</b></button>'}).join('');
+ document.getElementById('cardbox').style.display=plan==='solo'?'none':'block';
+ document.getElementById('goBtn').textContent=plan==='solo'?'Create free account':'Start 14-day trial';
+}
+function finish(){
+ var f=document.getElementById('frm'),d={};
+ new FormData(f).forEach(function(v,k){d[k]=v});
+ d.plan=plan;
+ try{localStorage.setItem('volt_user',JSON.stringify(d))}catch(e){}
+ var b=document.getElementById('goBtn');b.disabled=true;b.textContent='Setting up…';
+ setTimeout(function(){location.href='welcome.html'},1200);
+}
+document.addEventListener('DOMContentLoaded',paintPlans);
+</script><footer class="ftr"><div class="wrap">
+ <div class="fg">
+  <div><div class="logo"><span class="bolt">⚡</span>Volt</div>
+   <p style="margin-top:.9rem;max-width:34ch;font-size:.92rem;opacity:.82">
+    Invoicing that chases payment for you. Built for freelancers and small studios who would rather be working.</p>
+   <p class="note" style="color:var(--lime);opacity:1">SOC 2 · PCI DSS · Est. 2023</p></div>
+  <div><h4>Product</h4><ul>
+   <li><a href="index.html#features">Features</a></li>
+   <li><a href="pricing.html">Pricing</a></li>
+   <li><a href="app.html">Live dashboard</a></li>
+   <li><a href="signup.html">Start free</a></li></ul></div>
+  <div><h4>Company</h4><ul>
+   <li><a href="index.html#how">How it works</a></li>
+   <li><a href="index.html#faq">FAQ</a></li>
+   <li><a href="design-system.html">Design system</a></li>
+   <li><a href="../../contact.html">Built by Premium Agency</a></li></ul></div>
+  <div><h4>Get the drop</h4>
+   <p style="font-size:.9rem;opacity:.82">One email a month. Product changes, nothing else.</p>
+   <form onsubmit="event.preventDefault();this.innerHTML='<p style=color:var(--lime);font-weight:700>✓ YOU ARE IN.</p>'">
+    <div class="field"><input placeholder="you@studio.com" required></div>
+    <button class="btn btn-sm btn-lime btn-full" type="submit">Subscribe</button></form></div>
+ </div>
+ <div class="fbot"><span>© <span data-year></span> VOLT — demonstration project.</span>
+  <span>Designed &amp; built by Premium Agency</span></div>
+</div></footer>
+</body></html>

@@ -1,0 +1,8 @@
+# Ignore the static Hostinger mirror — deploy Next.js only
+moccasin-meerkat-640470.hostingersite.com
+
+# Local / build artifacts
+**/node_modules
+**/.next
+**/.git
+**/*.log

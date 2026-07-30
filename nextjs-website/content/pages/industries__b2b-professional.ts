@@ -1,4 +1,4 @@
-export const title = 'Digital Agency for B2B & Professional Services | Premium Agency';
+export const title = 'Digital Agency for B2B & Professional Services | Screen Arts';
 export const description = 'Long sales cycles need authority content and a lead engine that runs quietly. Web, SEO, content, ads and automation for b2b & professional services. Free audi';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/industries">Industries</a> / <span aria-current="page">B2B & Professional Services</span></nav>

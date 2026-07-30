@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { TopButton } from "./TopButton";
+import { brand } from "@/lib/brand";
 
 export function Footer() {
   return (
@@ -10,19 +11,22 @@ export function Footer() {
             <div className="f-brand">
               <Link className="logo" href="/">
                 <span className="dot" />
-                Premium Agency
+                {brand.shortName}
               </Link>
               <p className="lead" style={{ fontSize: ".9rem", marginTop: ".9rem" }}>
-                Twenty-four services under one roof, delivered by specialists and reported in
-                revenue. Serving brands across the USA, UK, Canada, Australia, UAE, Saudi Arabia,
-                Germany and Singapore.
+                {brand.legalName} — twenty-four services under one roof, delivered by specialists
+                and reported in revenue. Serving brands across the USA, UK, Canada, Australia, UAE,
+                Saudi Arabia, Germany and Singapore.
+              </p>
+              <p style={{ fontSize: ".88rem", color: "var(--txt-dim)", marginTop: "1rem" }}>
+                <strong style={{ color: "inherit", fontWeight: 600 }}>{brand.founder.name}</strong>
+                <br />
+                {brand.founder.title}
               </p>
               <p style={{ fontSize: ".88rem", color: "var(--txt-dim)" }}>
-                <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+                <a href={`mailto:${brand.email}`}>{brand.email}</a>
                 <br />
-                <a href="https://wa.me/923000000000">+92 300 0000000</a>
-                <br />
-                Rahim Yar Khan, Punjab, Pakistan
+                <a href={`https://wa.me/${brand.whatsapp}`}>{brand.phoneDisplay}</a>
               </p>
             </div>
             <div className="f-cols">
@@ -221,7 +225,7 @@ export function Footer() {
           </div>
           <div className="f-bottom">
             <span>
-              © <span data-year /> Premium Freelancing Agency. All rights reserved.
+              © <span data-year /> {brand.legalName}. All rights reserved.
             </span>
             <span>
               <Link href="/privacy-policy">Privacy</Link> · <Link href="/terms">Terms</Link> ·{" "}

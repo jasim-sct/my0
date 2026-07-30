@@ -1,4 +1,4 @@
-export const title = 'AI Chatbots Services | $2,400 – $14,000 | Premium Agency';
+export const title = 'AI Chatbots Services | $2,400 – $14,000 | Screen Arts';
 export const description = 'Retrieval-grounded agents that cite their sources, refuse anything they cannot ground, and escalate below a confidence threshold you set.';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

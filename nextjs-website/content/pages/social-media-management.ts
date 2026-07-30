@@ -1,4 +1,4 @@
-export const title = 'Social Media Management Services | $249 – $899/mo | Premium Agency';
+export const title = 'Social Media Management Services | $249 – $899/mo | Screen Arts';
 export const description = 'Instagram, Facebook and LinkedIn planned around what your audience actually saves and shares, with community management and a monthly report tied to e';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

@@ -1,4 +1,4 @@
-export const title = 'Digital Agency for Agencies & Studios | Premium Agency';
+export const title = 'Digital Agency for Agencies & Studios | Screen Arts';
 export const description = 'Overflow capacity under NDA, reported in your branding. Web, SEO, content, ads and automation for agencies & studios. Free audit within 24 hours.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/industries">Industries</a> / <span aria-current="page">Agencies & Studios</span></nav>

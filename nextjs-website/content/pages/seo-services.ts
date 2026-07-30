@@ -1,4 +1,4 @@
-export const title = 'SEO Services Services | $299 – $999/mo | Premium Agency';
+export const title = 'SEO Services Services | $299 – $999/mo | Screen Arts';
 export const description = 'On-page, technical and link building run as one programme, reported in pipeline and revenue. We show you the keyword-to-page map so you can see the st';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

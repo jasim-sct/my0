@@ -15,7 +15,7 @@ var ACTIONS=[
  {t:'Run a workflow',u:'automation.html#builder',ic:'▶',s:'demo'},
  {t:'Open the prompt lab',u:'content-systems.html#lab',ic:'▶',s:'demo'},
  {t:'Compare pricing tiers',u:'pricing.html',ic:'◫',s:'page'},
- {t:'Back to Premium Agency',u:'../../index.html',ic:'←',s:'external'}
+ {t:'Back to Screen Arts',u:'../../index.html',ic:'←',s:'external'}
 ];
 
 var F={

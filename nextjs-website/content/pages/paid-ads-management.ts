@@ -1,4 +1,4 @@
-export const title = 'Paid Ads Management Services | $399 – $1,299/mo | Premium Agency';
+export const title = 'Paid Ads Management Services | $399 – $1,299/mo | Screen Arts';
 export const description = 'Google and Meta campaigns structured around profit per conversion, with wasted spend cut weekly and a budget model that tells you honestly when scalin';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

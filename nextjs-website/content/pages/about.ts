@@ -1,15 +1,29 @@
-export const title = 'About Us | Full-Service Digital Agency Since 2019 | Premium Agency';
-export const description = 'A full-service digital agency delivering 24 services to clients in eight countries since 2019. Fixed pricing, full ownership, honest advice.';
+export const title = 'About Us | Screen Arts Innovations Private Limited';
+export const description = 'Screen Arts Innovations Private Limited — full-service digital agency led by Muhammed Jasim M C, Founder & Managing Director. Fixed pricing, full ownership, honest advice.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">About</span></nav>
  <div class="hero-grid">
-  <div><div class="eyebrow" data-anim>Est. 2019</div>
+  <div><div class="eyebrow" data-anim>Screen Arts</div>
    <h1 class="kin-h">Agency quality. Freelance pricing.</h1></div>
-  <div><p class="lead" data-anim data-delay="120">We started because every project we worked on died in
+  <div><p class="lead" data-anim data-delay="120">Screen Arts Innovations Private Limited started because every project we worked on died in
    the gap between agencies — the brand team handing to the motion team handing to the developer,
    each one losing something.</p></div>
  </div>
- <div class="phero-img"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-office.webp" alt="Daylight studio floor where the team works" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(assets/img/ph-office-tiny.webp)"></div></div>
+ <div class="phero-img"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-office.webp" alt="Daylight studio floor where the Screen Arts team works" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(assets/img/ph-office-tiny.webp)"></div></div>
+</div></section>
+
+<section class="band"><div class="wrap">
+ <div class="grid g2" style="background:none;gap:clamp(24px,4vw,56px);align-items:center">
+  <div data-anim="left">
+   <div class="eyebrow">Leadership</div>
+   <h2 class="kin-h">Muhammed Jasim M C</h2>
+   <p class="lead" style="margin-bottom:.4rem"><strong>Founder &amp; Managing Director</strong></p>
+   <p class="lead">Screen Arts is led by Muhammed Jasim M C — accountable for strategy, delivery standards,
+    and the promise that every engagement stays honest, priced in public, and owned by the client.</p>
+  </div>
+  <div data-anim="right"><div class="rv zoom ar-43 "><img class="ph " src="/assets/img/ph-meeting.webp" alt="Muhammed Jasim M C — Founder and Managing Director, Screen Arts" width="1600" height="1000" sizes="(max-width:900px) 92vw, 620px" loading="lazy" decoding="async" style="background-image:url(assets/img/ph-meeting-tiny.webp)"></div>
+  </div>
+ </div>
 </div></section>
 
 <section><div class="wrap">
@@ -29,7 +43,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
     <li>We say no to about a third of what we are asked to build</li>
    </ul>
   </div>
-  <div data-anim="right"><div class="rv zoom ar-43 "><img class="ph " src="/assets/img/ph-meeting.webp" alt="Client kick-off call in progress" width="1600" height="1000" sizes="(max-width:900px) 92vw, 620px" loading="lazy" decoding="async" style="background-image:url(assets/img/ph-meeting-tiny.webp)"></div>
+  <div data-anim="right"><div class="rv zoom ar-43 "><img class="ph " src="/assets/img/ph-workshop.webp" alt="Screen Arts discovery workshop" width="1600" height="1000" sizes="(max-width:900px) 92vw, 620px" loading="lazy" decoding="async" style="background-image:url(assets/img/ph-workshop-tiny.webp)"></div>
    <div class="hero-stats" style="margin-top:1.4rem;grid-template-columns:repeat(2,1fr)">
    <div class="stat"><b>640</b><small>Projects delivered</small></div><div class="stat"><b>20+</b><small>Countries served</small></div><div class="stat"><b>94%</b><small>Client retention</small></div><div class="stat"><b>24h</b><small>Response time</small></div></div>
   </div>
@@ -71,7 +85,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
 </div></section>
 
 <section id="faq"><div class="wrap narrow">
- <div class="center"><div class="eyebrow" data-anim>FAQ</div><h2 data-anim>About us</h2></div>
- <div class="faq" style="margin-top:1.8rem"><details class="glass" data-anim data-delay="0"><summary>How big is the team?</summary><p>Small enough that you meet whoever does your work, large enough to cover eight disciplines. Specialists per service — we do not have generalists pretending to be experts in everything.</p></details><details class="glass" data-anim data-delay="40"><summary>Where are you based?</summary><p>Rahim Yar Khan, Punjab, Pakistan — with staff working US, UK, EU, Gulf and APAC hours. Your time zone is written into the contract.</p></details><details class="glass" data-anim data-delay="80"><summary>Why should I trust an agency I found online?</summary><p>Start with the free audit. You get the findings whether you hire us or not, so the risk is entirely ours. Then look at the ten live builds — nobody fakes working software.</p></details><details class="glass" data-anim data-delay="120"><summary>What do you refuse to do?</summary><p>Anything we cannot do well. We turn down roughly a third of automation requests as not worth building, we do not do penetration testing, and we will not advise on token economics. We refer instead.</p></details><details class="glass" data-anim data-delay="160"><summary>Do you sign NDAs?</summary><p>Before any credentials change hands, always. For agency clients we work fully white-label under your branding.</p></details></div>
+ <div class="center"><div class="eyebrow" data-anim>FAQ</div><h2 data-anim>About Screen Arts</h2></div>
+ <div class="faq" style="margin-top:1.8rem"><details class="glass" data-anim data-delay="0"><summary>Who leads Screen Arts?</summary><p>Muhammed Jasim M C is Founder &amp; Managing Director of Screen Arts Innovations Private Limited. He oversees delivery standards, pricing honesty, and client accountability across every engagement.</p></details><details class="glass" data-anim data-delay="40"><summary>How big is the team?</summary><p>Small enough that you meet whoever does your work, large enough to cover eight disciplines. Specialists per service — we do not have generalists pretending to be experts in everything.</p></details><details class="glass" data-anim data-delay="80"><summary>Why should I trust an agency I found online?</summary><p>Start with the free audit. You get the findings whether you hire us or not, so the risk is entirely ours. Then look at the ten live builds — nobody fakes working software.</p></details><details class="glass" data-anim data-delay="120"><summary>What do you refuse to do?</summary><p>Anything we cannot do well. We turn down roughly a third of automation requests as not worth building, we do not do penetration testing, and we will not advise on token economics. We refer instead.</p></details><details class="glass" data-anim data-delay="160"><summary>Do you sign NDAs?</summary><p>Before any credentials change hands, always. For agency clients we work fully white-label under your branding.</p></details></div>
 </div></section>`;
 export const showCta = true;

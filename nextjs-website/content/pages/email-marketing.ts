@@ -1,4 +1,4 @@
-export const title = 'Email Marketing Services | $420 – $2,400 | Premium Agency';
+export const title = 'Email Marketing Services | $420 – $2,400 | Screen Arts';
 export const description = 'We build the lifecycle flows first, then the campaigns. Subject lines tested against each other rather than guessed, and revenue attributed per flow.';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

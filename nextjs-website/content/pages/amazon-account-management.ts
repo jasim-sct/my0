@@ -1,4 +1,4 @@
-export const title = 'Amazon Account Management Services | $499 – $2,500/mo | Premium Agency';
+export const title = 'Amazon Account Management Services | $499 – $2,500/mo | Screen Arts';
 export const description = 'Full Seller Central operations with PPC restructured around search-term intent, listings rebuilt on real keyword research, and account health monitore';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

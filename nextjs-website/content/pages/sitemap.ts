@@ -1,4 +1,4 @@
-export const title = 'Sitemap | Premium Agency';
+export const title = 'Sitemap | Screen Arts';
 export const description = 'Every page on this site — all 24 services, 12 guides, 8 locations, 6 industries and 10 live builds, organised by section.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Sitemap</span></nav>

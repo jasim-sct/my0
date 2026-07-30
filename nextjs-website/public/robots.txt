@@ -3,4 +3,4 @@ Allow: /
 Disallow: /demos/
 Disallow: /projects/
 
-Sitemap: https://www.yourdomain.com/sitemap.xml
+Sitemap: https://www.screenarts.com/sitemap.xml

@@ -1,4 +1,4 @@
-export const title = 'Data Entry & Web Scraping Services | $8 – $12/hour | Premium Agency';
+export const title = 'Data Entry & Web Scraping Services | $8 – $12/hour | Screen Arts';
 export const description = 'Scraping, entry, cleaning and enrichment with two-pass verification on critical fields and a 5% random sample checked by someone who did not enter it.';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

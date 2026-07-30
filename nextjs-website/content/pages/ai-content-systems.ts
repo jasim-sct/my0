@@ -1,4 +1,4 @@
-export const title = 'AI Content Systems Services | $799 – $4,000 | Premium Agency';
+export const title = 'AI Content Systems Services | $799 – $4,000 | Screen Arts';
 export const description = 'A versioned prompt library in git with an evaluation set, guardrails and an internal tool so non-technical staff get consistent output without learnin';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "../styles/globals.scss";
+import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: {
-    default: "Premium Freelancing Agency | Web, Brand, Marketing, AI & Automation Agency",
+    default: `${brand.shortName} | Web, Brand, Marketing, AI & Automation Agency`,
     template: "%s",
   },
   description:
@@ -12,31 +13,34 @@ export const metadata: Metadata = {
     icon: "/assets/favicon.svg",
     apple: "/assets/favicon.svg",
   },
-  metadataBase: new URL("https://www.yourdomain.com"),
+  metadataBase: new URL("https://www.screenarts.com"),
 };
 
 const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://www.yourdomain.com/#org",
-  name: "Premium Freelancing Agency",
-  alternateName: "Premium Agency",
-  url: "https://www.yourdomain.com/",
+  "@id": "https://www.screenarts.com/#org",
+  name: brand.legalName,
+  alternateName: brand.shortName,
+  url: "https://www.screenarts.com/",
   logo: {
     "@type": "ImageObject",
-    url: "https://www.yourdomain.com/assets/favicon.svg",
+    url: "https://www.screenarts.com/assets/favicon.svg",
   },
   description:
     "Full-service digital agency delivering web, brand, marketing, content, operations, AI and emerging-tech services to clients worldwide.",
-  email: "hello@yourdomain.com",
-  telephone: "+92 300 0000000",
+  email: brand.email,
+  telephone: brand.phoneDisplay,
   foundingDate: "2019",
   priceRange: "$$",
+  founder: {
+    "@type": "Person",
+    name: brand.founder.name,
+    jobTitle: brand.founder.title,
+  },
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Rahim Yar Khan",
-    addressRegion: "Punjab",
-    addressCountry: "PK",
+    addressCountry: "IN",
   },
 };
 

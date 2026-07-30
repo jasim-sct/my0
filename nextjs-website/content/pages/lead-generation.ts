@@ -1,4 +1,4 @@
-export const title = 'Lead Generation Services | $11 – $15/hour | Premium Agency';
+export const title = 'Lead Generation Services | $11 – $15/hour | Screen Arts';
 export const description = 'Researched by hand from LinkedIn, directories and filings, SMTP-verified within 48 hours of delivery, and scored on fit plus observable buying intent.';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

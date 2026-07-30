@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { brand } from "@/lib/brand";
 
 export function Nav() {
   return (
@@ -6,7 +7,7 @@ export function Nav() {
       <div className="wrap nav-in">
         <Link className="logo" href="/">
           <span className="dot" />
-          Premium Agency
+          {brand.shortName}
         </Link>
         <button className="burger" aria-label="Toggle menu" aria-expanded="false">
           <span />

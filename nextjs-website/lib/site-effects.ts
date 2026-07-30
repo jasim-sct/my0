@@ -34,27 +34,29 @@ export function initSiteEffects(): Cleanup {
     schedule();
   }
 
-  /* loader */
+  /* loader — cinematic settle */
   function drop() {
     const c = doc.querySelector(".curtain");
     if (c) c.classList.add("hide");
   }
-  if (doc.readyState === "complete") setTimeout(drop, 160);
+  if (doc.readyState === "complete") setTimeout(drop, 280);
   else {
-    const onLoad = () => setTimeout(drop, 160);
+    const onLoad = () => setTimeout(drop, 280);
     addEventListener("load", onLoad);
     cleanups.push(() => removeEventListener("load", onLoad));
   }
-  const dropTimer = setTimeout(drop, 2200);
+  const dropTimer = setTimeout(drop, 2600);
   cleanups.push(() => clearTimeout(dropTimer));
 
-  /* scroll chrome */
+  /* scroll chrome — lerped progress for silk feel */
   const nav = doc.querySelector("header.nav");
   const bar = doc.querySelector(".progress") as HTMLElement | null;
   const toTop = doc.querySelector(".top");
   let lastY = -1;
   let docH = 0;
   let ticking = false;
+  let progressTarget = 0;
+  let progressCurrent = 0;
   function measure() {
     docH = doc.documentElement.scrollHeight - innerHeight;
   }
@@ -62,11 +64,25 @@ export function initSiteEffects(): Cleanup {
   function applyScroll() {
     ticking = false;
     const y = pageYOffset;
-    if (y === lastY) return;
-    lastY = y;
-    if (nav) nav.classList.toggle("stuck", y > 16);
-    if (toTop) toTop.classList.toggle("show", y > 520);
-    if (bar) bar.style.transform = "scaleX(" + (docH > 0 ? y / docH : 0) + ")";
+    if (y !== lastY) {
+      lastY = y;
+      if (nav) nav.classList.toggle("stuck", y > 16);
+      if (toTop) toTop.classList.toggle("show", y > 520);
+      progressTarget = docH > 0 ? y / docH : 0;
+    }
+  }
+  if (bar && RICH) {
+    addTask(() => {
+      progressCurrent += (progressTarget - progressCurrent) * 0.12;
+      if (Math.abs(progressTarget - progressCurrent) < 0.0004) progressCurrent = progressTarget;
+      bar.style.transform = "scaleX(" + progressCurrent + ")";
+    });
+  } else if (bar) {
+    const syncBar = () => {
+      bar.style.transform = "scaleX(" + (docH > 0 ? pageYOffset / docH : 0) + ")";
+    };
+    addEventListener("scroll", syncBar, { passive: true });
+    cleanups.push(() => removeEventListener("scroll", syncBar));
   }
   const onScrollChrome = () => {
     if (!ticking) {
@@ -419,9 +435,9 @@ export function initSiteEffects(): Cleanup {
       if (hoverBtn && btnRect) {
         btnTx =
           "translate3d(" +
-          ((mx - btnRect.left - btnRect.width / 2) * 0.18).toFixed(1) +
+          ((mx - btnRect.left - btnRect.width / 2) * 0.22).toFixed(1) +
           "px," +
-          ((my - btnRect.top - btnRect.height / 2) * 0.26).toFixed(1) +
+          ((my - btnRect.top - btnRect.height / 2) * 0.32).toFixed(1) +
           "px,0)";
       }
       schedule();
@@ -430,8 +446,8 @@ export function initSiteEffects(): Cleanup {
     cleanups.push(() => doc.removeEventListener("mousemove", onMove));
 
     addTask(() => {
-      rx += (mx - rx) * 0.18;
-      ry += (my - ry) * 0.18;
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
       const nd = "translate3d(" + (mx - 2.5) + "px," + (my - 2.5) + "px,0)";
       const nr = "translate3d(" + (rx - 19).toFixed(1) + "px," + (ry - 19).toFixed(1) + "px,0)";
       if (nd !== dotT) {
@@ -501,7 +517,7 @@ export function initSiteEffects(): Cleanup {
           let t0 = 0;
           function tick(ts: number) {
             if (!t0) t0 = ts;
-            const p = Math.min((ts - t0) / 1400, 1);
+            const p = Math.min((ts - t0) / 1800, 1);
             const v = t * (1 - Math.pow(1 - p, 3));
             el.textContent =
               pfx + (t % 1 ? v.toFixed(1) : Math.round(v).toLocaleString()) + sfx;
@@ -676,7 +692,7 @@ export function initSiteEffects(): Cleanup {
         d.forEach((v, k) => body.push(k.toUpperCase() + ": " + v));
         location.href =
           "mailto:" +
-          (form.dataset.email || "hello@example.com") +
+          (form.dataset.email || "hello@screenarts.com") +
           "?subject=" +
           encodeURIComponent("Project enquiry — " + (d.get("service") || "General")) +
           "&body=" +

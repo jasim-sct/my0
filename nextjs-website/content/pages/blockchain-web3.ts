@@ -1,4 +1,4 @@
-export const title = 'Blockchain & Web3 Services | $1,900 – $8,000 | Premium Agency';
+export const title = 'Blockchain & Web3 Services | $1,900 – $8,000 | Screen Arts';
 export const description = 'Smart contracts with a Hardhat test suite above 90% coverage, a review pass against a written checklist, and gas modelled across four chains before yo';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

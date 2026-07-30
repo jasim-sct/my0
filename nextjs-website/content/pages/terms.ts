@@ -1,4 +1,4 @@
-export const title = 'Terms of Service | Premium Agency';
+export const title = 'Terms of Service | Screen Arts';
 export const description = 'The terms governing our engagements, payments, revisions, ownership and cancellation.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Terms of Service</span></nav>

@@ -1,4 +1,4 @@
-export const title = 'Graphic Design Services | $149 – $899 | Premium Agency';
+export const title = 'Graphic Design Services | $149 – $899 | Screen Arts';
 export const description = 'Logos, packaging, editorial and campaign print produced to production standard, with dielines, bleed and colour profiles that will not surprise your p';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

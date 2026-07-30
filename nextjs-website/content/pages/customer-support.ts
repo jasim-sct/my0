@@ -1,4 +1,4 @@
-export const title = 'Customer Support Services | $10 – $14/hour | Premium Agency';
+export const title = 'Customer Support Services | $10 – $14/hour | Screen Arts';
 export const description = 'Agents trained on your product, working inside your helpdesk, answering in your tone — with escalations that arrive complete so nobody repeats themsel';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

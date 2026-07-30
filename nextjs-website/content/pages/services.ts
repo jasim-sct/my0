@@ -1,4 +1,4 @@
-export const title = 'All 24 Services | Web, Brand, Marketing, AI | Premium Agency';
+export const title = 'All 24 Services | Web, Brand, Marketing, AI | Screen Arts';
 export const description = 'All 24 services: web, e-commerce, brand, SEO, ads, content, virtual assistants, AI automation, Web3 and Amazon. Published pricing on every page.';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

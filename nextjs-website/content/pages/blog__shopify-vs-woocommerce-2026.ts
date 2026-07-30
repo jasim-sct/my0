@@ -1,4 +1,4 @@
-export const title = 'Shopify vs WooCommerce in 2026: the honest comparison | Premium Agency';
+export const title = 'Shopify vs WooCommerce in 2026: the honest comparison | Screen Arts';
 export const description = 'A cost and capability comparison across five years, including the fees nobody mentions and the point where each one becomes the wrong choice.';
 export const mainHtml = `<article class="post">
 <section class="phero" style="padding-bottom:1.4rem"><div class="wrap narrow">
@@ -8,7 +8,7 @@ export const mainHtml = `<article class="post">
  <p class="lead" data-anim data-delay="120" style="margin-inline:0">A cost and capability comparison across five years, including the fees nobody mentions and the point where each one becomes the wrong choice.</p>
  <div class="post-meta" data-anim data-delay="180">
   <span class="avatar">PA</span>
-  <div><strong>Premium Agency editorial</strong><small>Published 2026-06-19 · 11 min read</small></div>
+  <div><strong>Screen Arts editorial</strong><small>Published 2026-06-19 · 11 min read</small></div>
  </div>
 </div>
 <div class="wrap" style="margin-top:2.2rem"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-writer.webp" alt="Long-form copy being drafted" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-writer-tiny.webp)"></div></div>

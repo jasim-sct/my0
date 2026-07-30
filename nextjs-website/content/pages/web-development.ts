@@ -1,4 +1,4 @@
-export const title = 'Website Development & Design Services | From $299 — Premium Agency';
+export const title = 'Website Development & Design Services | From $299 — Screen Arts';
 export const description = 'Professional website development from $299. Responsive, SEO-ready websites with custom UI/UX, animations and CRM-connected forms. Delivered in 7 to 25 days.';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

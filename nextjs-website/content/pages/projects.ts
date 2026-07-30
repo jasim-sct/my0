@@ -1,4 +1,4 @@
-export const title = '10 Live Projects | Working Demos You Can Use | Premium Agency';
+export const title = '10 Live Projects | Working Demos You Can Use | Screen Arts';
 export const description = 'Ten complete working applications you can use right now: e-commerce checkout, AI studio, support platform, marketing dashboard and more. Real software.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Projects</span></nav>

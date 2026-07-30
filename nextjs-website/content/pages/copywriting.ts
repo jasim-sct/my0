@@ -1,4 +1,4 @@
-export const title = 'Copywriting Services | $140 – $780 | Premium Agency';
+export const title = 'Copywriting Services | $140 – $780 | Screen Arts';
 export const description = 'Sales pages, ads and product descriptions that lead with your customer';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

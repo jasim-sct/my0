@@ -1,4 +1,4 @@
-export const title = 'Digital Agency for Local Service Businesses | Premium Agency';
+export const title = 'Digital Agency for Local Service Businesses | Screen Arts';
 export const description = 'Local SEO, a site that converts, and someone answering the phone. Web, SEO, content, ads and automation for local service businesses. Free audit within 24 hou';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/industries">Industries</a> / <span aria-current="page">Local Service Businesses</span></nav>

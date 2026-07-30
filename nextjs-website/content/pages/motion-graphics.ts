@@ -1,4 +1,4 @@
-export const title = 'Motion Graphics & Animation Services | $499 – $9,000 | Premium Agency';
+export const title = 'Motion Graphics & Animation Services | $499 – $9,000 | Screen Arts';
 export const description = 'We build title systems and animation frameworks that are data-driven — swap the copy or the language and the sequence re-times itself around it.';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

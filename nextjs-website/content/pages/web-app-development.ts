@@ -1,4 +1,4 @@
-export const title = 'Web App Development Services | $2,400 – $14,000 | Premium Agency';
+export const title = 'Web App Development Services | $2,400 – $14,000 | Screen Arts';
 export const description = 'We build dashboards, portals, SaaS MVPs and internal tools with real architecture — typed data, proper auth, audit logs and documentation the next dev';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

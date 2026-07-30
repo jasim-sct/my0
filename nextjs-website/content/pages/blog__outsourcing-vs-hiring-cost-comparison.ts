@@ -1,4 +1,4 @@
-export const title = 'Outsourcing vs hiring: the cost comparison nobody shows you | Premium Agency';
+export const title = 'Outsourcing vs hiring: the cost comparison nobody shows you | Screen Arts';
 export const description = 'The full first-year cost of a local hire against outsourced support, including the six costs that never appear in the salary conversation.';
 export const mainHtml = `<article class="post">
 <section class="phero" style="padding-bottom:1.4rem"><div class="wrap narrow">
@@ -8,7 +8,7 @@ export const mainHtml = `<article class="post">
  <p class="lead" data-anim data-delay="120" style="margin-inline:0">The full first-year cost of a local hire against outsourced support, including the six costs that never appear in the salary conversation.</p>
  <div class="post-meta" data-anim data-delay="180">
   <span class="avatar">PA</span>
-  <div><strong>Premium Agency editorial</strong><small>Published 2026-03-21 · 8 min read</small></div>
+  <div><strong>Screen Arts editorial</strong><small>Published 2026-03-21 · 8 min read</small></div>
  </div>
 </div>
 <div class="wrap" style="margin-top:2.2rem"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-security.webp" alt="Security review of a client system" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-security-tiny.webp)"></div></div>

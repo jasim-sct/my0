@@ -2,6 +2,7 @@ import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import { FinalCta } from "./FinalCta";
 import { SiteEffects } from "./SiteEffects";
+import { brand } from "@/lib/brand";
 
 type Props = {
   children: React.ReactNode;
@@ -19,7 +20,7 @@ export function SiteShell({ children, showCta = true }: Props) {
       </a>
       <div className="curtain">
         <div className="load-mark">
-          <b>Premium Agency</b>
+          <b>{brand.shortName}</b>
           <div className="load-bar">
             <i />
           </div>

@@ -1,4 +1,4 @@
-export const title = 'UI/UX Design Services | $899 – $4,500 | Premium Agency';
+export const title = 'UI/UX Design Services | $899 – $4,500 | Screen Arts';
 export const description = 'We deliver a documented design system — colour tokens with contrast ratios, a type scale, component states including errors, spacing rules and written';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

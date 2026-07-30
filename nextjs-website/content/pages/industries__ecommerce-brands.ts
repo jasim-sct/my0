@@ -1,4 +1,4 @@
-export const title = 'Digital Agency for E-Commerce Brands | Premium Agency';
+export const title = 'Digital Agency for E-Commerce Brands | Screen Arts';
 export const description = 'Stores that need conversion work, not more traffic. Web, SEO, content, ads and automation for e-commerce brands. Free audit within 24 hours.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/industries">Industries</a> / <span aria-current="page">E-Commerce Brands</span></nav>

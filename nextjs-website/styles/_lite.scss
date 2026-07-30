@@ -1,16 +1,71 @@
 /* ========================================================== LITE MODE === */
-html.lite .rv::after {
-  display:none
-}
-html.lite .rv img {
-  transform:none !important
-}
-html.lite .cur,html.lite .cur-dot {
-  display:none
-}
-html.lite [data-anim] {
-  transition-duration:.45s
-}
-html.lite .marquee-track {
-  animation-duration:70s
+/* Strip luxury extras on weak devices / reduced capacity */
+
+html.lite {
+  body::before {
+    display: none;
+  }
+
+  body {
+    animation: none;
+  }
+
+  .rv::after {
+    display: none;
+  }
+
+  .rv img {
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .cur,
+  .cur-dot {
+    display: none;
+  }
+
+  [data-anim] {
+    filter: none !important;
+    transition-duration: 0.45s;
+  }
+
+  .kin > i {
+    filter: none !important;
+    opacity: 1;
+  }
+
+  .marquee-track {
+    animation-duration: 70s;
+  }
+
+  .hero-badge,
+  .logo .dot,
+  .cta-band::before {
+    animation: none !important;
+  }
+
+  .progress {
+    height: 2px;
+    background: var(--acc);
+    box-shadow: none;
+  }
+
+  header.nav.stuck {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: var(--paper);
+  }
+
+  html:not(.lite) img.ph {
+    opacity: 1;
+  }
+
+  .grid > .card:hover,
+  .grid > .pillar:hover,
+  .grid > .art-card:hover,
+  .grid > .demo-tile:hover,
+  .btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }

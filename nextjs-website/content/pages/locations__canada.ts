@@ -1,4 +1,4 @@
-export const title = 'Digital Agency for Canada | Web, SEO, Brand & AI | Premium Agency';
+export const title = 'Digital Agency for Canada | Web, SEO, Brand & AI | Screen Arts';
 export const description = 'Web, SEO, brand, ads, content and AI automation for Canada businesses. Named staff on EST / PST, invoiced in your currency. Free audit in 24 hours.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/locations">Locations</a> / <span aria-current="page">Canada</span></nav>

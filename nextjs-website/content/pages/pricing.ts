@@ -1,4 +1,4 @@
-export const title = 'Pricing | All 24 Services, Published Rates | Premium Agency';
+export const title = 'Pricing | All 24 Services, Published Rates | Screen Arts';
 export const description = 'Transparent pricing for every service: websites from $299, SEO from $299/mo, brand identity from $899, AI chatbots from $2,400, plus five bundled packages from $699.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Pricing</span></nav>

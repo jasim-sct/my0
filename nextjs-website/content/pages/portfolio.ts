@@ -1,4 +1,4 @@
-export const title = 'Portfolio & Case Studies | Premium Agency';
+export const title = 'Portfolio & Case Studies | Screen Arts';
 export const description = 'See our recent work: Shopify stores, SEO campaigns, brand launches, AI chatbots, social media growth and custom websites for clients worldwide.';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

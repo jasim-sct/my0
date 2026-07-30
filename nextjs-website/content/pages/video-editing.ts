@@ -1,4 +1,4 @@
-export const title = 'Video Editing Services | $199 – $999 | Premium Agency';
+export const title = 'Video Editing Services | $199 – $999 | Screen Arts';
 export const description = 'We cut to the beat, colour grade to your brand palette, burn in captions for silent viewing and deliver in every aspect ratio you need.';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

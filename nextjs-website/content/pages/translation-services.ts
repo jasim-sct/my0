@@ -1,4 +1,4 @@
-export const title = 'Translation & Localisation Services | $0.09 – $0.18/word | Premium Agency';
+export const title = 'Translation & Localisation Services | $0.09 – $0.18/word | Screen Arts';
 export const description = 'Native writers, a second-reviewer pass, and genuine right-to-left typesetting — Nastaliq script, correct numerals, and every layout consequence flagge';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

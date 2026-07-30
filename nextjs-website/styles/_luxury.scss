@@ -1,0 +1,298 @@
+/* ========================================================== LUXURY LAYER ===
+   Premium motion & surface polish. Disabled under html.lite / reduced-motion. */
+
+/* Film grain — subtle paper texture, pointer-events none */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9800;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+}
+
+/* Cinematic page settle after curtain */
+html:not(.lite) body {
+  animation: luxBodyIn 1.2s var(--ease-lux) both;
+}
+
+@keyframes luxBodyIn {
+  from {
+    opacity: 0.92;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Sticky nav — soft elevation + whisper of blur */
+html:not(.lite) header.nav.stuck {
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: saturate(1.2) blur(12px);
+  -webkit-backdrop-filter: saturate(1.2) blur(12px);
+  box-shadow: 0 1px 0 var(--rule), var(--lux-shadow-sm);
+}
+
+/* Progress bar — gradient silk */
+html:not(.lite) .progress {
+  height: 2.5px;
+  background: linear-gradient(90deg, var(--acc), #8b6cf7 55%, var(--hot));
+  box-shadow: 0 0 12px rgba(91, 45, 240, 0.35);
+}
+
+/* Cursor — softer luxury ring */
+html:not(.lite) .cur {
+  border-color: rgba(12, 12, 13, 0.22);
+  mix-blend-mode: difference;
+  border-width: 1.5px;
+  transition:
+    width 0.55s var(--ease-lux),
+    height 0.55s var(--ease-lux),
+    background 0.4s var(--ease-lux-soft),
+    border-color 0.4s,
+    opacity 0.35s;
+}
+
+html:not(.lite) .cur.grow {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+html:not(.lite) .cur.media {
+  background: var(--ink);
+  border-color: var(--ink);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+/* Cards — gentle lift on capable hardware */
+html:not(.lite) .grid > .card,
+html:not(.lite) .grid > .art-card,
+html:not(.lite) .grid > .demo-tile,
+html:not(.lite) .grid > .pillar {
+  transition:
+    background var(--dur-lux) var(--ease-lux),
+    transform var(--dur-lux) var(--ease-lux),
+    box-shadow var(--dur-lux) var(--ease-lux);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html:not(.lite) .grid > .card:hover,
+  html:not(.lite) .grid > .pillar:hover {
+    transform: translate3d(0, -4px, 0);
+    z-index: 2;
+    box-shadow: var(--lux-shadow-sm);
+  }
+
+  html:not(.lite) .grid > .art-card:hover,
+  html:not(.lite) .grid > .demo-tile:hover {
+    transform: translate3d(0, -6px, 0);
+    z-index: 2;
+    box-shadow: var(--lux-shadow);
+  }
+
+  html:not(.lite) .proj-shot:hover {
+    box-shadow: var(--lux-shadow);
+  }
+
+  html:not(.lite) .mk-chip:hover {
+    transform: translate3d(0, -2px, 0);
+    box-shadow: var(--lux-shadow-sm);
+  }
+
+  html:not(.lite) .btn:hover {
+    transform: translate3d(0, -2px, 0);
+    letter-spacing: 0.01em;
+  }
+
+  html:not(.lite) .btn:active {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Hero badge — soft float */
+html:not(.lite) .hero-badge {
+  box-shadow: var(--lux-shadow);
+  animation: luxFloat 6.5s var(--ease-lux-soft) infinite alternate;
+}
+
+@keyframes luxFloat {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+/* Stats — underline draw on enter */
+html:not(.lite) .stat.in b,
+html:not(.lite) .hero-stats .stat b {
+  position: relative;
+}
+
+html:not(.lite) .stat.in b::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.15em;
+  width: 100%;
+  height: 1.5px;
+  background: var(--acc);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: luxRule 0.9s var(--ease-lux) 0.35s forwards;
+}
+
+@keyframes luxRule {
+  to {
+    transform: scaleX(0.42);
+  }
+}
+
+/* CTA band — richer ambient wash */
+html:not(.lite) .cta-band {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06), var(--lux-shadow);
+}
+
+html:not(.lite) .cta-band::before {
+  opacity: 0.85;
+  filter: saturate(1.15);
+  animation: luxDrift 28s var(--ease-lux-soft) infinite alternate;
+}
+
+@keyframes luxDrift {
+  from {
+    transform: translate3d(-14%, 6%, 0) scale(1) rotate(0deg);
+  }
+  to {
+    transform: translate3d(16%, -8%, 0) scale(1.2) rotate(8deg);
+  }
+}
+
+/* Marquee — slower, more intentional */
+html:not(.lite) .marquee-track {
+  animation-duration: 56s;
+}
+
+html:not(.lite) .marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Serif emphasis shimmer on hover (subtle) */
+html:not(.lite) em,
+html:not(.lite) .it {
+  background: linear-gradient(90deg, currentColor 0%, var(--acc) 50%, currentColor 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-position 0.8s var(--ease-lux);
+}
+
+html:not(.lite) em:hover,
+html:not(.lite) .it:hover {
+  -webkit-text-fill-color: transparent;
+  background-position: 100% 0;
+}
+
+/* Logo dot pulse */
+html:not(.lite) .logo .dot {
+  box-shadow: 0 0 0 0 rgba(91, 45, 240, 0.35);
+  animation: luxDot 3.2s var(--ease-lux-soft) infinite;
+}
+
+@keyframes luxDot {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(91, 45, 240, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(91, 45, 240, 0);
+  }
+}
+
+/* Mega menu — softer entrance */
+html:not(.lite) .mega {
+  transition:
+    opacity 0.4s var(--ease-lux),
+    visibility 0.4s,
+    transform 0.4s var(--ease-lux);
+  transform: translate3d(0, -6px, 0);
+}
+
+html:not(.lite) .has-mega.open .mega {
+  transform: none;
+}
+
+/* FAQ open — smoother */
+html:not(.lite) .faq details[open] p {
+  animation: luxFadeUp 0.55s var(--ease-lux);
+}
+
+@keyframes luxFadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* WhatsApp / top — silkier */
+html:not(.lite) .wa {
+  transition: transform 0.55s var(--spring), box-shadow 0.4s;
+}
+
+html:not(.lite) .wa:hover {
+  box-shadow: 0 16px 40px -10px rgba(37, 211, 102, 0.7);
+}
+
+html:not(.lite) .top {
+  transition:
+    opacity 0.5s var(--ease-lux),
+    visibility 0.5s,
+    transform 0.5s var(--ease-lux),
+    background 0.35s,
+    color 0.35s,
+    border-color 0.35s;
+}
+
+/* Image ready — soft settle when decoded */
+html:not(.lite) img.ph.ready {
+  animation: luxImgReady 0.7s var(--ease-lux) both;
+}
+
+@keyframes luxImgReady {
+  from {
+    filter: brightness(0.96);
+  }
+  to {
+    filter: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    display: none;
+  }
+
+  html:not(.lite) body,
+  html:not(.lite) .hero-badge,
+  html:not(.lite) .logo .dot,
+  html:not(.lite) .cta-band::before {
+    animation: none !important;
+  }
+
+  html:not(.lite) .grid > .card:hover,
+  html:not(.lite) .grid > .pillar:hover,
+  html:not(.lite) .grid > .art-card:hover,
+  html:not(.lite) .grid > .demo-tile:hover,
+  html:not(.lite) .btn:hover {
+    transform: none;
+  }
+}

@@ -1,4 +1,4 @@
-export const title = 'What a brand identity actually includes (and what it does not) | Premium Agency';
+export const title = 'What a brand identity actually includes (and what it does not) | Screen Arts';
 export const description = 'The difference between a logo, a visual identity and a brand system — with what should be in the handover document.';
 export const mainHtml = `<article class="post">
 <section class="phero" style="padding-bottom:1.4rem"><div class="wrap narrow">
@@ -8,7 +8,7 @@ export const mainHtml = `<article class="post">
  <p class="lead" data-anim data-delay="120" style="margin-inline:0">The difference between a logo, a visual identity and a brand system — with what should be in the handover document.</p>
  <div class="post-meta" data-anim data-delay="180">
   <span class="avatar">PA</span>
-  <div><strong>Premium Agency editorial</strong><small>Published 2026-04-04 · 7 min read</small></div>
+  <div><strong>Screen Arts editorial</strong><small>Published 2026-04-04 · 7 min read</small></div>
  </div>
 </div>
 <div class="wrap" style="margin-top:2.2rem"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-data.webp" alt="Data entry and research work in progress" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-data-tiny.webp)"></div></div>

@@ -1,4 +1,4 @@
-export const title = 'Virtual Assistant Services | $9/hr or $1,450/mo | Premium Agency';
+export const title = 'Virtual Assistant Services | $9/hr or $1,450/mo | Screen Arts';
 export const description = 'A named person who joins your Slack, learns your process in the first fortnight and stays on your account. Replaced within five days at no cost if the';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

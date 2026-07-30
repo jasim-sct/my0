@@ -1,4 +1,4 @@
-export const title = 'Digital Agency for Amazon Sellers | Premium Agency';
+export const title = 'Digital Agency for Amazon Sellers | Screen Arts';
 export const description = 'Listings, PPC and account health handled by people who have run eight-figure catalogues. Web, SEO, content, ads and automation for amazon sellers. Free audit ';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/industries">Industries</a> / <span aria-current="page">Amazon Sellers</span></nav>

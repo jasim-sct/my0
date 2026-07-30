@@ -1,4 +1,4 @@
-export const title = 'Brand Identity Services | $899 – $6,000 | Premium Agency';
+export const title = 'Brand Identity Services | $899 – $6,000 | Screen Arts';
 export const description = 'We build the whole system — mark, palette, type scale, applications, motion specification and usage rules — documented so the next person to touch it ';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

@@ -4,7 +4,7 @@ import { blogPosts } from "@/content/blog";
 import { industries } from "@/content/industries";
 import { locations } from "@/content/locations";
 
-const base = "https://www.yourdomain.com";
+const base = "https://www.screenarts.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [

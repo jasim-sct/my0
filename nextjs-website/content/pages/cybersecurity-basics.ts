@@ -1,4 +1,4 @@
-export const title = 'Cybersecurity Basics Services | $1,400 fixed + $95/hr fixes | Premium Agency';
+export const title = 'Cybersecurity Basics Services | $1,400 fixed + $95/hr fixes | Screen Arts';
 export const description = 'A weighted 12-point audit covering the fundamentals that account for most real incidents at this size, with findings ranked by severity and fixes quot';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

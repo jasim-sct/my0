@@ -1,4 +1,4 @@
-export const title = 'Script Writing Services | $180 – $260/min | Premium Agency';
+export const title = 'Script Writing Services | $180 – $260/min | Screen Arts';
 export const description = 'Properly formatted screenplays, read aloud before delivery, with the hook placed in the first three seconds and word count mapped to runtime.';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

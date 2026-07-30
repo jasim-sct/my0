@@ -1,4 +1,4 @@
-export const title = 'Free Audit & Quote | 24-Hour Response | Premium Agency';
+export const title = 'Free Audit & Quote | 24-Hour Response | Screen Arts';
 export const description = 'Get a free audit of your website, ads, Amazon account or content. Findings within 24 hours, yours whether you hire us or not. No card, no call required.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Contact</span></nav>
@@ -13,7 +13,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
 
 <section style="padding-top:1rem"><div class="wrap">
  <div class="grid g2" style="background:none;gap:clamp(24px,4vw,48px);align-items:start">
-  <form class="form" id="quoteForm" data-email="hello@yourdomain.com" data-anim="left" novalidate>
+  <form class="form" id="quoteForm" data-email="hello@screenarts.com" data-anim="left" novalidate>
    <h3>Project enquiry</h3>
    <div class="row">
     <div class="field"><label for="name">Name *</label><input id="name" name="name" required placeholder="Jane Smith"><span class="msg">Required</span></div>
@@ -39,7 +39,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
     <span class="msg">Give us something to work with</span>
     <p class="note" id="wcount" style="margin-top:.35rem">0 words</p></div>
    <button class="btn btn-primary btn-full" type="submit"><span>Send enquiry</span><span class="gt">&rsaquo;</span></button>
-   <p class="form-note" id="formMsg" style="display:none;color:var(--ok)">Opening your email app with the details filled in. If nothing happens, email hello@yourdomain.com directly.</p>
+   <p class="form-note" id="formMsg" style="display:none;color:var(--ok)">Opening your email app with the details filled in. If nothing happens, email hello@screenarts.com directly.</p>
    <p class="form-note center">No card, no call required. By submitting you agree to our <a href="/privacy-policy">privacy policy</a>.</p>
   </form>
 
@@ -55,7 +55,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
    <div class="box" style="margin-bottom:1rem"><h3>Direct contact</h3>
     <ul class="ct-list">
      <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 7 9-7"/></svg>
-      <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li>
+      <a href="mailto:hello@screenarts.com">hello@screenarts.com</a></li>
      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 20.5l1.6-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg>
       <a href="https://wa.me/923000000000">WhatsApp +92 300 0000000</a></li>
      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>

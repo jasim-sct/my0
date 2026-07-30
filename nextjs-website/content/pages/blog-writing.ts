@@ -1,4 +1,4 @@
-export const title = 'Blog Writing Services | $180 – $780 | Premium Agency';
+export const title = 'Blog Writing Services | $180 – $780 | Screen Arts';
 export const description = 'Articles built on search intent and structured to skim, with something on the page that is not already on page one. Written by people, edited by a dif';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

@@ -1,4 +1,4 @@
-export const title = 'The 12-point security checklist that prevents most breaches | Premium Agency';
+export const title = 'The 12-point security checklist that prevents most breaches | Screen Arts';
 export const description = 'Small sites are not breached by sophisticated attacks. Here is the weighted checklist we audit against, with severity and point values.';
 export const mainHtml = `<article class="post">
 <section class="phero" style="padding-bottom:1.4rem"><div class="wrap narrow">
@@ -8,7 +8,7 @@ export const mainHtml = `<article class="post">
  <p class="lead" data-anim data-delay="120" style="margin-inline:0">Small sites are not breached by sophisticated attacks. Here is the weighted checklist we audit against, with severity and point values.</p>
  <div class="post-meta" data-anim data-delay="180">
   <span class="avatar">PA</span>
-  <div><strong>Premium Agency editorial</strong><small>Published 2026-05-16 · 8 min read</small></div>
+  <div><strong>Screen Arts editorial</strong><small>Published 2026-05-16 · 8 min read</small></div>
  </div>
 </div>
 <div class="wrap" style="margin-top:2.2rem"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-city.webp" alt="Global markets served around the clock" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-city-tiny.webp)"></div></div>

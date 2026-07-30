@@ -1,4 +1,4 @@
-export const title = 'Industries We Serve | E-Commerce, SaaS, Amazon, B2B | Premium Agency';
+export const title = 'Industries We Serve | E-Commerce, SaaS, Amazon, B2B | Screen Arts';
 export const description = 'Digital services for e-commerce brands, SaaS startups, local service businesses, Amazon sellers, agencies and B2B professional services.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Industries</span></nav>

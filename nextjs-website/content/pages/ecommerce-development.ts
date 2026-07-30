@@ -1,4 +1,4 @@
-export const title = 'E-Commerce Development Services | $499 – $2,999 | Premium Agency';
+export const title = 'E-Commerce Development Services | $499 – $2,999 | Screen Arts';
 export const description = 'We build Shopify and WooCommerce stores where the checkout is the design priority — fewer fields, clearer shipping, visible trust signals, and upsells';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

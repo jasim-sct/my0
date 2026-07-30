@@ -1,4 +1,4 @@
-export const title = 'Why your best content is invisible to Google | Premium Agency';
+export const title = 'Why your best content is invisible to Google | Screen Arts';
 export const description = 'Most content failures are structural, not editorial. How to find the pages competing with each other and fix the internal linking that never existed.';
 export const mainHtml = `<article class="post">
 <section class="phero" style="padding-bottom:1.4rem"><div class="wrap narrow">
@@ -8,7 +8,7 @@ export const mainHtml = `<article class="post">
  <p class="lead" data-anim data-delay="120" style="margin-inline:0">Most content failures are structural, not editorial. How to find the pages competing with each other and fix the internal linking that never existed.</p>
  <div class="post-meta" data-anim data-delay="180">
   <span class="avatar">PA</span>
-  <div><strong>Premium Agency editorial</strong><small>Published 2026-06-28 · 10 min read</small></div>
+  <div><strong>Screen Arts editorial</strong><small>Published 2026-06-28 · 10 min read</small></div>
  </div>
 </div>
 <div class="wrap" style="margin-top:2.2rem"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-analytics.webp" alt="Revenue and traffic dashboard on a laptop" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-analytics-tiny.webp)"></div></div>
@@ -32,7 +32,7 @@ export const mainHtml = `<article class="post">
 
 <section id="faq"><div class="wrap narrow">
  <div class="center"><div class="eyebrow" data-anim>FAQ</div><h2 data-anim>Related questions</h2></div>
- <div class="faq" style="margin-top:1.8rem"><details class="glass" data-anim data-delay="0"><summary>How do I know if I have keyword cannibalisation?</summary><p>Search Console, Performance report, filter by query, check the Pages tab. Multiple URLs appearing for one query is the signal. Or search site:yourdomain.com plus the phrase and see how many of your own pages come back.</p></details><details class="glass" data-anim data-delay="40"><summary>Should I delete or redirect old content?</summary><p>Redirect, almost always. A 301 to the consolidated page passes the accumulated authority. Deleting throws it away. Only delete if the page has no links and no traffic at all.</p></details><details class="glass" data-anim data-delay="80"><summary>How many internal links is too many?</summary><p>There is no hard cap, but every link dilutes the others. Aim for three to eight contextual links per article, all genuinely relevant. A hundred footer links pass almost nothing.</p></details></div>
+ <div class="faq" style="margin-top:1.8rem"><details class="glass" data-anim data-delay="0"><summary>How do I know if I have keyword cannibalisation?</summary><p>Search Console, Performance report, filter by query, check the Pages tab. Multiple URLs appearing for one query is the signal. Or search site:example.com plus the phrase and see how many of your own pages come back.</p></details><details class="glass" data-anim data-delay="40"><summary>Should I delete or redirect old content?</summary><p>Redirect, almost always. A 301 to the consolidated page passes the accumulated authority. Deleting throws it away. Only delete if the page has no links and no traffic at all.</p></details><details class="glass" data-anim data-delay="80"><summary>How many internal links is too many?</summary><p>There is no hard cap, but every link dilutes the others. Aim for three to eight contextual links per article, all genuinely relevant. A hundred footer links pass almost nothing.</p></details></div>
 </div></section>
 
 <section><div class="wrap">

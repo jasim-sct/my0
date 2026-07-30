@@ -1,4 +1,4 @@
-export const title = 'Blog | Guides on Web, SEO, Brand, AI & Commerce | Premium Agency';
+export const title = 'Blog | Guides on Web, SEO, Brand, AI & Commerce | Screen Arts';
 export const description = '12 in-depth guides on website costs, SEO strategy, Shopify vs WooCommerce, Amazon ACoS, AI automation, security and more. Real numbers, honest trade-offs.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Blog</span></nav>

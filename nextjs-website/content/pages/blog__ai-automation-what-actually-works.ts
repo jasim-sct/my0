@@ -1,4 +1,4 @@
-export const title = 'AI automation: what actually works in a small business | Premium Agency';
+export const title = 'AI automation: what actually works in a small business | Screen Arts';
 export const description = 'Which AI automations return real money in a business under fifty people, and which are expensive theatre. Based on 34 deployed systems.';
 export const mainHtml = `<article class="post">
 <section class="phero" style="padding-bottom:1.4rem"><div class="wrap narrow">
@@ -8,7 +8,7 @@ export const mainHtml = `<article class="post">
  <p class="lead" data-anim data-delay="120" style="margin-inline:0">Which AI automations return real money in a business under fifty people, and which are expensive theatre. Based on 34 deployed systems.</p>
  <div class="post-meta" data-anim data-delay="180">
   <span class="avatar">PA</span>
-  <div><strong>Premium Agency editorial</strong><small>Published 2026-05-29 · 9 min read</small></div>
+  <div><strong>Screen Arts editorial</strong><small>Published 2026-05-29 · 9 min read</small></div>
  </div>
 </div>
 <div class="wrap" style="margin-top:2.2rem"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-social.webp" alt="Social platform apps on a phone" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-social-tiny.webp)"></div></div>

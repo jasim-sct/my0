@@ -1,4 +1,4 @@
-export const title = 'How to cut Amazon ACoS by half in 90 days | Premium Agency';
+export const title = 'How to cut Amazon ACoS by half in 90 days | Screen Arts';
 export const description = 'The campaign restructure that takes most Seller Central accounts from 40% ACoS to under 20%, with the exact steps in order.';
 export const mainHtml = `<article class="post">
 <section class="phero" style="padding-bottom:1.4rem"><div class="wrap narrow">
@@ -8,7 +8,7 @@ export const mainHtml = `<article class="post">
  <p class="lead" data-anim data-delay="120" style="margin-inline:0">The campaign restructure that takes most Seller Central accounts from 40% ACoS to under 20%, with the exact steps in order.</p>
  <div class="post-meta" data-anim data-delay="180">
   <span class="avatar">PA</span>
-  <div><strong>Premium Agency editorial</strong><small>Published 2026-06-11 · 12 min read</small></div>
+  <div><strong>Screen Arts editorial</strong><small>Published 2026-06-11 · 12 min read</small></div>
  </div>
 </div>
 <div class="wrap" style="margin-top:2.2rem"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-code.webp" alt="Front-end code being written for a client build" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-code-tiny.webp)"></div></div>

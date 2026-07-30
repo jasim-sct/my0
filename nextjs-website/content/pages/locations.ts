@@ -1,4 +1,4 @@
-export const title = 'Locations | Digital Agency Serving 8 Markets | Premium Agency';
+export const title = 'Locations | Digital Agency Serving 8 Markets | Screen Arts';
 export const description = 'We serve clients in the United States, United Kingdom, Canada, Australia, UAE, Saudi Arabia, Germany and Singapore with named staff working your business hours.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Locations</span></nav>

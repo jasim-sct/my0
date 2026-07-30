@@ -1,4 +1,4 @@
-export const title = 'How much does a website cost in 2026? Real numbers, no ranges | Premium Agency';
+export const title = 'How much does a website cost in 2026? Real numbers, no ranges | Screen Arts';
 export const description = 'Actual website costs in 2026 broken down by type, with what drives the price up and the five things agencies quietly charge extra for.';
 export const mainHtml = `<article class="post">
 <section class="phero" style="padding-bottom:1.4rem"><div class="wrap narrow">
@@ -8,7 +8,7 @@ export const mainHtml = `<article class="post">
  <p class="lead" data-anim data-delay="120" style="margin-inline:0">Actual website costs in 2026 broken down by type, with what drives the price up and the five things agencies quietly charge extra for.</p>
  <div class="post-meta" data-anim data-delay="180">
   <span class="avatar">PA</span>
-  <div><strong>Premium Agency editorial</strong><small>Published 2026-07-14 · 9 min read</small></div>
+  <div><strong>Screen Arts editorial</strong><small>Published 2026-07-14 · 9 min read</small></div>
  </div>
 </div>
 <div class="wrap" style="margin-top:2.2rem"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-ai.webp" alt="Automation and machine intelligence systems" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-ai-tiny.webp)"></div></div>

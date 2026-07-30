@@ -1,4 +1,4 @@
-/* Premium Freelancing Agency — motion layer v4 (editorial)
+/* Screen Arts Innovations Private Limited — motion layer v4 (editorial)
    Reference language: WPP kinetic line-masks + Accenture Song scroll-telling.
    Rules: one shared rAF, only transform/opacity animated, no layout reads in
    move handlers, everything degrades cleanly on weak hardware. */

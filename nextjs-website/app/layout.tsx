@@ -2,11 +2,41 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Premium Freelancing Agency | Web, Brand, Marketing, AI & Automation Agency",
-  description: "Websites, e-commerce, brand, SEO, paid ads, content, AI automation and Amazon — 24 services across 8 markets, all priced publicly. Free audit in 24 hours.",
+  title: {
+    default: "Premium Freelancing Agency | Web, Brand, Marketing, AI & Automation Agency",
+    template: "%s",
+  },
+  description:
+    "Websites, e-commerce, brand, SEO, paid ads, content, AI automation and Amazon — 24 services across 8 markets, all priced publicly. Free audit in 24 hours.",
   icons: {
     icon: "/assets/favicon.svg",
     apple: "/assets/favicon.svg",
+  },
+  metadataBase: new URL("https://www.yourdomain.com"),
+};
+
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://www.yourdomain.com/#org",
+  name: "Premium Freelancing Agency",
+  alternateName: "Premium Agency",
+  url: "https://www.yourdomain.com/",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.yourdomain.com/assets/favicon.svg",
+  },
+  description:
+    "Full-service digital agency delivering web, brand, marketing, content, operations, AI and emerging-tech services to clients worldwide.",
+  email: "hello@yourdomain.com",
+  telephone: "+92 300 0000000",
+  foundingDate: "2019",
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Rahim Yar Khan",
+    addressRegion: "Punjab",
+    addressCountry: "PK",
   },
 };
 
@@ -24,9 +54,12 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&family=Instrument+Serif:ital@0;1&display=swap"
           rel="stylesheet"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
       </head>
       <body>{children}</body>
     </html>
   );
 }
-

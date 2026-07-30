@@ -1,0 +1,357 @@
+[
+  {
+    "source": "/about.html",
+    "destination": "/about",
+    "permanent": true
+  },
+  {
+    "source": "/ai-automation.html",
+    "destination": "/ai-automation",
+    "permanent": true
+  },
+  {
+    "source": "/ai-chatbots.html",
+    "destination": "/ai-chatbots",
+    "permanent": true
+  },
+  {
+    "source": "/ai-content-systems.html",
+    "destination": "/ai-content-systems",
+    "permanent": true
+  },
+  {
+    "source": "/amazon-account-management.html",
+    "destination": "/amazon-account-management",
+    "permanent": true
+  },
+  {
+    "source": "/blockchain-web3.html",
+    "destination": "/blockchain-web3",
+    "permanent": true
+  },
+  {
+    "source": "/blog-writing.html",
+    "destination": "/blog-writing",
+    "permanent": true
+  },
+  {
+    "source": "/blog/ai-automation-what-actually-works.html",
+    "destination": "/blog/ai-automation-what-actually-works",
+    "permanent": true
+  },
+  {
+    "source": "/blog/amazon-acos-reduction-guide.html",
+    "destination": "/blog/amazon-acos-reduction-guide",
+    "permanent": true
+  },
+  {
+    "source": "/blog/core-web-vitals-fix-guide.html",
+    "destination": "/blog/core-web-vitals-fix-guide",
+    "permanent": true
+  },
+  {
+    "source": "/blog/how-much-does-a-website-cost.html",
+    "destination": "/blog/how-much-does-a-website-cost",
+    "permanent": true
+  },
+  {
+    "source": "/blog/how-to-brief-a-design-agency.html",
+    "destination": "/blog/how-to-brief-a-design-agency",
+    "permanent": true
+  },
+  {
+    "source": "/blog/index.html",
+    "destination": "/blog",
+    "permanent": true
+  },
+  {
+    "source": "/blog/local-seo-checklist.html",
+    "destination": "/blog/local-seo-checklist",
+    "permanent": true
+  },
+  {
+    "source": "/blog/outsourcing-vs-hiring-cost-comparison.html",
+    "destination": "/blog/outsourcing-vs-hiring-cost-comparison",
+    "permanent": true
+  },
+  {
+    "source": "/blog/seo-vs-paid-ads-which-first.html",
+    "destination": "/blog/seo-vs-paid-ads-which-first",
+    "permanent": true
+  },
+  {
+    "source": "/blog/shopify-vs-woocommerce-2026.html",
+    "destination": "/blog/shopify-vs-woocommerce-2026",
+    "permanent": true
+  },
+  {
+    "source": "/blog/website-security-checklist-small-business.html",
+    "destination": "/blog/website-security-checklist-small-business",
+    "permanent": true
+  },
+  {
+    "source": "/blog/what-a-brand-identity-actually-includes.html",
+    "destination": "/blog/what-a-brand-identity-actually-includes",
+    "permanent": true
+  },
+  {
+    "source": "/blog/why-your-content-is-invisible-to-google.html",
+    "destination": "/blog/why-your-content-is-invisible-to-google",
+    "permanent": true
+  },
+  {
+    "source": "/brand-identity.html",
+    "destination": "/brand-identity",
+    "permanent": true
+  },
+  {
+    "source": "/business-automation.html",
+    "destination": "/business-automation",
+    "permanent": true
+  },
+  {
+    "source": "/contact.html",
+    "destination": "/contact",
+    "permanent": true
+  },
+  {
+    "source": "/content-video.html",
+    "destination": "/content-video",
+    "permanent": true
+  },
+  {
+    "source": "/copywriting.html",
+    "destination": "/copywriting",
+    "permanent": true
+  },
+  {
+    "source": "/customer-support.html",
+    "destination": "/customer-support",
+    "permanent": true
+  },
+  {
+    "source": "/cybersecurity-basics.html",
+    "destination": "/cybersecurity-basics",
+    "permanent": true
+  },
+  {
+    "source": "/data-entry-scraping.html",
+    "destination": "/data-entry-scraping",
+    "permanent": true
+  },
+  {
+    "source": "/digital-marketing.html",
+    "destination": "/digital-marketing",
+    "permanent": true
+  },
+  {
+    "source": "/ecommerce-development.html",
+    "destination": "/ecommerce-development",
+    "permanent": true
+  },
+  {
+    "source": "/email-marketing.html",
+    "destination": "/email-marketing",
+    "permanent": true
+  },
+  {
+    "source": "/graphic-design.html",
+    "destination": "/graphic-design",
+    "permanent": true
+  },
+  {
+    "source": "/industries.html",
+    "destination": "/industries",
+    "permanent": true
+  },
+  {
+    "source": "/industries/agencies.html",
+    "destination": "/industries/agencies",
+    "permanent": true
+  },
+  {
+    "source": "/industries/amazon-sellers.html",
+    "destination": "/industries/amazon-sellers",
+    "permanent": true
+  },
+  {
+    "source": "/industries/b2b-professional.html",
+    "destination": "/industries/b2b-professional",
+    "permanent": true
+  },
+  {
+    "source": "/industries/ecommerce-brands.html",
+    "destination": "/industries/ecommerce-brands",
+    "permanent": true
+  },
+  {
+    "source": "/industries/local-services.html",
+    "destination": "/industries/local-services",
+    "permanent": true
+  },
+  {
+    "source": "/industries/saas-startups.html",
+    "destination": "/industries/saas-startups",
+    "permanent": true
+  },
+  {
+    "source": "/lead-generation.html",
+    "destination": "/lead-generation",
+    "permanent": true
+  },
+  {
+    "source": "/locations.html",
+    "destination": "/locations",
+    "permanent": true
+  },
+  {
+    "source": "/locations/australia.html",
+    "destination": "/locations/australia",
+    "permanent": true
+  },
+  {
+    "source": "/locations/canada.html",
+    "destination": "/locations/canada",
+    "permanent": true
+  },
+  {
+    "source": "/locations/germany.html",
+    "destination": "/locations/germany",
+    "permanent": true
+  },
+  {
+    "source": "/locations/saudi-arabia.html",
+    "destination": "/locations/saudi-arabia",
+    "permanent": true
+  },
+  {
+    "source": "/locations/singapore.html",
+    "destination": "/locations/singapore",
+    "permanent": true
+  },
+  {
+    "source": "/locations/united-arab-emirates.html",
+    "destination": "/locations/united-arab-emirates",
+    "permanent": true
+  },
+  {
+    "source": "/locations/united-kingdom.html",
+    "destination": "/locations/united-kingdom",
+    "permanent": true
+  },
+  {
+    "source": "/locations/united-states.html",
+    "destination": "/locations/united-states",
+    "permanent": true
+  },
+  {
+    "source": "/motion-graphics.html",
+    "destination": "/motion-graphics",
+    "permanent": true
+  },
+  {
+    "source": "/no-code-development.html",
+    "destination": "/no-code-development",
+    "permanent": true
+  },
+  {
+    "source": "/packages.html",
+    "destination": "/packages",
+    "permanent": true
+  },
+  {
+    "source": "/paid-ads-management.html",
+    "destination": "/paid-ads-management",
+    "permanent": true
+  },
+  {
+    "source": "/portfolio.html",
+    "destination": "/portfolio",
+    "permanent": true
+  },
+  {
+    "source": "/pricing.html",
+    "destination": "/pricing",
+    "permanent": true
+  },
+  {
+    "source": "/privacy-policy.html",
+    "destination": "/privacy-policy",
+    "permanent": true
+  },
+  {
+    "source": "/projects.html",
+    "destination": "/projects",
+    "permanent": true
+  },
+  {
+    "source": "/script-writing.html",
+    "destination": "/script-writing",
+    "permanent": true
+  },
+  {
+    "source": "/seo-services.html",
+    "destination": "/seo-services",
+    "permanent": true
+  },
+  {
+    "source": "/services.html",
+    "destination": "/services",
+    "permanent": true
+  },
+  {
+    "source": "/sitemap.html",
+    "destination": "/sitemap",
+    "permanent": true
+  },
+  {
+    "source": "/social-media-management.html",
+    "destination": "/social-media-management",
+    "permanent": true
+  },
+  {
+    "source": "/terms.html",
+    "destination": "/terms",
+    "permanent": true
+  },
+  {
+    "source": "/translation-services.html",
+    "destination": "/translation-services",
+    "permanent": true
+  },
+  {
+    "source": "/ui-ux-design.html",
+    "destination": "/ui-ux-design",
+    "permanent": true
+  },
+  {
+    "source": "/video-editing.html",
+    "destination": "/video-editing",
+    "permanent": true
+  },
+  {
+    "source": "/virtual-assistant.html",
+    "destination": "/virtual-assistant",
+    "permanent": true
+  },
+  {
+    "source": "/web-app-development.html",
+    "destination": "/web-app-development",
+    "permanent": true
+  },
+  {
+    "source": "/web-development.html",
+    "destination": "/web-development",
+    "permanent": true
+  },
+  {
+    "source": "/website-development.html",
+    "destination": "/website-development",
+    "permanent": true
+  },
+  {
+    "source": "/index.html",
+    "destination": "/",
+    "permanent": true
+  }
+]

@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
       { source: "/industries/:slug.html", destination: "/industries/:slug", permanent: true },
       { source: "/locations/:slug.html", destination: "/locations/:slug", permanent: true },
       { source: "/blog/:slug.html", destination: "/blog/:slug", permanent: true },
+      // Stale covered-renderer URLs (removed) — send users back to portfolio
+      { source: "/renderer", destination: "/portfolio", permanent: false },
+      { source: "/renderer/:path*", destination: "/portfolio", permanent: false },
     ];
   },
 };

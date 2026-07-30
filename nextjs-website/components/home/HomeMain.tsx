@@ -161,7 +161,7 @@ export function HomeMain() {
           <div className="hscroll-sticky">
             <div className="wrap hscroll-scroller">
               <div className="hscroll-track">
-                <a className="hscroll-panel demo-tile" href="/projects/shop/index.html">
+                <a className="hscroll-panel demo-tile" href="/projects/shop">
                   <div className="dt-thumb">
                     <img className="ph dt-img" src="/assets/img/pj-shop.webp" alt="Lumen Commerce storefront and cart" width={1600} height={1000} />
                     <span className="proj-live">LIVE</span>
@@ -173,7 +173,7 @@ export function HomeMain() {
                     <span className="dt-cta">Open it <span className="gt">&rsaquo;</span></span>
                   </div>
                 </a>
-                <a className="hscroll-panel demo-tile" href="/projects/flux/index.html">
+                <a className="hscroll-panel demo-tile" href="/projects/flux">
                   <div className="dt-thumb">
                     <img className="ph dt-img" src="/assets/img/pj-flux.webp" alt="FLUX AI studio interface" width={1600} height={1000} />
                     <span className="proj-live">LIVE</span>
@@ -185,7 +185,7 @@ export function HomeMain() {
                     <span className="dt-cta">Open it <span className="gt">&rsaquo;</span></span>
                   </div>
                 </a>
-                <a className="hscroll-panel demo-tile" href="/projects/relay/index.html">
+                <a className="hscroll-panel demo-tile" href="/projects/relay">
                   <div className="dt-thumb">
                     <img className="ph dt-img" src="/assets/img/pj-relay.webp" alt="RELAY operations platform" width={1600} height={1000} />
                     <span className="proj-live">LIVE</span>

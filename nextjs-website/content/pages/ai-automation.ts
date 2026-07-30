@@ -8,7 +8,7 @@ export const mainHtml = `<section class="phero">
   <p class="lead center" data-anim data-delay="150">Chatbots that qualify leads. Workflows that run while you sleep.</p>
   <div class="hero-cta" style="justify-content:center" data-anim data-delay="220">
    <a class="btn btn-primary" href="/contact"><span>Get a Quote</span></a>
-   <a class="btn btn-ghost" href="/projects/flux/index.html"><span>▶ Open FLUX</span></a>
+   <a class="btn btn-ghost" href="/projects/flux"><span>▶ Open FLUX</span></a>
   </div>
   <div class="phero-img" data-anim="zoom" data-delay="300"><img class="ph " src="/assets/img/ai.webp" alt="AI chatbot and business workflow automation" width="1280" height="853" sizes="(max-width:900px) 92vw, 900px" loading="eager" fetchpriority="high" style="background-image:url(assets/img/ai-tiny.webp)"></div>
  </div>

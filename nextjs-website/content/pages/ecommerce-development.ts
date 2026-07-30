@@ -9,7 +9,7 @@ export const mainHtml = `<section class="phero">
    <div><p class="lead" data-anim data-delay="120">We build Shopify and WooCommerce stores where the checkout is the design priority — fewer fields, clearer shipping, visible trust signals, and upsells that do not feel like a trap.</p>
     <div class="hero-cta" data-anim data-delay="180">
      <a class="btn btn-primary" href="/contact"><span>Free e-commerce development audit</span><span class="gt">&rsaquo;</span></a>
-     <a class="btn" href="/projects/shop/index.html"><span>Try a live store</span></a>
+     <a class="btn" href="/projects/shop"><span>Try a live store</span></a>
     </div>
    </div>
   </div>
@@ -60,9 +60,9 @@ export const mainHtml = `<section class="phero">
     <h2 class="kin-h" data-anim>See it working</h2>
     <p class="lead" data-anim>Not a screenshot — a live build you can click through right now, in your
      own browser, before you pay us anything.</p>
-    <div class="hero-cta"><a class="btn btn-primary" href="/projects/shop/index.html"><span>Try a live store</span><span class="gt">&rsaquo;</span></a></div>
+    <div class="hero-cta"><a class="btn btn-primary" href="/projects/shop"><span>Try a live store</span><span class="gt">&rsaquo;</span></a></div>
    </div>
-   <a class="proj-shot" href="/projects/shop/index.html" data-anim="right"><img class="ph " src="/assets/img/pj-shop.webp" alt="Lumen Commerce storefront and cart" width="1600" height="1000" sizes="(max-width:900px) 92vw, 620px" loading="lazy" decoding="async" style="background-image:url(assets/img/pj-shop-tiny.webp)">
+   <a class="proj-shot" href="/projects/shop" data-anim="right"><img class="ph " src="/assets/img/pj-shop.webp" alt="Lumen Commerce storefront and cart" width="1600" height="1000" sizes="(max-width:900px) 92vw, 620px" loading="lazy" decoding="async" style="background-image:url(assets/img/pj-shop-tiny.webp)">
     <span class="proj-live">LIVE</span><span class="proj-open">Open it &rsaquo;</span></a>
   </div>
  </div>

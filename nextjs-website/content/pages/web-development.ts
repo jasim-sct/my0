@@ -32,7 +32,7 @@ export const mainHtml = `<section class="phero">
  </div>
 </section><section style="padding-top:0">
  <div class="wrap">
-  <a class="glass card no-tilt demo-strip" href="/projects/dashboard/index.html" data-anim="zoom">
+  <a class="glass card no-tilt demo-strip" href="/projects/dashboard" data-anim="zoom">
    <div class="ds-ico">📊</div>
    <div class="ds-txt"><span class="dt-cat">● Live Demo — try it now</span>
     <h3>Northwind Analytics — SaaS app</h3><p>A production admin panel: live charts, 48-record data table, full CRUD, CSV export and light mode.</p></div>

@@ -8,7 +8,7 @@ export const mainHtml = `<section class="phero">
   <p class="lead center" data-anim data-delay="150">SEO, social media and paid ads — three engines, one strategy, reported every month.</p>
   <div class="hero-cta" style="justify-content:center" data-anim data-delay="220">
    <a class="btn btn-primary" href="/contact"><span>Get a Quote</span></a>
-   <a class="btn btn-ghost" href="/projects/signal/index.html"><span>▶ Open SIGNAL</span></a>
+   <a class="btn btn-ghost" href="/projects/signal"><span>▶ Open SIGNAL</span></a>
   </div>
   <div class="phero-img" data-anim="zoom" data-delay="300"><img class="ph " src="/assets/img/marketing.webp" alt="SEO rankings, analytics growth chart and social media marketing" width="1280" height="853" sizes="(max-width:900px) 92vw, 900px" loading="eager" fetchpriority="high" style="background-image:url(assets/img/marketing-tiny.webp)"></div>
  </div>

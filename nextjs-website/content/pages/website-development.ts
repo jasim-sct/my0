@@ -9,7 +9,7 @@ export const mainHtml = `<section class="phero">
    <div><p class="lead" data-anim data-delay="120">We build sites that score 90+ on Lighthouse, rank because the structure is right, and turn visitors into enquiries because the copy leads with your customer's problem.</p>
     <div class="hero-cta" data-anim data-delay="180">
      <a class="btn btn-primary" href="/contact"><span>Free website development audit</span><span class="gt">&rsaquo;</span></a>
-     <a class="btn" href="/projects/terra/index.html"><span>See a live build</span></a>
+     <a class="btn" href="/projects/terra"><span>See a live build</span></a>
     </div>
    </div>
   </div>
@@ -60,9 +60,9 @@ export const mainHtml = `<section class="phero">
     <h2 class="kin-h" data-anim>See it working</h2>
     <p class="lead" data-anim>Not a screenshot — a live build you can click through right now, in your
      own browser, before you pay us anything.</p>
-    <div class="hero-cta"><a class="btn btn-primary" href="/projects/terra/index.html"><span>See a live build</span><span class="gt">&rsaquo;</span></a></div>
+    <div class="hero-cta"><a class="btn btn-primary" href="/projects/terra"><span>See a live build</span><span class="gt">&rsaquo;</span></a></div>
    </div>
-   <a class="proj-shot" href="/projects/terra/index.html" data-anim="right"><img class="ph " src="/assets/img/pj-terra.webp" alt="Terra & Co subscription homepage" width="1600" height="1000" sizes="(max-width:900px) 92vw, 620px" loading="lazy" decoding="async" style="background-image:url(assets/img/pj-terra-tiny.webp)">
+   <a class="proj-shot" href="/projects/terra" data-anim="right"><img class="ph " src="/assets/img/pj-terra.webp" alt="Terra & Co subscription homepage" width="1600" height="1000" sizes="(max-width:900px) 92vw, 620px" loading="lazy" decoding="async" style="background-image:url(assets/img/pj-terra-tiny.webp)">
     <span class="proj-live">LIVE</span><span class="proj-open">Open it &rsaquo;</span></a>
   </div>
  </div>

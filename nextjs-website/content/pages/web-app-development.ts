@@ -9,7 +9,7 @@ export const mainHtml = `<section class="phero">
    <div><p class="lead" data-anim data-delay="120">We build dashboards, portals, SaaS MVPs and internal tools with real architecture — typed data, proper auth, audit logs and documentation the next developer can read.</p>
     <div class="hero-cta" data-anim data-delay="180">
      <a class="btn btn-primary" href="/contact"><span>Free web app development audit</span><span class="gt">&rsaquo;</span></a>
-     <a class="btn" href="/projects/dashboard/index.html"><span>Open a live app</span></a>
+     <a class="btn" href="/projects/dashboard"><span>Open a live app</span></a>
     </div>
    </div>
   </div>
@@ -60,9 +60,9 @@ export const mainHtml = `<section class="phero">
     <h2 class="kin-h" data-anim>See it working</h2>
     <p class="lead" data-anim>Not a screenshot — a live build you can click through right now, in your
      own browser, before you pay us anything.</p>
-    <div class="hero-cta"><a class="btn btn-primary" href="/projects/dashboard/index.html"><span>Open a live app</span><span class="gt">&rsaquo;</span></a></div>
+    <div class="hero-cta"><a class="btn btn-primary" href="/projects/dashboard"><span>Open a live app</span><span class="gt">&rsaquo;</span></a></div>
    </div>
-   <a class="proj-shot" href="/projects/dashboard/index.html" data-anim="right"><img class="ph " src="/assets/img/pj-dash.webp" alt="Northwind Analytics dashboard" width="1600" height="1000" sizes="(max-width:900px) 92vw, 620px" loading="lazy" decoding="async" style="background-image:url(assets/img/pj-dash-tiny.webp)">
+   <a class="proj-shot" href="/projects/dashboard" data-anim="right"><img class="ph " src="/assets/img/pj-dash.webp" alt="Northwind Analytics dashboard" width="1600" height="1000" sizes="(max-width:900px) 92vw, 620px" loading="lazy" decoding="async" style="background-image:url(assets/img/pj-dash-tiny.webp)">
     <span class="proj-live">LIVE</span><span class="proj-open">Open it &rsaquo;</span></a>
   </div>
  </div>

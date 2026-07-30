@@ -1,0 +1,73 @@
+/* ========================================================== MEDIA ======= */
+/* image reveal: panel wipes away, photo settles from 1.12 scale */
+.rv {
+  position:relative;
+  overflow:hidden;
+  background:var(--paper-3);
+  border-radius:var(--r)
+}
+.rv::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--paper-2);
+  z-index:2;
+  transform:translate3d(0,0,0);
+  transition:transform 1s var(--ease)
+}
+.rv.in::after {
+  transform:translate3d(0,-101%,0)
+}
+.rv img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.12);
+  transition:transform 1.4s var(--ease)
+}
+.rv.in img {
+  transform:scale(1)
+}
+.rv.zoom:hover img {
+  transform:scale(1.06);
+  transition:transform .9s var(--ease)
+}
+.band-dark .rv::after {
+  background:var(--dark-2)
+}
+/* aspect helpers */
+.ar-16 {
+  aspect-ratio:16/10
+}
+.ar-43 {
+  aspect-ratio:4/3
+}
+.ar-11 {
+  aspect-ratio:1/1
+}
+.ar-45 {
+  aspect-ratio:4/5
+}
+.ar-21 {
+  aspect-ratio:21/9
+}
+/* LQIP placeholder from v2 */
+.ph {
+  background-size:cover;
+  background-position:center
+}
+/* photo caption, Accenture-ish */
+.cap {
+  font-size:.76rem;
+  color:var(--muted-2);
+  margin-top:.6rem;
+  letter-spacing:-.005em;
+  display:flex;
+  gap:.5rem;
+  align-items:baseline
+}
+.cap b {
+  font-family:var(--sans);
+  color:var(--ink);
+  font-weight:600
+}

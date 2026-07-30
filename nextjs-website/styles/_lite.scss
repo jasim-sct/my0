@@ -1,0 +1,16 @@
+/* ========================================================== LITE MODE === */
+html.lite .rv::after {
+  display:none
+}
+html.lite .rv img {
+  transform:none !important
+}
+html.lite .cur,html.lite .cur-dot {
+  display:none
+}
+html.lite [data-anim] {
+  transition-duration:.45s
+}
+html.lite .marquee-track {
+  animation-duration:70s
+}

@@ -1,0 +1,41 @@
+/* Design tokens — CSS custom properties (runtime).
+   Keep var(--*) in selectors; do not replace with Sass vars. */
+
+:root {
+  /* --- surfaces --- */
+  --paper: #ffffff;
+  --paper-2: #f4f3f0; /* warm off-white band */
+  --paper-3: #eceae5;
+  --ink: #0c0c0d; /* near-black, never pure */
+  --ink-2: #1a1a1c;
+  --muted: #5d5d63;
+  --muted-2: #8a8a91;
+  --rule: #dedcd7;
+  --rule-2: #e9e7e2;
+
+  /* --- accent --- */
+  --acc: #5b2df0; /* electric violet */
+  --acc-ink: #4a1fd6;
+  --acc-soft: #efe9ff;
+  --hot: #ff4d2e; /* signal orange-red */
+  --warm: #ffb800;
+  --green: #0f9d6a;
+
+  /* --- inverted --- */
+  --dark: #0c0c0d;
+  --dark-2: #17171a;
+
+  --maxw: 1320px;
+  --gut: clamp(20px, 4vw, 48px);
+  --r: 4px; /* editorial = almost square */
+  --r-lg: 6px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-io: cubic-bezier(0.65, 0.05, 0.36, 1);
+  --spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+
+  --sans: "Inter Tight", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --serif: "Instrument Serif", "Times New Roman", Georgia, serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}

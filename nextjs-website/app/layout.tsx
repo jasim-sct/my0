@@ -37,6 +37,26 @@ export const metadata: Metadata = {
     apple: "/assets/favicon.svg",
   },
   metadataBase: new URL("https://www.axiofuture.com"),
+  openGraph: {
+    type: "website",
+    siteName: brand.shortName,
+    title: `${brand.shortName} | Software Technology & Product Engineering`,
+    description: "Axio Future builds scalable software products, SaaS platforms, enterprise systems, and digital solutions for modern businesses.",
+    images: [
+      {
+        url: "/assets/img/ph-hero.webp",
+        width: 1600,
+        height: 1000,
+        alt: "Axio Future - Software Technology & Product Engineering",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${brand.shortName} | Software Technology & Product Engineering`,
+    description: "Axio Future builds scalable software products, SaaS platforms, enterprise systems, and digital solutions for modern businesses.",
+    images: ["/assets/img/ph-hero.webp"],
+  },
 };
 
 const orgJsonLd = {

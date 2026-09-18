@@ -1,4 +1,4 @@
-export const title = 'Privacy Policy | Screen Arts';
+export const title = 'Privacy Policy | Axon Future';
 export const description = 'How we collect, use, store, retain and protect your personal information, plus how to request access, correction or deletion of your data.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Privacy Policy</span></nav>

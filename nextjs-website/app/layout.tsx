@@ -4,44 +4,36 @@ import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: {
-    default: `${brand.shortName} | Web, Brand, Marketing, AI & Automation Agency`,
+    default: `${brand.shortName} | Software Technology & Product Engineering`,
     template: "%s",
   },
   description:
-    "Websites, e-commerce, brand, SEO, paid ads, content, AI automation and Amazon — 24 services across 8 markets, all priced publicly. Free audit in 24 hours.",
+    "Axon Future builds scalable software products, SaaS platforms, enterprise systems, and digital solutions for modern businesses.",
   icons: {
     icon: "/assets/favicon.svg",
     apple: "/assets/favicon.svg",
   },
-  metadataBase: new URL("https://www.screenarts.com"),
+  metadataBase: new URL("https://www.axonfuture.com"),
 };
 
 const orgJsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://www.screenarts.com/#org",
+  "@type": "Organization",
+  "@id": "https://www.axonfuture.com/#org",
   name: brand.legalName,
   alternateName: brand.shortName,
-  url: "https://www.screenarts.com/",
+  url: "https://www.axonfuture.com/",
   logo: {
     "@type": "ImageObject",
-    url: "https://www.screenarts.com/assets/favicon.svg",
+    url: "https://www.axonfuture.com/assets/favicon.svg",
   },
   description:
-    "Full-service digital agency delivering web, brand, marketing, content, operations, AI and emerging-tech services to clients worldwide.",
+    "Axon Future is a software technology company that designs and builds scalable digital products, SaaS platforms, enterprise systems, and modern web applications.",
   email: brand.email,
-  telephone: brand.phoneDisplay,
-  foundingDate: "2019",
-  priceRange: "$$",
-  founder: {
-    "@type": "Person",
-    name: brand.founder.name,
-    jobTitle: brand.founder.title,
-  },
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "IN",
-  },
+  sameAs: [
+    "https://github.com/axonfuture",
+    "https://linkedin.com/company/axonfuture",
+  ],
 };
 
 export default function RootLayout({
@@ -67,3 +59,4 @@ export default function RootLayout({
     </html>
   );
 }
+

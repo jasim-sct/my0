@@ -5,22 +5,22 @@ export function Hero() {
         <div className="hero-grid">
           <div>
             <div className="eyebrow" data-anim>
-              24 services · 8 markets · one team
+              Software · SaaS · Enterprise · Architecture
             </div>
-            <h1 className="kin-h">Every digital service your business needs.</h1>
+            <h1 className="kin-h">Engineering the software systems that move businesses forward.</h1>
           </div>
           <div>
             <p className="lead" data-anim data-delay="120">
-              Websites, brand, marketing, content, operations, AI and emerging tech — delivered by
-              specialists, priced transparently, and reported in revenue rather than impressions.
+              We design and build scalable software products, SaaS platforms, enterprise systems, 
+              and digital experiences engineered for real-world business growth.
             </p>
             <div className="hero-cta" data-anim data-delay="180">
               <a className="btn btn-primary" href="/contact">
-                <span>Get a free audit</span>
+                <span>Start a Project</span>
                 <span className="gt">&rsaquo;</span>
               </a>
               <a className="btn" href="/projects">
-                <span>See 10 live builds</span>
+                <span>Explore Our Work</span>
               </a>
             </div>
           </div>
@@ -31,55 +31,45 @@ export function Hero() {
             <img
               className="ph"
               src="/assets/img/ph-hero.webp"
-              alt="Agency strategists reviewing a client growth plan together"
+              alt="Engineering team reviewing software architecture"
               width={1600}
               height={1000}
             />
-          </div>
-          <div className="hero-badge" data-anim data-delay="500">
-            <b>
-              <span data-count="24" data-suffix="">
-                0
-              </span>
-            </b>
-            <small>
-              services under one roof, from $149 to $2,999 — every price published.
-            </small>
           </div>
         </div>
 
         <div className="hero-stats">
           <div className="stat" data-anim data-delay="0">
             <b>
-              <span data-count="640" data-suffix="" data-prefix="">
-                0
-              </span>
-            </b>
-            <small>Projects delivered</small>
-          </div>
-          <div className="stat" data-anim data-delay="70">
-            <b>
-              <span data-count="20" data-suffix="+" data-prefix="">
+              <span data-count="150" data-suffix="+" data-prefix="">
                 0+
               </span>
             </b>
-            <small>Countries served</small>
+            <small>Products Shipped</small>
+          </div>
+          <div className="stat" data-anim data-delay="70">
+            <b>
+              <span data-count="40" data-suffix="k" data-prefix="">
+                0k
+              </span>
+            </b>
+            <small>Engineering Hours</small>
           </div>
           <div className="stat" data-anim data-delay="140">
             <b>
-              <span data-count="94" data-suffix="%" data-prefix="">
+              <span data-count="99.9" data-suffix="%" data-prefix="">
                 0%
               </span>
             </b>
-            <small>Client retention</small>
+            <small>System Uptime</small>
           </div>
           <div className="stat" data-anim data-delay="210">
             <b>
-              <span data-count="24" data-suffix="h" data-prefix="">
-                0h
+              <span data-count="12" data-suffix="+" data-prefix="">
+                0+
               </span>
             </b>
-            <small>Response time</small>
+            <small>Core Technologies</small>
           </div>
         </div>
       </div>

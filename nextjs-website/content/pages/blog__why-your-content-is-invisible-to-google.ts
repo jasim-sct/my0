@@ -1,4 +1,4 @@
-export const title = 'Why your best content is invisible to Google | Screen Arts';
+export const title = 'Why your best content is invisible to Google | Axon Future';
 export const description = 'Most content failures are structural, not editorial. How to find the pages competing with each other and fix the internal linking that never existed.';
 export const mainHtml = `<article class="post">
 <section class="phero" style="padding-bottom:1.4rem"><div class="wrap narrow">
@@ -8,7 +8,7 @@ export const mainHtml = `<article class="post">
  <p class="lead" data-anim data-delay="120" style="margin-inline:0">Most content failures are structural, not editorial. How to find the pages competing with each other and fix the internal linking that never existed.</p>
  <div class="post-meta" data-anim data-delay="180">
   <span class="avatar">PA</span>
-  <div><strong>Screen Arts editorial</strong><small>Published 2026-06-28 · 10 min read</small></div>
+  <div><strong>Axon Future Engineering</strong><small>Published 2026-06-28 · 10 min read</small></div>
  </div>
 </div>
 <div class="wrap" style="margin-top:2.2rem"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-analytics.webp" alt="Revenue and traffic dashboard on a laptop" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-analytics-tiny.webp)"></div></div>

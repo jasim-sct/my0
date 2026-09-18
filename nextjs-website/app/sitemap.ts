@@ -4,7 +4,7 @@ import { blogPosts } from "@/content/blog";
 import { industries } from "@/content/industries";
 import { locations } from "@/content/locations";
 
-const base = "https://www.screenarts.com";
+const base = "https://www.axonfuture.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -12,17 +12,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/services",
     "/pricing",
-    "/packages",
-    "/portfolio",
     "/projects",
     "/contact",
     "/blog",
     "/industries",
     "/locations",
-    "/web-development",
-    "/digital-marketing",
-    "/content-video",
-    "/ai-automation",
     "/privacy-policy",
     "/terms",
     "/sitemap",
@@ -38,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: path === "" ? 1 : 0.7,
     })),
     ...services.map((s) => ({
-      url: `${base}/${s.slug}`,
+      url: `${base}/services/${s.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.6,

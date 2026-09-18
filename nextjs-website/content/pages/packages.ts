@@ -1,4 +1,4 @@
-export const title = 'Agency Packages & Bundle Pricing | From $699 — Screen Arts';
+export const title = 'Agency Packages & Bundle Pricing | From $699 — Axon Future';
 export const description = 'Bundled agency packages from $699: Starter, Growth, E-Commerce Empire, Brand Launch and Done-For-You. Website, branding, SEO, ads and content combined.';
 export const mainHtml = `<section class="phero">
  <div class="wrap">

@@ -3,6 +3,7 @@ import { Hero } from "./Hero";
 import { SystemThinking } from "./SystemThinking";
 import { ArchitectureExplorer } from "./ArchitectureExplorer";
 import { ProblemToSystem } from "./ProblemToSystem";
+import { AxioIcon } from "@/components/icons";
 
 export function HomeMain() {
   return (
@@ -71,43 +72,48 @@ export function HomeMain() {
           </div>
           <div className="grid g4">
             <article className="glass card pillar" data-anim data-delay="0">
+              <AxioIcon name="web-apps" size={32} className="card__icon" aria-hidden="true" />
               <span className="idx">01 / Web</span>
               <h3>Websites</h3>
               <p>High-performance, search-optimized web architectures built on Next.js. Sub-second load times, zero layout shifts, and complete code ownership.</p>
               <div className="p-links">
-                <Link href="/services/websites" className="pl">Explore websites →</Link>
+                <Link href="/services/websites" className="pl"><span className="icon-label">Explore websites <AxioIcon name="arrow-right" size={13} aria-hidden="true" /></span></Link>
               </div>
             </article>
             <article className="glass card pillar" data-anim data-delay="70">
+              <AxioIcon name="mobile-apps" size={32} className="card__icon" aria-hidden="true" />
               <span className="idx">02 / App</span>
               <h3>Digital Products</h3>
               <p>Interactive web applications, customer portals, and workflow tools engineered with deterministic state and fluid, responsive interfaces.</p>
               <div className="p-links">
-                <Link href="/services/digital-products" className="pl">Explore digital products →</Link>
+                <Link href="/services/digital-products" className="pl"><span className="icon-label">Explore digital products <AxioIcon name="arrow-right" size={13} aria-hidden="true" /></span></Link>
               </div>
             </article>
             <article className="glass card pillar" data-anim data-delay="140">
+              <AxioIcon name="integration" size={32} className="card__icon" aria-hidden="true" />
               <span className="idx">03 / Ops</span>
               <h3>Business Systems</h3>
               <p>Internal operations platforms, centralized databases, and automated workflows that eliminate spreadsheet gridlock and manual error.</p>
               <div className="p-links">
-                <Link href="/services/business-systems" className="pl">Explore business systems →</Link>
+                <Link href="/services/business-systems" className="pl"><span className="icon-label">Explore business systems <AxioIcon name="arrow-right" size={13} aria-hidden="true" /></span></Link>
               </div>
             </article>
             <article className="glass card pillar" data-anim data-delay="210">
+              <AxioIcon name="platforms" size={32} className="card__icon" aria-hidden="true" />
               <span className="idx">04 / Platform</span>
               <h3>Platforms</h3>
               <p>Scalable transactional systems, custom e-commerce engines, and multi-tenant platforms designed to handle complex business logic.</p>
               <div className="p-links">
-                <Link href="/services/platforms" className="pl">Explore platforms →</Link>
+                <Link href="/services/platforms" className="pl"><span className="icon-label">Explore platforms <AxioIcon name="arrow-right" size={13} aria-hidden="true" /></span></Link>
               </div>
             </article>
             <article className="glass card pillar" data-anim data-delay="0">
+              <AxioIcon name="infrastructure" size={32} className="card__icon" aria-hidden="true" />
               <span className="idx">05 / Infra</span>
               <h3>Software Infrastructure</h3>
               <p>Resilient APIs, relational database schemas, reverse proxy security, and automated deployment pipelines that ensure high availability.</p>
               <div className="p-links">
-                <Link href="/services/software-infrastructure" className="pl">Explore infrastructure →</Link>
+                <Link href="/services/software-infrastructure" className="pl"><span className="icon-label">Explore infrastructure <AxioIcon name="arrow-right" size={13} aria-hidden="true" /></span></Link>
               </div>
             </article>
           </div>
@@ -196,6 +202,7 @@ export function HomeMain() {
             <div className="step" data-anim data-delay="0">
               <div className="n">01</div>
               <div>
+                <AxioIcon name="research" size={20} className="section__icon" aria-hidden="true" style={{ marginBottom: "0.5rem" }} />
                 <h3>Analyze &amp; Scope</h3>
                 <p>We map your user journeys, data requirements, and operational constraints before writing any code.</p>
               </div>
@@ -203,6 +210,7 @@ export function HomeMain() {
             <div className="step" data-anim data-delay="60">
               <div className="n">02</div>
               <div>
+                <AxioIcon name="system-architecture" size={20} className="section__icon" aria-hidden="true" style={{ marginBottom: "0.5rem" }} />
                 <h3>Architect</h3>
                 <p>Designing database schemas, API contracts, security policies, and component hierarchies for long-term maintainability.</p>
               </div>
@@ -210,6 +218,7 @@ export function HomeMain() {
             <div className="step" data-anim data-delay="120">
               <div className="n">03</div>
               <div>
+                <AxioIcon name="software-engineering" size={20} className="section__icon" aria-hidden="true" style={{ marginBottom: "0.5rem" }} />
                 <h3>Build &amp; Test</h3>
                 <p>TypeScript-first development with strict typing, automated linting, Core Web Vitals checks, and cross-device testing.</p>
               </div>
@@ -217,6 +226,7 @@ export function HomeMain() {
             <div className="step" data-anim data-delay="180">
               <div className="n">04</div>
               <div>
+                <AxioIcon name="deployment" size={20} className="section__icon" aria-hidden="true" style={{ marginBottom: "0.5rem" }} />
                 <h3>Deploy &amp; Handover</h3>
                 <p>Production deployment with SSL, CDN caching, analytics, and full source code ownership handed over unconditionally.</p>
               </div>
@@ -278,28 +288,28 @@ export function HomeMain() {
             <Link className="glass card art-card" href="/blog/core-web-vitals-fix-guide" data-anim data-delay="0">
               <div className="rv zoom ar-16"><img className="ph" src="/assets/img/ph-code.webp" alt="Code optimization" width={1600} height={1000} /></div>
               <div className="ac-body">
-                <span className="dt-cat">Performance</span>
+                <span className="dt-cat"><span className="icon-label"><AxioIcon name="core-web-vitals" size={12} aria-hidden="true" />Performance</span></span>
                 <h3>Fixing Core Web Vitals in Next.js Apps</h3>
                 <p>A technical guide to eliminating layout shifts and optimizing LCP in React applications for perfect Lighthouse scores.</p>
-                <span className="dt-cta">Read guide <span className="gt">&rsaquo;</span></span>
+                <span className="dt-cta"><span className="icon-label">Read guide <AxioIcon name="arrow-right" size={12} aria-hidden="true" /></span></span>
               </div>
             </Link>
             <Link className="glass card art-card" href="/blog/how-much-does-a-website-cost" data-anim data-delay="70">
               <div className="rv zoom ar-16"><img className="ph" src="/assets/img/ph-ai.webp" alt="Architecture" width={1600} height={1000} /></div>
               <div className="ac-body">
-                <span className="dt-cat">Pricing</span>
+                <span className="dt-cat"><span className="icon-label"><AxioIcon name="roi" size={12} aria-hidden="true" />Pricing</span></span>
                 <h3>The real cost of website development in 2026</h3>
                 <p>Breaking down the engineering requirements, hosting renewals, and scope factors behind professional website pricing.</p>
-                <span className="dt-cta">Read guide <span className="gt">&rsaquo;</span></span>
+                <span className="dt-cta"><span className="icon-label">Read guide <AxioIcon name="arrow-right" size={12} aria-hidden="true" /></span></span>
               </div>
             </Link>
             <Link className="glass card art-card" href="/blog/website-security-checklist-small-business" data-anim data-delay="140">
               <div className="rv zoom ar-16"><img className="ph" src="/assets/img/ph-social.webp" alt="Security" width={1600} height={1000} /></div>
               <div className="ac-body">
-                <span className="dt-cat">Security</span>
+                <span className="dt-cat"><span className="icon-label"><AxioIcon name="security" size={12} aria-hidden="true" />Security</span></span>
                 <h3>Website security checklist for small businesses</h3>
                 <p>Essential security implementations from SSL configuration to CSP headers and sanitized user inputs.</p>
-                <span className="dt-cta">Read guide <span className="gt">&rsaquo;</span></span>
+                <span className="dt-cta"><span className="icon-label">Read guide <AxioIcon name="arrow-right" size={12} aria-hidden="true" /></span></span>
               </div>
             </Link>
           </div>

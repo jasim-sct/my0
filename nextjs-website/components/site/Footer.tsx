@@ -2,6 +2,7 @@ import Link from "next/link";
 import { TopButton } from "./TopButton";
 import { brand } from "@/lib/brand";
 import { AxonLogo } from "./AxonLogo";
+import { AxioIcon } from "@/components/icons";
 
 export function Footer() {
   return (
@@ -22,21 +23,11 @@ export function Footer() {
               <div>
                 <h4>Capabilities</h4>
                 <ul>
-                  <li>
-                    <Link href="/services/websites">Websites</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/digital-products">Digital Products</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/business-systems">Business Systems</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/platforms">Platforms</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/software-infrastructure">Software Infrastructure</Link>
-                  </li>
+                  <li><Link href="/services/websites"><span className="icon-label"><AxioIcon name="web-apps" size={13} aria-hidden="true" />Websites</span></Link></li>
+                  <li><Link href="/services/digital-products"><span className="icon-label"><AxioIcon name="mobile-apps" size={13} aria-hidden="true" />Digital Products</span></Link></li>
+                  <li><Link href="/services/business-systems"><span className="icon-label"><AxioIcon name="integration" size={13} aria-hidden="true" />Business Systems</span></Link></li>
+                  <li><Link href="/services/platforms"><span className="icon-label"><AxioIcon name="platforms" size={13} aria-hidden="true" />Platforms</span></Link></li>
+                  <li><Link href="/services/software-infrastructure"><span className="icon-label"><AxioIcon name="infrastructure" size={13} aria-hidden="true" />Software Infrastructure</span></Link></li>
                 </ul>
               </div>
               <div>
@@ -62,12 +53,8 @@ export function Footer() {
               <div>
                 <h4>Connect</h4>
                 <ul>
-                  <li>
-                    <a href="https://github.com/axiofuture" target="_blank" rel="noopener">GitHub</a>
-                  </li>
-                  <li>
-                    <a href="https://linkedin.com/company/axiofuture" target="_blank" rel="noopener">LinkedIn</a>
-                  </li>
+                  <li><a href="https://github.com/axiofuture" target="_blank" rel="noopener"><span className="icon-label"><AxioIcon name="version-control" size={13} aria-hidden="true" />GitHub</span></a></li>
+                  <li><a href="https://linkedin.com/company/axiofuture" target="_blank" rel="noopener"><span className="icon-label"><AxioIcon name="partnership" size={13} aria-hidden="true" />LinkedIn</span></a></li>
                 </ul>
               </div>
             </div>

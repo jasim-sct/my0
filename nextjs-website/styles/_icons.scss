@@ -1,0 +1,200 @@
+/**
+ * Axio Future — SVG Icon System Styles
+ * Base utilities and semantic animation states for the AxioIcon component.
+ * No font-face references, no external icon dependencies.
+ */
+
+// ─── Base ─────────────────────────────────────────────────────────────────────
+.axio-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+  // Inherit color from parent by default — works with CSS custom properties
+  color: currentColor;
+  // Crisp at small sizes
+  shape-rendering: geometricPrecision;
+  // Smooth stroke caps already set via SVG attributes
+  // Prevent icons from stretching in flex containers
+  min-width: 1em;
+  min-height: 1em;
+  line-height: 1;
+  // Prevents color-scheme artifacts
+  forced-color-adjust: none;
+
+  svg {
+    display: block;
+  }
+}
+
+// ─── Accent modifier (used in nav bullets, card pills) ─────────────────────────
+.axio-icon--accent {
+  color: var(--clr-accent, #5b9cf6);
+}
+
+.axio-icon--muted {
+  opacity: 0.45;
+}
+
+.axio-icon--dim {
+  opacity: 0.65;
+}
+
+// ─── Size helpers (override with size prop is preferred) ─────────────────────
+.axio-icon--sm { width: 14px; height: 14px; }
+.axio-icon--md { width: 20px; height: 20px; }
+.axio-icon--lg { width: 28px; height: 28px; }
+.axio-icon--xl { width: 40px; height: 40px; }
+.axio-icon--2xl { width: 56px; height: 56px; }
+
+// ─── Semantic animations ──────────────────────────────────────────────────────
+
+// pulse — subtle heartbeat for status/monitoring icons
+.axio-icon--pulse {
+  animation: axio-pulse 2.4s ease-in-out infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes axio-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.96); }
+}
+
+// scan — horizontal sweep for crawling/search icons
+.axio-icon--scan {
+  animation: axio-scan 2s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes axio-scan {
+  0% { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 0% 0 0); }
+}
+
+// flow — gentle directional drift for API/data flow icons
+.axio-icon--flow {
+  animation: axio-flow 1.8s ease-in-out infinite alternate;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes axio-flow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(3px); }
+}
+
+// spin — continuous rotation for automation/process icons
+.axio-icon--spin {
+  animation: axio-spin 3s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes axio-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+// ─── Icon in navigation contexts ─────────────────────────────────────────────
+.nav__icon {
+  margin-right: 0.4em;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  .nav__link:hover &,
+  .nav__link:focus-visible & {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+}
+
+// ─── Icon in button contexts ──────────────────────────────────────────────────
+.btn__icon {
+  margin-right: 0.375em;
+  transition: transform 0.2s ease;
+
+  .btn:hover & {
+    transform: translateX(2px);
+  }
+}
+
+// Arrow/chevron icon for CTA buttons
+.btn__arrow {
+  margin-left: 0.5em;
+  transition: transform 0.25s ease;
+
+  .btn:hover & {
+    transform: translateX(4px);
+  }
+}
+
+// ─── Icon in card contexts ────────────────────────────────────────────────────
+.card__icon {
+  display: block;
+  margin-bottom: var(--sp-2, 0.5rem);
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.25s ease;
+
+  .card:hover & {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+
+// ─── Section icon (large decorative-semantic icons in editorial sections) ─────
+.section__icon {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// ─── Tick list icon ───────────────────────────────────────────────────────────
+.tick-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+
+    .axio-icon {
+      margin-top: 0.1rem;
+      flex-shrink: 0;
+      color: var(--clr-accent, #5b9cf6);
+    }
+  }
+}
+
+// ─── Back-to-top button icon ──────────────────────────────────────────────────
+.top-btn {
+  .axio-icon {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .axio-icon {
+    transform: translateY(-3px);
+  }
+}
+
+// ─── Tab/filter icon with label ───────────────────────────────────────────────
+.icon-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  line-height: 1;
+}

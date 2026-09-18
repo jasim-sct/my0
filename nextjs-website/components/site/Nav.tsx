@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AxonLogo } from "./AxonLogo";
+import { AxioIcon } from "@/components/icons";
 
 export function Nav() {
   return (
@@ -14,13 +15,13 @@ export function Nav() {
         <nav className="menu" aria-label="Main navigation">
           <div className="has-mega">
             <button className="mega-btn" aria-expanded="false">
-              Services <i>▾</i>
+              Services <AxioIcon name="chevron-down" size={14} aria-hidden="true" style={{ verticalAlign: "middle", marginLeft: "0.2em" }} />
             </button>
             <div className="mega">
               <div className="wrap mega-in">
                 <div className="mm-col">
                   <div className="mm-head">
-                    <i>⬡</i>Capabilities
+                    <AxioIcon name="connected-systems" size={16} aria-hidden="true" className="nav__icon" />Capabilities
                   </div>
                   <p className="mm-blurb">Digital products and platforms engineered to scale.</p>
                   <Link href="/services/websites">
@@ -47,10 +48,10 @@ export function Nav() {
               </div>
               <div className="mega-foot">
                 <div className="wrap">
-                  <Link href="/services">All capabilities →</Link>
-                  <Link href="/engineering">Engineering →</Link>
-                  <Link href="/pricing">Pricing →</Link>
-                  <Link href="/projects">Selected work →</Link>
+                  <Link href="/services"><span className="icon-label"><AxioIcon name="platforms" size={13} aria-hidden="true" />All capabilities</span></Link>
+                  <Link href="/engineering"><span className="icon-label"><AxioIcon name="software-engineering" size={13} aria-hidden="true" />Engineering</span></Link>
+                  <Link href="/pricing"><span className="icon-label"><AxioIcon name="roi" size={13} aria-hidden="true" />Pricing</span></Link>
+                  <Link href="/projects"><span className="icon-label"><AxioIcon name="case-studies" size={13} aria-hidden="true" />Selected work</span></Link>
                 </div>
               </div>
             </div>

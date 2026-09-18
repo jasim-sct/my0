@@ -23,15 +23,10 @@ const STAGES: Stage[] = [
     name: "Problem",
     icon: "challenge",
     tagline: "Uncovering root operational bottlenecks",
-    description:
-      "We interrogate the actual business constraint rather than taking superficial feature lists for granted. We map operational drag, manual repetition, and data loss before proposing any technical intervention.",
-    activities: [
-      "Workflow & stakeholder bottleneck mapping",
-      "Current state data audit and failure point analysis",
-      "Cost of manual operations vs. software automation ROI",
-    ],
+    description: "We map operational drag and manual repetition before proposing any technical intervention.",
+    activities: [],
     deliverable: "Domain Constraint Specification",
-    criteria: "Clear business metrics and unambiguous problem definition",
+    criteria: "",
   },
   {
     id: "model",
@@ -39,15 +34,10 @@ const STAGES: Stage[] = [
     name: "Model",
     icon: "structured-data",
     tagline: "Defining core entities and state boundaries",
-    description:
-      "Every system is only as good as its domain model. We define real-world entities (users, orders, inventory, workflows), relationship cardinalities, and state transitions before visual mockups begin.",
-    activities: [
-      "Entity-relationship modeling and state machines",
-      "Role-based access matrix and tenant boundaries",
-      "Data lifecycle and retention rules definition",
-    ],
+    description: "We define real-world entities, relationship cardinalities, and strict state transitions.",
+    activities: [],
     deliverable: "Normalized Entity & State Transition Matrix",
-    criteria: "Zero circular dependencies and deterministic state flow",
+    criteria: "",
   },
   {
     id: "design",
@@ -55,15 +45,10 @@ const STAGES: Stage[] = [
     name: "Design",
     icon: "frontend",
     tagline: "Accessible, high-density interface ergonomics",
-    description:
-      "We design interfaces that prioritize cognitive clarity, rapid task completion, and responsive accessibility. No decorative filler or oversized fluff—interfaces are engineered for real daily work.",
-    activities: [
-      "Design tokens (colors, typography, elevation, spacing)",
-      "High-density data tables, forms, and keyboard navigation",
-      "Responsive viewports across mobile, tablet, and widescreen",
-    ],
-    deliverable: "Tokenized UI Design System & Component Library",
-    criteria: "WCAG 2.1 AA accessibility and sub-3 click task completion",
+    description: "Interfaces engineered for cognitive clarity, rapid task completion, and responsive accessibility.",
+    activities: [],
+    deliverable: "Tokenized UI Design System",
+    criteria: "",
   },
   {
     id: "architecture",
@@ -71,15 +56,10 @@ const STAGES: Stage[] = [
     name: "Architecture",
     icon: "system-architecture",
     tagline: "Decoupled layers and explicit contracts",
-    description:
-      "We establish strict boundaries between user interfaces, API services, background queues, and databases. Typed contracts ensure that any upstream change is caught during compile time, not in production.",
-    activities: [
-      "Frontend SSR vs. client hydration partitioning",
-      "REST / GraphQL schema specifications with strict typing",
-      "Caching hierarchies, connection pooling, and queue topology",
-    ],
-    deliverable: "System Topology & API Interface Contracts",
-    criteria: "Complete type safety across all system boundaries",
+    description: "Strict typed boundaries between user interfaces, API services, and databases.",
+    activities: [],
+    deliverable: "System Topology & API Contracts",
+    criteria: "",
   },
   {
     id: "engineering",
@@ -87,15 +67,10 @@ const STAGES: Stage[] = [
     name: "Engineering",
     icon: "software-engineering",
     tagline: "Rigorous implementation without dependency bloat",
-    description:
-      "We write clean, typed TypeScript and backend code. We avoid massive external runtime libraries for trivial tasks, choosing native web standards, optimized queries, and sub-second execution speeds.",
-    activities: [
-      "Strict-mode TypeScript implementation across client and server",
-      "Database schema migrations with index optimization",
-      "Automated unit, integration, and contract test suites",
-    ],
-    deliverable: "Clean, Documented & Tested Production Source Code",
-    criteria: "100% typecheck pass, zero high-severity audit vulnerabilities",
+    description: "Clean TypeScript and optimized queries avoiding massive external runtime libraries.",
+    activities: [],
+    deliverable: "Clean, Documented Source Code",
+    criteria: "",
   },
   {
     id: "integration",
@@ -103,15 +78,10 @@ const STAGES: Stage[] = [
     name: "Integration",
     icon: "integration",
     tagline: "Resilient connections with third-party ecosystems",
-    description:
-      "Modern businesses depend on external payment gateways, CRMs, email services, and logistics APIs. We engineer robust integration pipelines with idempotency keys, token-bucket rate limits, and fallback queues.",
-    activities: [
-      "Webhook ingestion pipelines with signature validation",
-      "Transactional mutations with idempotency tokens",
-      "Circuit breakers and exponential backoff retry policies",
-    ],
+    description: "Robust integration pipelines with idempotency keys, rate limits, and fallback queues.",
+    activities: [],
     deliverable: "Bi-directional Synced Integration Pipelines",
-    criteria: "Zero duplicate transactions under network timeouts",
+    criteria: "",
   },
   {
     id: "deployment",
@@ -119,15 +89,10 @@ const STAGES: Stage[] = [
     name: "Deployment",
     icon: "deployment",
     tagline: "Stateless containers and hardened edge delivery",
-    description:
-      "We package systems into reproducible Docker containers and deploy behind hardened Nginx reverse proxies on fast CDNs. Automated SSL, security headers, and health checks are standard.",
-    activities: [
-      "Multi-stage Docker builds and automated CI/CD workflows",
-      "Nginx reverse proxy configuration with TLS 1.3 and HSTS",
-      "Core Web Vitals tuning for sub-second LCP and zero CLS",
-    ],
-    deliverable: "Zero-Downtime Deployment & Automated Infrastructure",
-    criteria: "99.9% uptime baseline, sub-second LCP globally",
+    description: "Systems packaged into reproducible containers behind automated TLS and global CDN caching.",
+    activities: [],
+    deliverable: "Zero-Downtime Deployment Automation",
+    criteria: "",
   },
   {
     id: "evolution",
@@ -135,15 +100,10 @@ const STAGES: Stage[] = [
     name: "Evolution",
     icon: "evolution",
     tagline: "Monitoring, telemetry, and non-breaking growth",
-    description:
-      "Software does not stop at launch. We implement structured JSON telemetry, error alerting, and continuous database query tuning so the system scales cleanly alongside growing business volume.",
-    activities: [
-      "Structured application logging and error rate monitoring",
-      "Slow-query telemetry and database index rebalancing",
-      "Backward-compatible API versioning and non-breaking updates",
-    ],
-    deliverable: "Telemetry Dashboard & Long-Term Roadmap",
-    criteria: "Proactive alerting before user-facing failure occurs",
+    description: "Structured telemetry and continuous tuning so the system scales cleanly alongside business volume.",
+    activities: [],
+    deliverable: "Telemetry & Long-Term Roadmap",
+    criteria: "",
   },
 ];
 
@@ -195,48 +155,85 @@ export function SystemThinking() {
             id={`stage-panel-${current.id}`}
             role="tabpanel"
             aria-labelledby={`stage-tab-${current.id}`}
-            className="st-detail-card"
+            className="st-detail-card glass card"
             key={current.id}
+            style={{ 
+              marginTop: "2rem", 
+              padding: 0, 
+              overflow: "hidden" 
+            }}
           >
-            <div className="st-detail-grid">
-              <div>
-                <span className="st-meta-label">Stage {current.num}</span>
-                <h3 style={{ fontSize: "1.4rem", margin: "0.2rem 0 0.4rem", color: "var(--ink)" }}>
-                  {current.name}: {current.tagline}
+            <div style={{ 
+              display: "grid", 
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", 
+              gap: 0
+            }}>
+              
+              {/* Dominant Visual Panel */}
+              <div style={{ 
+                background: "rgba(0,0,0,0.3)", 
+                borderRight: "1px solid var(--rule)", 
+                padding: "3rem", 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                position: "relative",
+                minHeight: "300px"
+              }}>
+                <div style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at center, rgba(0, 229, 255, 0.05) 0%, transparent 70%)" }} />
+                
+                <div style={{ 
+                  position: "relative",
+                  width: "120px", 
+                  height: "120px", 
+                  display: "flex", 
+                  alignItems: "center", 
+                  justifyContent: "center",
+                  borderRadius: "24px",
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  boxShadow: "0 10px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)"
+                }}>
+                  <div style={{ position: "absolute", top: "-10px", left: "-10px", right: "-10px", bottom: "-10px", border: "1px dashed rgba(255,255,255,0.1)", borderRadius: "34px", zIndex: 0 }} />
+                  <div style={{ position: "relative", zIndex: 1, color: "var(--acc)", filter: "drop-shadow(0 0 12px rgba(0, 229, 255, 0.3))" }}>
+                    <AxioIcon name={current.icon} size={48} aria-hidden="true" />
+                  </div>
+                </div>
+                
+                <div style={{ position: "absolute", bottom: "1.5rem", left: "1.5rem", fontSize: "4rem", fontWeight: 700, color: "rgba(255,255,255,0.03)", lineHeight: 1, letterSpacing: "-0.04em", userSelect: "none" }}>
+                  {current.num}
+                </div>
+              </div>
+
+              {/* Text & Data Panel */}
+              <div style={{ padding: "3rem" }}>
+                <span className="st-meta-label" style={{ display: "inline-block", background: "rgba(255,255,255,0.05)", padding: "0.3rem 0.8rem", borderRadius: "100px", marginBottom: "1.5rem" }}>
+                  Phase {current.num}
+                </span>
+                
+                <h3 style={{ fontSize: "1.6rem", margin: "0 0 0.8rem", color: "var(--ink)", fontWeight: 600, letterSpacing: "-0.01em" }}>
+                  {current.name}
                 </h3>
-                <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: 1.6, marginBottom: "1.2rem" }}>
+                
+                <div style={{ fontSize: "1.1rem", color: "var(--acc)", fontWeight: 500, marginBottom: "1rem" }}>
+                  {current.tagline}
+                </div>
+                
+                <p style={{ color: "var(--muted)", fontSize: "1rem", lineHeight: 1.6, marginBottom: "2rem", maxWidth: "45ch" }}>
                   {current.description}
                 </p>
-
-                <h4 style={{ fontSize: "0.88rem", textTransform: "uppercase", letterSpacing: "0.04em", color: "var(--ink-2)", marginBottom: "0.5rem" }}>
-                  Key Engineering Activities
-                </h4>
-                <ul className="tick-list" style={{ margin: 0 }}>
-                  {current.activities.map((act, i) => (
-                    <li key={i}>
-                      <AxioIcon name="solution" size={13} aria-hidden="true" />
-                      <span>{act}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="st-meta-box">
-                <div className="st-meta-row">
-                  <span className="st-meta-label">Primary Deliverable</span>
-                  <span className="st-meta-val">{current.deliverable}</span>
-                </div>
-                <div className="st-meta-row">
-                  <span className="st-meta-label">Verification Criteria</span>
-                  <span className="st-meta-val">{current.criteria}</span>
-                </div>
-                <div className="st-meta-row" style={{ marginTop: "1rem", paddingTop: "0.8rem", borderTop: "1px solid var(--rule)" }}>
-                  <span className="st-meta-label">Related Capability</span>
-                  <span className="st-meta-val" style={{ color: "var(--acc)" }}>
-                    {idxToCapability(activeIdx)}
-                  </span>
+                
+                <div style={{ borderTop: "1px solid var(--rule)", paddingTop: "1.5rem" }}>
+                  <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--muted)", marginBottom: "0.5rem" }}>
+                    Primary Deliverable
+                  </div>
+                  <div style={{ fontSize: "0.95rem", color: "var(--ink)", fontWeight: 500, display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                    <AxioIcon name="arrow-right" size={14} aria-hidden="true" style={{ color: "var(--acc)" }} />
+                    {current.deliverable}
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

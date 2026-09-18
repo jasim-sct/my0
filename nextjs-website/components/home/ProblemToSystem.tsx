@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { AxioIcon } from "@/components/icons";
 import type { AxioIconName } from "@/components/icons";
@@ -84,8 +87,11 @@ const PROBLEMS: ProblemMap[] = [
 ];
 
 export function ProblemToSystem() {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const activeItem = PROBLEMS[activeIdx];
+
   return (
-    <section className="band">
+    <section className="band-dark" style={{ borderTop: "1px solid var(--rule)" }}>
       <div className="wrap">
         <div className="s-head">
           <div>
@@ -99,39 +105,75 @@ export function ProblemToSystem() {
           </div>
         </div>
 
-        <div className="grid g3" style={{ marginTop: "1rem" }}>
-          {PROBLEMS.map((item, idx) => (
-            <article key={idx} className="glass card p2s-card" data-anim data-delay={idx * 50}>
-              <div>
-                <span className="p2s-badge">
-                  <AxioIcon name={item.icon} size={13} aria-hidden="true" style={{ marginRight: "0.35em", opacity: 0.75 }} />
+        <div className="grid g2" style={{ marginTop: "2rem", gap: "3rem", background: "none" }} data-anim>
+          {/* Left: Interactive List */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+            {PROBLEMS.map((item, idx) => (
+              <button
+                key={idx}
+                className={`p2s-btn ${idx === activeIdx ? "is-active" : ""}`}
+                onClick={() => setActiveIdx(idx)}
+                style={{
+                  textAlign: "left",
+                  padding: "1.2rem",
+                  borderRadius: "8px",
+                  background: idx === activeIdx ? "rgba(255,255,255,0.05)" : "transparent",
+                  border: idx === activeIdx ? "1px solid rgba(255,255,255,0.1)" : "1px solid transparent",
+                  cursor: "pointer",
+                  transition: "all 0.2s ease"
+                }}
+              >
+                <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", color: idx === activeIdx ? "var(--acc)" : "var(--muted)", marginBottom: "0.4rem" }}>
                   {item.badge}
-                </span>
-                <h3 style={{ fontSize: "1.15rem", marginBottom: "0.6rem", lineHeight: 1.35 }}>{item.bottleneck}</h3>
-                <p style={{ fontSize: "0.88rem", color: "var(--muted)", lineHeight: 1.6, margin: 0 }}>
-                  {item.context}
-                </p>
-              </div>
+                </div>
+                <h3 style={{ fontSize: "1.1rem", margin: 0, color: idx === activeIdx ? "var(--ink)" : "var(--txt-dim)", fontWeight: idx === activeIdx ? 600 : 400 }}>
+                  {item.bottleneck}
+                </h3>
+              </button>
+            ))}
+          </div>
 
-              <div className="p2s-sol">
-                <div className="p2s-sol-title">
-                  <AxioIcon name="solution" size={14} aria-hidden="true" style={{ marginRight: "0.35em", opacity: 0.7 }} />
-                  Engineered Solution:
-                </div>
-                <p style={{ fontSize: "0.9rem", color: "var(--ink)", lineHeight: 1.55, margin: "0 0 0.8rem" }}>
-                  {item.solution}
-                </p>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
-                  <Link href={item.capabilityHref} className="pl" style={{ fontSize: "0.82rem" }}>
-                    <span className="icon-label">{item.capabilityName} <AxioIcon name="arrow-right" size={11} aria-hidden="true" /></span>
-                  </Link>
-                  <Link href={item.proofHref} className="pl" style={{ fontSize: "0.82rem", color: "var(--muted)" }}>
-                    <span className="icon-label">{item.proofName} <AxioIcon name="external-link" size={11} aria-hidden="true" /></span>
-                  </Link>
+          {/* Right: Immersive System View */}
+          <div className="glass card" style={{ padding: "2.5rem", position: "relative", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+            {/* Visual Flowchart Presentation */}
+            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+              <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "48px", height: "48px", borderRadius: "50%", background: "rgba(255,0,0,0.1)", color: "#ff4d4d", marginBottom: "1rem" }}>
+                <AxioIcon name="challenge" size={24} aria-hidden="true" />
+              </div>
+              <h4 style={{ fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--muted)", margin: "0 0 0.5rem" }}>Business Bottleneck</h4>
+              <p style={{ fontSize: "1.2rem", fontWeight: 500, color: "var(--ink)", margin: 0, maxWidth: "40ch", marginInline: "auto" }}>
+                "{activeItem.bottleneck}"
+              </p>
+            </div>
+
+            <div style={{ position: "relative", textAlign: "center", margin: "0 auto 3rem", width: "100%", maxWidth: "300px" }}>
+              <div style={{ position: "absolute", top: 0, bottom: 0, left: "50%", width: "1px", background: "linear-gradient(to bottom, rgba(255,255,255,0.1), var(--acc), rgba(255,255,255,0.1))", transform: "translateX(-50%)", zIndex: 0 }} />
+              <div style={{ position: "relative", zIndex: 1, padding: "1.5rem 0" }}>
+                <div style={{ display: "inline-flex", background: "var(--surface)", border: "1px solid var(--acc)", padding: "0.4rem 1rem", borderRadius: "20px", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--acc)", fontWeight: 600 }}>
+                  Engineered Response
                 </div>
               </div>
-            </article>
-          ))}
+            </div>
+
+            <div style={{ textAlign: "center", background: "rgba(0,0,0,0.2)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "12px", padding: "2rem" }}>
+              <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "48px", height: "48px", borderRadius: "50%", background: "rgba(0, 229, 255, 0.1)", color: "var(--acc)", marginBottom: "1rem" }}>
+                <AxioIcon name={activeItem.icon} size={24} aria-hidden="true" />
+              </div>
+              <p style={{ fontSize: "1.1rem", color: "var(--ink)", lineHeight: 1.6, margin: "0 0 1.5rem" }}>
+                {activeItem.solution}
+              </p>
+              
+              <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1rem" }}>
+                <Link href={activeItem.capabilityHref} className="btn btn-sm" style={{ background: "transparent", border: "1px solid var(--rule)" }}>
+                  Capability: {activeItem.capabilityName} <span className="gt">&rsaquo;</span>
+                </Link>
+                <Link href={activeItem.proofHref} className="btn btn-sm btn-primary">
+                  Proof: {activeItem.proofName} <span className="gt">&rsaquo;</span>
+                </Link>
+              </div>
+            </div>
+            
+          </div>
         </div>
       </div>
     </section>

@@ -39,11 +39,11 @@ const MODES: Mode[] = [
         icon: "frontend",
         title: "Frontend Layer",
         tag: "Next.js · React · TypeScript",
-        summary: "Prerendered Server Components for instant HTML paint paired with isolated client hydration for interactive state widgets. Strictly typed props and zero unused CSS.",
-        tech: "TypeScript 5, Next.js App Router, CSS Custom Properties",
-        protocols: "HTTPS, HTTP/2, Semantic DOM, WCAG 2.1 AA",
-        resilience: "Graceful degradation under offline or slow mobile connections",
-        latencyTarget: "< 800ms LCP, < 50ms INP",
+        summary: "Prerendered Server Components paired with isolated client hydration for interactive states. Strictly typed props and zero unused CSS.",
+        tech: "TypeScript, Next.js",
+        protocols: "HTTPS, DOM, WCAG 2.1 AA",
+        resilience: "Graceful offline degradation",
+        latencyTarget: "< 800ms LCP",
       },
       {
         id: "gateway",
@@ -51,10 +51,10 @@ const MODES: Mode[] = [
         icon: "security",
         title: "API Gateway & Guard",
         tag: "Edge Routing · Rate Limiting",
-        summary: "Ingress proxy enforcing TLS termination, IP token-bucket rate limits, CORS origin isolation, and upfront JSON payload schema validation before requests reach domain services.",
-        tech: "Nginx, Edge Middleware, Schema Validators (Zod)",
-        protocols: "REST, JSON, JWT Bearer Auth",
-        resilience: "Automatic drop of malformed payloads; 429 rate limit backoff",
+        summary: "Ingress proxy enforcing TLS termination, IP rate limits, and upfront JSON payload validation.",
+        tech: "Nginx, Edge Middleware, Zod",
+        protocols: "REST, JSON, JWT Bearer",
+        resilience: "Automatic 429 rate limit backoff",
         latencyTarget: "< 15ms validation overhead",
       },
       {
@@ -63,23 +63,23 @@ const MODES: Mode[] = [
         icon: "backend",
         title: "Domain Services",
         tag: "Node.js · Express · NestJS",
-        summary: "Stateless business logic execution executing domain validation, access authorization, transactional orchestration, and event dispatching to background queues.",
-        tech: "Node.js, Express/NestJS, TypeScript",
-        protocols: "Typed Internal RPC / REST, Event Bus",
-        resilience: "Idempotency tokens preventing duplicate transactional side-effects",
-        latencyTarget: "< 45ms business logic execution",
+        summary: "Stateless logic executing domain validation, authorization, and event dispatching to background queues.",
+        tech: "Node.js, Express/NestJS",
+        protocols: "Typed Internal RPC, Event Bus",
+        resilience: "Idempotency prevents duplicate side-effects",
+        latencyTarget: "< 45ms logic execution",
       },
       {
         id: "data",
         idx: "04",
         icon: "database",
         title: "Data & Caching Tier",
-        tag: "PostgreSQL · Redis · MongoDB",
-        summary: "Normalized relational storage with strict foreign keys and indexed query paths, augmented with Redis for hot in-memory session caches and query results.",
-        tech: "PostgreSQL 16, Redis 7, PgBouncer pooling",
-        protocols: "PostgreSQL Wire Protocol, Redis RESP",
-        resilience: "Point-in-time recovery (PITR), automated snapshot replicas",
-        latencyTarget: "< 5ms cached query, < 25ms indexed query",
+        tag: "PostgreSQL · Redis",
+        summary: "Normalized relational storage augmented with Redis for hot in-memory session caches.",
+        tech: "PostgreSQL 16, Redis, PgBouncer",
+        protocols: "PostgreSQL Protocol, RESP",
+        resilience: "Point-in-time recovery, automated replicas",
+        latencyTarget: "< 25ms indexed query",
       },
       {
         id: "infra",
@@ -87,11 +87,11 @@ const MODES: Mode[] = [
         icon: "infrastructure",
         title: "Infrastructure & Edge",
         tag: "Docker · Nginx · CDN",
-        summary: "Multi-stage Docker containers deployed across high-availability Linux hosts behind reverse proxies with automated TLS 1.3 encryption and global CDN caching.",
-        tech: "Docker, Linux, Nginx, Cloud CDN",
-        protocols: "TLS 1.3, HTTP/2, HSTS Preload",
-        resilience: "Zero-downtime rolling container updates with health probes",
-        latencyTarget: "99.9% uptime baseline globally",
+        summary: "Multi-stage containers deployed across high-availability hosts behind automated TLS and CDN caching.",
+        tech: "Docker, Linux, CDN",
+        protocols: "TLS 1.3, HTTP/2, HSTS",
+        resilience: "Zero-downtime rolling updates",
+        latencyTarget: "99.9% uptime baseline",
       },
     ],
   },
@@ -107,11 +107,11 @@ const MODES: Mode[] = [
         icon: "engagement",
         title: "User Event Trigger",
         tag: "Input · Form · Click",
-        summary: "User triggers a state mutation (checkout submit, task move, configuration save). Client validates fields instantly and shows optimistic UI state.",
-        tech: "Client-side React state, Synthetic Event Dispatcher",
-        protocols: "Internal DOM Event, LocalStorage sync",
-        resilience: "Input debouncing and disabled duplicate clicks",
-        latencyTarget: "< 16ms client frame response",
+        summary: "Client validates fields instantly and shows optimistic UI state without blocking.",
+        tech: "React State, Synthetic Events",
+        protocols: "Internal DOM Event",
+        resilience: "Input debouncing",
+        latencyTarget: "< 16ms frame response",
       },
       {
         id: "df-guard",
@@ -119,11 +119,11 @@ const MODES: Mode[] = [
         icon: "authentication",
         title: "Schema & Auth Guard",
         tag: "Gateway Validation",
-        summary: "Request arrives at backend. Gateway validates JWT session authenticity, checks user organization permissions, and tests payload against strict Zod schema.",
-        tech: "JSON Web Tokens (JWT), Zod Schema Parser",
-        protocols: "HTTPS POST, Authorization Header",
-        resilience: "Immediate 400 rejection on unverified input with typed error code",
-        latencyTarget: "< 10ms security inspection",
+        summary: "Gateway validates session authenticity and tests payload against strict schemas.",
+        tech: "JWT, Zod Schema Parser",
+        protocols: "HTTPS POST",
+        resilience: "Immediate 400 rejection",
+        latencyTarget: "< 10ms security check",
       },
       {
         id: "df-proc",
@@ -131,10 +131,10 @@ const MODES: Mode[] = [
         icon: "automation",
         title: "Business Processing",
         tag: "Domain Logic",
-        summary: "Service verifies entity state, checks business rules (inventory availability, discount eligibility, quota limits), and calculates final changes.",
-        tech: "Domain Services, Business Rule Engine",
-        protocols: "Internal typed interfaces",
-        resilience: "Circuit-breaking fallback if downstream dependency times out",
+        summary: "Service verifies entity state, checks business rules, and calculates changes.",
+        tech: "Domain Services",
+        protocols: "Typed interfaces",
+        resilience: "Circuit-breaking fallback",
         latencyTarget: "< 35ms rule execution",
       },
       {
@@ -143,11 +143,11 @@ const MODES: Mode[] = [
         icon: "database",
         title: "Atomic DB Commit",
         tag: "ACID Transaction",
-        summary: "State mutation runs inside an isolated SQL transaction. Writes both the entity update and an audit log row before committing write-ahead log.",
-        tech: "PostgreSQL ACID Transaction block",
-        protocols: "TCP Socket via Connection Pool",
-        resilience: "Automatic transaction rollback on any constraint violation",
-        latencyTarget: "< 18ms disk write & sync",
+        summary: "State mutation runs inside an isolated SQL transaction with audit logging.",
+        tech: "PostgreSQL ACID block",
+        protocols: "TCP Socket",
+        resilience: "Automatic rollback on violation",
+        latencyTarget: "< 18ms disk write",
       },
       {
         id: "df-resp",
@@ -155,11 +155,11 @@ const MODES: Mode[] = [
         icon: "api",
         title: "Verified Response",
         tag: "Typed JSON Result",
-        summary: "Success response returns with updated resource payload and Cache-Control headers. Client reconciles optimistic UI and confirms operation to user.",
-        tech: "HTTP Response, Client Store Reconciler",
-        protocols: "HTTP 200 OK, JSON Payload",
-        resilience: "Client rollback and clear user alert if network dropped",
-        latencyTarget: "< 120ms total roundtrip globally",
+        summary: "Client reconciles optimistic UI and confirms operation to user.",
+        tech: "Client Store Reconciler",
+        protocols: "HTTP 200 OK",
+        resilience: "Client rollback on drop",
+        latencyTarget: "< 120ms roundtrip",
       },
     ],
   },
@@ -175,11 +175,11 @@ const MODES: Mode[] = [
         icon: "deployment",
         title: "Modular Monolith",
         tag: "Day 1 Baseline",
-        summary: "Prerendered Next.js pages, consolidated Node.js service, and single PostgreSQL instance. Maximum velocity, zero distributed complexity, sub-second loads.",
+        summary: "Prerendered pages, consolidated service, and single instance database for maximum velocity.",
         tech: "Next.js, Node.js, PostgreSQL",
-        protocols: "Single process / Docker host",
-        resilience: "Daily automated database backups, automated container restart",
-        latencyTarget: "Handles 1k–50k requests/day effortlessly",
+        protocols: "Single Docker host",
+        resilience: "Daily automated backups",
+        latencyTarget: "Handles 10k+ requests/day",
       },
       {
         id: "sc-two",
@@ -187,11 +187,11 @@ const MODES: Mode[] = [
         icon: "cloud",
         title: "Service Boundaries",
         tag: "Growth Stage",
-        summary: "Decoupling read-heavy catalog pages from write-heavy transactional APIs. Adding Redis caching for hot data and PgBouncer for database connection pooling.",
-        tech: "Redis, PgBouncer, Dedicated API containers",
+        summary: "Adding Redis caching for hot data and PgBouncer for database connection pooling.",
+        tech: "Redis, PgBouncer, Dedicated APIs",
         protocols: "Decoupled internal routing",
-        resilience: "Database shielded from connection exhaustion under peak traffic",
-        latencyTarget: "Handles 100k–500k requests/day with sub-50ms cache hits",
+        resilience: "Shielded connection pools",
+        latencyTarget: "Handles 100k+ requests/day",
       },
       {
         id: "sc-three",
@@ -199,11 +199,11 @@ const MODES: Mode[] = [
         icon: "cicd",
         title: "Event-Driven Queues",
         tag: "Scale Stage",
-        summary: "Offloading intensive tasks (email dispatches, report generation, webhooks, scrapers) to asynchronous background workers backed by Redis queues.",
-        tech: "BullMQ / Redis, Background Worker Fleet",
-        protocols: "AMQP / Redis Pub-Sub",
-        resilience: "Failed jobs automatically retry with exponential backoff and DLQ",
-        latencyTarget: "Zero user-facing blocking on slow external tasks",
+        summary: "Offloading intensive tasks to asynchronous background workers backed by Redis.",
+        tech: "BullMQ, Worker Fleet",
+        protocols: "AMQP / Pub-Sub",
+        resilience: "Exponential backoff retries",
+        latencyTarget: "Zero user-facing blocking",
       },
       {
         id: "sc-four",
@@ -211,11 +211,11 @@ const MODES: Mode[] = [
         icon: "platforms",
         title: "Distributed Platform",
         tag: "Enterprise Stage",
-        summary: "Multi-region CDN caching, read-replica PostgreSQL clusters, auto-scaling stateless application containers, and comprehensive telemetry alerting.",
-        tech: "Kubernetes / Docker Swarm, Multi-region CDN, Read Replicas",
-        protocols: "Edge Anycast Routing, Read/Write Split",
-        resilience: "Automated failover to replica database within 30 seconds",
-        latencyTarget: "Millions of transactions with 99.95% availability",
+        summary: "Multi-region caching, read-replica clusters, and auto-scaling stateless application containers.",
+        tech: "Kubernetes, Multi-region CDN",
+        protocols: "Edge Anycast, Read/Write Split",
+        resilience: "Automated replica failover",
+        latencyTarget: "Millions of transactions",
       },
     ],
   },
@@ -299,43 +299,70 @@ export function ArchitectureExplorer() {
           </div>
 
           {/* Node Inspector Panel */}
-          <div className="ae-inspector" key={`${mode.id}-${activeNode.id}`}>
-            <div className="ae-inspector-grid">
-              <div>
-                <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.3rem" }}>
-                  <span className="mk-chip" style={{ background: "var(--paper)", borderColor: "var(--rule)" }}>
-                    {activeNode.idx}
-                  </span>
-                  <h3 style={{ margin: 0, fontSize: "1.25rem", color: "var(--ink)" }}>{activeNode.title}</h3>
-                </div>
-                <p style={{ color: "var(--muted)", fontSize: "0.92rem", lineHeight: 1.6, margin: "0.5rem 0 1rem" }}>
+          <div className="ae-inspector" key={`${mode.id}-${activeNode.id}`} style={{ 
+            marginTop: "1.5rem", 
+            background: "#0c0d10", 
+            borderRadius: "12px", 
+            border: "1px solid rgba(255,255,255,0.08)",
+            boxShadow: "0 20px 40px -10px rgba(0,0,0,0.5)",
+            overflow: "hidden"
+          }}>
+            {/* Dashboard Header */}
+            <div style={{ 
+              display: "flex", 
+              alignItems: "center", 
+              justifyContent: "space-between",
+              padding: "1rem 1.5rem", 
+              background: "rgba(255,255,255,0.03)", 
+              borderBottom: "1px solid rgba(255,255,255,0.05)" 
+            }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.8rem" }}>
+                <span style={{ 
+                  fontFamily: "var(--font-mono, monospace)", 
+                  fontSize: "0.75rem", 
+                  color: "var(--acc)", 
+                  background: "rgba(0, 229, 255, 0.1)", 
+                  padding: "0.2rem 0.5rem", 
+                  borderRadius: "4px" 
+                }}>
+                  NODE_{activeNode.idx}
+                </span>
+                <h3 style={{ margin: 0, fontSize: "1rem", color: "#fff", fontWeight: 500, letterSpacing: "0.02em" }}>
+                  {activeNode.title}
+                </h3>
+              </div>
+              <div style={{ display: "flex", gap: "0.5rem" }}>
+                <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#0ACF83", boxShadow: "0 0 8px #0ACF83" }} />
+                <span style={{ fontSize: "0.7rem", color: "#0ACF83", textTransform: "uppercase", letterSpacing: "0.05em" }}>Online</span>
+              </div>
+            </div>
+
+            {/* Dashboard Body */}
+            <div style={{ display: "grid", gridTemplateColumns: "minmax(250px, 1.5fr) 1fr", gap: "1px", background: "rgba(255,255,255,0.05)" }}>
+              {/* Summary Section */}
+              <div style={{ background: "#0c0d10", padding: "1.5rem" }}>
+                <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.95rem", lineHeight: 1.6, margin: 0 }}>
                   {activeNode.summary}
                 </p>
-
-                <div className="ae-spec-grid">
-                  <div className="ae-spec-item">
-                    <span className="ae-spec-k"><span className="icon-label"><AxioIcon name="code-quality" size={12} aria-hidden="true" />Technology</span></span>
-                    <span className="ae-spec-v">{activeNode.tech}</span>
-                  </div>
-                  <div className="ae-spec-item">
-                    <span className="ae-spec-k"><span className="icon-label"><AxioIcon name="performance" size={12} aria-hidden="true" />Target Latency</span></span>
-                    <span className="ae-spec-v">{activeNode.latencyTarget}</span>
-                  </div>
-                </div>
               </div>
 
-              <div>
-                <div className="ae-spec-item" style={{ marginBottom: "0.8rem" }}>
-                  <span className="ae-spec-k"><span className="icon-label"><AxioIcon name="api" size={12} aria-hidden="true" />Protocols &amp; Standards</span></span>
-                  <span className="ae-spec-v" style={{ fontWeight: 500, fontSize: "0.82rem" }}>
-                    {activeNode.protocols}
-                  </span>
+              {/* Specs Grid */}
+              <div style={{ background: "#0c0d10", padding: "1.5rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", borderBottom: "1px dashed rgba(255,255,255,0.1)", paddingBottom: "0.5rem" }}>
+                  <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Technology</span>
+                  <span style={{ fontSize: "0.85rem", color: "#fff", fontFamily: "var(--font-mono, monospace)" }}>{activeNode.tech}</span>
                 </div>
-                <div className="ae-spec-item">
-                  <span className="ae-spec-k"><span className="icon-label"><AxioIcon name="reliability" size={12} aria-hidden="true" />Failure Mode &amp; Resilience</span></span>
-                  <span className="ae-spec-v" style={{ fontWeight: 500, fontSize: "0.82rem", color: "var(--muted)" }}>
-                    {activeNode.resilience}
-                  </span>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", borderBottom: "1px dashed rgba(255,255,255,0.1)", paddingBottom: "0.5rem" }}>
+                  <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Protocols</span>
+                  <span style={{ fontSize: "0.85rem", color: "#fff", fontFamily: "var(--font-mono, monospace)" }}>{activeNode.protocols}</span>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", borderBottom: "1px dashed rgba(255,255,255,0.1)", paddingBottom: "0.5rem" }}>
+                  <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Latency Target</span>
+                  <span style={{ fontSize: "0.85rem", color: "var(--acc)", fontFamily: "var(--font-mono, monospace)" }}>{activeNode.latencyTarget}</span>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+                  <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Resilience</span>
+                  <span style={{ fontSize: "0.85rem", color: "#fff", fontFamily: "var(--font-mono, monospace)" }}>{activeNode.resilience}</span>
                 </div>
               </div>
             </div>

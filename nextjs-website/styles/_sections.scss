@@ -35,13 +35,14 @@
   transform:scaleX(1)
 }
 .step .n {
-  font-family:var(--mono);
-  font-size:.8rem;
+  font-family:var(--sans);
+  font-size:.75rem;
+  font-weight:600;
   color:var(--acc);
   background:none;
   -webkit-text-fill-color:currentColor;
   padding-top:.35rem;
-  letter-spacing:.02em
+  letter-spacing:.01em
 }
 .step h3 {
   font-size:clamp(1.2rem,2.2vw,1.7rem);
@@ -298,7 +299,7 @@
   background:var(--paper-2)
 }
 .price-tbl .mono {
-  font-family:var(--mono);
+  font-family:var(--sans);
   font-weight:500;
   color:var(--acc)
 }
@@ -796,10 +797,10 @@ html.lite .cta-band::before {
 }
 .tag {
   display:inline-block;
-  font-family:var(--mono);
+  font-family:var(--body);
   font-size:.72rem;
   color:var(--muted);
-  letter-spacing:-.01em
+  letter-spacing:-.005em
 }
 .kicker {
   font-family:var(--sans);

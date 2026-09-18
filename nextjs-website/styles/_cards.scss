@@ -83,10 +83,11 @@
 }
 /* card with a number tick in the corner, Accenture-style */
 .card .idx {
-  font-family:var(--mono);
+  font-family:var(--sans);
   font-size:.72rem;
   color:var(--muted-2);
-  letter-spacing:.04em;
+  letter-spacing:.01em;
+  font-weight:500;
   display:block;
   margin-bottom:.9rem
 }
@@ -108,11 +109,11 @@
 }
 .from {
   display:inline-block;
-  font-family:var(--mono);
+  font-family:var(--sans);
   font-size:.76rem;
   font-weight:500;
   color:var(--acc);
-  letter-spacing:-.01em;
+  letter-spacing:0;
   text-transform:none
 }
 .chips {
@@ -142,6 +143,35 @@
   background:rgba(255,184,0,.14);
   border-color:rgba(255,184,0,.4);
   color:#a37500
+}
+/* ---------- featured capability (asymmetric, editorial) ---------- */
+.cap-feature {
+  min-height: auto;
+  padding: clamp(1.8rem,3.5vw,2.8rem) clamp(1.6rem,3vw,2.4rem)
+}
+.cap-feature-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: clamp(2rem,4vw,4rem);
+  flex-wrap: wrap
+}
+.cap-feature-inner h3 {
+  font-size: clamp(1.5rem,2.8vw,2.2rem);
+  letter-spacing: -.04em;
+  margin-bottom: .35em
+}
+.cap-feature-inner p {
+  max-width: 52ch
+}
+.cap-feature-links {
+  flex: 0 0 auto
+}
+@media(max-width:640px) {
+  .cap-feature-inner {
+    flex-direction: column;
+    align-items: flex-start
+  }
 }
 /* ---------- pillar tiles ---------- */
 .pillar {
@@ -510,7 +540,7 @@
   text-transform:none
 }
 .price-sm {
-  font-family:var(--mono);
+  font-family:var(--body);
   font-size:.74rem;
   color:var(--muted)
 }

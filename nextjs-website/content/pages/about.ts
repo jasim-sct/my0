@@ -36,22 +36,28 @@ export const mainHtml = `<section class="phero"><div class="wrap">
    <p class="lead" data-anim>Technology should reduce operational drag, not introduce new layers of failure.</p>
   </div>
  </div>
- <div class="grid g3">
-  <article class="glass card" data-anim data-delay="0">
-   <span class="idx">01</span>
-   <h3>Software is a system, not just an interface</h3>
-   <p>A website or product is only as dependable as the database models, API contracts, and server infrastructure beneath it. We design data flow, state management, and edge cases before polishing visual styles.</p>
-  </article>
-  <article class="glass card" data-anim data-delay="60">
-   <span class="idx">02</span>
-   <h3>Performance is a foundational feature</h3>
-   <p>Slow pages drain conversions and search visibility. We optimize Core Web Vitals, minimize client JavaScript bundles, enforce semantic HTML, and implement CDN caching so applications feel instant on any device.</p>
-  </article>
-  <article class="glass card" data-anim data-delay="120">
-   <span class="idx">03</span>
-   <h3>Total transparency over agency mystery</h3>
-   <p>We do not disguise basic templating as proprietary software, nor do we hide ongoing hosting renewals. You receive clean, documented source code, direct technical communication, and clear pricing.</p>
-  </article>
+ <div style="display: flex; flex-direction: column; margin-top: 4rem;">
+  
+  <div data-anim style="margin-bottom: 5rem;">
+   <span style="font-size: 1.2rem; font-weight: 600; color: var(--acc); display: block; margin-bottom: 1rem;">01</span>
+   <h3 style="font-size: clamp(2rem, 5vw, 3.5rem); margin: 0 0 1.5rem; line-height: 1.1; letter-spacing: -0.02em; max-width: 25ch;">Software is a system, not just an interface</h3>
+   <p style="font-size: 1.2rem; color: var(--muted); margin: 0; max-width: 50ch; line-height: 1.6;">We design data flow, state management, and edge cases before polishing visual styles.</p>
+  </div>
+  
+  <div data-anim style="margin-bottom: 5rem; display: flex; justify-content: flex-end;">
+   <div style="max-width: 600px;">
+     <span style="font-size: 1.2rem; font-weight: 600; color: var(--acc); display: block; margin-bottom: 1rem;">02</span>
+     <h3 style="font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1.5rem; line-height: 1.15; letter-spacing: -0.02em;">Performance is a foundational feature</h3>
+     <p style="font-size: 1.1rem; color: var(--muted); margin: 0; line-height: 1.6;">We optimize Core Web Vitals, minimize client bundles, and enforce semantic HTML so applications feel instant.</p>
+   </div>
+  </div>
+
+  <div data-anim style="margin-bottom: 2rem;">
+   <span style="font-size: 1.2rem; font-weight: 600; color: var(--acc); display: block; margin-bottom: 1rem;">03</span>
+   <h3 style="font-size: clamp(1.8rem, 4vw, 2.5rem); margin: 0 0 1rem; line-height: 1.2; letter-spacing: -0.02em;">Total transparency over agency mystery</h3>
+   <p style="font-size: 1.1rem; color: var(--muted); margin: 0; max-width: 60ch; line-height: 1.6;">You receive clean, documented source code, direct technical communication, and clear pricing without hidden retainers.</p>
+  </div>
+
  </div>
 </div></section>
 
@@ -66,26 +72,45 @@ export const mainHtml = `<section class="phero"><div class="wrap">
    <p class="lead" data-anim>Evidence-based decisions across architecture, data, security, and deployment.</p>
   </div>
  </div>
- <div class="grid g2" style="gap:clamp(20px,3vw,40px);align-items:start">
-  <div class="glass card" data-anim="left">
-   <h3>Frontend &amp; User Systems</h3>
-   <p>We build with TypeScript, React, and Next.js, prioritizing server rendering, component reusability, and accessible interaction states. Every interface is tested against varying viewports and constrained network connections.</p>
-   <ul class="tick" style="margin-top:1rem">
-    <li>Strict TypeScript type safety across props and API contracts</li>
-    <li>Optimized Core Web Vitals (sub-second LCP, minimal INP and CLS)</li>
-    <li>Accessible markup with proper ARIA roles, semantic tags, and keyboard navigation</li>
-   </ul>
+ 
+ <div style="margin-top: 4rem; display: flex; flex-direction: column; align-items: center; position: relative;">
+  <!-- Connecting Line -->
+  <div style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: linear-gradient(to bottom, rgba(0,229,255,0.4), rgba(0,229,255,0.1)); transform: translateX(-50%); z-index: 0;"></div>
+  
+  <div data-anim style="display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; margin-bottom: 3rem; position: relative; z-index: 1; background: var(--surface); padding: 1.5rem 3rem; border-radius: 100px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+    <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--acc);">Phase 01</div>
+    <h3 style="font-size: 1.4rem; margin: 0; color: #fff;">Ideation &amp; System Modeling</h3>
   </div>
-  <div class="glass card" data-anim="right">
-   <h3>Backend, APIs &amp; Infrastructure</h3>
-   <p>We architect backend systems using Node.js, Express, NestJS, and relational databases like PostgreSQL alongside MongoDB. Services communicate via typed REST APIs and are hardened behind Nginx reverse proxies with automated SSL.</p>
-   <ul class="tick" style="margin-top:1rem">
-    <li>Normalized schemas, connection pooling, and indexed queries</li>
-    <li>OWASP-aligned security: CSP headers, rate-limiting, and CSRF protection</li>
-    <li>Reproducible container deployments and zero-downtime CI/CD workflows</li>
-   </ul>
+
+  <div style="width: 20px; height: 20px; border-left: 2px solid var(--acc); border-bottom: 2px solid var(--acc); transform: rotate(-45deg); margin-bottom: 3rem; position: relative; z-index: 1;"></div>
+  
+  <div data-anim style="display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; margin-bottom: 3rem; position: relative; z-index: 1; background: var(--surface); padding: 1.5rem 3rem; border-radius: 100px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+    <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--acc);">Phase 02</div>
+    <h3 style="font-size: 1.4rem; margin: 0; color: #fff;">Architecture &amp; API Contracts</h3>
+  </div>
+
+  <div style="width: 20px; height: 20px; border-left: 2px solid var(--acc); border-bottom: 2px solid var(--acc); transform: rotate(-45deg); margin-bottom: 3rem; position: relative; z-index: 1;"></div>
+
+  <div data-anim style="display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; margin-bottom: 3rem; position: relative; z-index: 1; background: var(--surface); padding: 1.5rem 3rem; border-radius: 100px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+    <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--acc);">Phase 03</div>
+    <h3 style="font-size: 1.4rem; margin: 0; color: #fff;">Implementation &amp; Build</h3>
+  </div>
+
+  <div style="width: 20px; height: 20px; border-left: 2px solid var(--acc); border-bottom: 2px solid var(--acc); transform: rotate(-45deg); margin-bottom: 3rem; position: relative; z-index: 1;"></div>
+
+  <div data-anim style="display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; margin-bottom: 3rem; position: relative; z-index: 1; background: var(--surface); padding: 1.5rem 3rem; border-radius: 100px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+    <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--acc);">Phase 04</div>
+    <h3 style="font-size: 1.4rem; margin: 0; color: #fff;">Validation &amp; Quality Check</h3>
+  </div>
+
+  <div style="width: 20px; height: 20px; border-left: 2px solid var(--acc); border-bottom: 2px solid var(--acc); transform: rotate(-45deg); margin-bottom: 3rem; position: relative; z-index: 1;"></div>
+
+  <div data-anim style="display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; position: relative; z-index: 1; background: var(--surface); padding: 1.5rem 3rem; border-radius: 100px; border: 1px solid var(--acc); box-shadow: 0 0 20px rgba(0,229,255,0.2);">
+    <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--acc);">Phase 05</div>
+    <h3 style="font-size: 1.4rem; margin: 0; color: #fff;">Zero-Downtime Deployment</h3>
   </div>
  </div>
+
 </div></section>
 
 <!-- What we're building toward -->

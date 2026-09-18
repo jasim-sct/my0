@@ -31,22 +31,28 @@ export const mainHtml = `<section class="phero"><div class="wrap">
    <p class="lead" data-anim>We eliminate fragile abstractions and speculative complexity in favor of clear, maintainable, and observable codebases.</p>
   </div>
  </div>
- <div class="grid g3">
-  <article class="glass card" data-anim data-delay="0">
-   <span class="idx">01 / State</span>
-   <h3>Deterministic State Over Hidden Magic</h3>
-   <p>Shared implicit state is the root cause of production bugs. We enforce explicit, uni-directional data flow with immutable state updates and validated transitions.</p>
-  </article>
-  <article class="glass card" data-anim data-delay="60">
-   <span class="idx">02 / Boundaries</span>
-   <h3>Strict Contracts Between Layers</h3>
-   <p>The boundary between frontend, API, and database must be enforced by typed schemas. When an API contract changes, the build breaks before deployment, not in production.</p>
-  </article>
-  <article class="glass card" data-anim data-delay="120">
-   <span class="idx">03 / Weight</span>
-   <h3>Minimal Runtime Dependencies</h3>
-   <p>We do not import mega-libraries for trivial tasks. We prioritize native web standards, lean utility abstractions, and sub-100KB initial JavaScript payloads.</p>
-  </article>
+ <div style="display: flex; flex-direction: column; gap: 4rem; margin-top: 3rem;">
+  <div data-anim style="display: grid; grid-template-columns: minmax(80px, auto) 1fr; gap: 2rem; align-items: start; border-top: 2px solid var(--ink); padding-top: 1.5rem;">
+    <span style="font-size: 4rem; font-weight: 700; color: var(--ink); line-height: 0.8; letter-spacing: -0.05em;">01</span>
+    <div>
+      <h3 style="font-size: 1.6rem; margin: 0 0 0.8rem; color: var(--ink);">Deterministic State</h3>
+      <p style="color: var(--muted); margin: 0; line-height: 1.6; font-size: 1.1rem; max-width: 50ch;">Shared implicit state causes bugs. We enforce explicit, uni-directional data flow with immutable state updates.</p>
+    </div>
+  </div>
+  <div data-anim style="display: grid; grid-template-columns: minmax(80px, auto) 1fr; gap: 2rem; align-items: start; border-top: 2px solid var(--ink); padding-top: 1.5rem;">
+    <span style="font-size: 4rem; font-weight: 700; color: var(--ink); line-height: 0.8; letter-spacing: -0.05em;">02</span>
+    <div>
+      <h3 style="font-size: 1.6rem; margin: 0 0 0.8rem; color: var(--ink);">Strict Contracts</h3>
+      <p style="color: var(--muted); margin: 0; line-height: 1.6; font-size: 1.1rem; max-width: 50ch;">Boundaries between frontend, API, and database are enforced by typed schemas. The build breaks before deployment.</p>
+    </div>
+  </div>
+  <div data-anim style="display: grid; grid-template-columns: minmax(80px, auto) 1fr; gap: 2rem; align-items: start; border-top: 2px solid var(--ink); padding-top: 1.5rem;">
+    <span style="font-size: 4rem; font-weight: 700; color: var(--ink); line-height: 0.8; letter-spacing: -0.05em;">03</span>
+    <div>
+      <h3 style="font-size: 1.6rem; margin: 0 0 0.8rem; color: var(--ink);">Minimal Weight</h3>
+      <p style="color: var(--muted); margin: 0; line-height: 1.6; font-size: 1.1rem; max-width: 50ch;">We prioritize native web standards and lean utility abstractions over importing mega-libraries for trivial tasks.</p>
+    </div>
+  </div>
  </div>
 </div></section>
 
@@ -62,63 +68,105 @@ export const mainHtml = `<section class="phero"><div class="wrap">
   </div>
  </div>
 
- <div class="grid g2" style="background:none;gap:clamp(20px,3vw,36px)">
-  <!-- Frontend & UI -->
-  <div class="glass card" style="padding:2.2rem" data-anim>
-   <div class="eyebrow">Frontend Systems</div>
-   <h3 style="margin:0.5rem 0 0.8rem">TypeScript &amp; Next.js App Router</h3>
-   <p>We use <strong>TypeScript</strong> in strict mode across every client application. This eliminates entire classes of runtime null errors and enables instant, self-documenting refactoring as applications grow.</p>
-   <p>With <strong>Next.js App Router</strong>, we separate Server Components from Client Components. Static marketing and catalog pages are prerendered as zero-JS HTML, while dynamic forms and interactive canvases hydrate selectively.</p>
-   <ul class="tick" style="margin-top:1rem">
-    <li>Strict TypeScript configurations with zero <code>any</code> allowances</li>
-    <li>Sub-second Largest Contentful Paint (LCP) and zero Cumulative Layout Shift (CLS)</li>
-    <li>Semantic HTML elements with keyboard accessibility (WCAG 2.1 AA)</li>
-    <li>Native CSS variables and responsive Grid/Flexbox over heavy UI utility runtimes</li>
-   </ul>
-  </div>
+ <div style="margin-top: 3rem; display: flex; flex-direction: column; gap: 1rem;">
+  <!-- Layer 1: Frontend -->
+  <details class="stack-layer" data-anim style="background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; cursor: pointer;">
+    <summary style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; list-style: none; font-size: 1.3rem; font-weight: 500; color: var(--ink);">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: rgba(0,229,255,0.1); color: var(--acc); border-radius: 8px; font-size: 1rem; font-weight: 700;">1</span>
+        Frontend Layer: TypeScript &amp; Next.js
+      </div>
+      <span style="color: var(--acc); font-size: 1.5rem;">+</span>
+    </summary>
+    <div style="padding: 0 2rem 2rem; border-top: 1px dashed var(--rule); margin-top: -0.5rem; padding-top: 1.5rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+        <div>
+          <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.5rem;">Why</div>
+          <p style="margin: 0; color: var(--ink); line-height: 1.6;">Eliminate runtime null errors and enable safe refactoring. Strict typed props and zero unused CSS.</p>
+        </div>
+        <div>
+          <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--acc); margin-bottom: 0.5rem;">Decision</div>
+          <p style="margin: 0; color: var(--ink); line-height: 1.6;">Use <strong>TypeScript</strong> in strict mode. Use <strong>Next.js App Router</strong> for zero-JS static HTML from hydrated interactive Canvas elements, ensuring sub-second LCP.</p>
+        </div>
+      </div>
+    </div>
+  </details>
 
-  <!-- Backend & APIs -->
-  <div class="glass card" style="padding:2.2rem" data-anim data-delay="60">
-   <div class="eyebrow">Backend &amp; Integrations</div>
-   <h3 style="margin:0.5rem 0 0.8rem">Node.js, Express &amp; NestJS Services</h3>
-   <p>For backend systems, we engineer asynchronous I/O architectures in <strong>Node.js</strong>, leveraging Express for lightweight services and NestJS for domain-driven enterprise business logic.</p>
-   <p>Every REST endpoint validates input payloads via schema validation libraries (Zod / Joi) before hitting business controllers. We implement idempotency keys for transactional actions to prevent double-submissions.</p>
-   <ul class="tick" style="margin-top:1rem">
-    <li>Strict request payload and query validation before business logic execution</li>
-    <li>Idempotent transactional mutations for payments and state changes</li>
-    <li>Structured JSON logging with request correlation IDs for rapid debugging</li>
-    <li>Token-bucket rate limiting and circuit breakers on third-party integrations</li>
-   </ul>
-  </div>
+  <!-- Layer 2: Backend -->
+  <details class="stack-layer" data-anim style="background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; cursor: pointer;">
+    <summary style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; list-style: none; font-size: 1.3rem; font-weight: 500; color: var(--ink);">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: rgba(0,229,255,0.1); color: var(--acc); border-radius: 8px; font-size: 1rem; font-weight: 700;">2</span>
+        Backend &amp; Logic: Node.js
+      </div>
+      <span style="color: var(--acc); font-size: 1.5rem;">+</span>
+    </summary>
+    <div style="padding: 0 2rem 2rem; border-top: 1px dashed var(--rule); margin-top: -0.5rem; padding-top: 1.5rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+        <div>
+          <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.5rem;">Why</div>
+          <p style="margin: 0; color: var(--ink); line-height: 1.6;">Ensure resilient handling of concurrent I/O operations and guarantee payload validity before execution.</p>
+        </div>
+        <div>
+          <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--acc); margin-bottom: 0.5rem;">Decision</div>
+          <p style="margin: 0; color: var(--ink); line-height: 1.6;">Engineer asynchronous architectures in <strong>Node.js</strong>. Validate payloads via Zod. Implement idempotency keys for transactional actions.</p>
+        </div>
+      </div>
+    </div>
+  </details>
 
-  <!-- Data & Persistence -->
-  <div class="glass card" style="padding:2.2rem" data-anim>
-   <div class="eyebrow">Data Architecture</div>
-   <h3 style="margin:0.5rem 0 0.8rem">PostgreSQL &amp; MongoDB Workloads</h3>
-   <p>We choose databases based on data relational topology rather than fashion. Relational financial data, customer accounts, and order histories are modeled in normalized <strong>PostgreSQL</strong> schemas with strict foreign keys and check constraints.</p>
-   <p>Dynamic event logs, unstructured product catalogs, and semi-structured workflow metadata are persisted in <strong>MongoDB</strong> with indexed query paths and document schema validation.</p>
-   <ul class="tick" style="margin-top:1rem">
-    <li>ACID-compliant transactions for multi-entity business mutations</li>
-    <li>Optimized B-tree and GIN indexing for fast filtering on high-volume tables</li>
-    <li>Connection pooling via PgBouncer to prevent database thread starvation</li>
-    <li>Automated point-in-time recovery (PITR) and encrypted backup snapshots</li>
-   </ul>
-  </div>
+  <!-- Layer 3: Data -->
+  <details class="stack-layer" data-anim style="background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; cursor: pointer;">
+    <summary style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; list-style: none; font-size: 1.3rem; font-weight: 500; color: var(--ink);">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: rgba(0,229,255,0.1); color: var(--acc); border-radius: 8px; font-size: 1rem; font-weight: 700;">3</span>
+        Data Architecture: PostgreSQL
+      </div>
+      <span style="color: var(--acc); font-size: 1.5rem;">+</span>
+    </summary>
+    <div style="padding: 0 2rem 2rem; border-top: 1px dashed var(--rule); margin-top: -0.5rem; padding-top: 1.5rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+        <div>
+          <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.5rem;">Why</div>
+          <p style="margin: 0; color: var(--ink); line-height: 1.6;">Financial data and accounts require strict ACID compliance and normalized schemas to prevent corruption.</p>
+        </div>
+        <div>
+          <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--acc); margin-bottom: 0.5rem;">Decision</div>
+          <p style="margin: 0; color: var(--ink); line-height: 1.6;">Model relational data in <strong>PostgreSQL</strong> with strict foreign keys. Unstructured event logs use MongoDB with indexed query paths.</p>
+        </div>
+      </div>
+    </div>
+  </details>
+  
+  <!-- Layer 4: Infra -->
+  <details class="stack-layer" data-anim style="background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; cursor: pointer;">
+    <summary style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; list-style: none; font-size: 1.3rem; font-weight: 500; color: var(--ink);">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: rgba(0,229,255,0.1); color: var(--acc); border-radius: 8px; font-size: 1rem; font-weight: 700;">4</span>
+        Infrastructure: Docker &amp; Edge
+      </div>
+      <span style="color: var(--acc); font-size: 1.5rem;">+</span>
+    </summary>
+    <div style="padding: 0 2rem 2rem; border-top: 1px dashed var(--rule); margin-top: -0.5rem; padding-top: 1.5rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+        <div>
+          <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.5rem;">Why</div>
+          <p style="margin: 0; color: var(--ink); line-height: 1.6;">Environments must be reproducible, and the perimeter must be hardened against OWASP Top 10 vulnerabilities.</p>
+        </div>
+        <div>
+          <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--acc); margin-bottom: 0.5rem;">Decision</div>
+          <p style="margin: 0; color: var(--ink); line-height: 1.6;">Containerize with <strong>Docker</strong> behind hardened Nginx proxies. Enforce strict CSP, TLS 1.3, and sanitized inputs globally.</p>
+        </div>
+      </div>
+    </div>
+  </details>
 
-  <!-- Infrastructure & Security -->
-  <div class="glass card" style="padding:2.2rem" data-anim data-delay="60">
-   <div class="eyebrow">Infrastructure &amp; Security</div>
-   <h3 style="margin:0.5rem 0 0.8rem">Nginx, Docker &amp; Edge Delivery</h3>
-   <p>Applications are containerized with multi-stage <strong>Docker</strong> builds, ensuring deterministic local development and identical production artifacts. Services run behind hardened <strong>Nginx</strong> reverse proxies.</p>
-   <p>We enforce OWASP Top 10 defenses on every deployment: strict Content Security Policy (CSP), HTTP Strict Transport Security (HSTS), rate limiting, and sanitized user inputs.</p>
-   <ul class="tick" style="margin-top:1rem">
-    <li>Automated Let's Encrypt SSL/TLS certificate renewal with TLS 1.3 encryption</li>
-    <li>Security headers: CSP, X-Content-Type-Options, Referrer-Policy, Frame-Options</li>
-    <li>Edge CDN caching with granular Cache-Control and stale-while-revalidate headers</li>
-    <li>Stateless application containers ready for horizontal scale and zero-downtime rollouts</li>
-   </ul>
-  </div>
  </div>
+ <style>
+   details.stack-layer > summary { list-style: none; }
+   details.stack-layer > summary::-webkit-details-marker { display: none; }
+   details.stack-layer[open] summary span:last-child { transform: rotate(45deg); transition: transform 0.2s ease; }
+ </style>
 </div></section>
 
 <!-- Interactive Proof Connection -->
@@ -133,33 +181,45 @@ export const mainHtml = `<section class="phero"><div class="wrap">
   </div>
  </div>
 
- <div class="grid g3">
-  <article class="glass card" data-anim data-delay="0">
-   <span class="idx">Proof 01</span>
-   <h3>Lumen Commerce</h3>
-   <p>Headless e-commerce architecture verifying dynamic category filtering, persistent cart state across browser reloads, promo logic, and a multi-step checkout wizard without third-party platform bloat.</p>
-   <div class="hero-cta" style="margin-top:1rem">
-    <a class="arrow-link" href="/projects/shop">Inspect architecture &rsaquo;</a>
-   </div>
-  </article>
+ <div style="display: flex; flex-direction: column; margin-top: 3rem; position: relative;" data-anim>
+  <!-- Connecting line -->
+  <div style="position: absolute; left: 16px; top: 0; bottom: 0; width: 2px; background: rgba(255,255,255,0.1); z-index: 0;"></div>
 
-  <article class="glass card" data-anim data-delay="60">
-   <span class="idx">Proof 02</span>
-   <h3>FLUX AI Studio</h3>
-   <p>Desktop-grade IDE layout verifying complex browser canvas interactions: ⌘K command dispatcher, SVG bezier curve rendering between node connectors, and asynchronous execution streaming.</p>
-   <div class="hero-cta" style="margin-top:1rem">
-    <a class="arrow-link" href="/projects/flux">Inspect architecture &rsaquo;</a>
-   </div>
-  </article>
+  <div style="display: grid; grid-template-columns: minmax(180px, 1fr) 2fr auto; gap: 2rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px dashed rgba(255,255,255,0.1); position: relative; z-index: 1;">
+    <div style="display: flex; alignItems: center; gap: 1rem;">
+      <div style="width: 34px; height: 34px; border-radius: 50%; background: var(--acc); box-shadow: 0 0 10px rgba(0, 229, 255, 0.4); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #000; font-weight: 700;">01</div>
+      <h3 style="margin: 0; font-size: 1.2rem; color: #fff;">Lumen Commerce</h3>
+    </div>
+    <div>
+      <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.4); margin-bottom: 0.2rem;">Verified Result</div>
+      <p style="margin: 0; color: rgba(255,255,255,0.8); font-size: 0.95rem;">Headless e-commerce architecture verifying dynamic filtering and multi-step checkout.</p>
+    </div>
+    <a class="btn btn-sm btn-primary" href="/projects/shop">Inspect architecture &rsaquo;</a>
+  </div>
 
-  <article class="glass card" data-anim data-delay="120">
-   <span class="idx">Proof 03</span>
-   <h3>RELAY Platform</h3>
-   <p>Operational tooling architecture verifying memory-efficient table filtering, client-side CSV serialization using the Blob API, and state machine column transitions on an interactive Kanban board.</p>
-   <div class="hero-cta" style="margin-top:1rem">
-    <a class="arrow-link" href="/projects/relay">Inspect architecture &rsaquo;</a>
-   </div>
-  </article>
+  <div style="display: grid; grid-template-columns: minmax(180px, 1fr) 2fr auto; gap: 2rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px dashed rgba(255,255,255,0.1); position: relative; z-index: 1;">
+    <div style="display: flex; alignItems: center; gap: 1rem;">
+      <div style="width: 34px; height: 34px; border-radius: 50%; background: var(--acc); box-shadow: 0 0 10px rgba(0, 229, 255, 0.4); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #000; font-weight: 700;">02</div>
+      <h3 style="margin: 0; font-size: 1.2rem; color: #fff;">FLUX AI Studio</h3>
+    </div>
+    <div>
+      <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.4); margin-bottom: 0.2rem;">Verified Result</div>
+      <p style="margin: 0; color: rgba(255,255,255,0.8); font-size: 0.95rem;">Desktop-grade IDE layout verifying complex browser canvas interactions and execution streaming.</p>
+    </div>
+    <a class="btn btn-sm btn-primary" href="/projects/flux">Inspect architecture &rsaquo;</a>
+  </div>
+
+  <div style="display: grid; grid-template-columns: minmax(180px, 1fr) 2fr auto; gap: 2rem; align-items: center; padding: 1.5rem 0; position: relative; z-index: 1;">
+    <div style="display: flex; alignItems: center; gap: 1rem;">
+      <div style="width: 34px; height: 34px; border-radius: 50%; background: var(--acc); box-shadow: 0 0 10px rgba(0, 229, 255, 0.4); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: #000; font-weight: 700;">03</div>
+      <h3 style="margin: 0; font-size: 1.2rem; color: #fff;">RELAY Platform</h3>
+    </div>
+    <div>
+      <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.4); margin-bottom: 0.2rem;">Verified Result</div>
+      <p style="margin: 0; color: rgba(255,255,255,0.8); font-size: 0.95rem;">Operational tooling architecture verifying memory-efficient table filtering and Kanban state transitions.</p>
+    </div>
+    <a class="btn btn-sm btn-primary" href="/projects/relay">Inspect architecture &rsaquo;</a>
+  </div>
  </div>
 </div></section>
 

@@ -36,18 +36,13 @@ export function HomeMain() {
             </div>
             <div>
               <p className="lead" data-anim>
-                Most software breaks not from lack of ambition, but from fragile foundations. We engineer systems with strict architecture, clean data contracts, and zero runtime bloat—built around the exact way your business operates.
+                Strict architecture. Clean data contracts. Zero runtime bloat.
               </p>
               <Link className="arrow-link" href="/about" data-anim>Our engineering philosophy <span className="gt">&rsaquo;</span></Link>
             </div>
           </div>
-          <div className="grid g2" style={{ marginTop: '1rem' }}>
-            <div className="rv ar-43" data-anim>
-              <img className="ph" src="/assets/img/ph-workshop.webp" alt="System architecture planning session" width={1600} height={1000} />
-            </div>
-            <div className="rv ar-43" data-anim data-delay="90">
-              <img className="ph" src="/assets/img/ph-whiteboard.webp" alt="Mapping software data flow and infrastructure" width={1600} height={1000} />
-            </div>
+          <div className="rv ar-219" style={{ marginTop: '1rem' }} data-anim>
+            <img className="ph" src="/assets/img/ph-workshop.webp" alt="System architecture planning session" width={1600} height={762} />
           </div>
         </div>
       </section>
@@ -65,57 +60,76 @@ export function HomeMain() {
             </div>
             <div>
               <p className="lead" data-anim>
-                We build across five interconnected software domains—from high-performance web storefronts to internal operations platforms and multi-tier cloud infrastructure.
+                From high-performance web storefronts to internal operations platforms and cloud infrastructure.
               </p>
               <Link className="arrow-link" href="/services" data-anim>View all capabilities <span className="gt">&rsaquo;</span></Link>
             </div>
           </div>
-          <div className="grid g4">
-            <article className="glass card pillar" data-anim data-delay="0">
-              <AxioIcon name="web-apps" size={32} className="card__icon" aria-hidden="true" />
-              <span className="idx">01 / Web</span>
-              <h3>Websites</h3>
-              <p>High-performance, search-optimized web architectures built on Next.js. Sub-second load times, zero layout shifts, and complete code ownership.</p>
-              <div className="p-links">
-                <Link href="/services/websites" className="pl"><span className="icon-label">Explore websites <AxioIcon name="arrow-right" size={13} aria-hidden="true" /></span></Link>
+
+          {/* Premium Capabilities Presentation */}
+          <div style={{ display: "grid", gridTemplateColumns: "minmax(300px, 1.2fr) 1fr", gap: "2rem", marginTop: "2rem" }}>
+            {/* Dominant Feature: Websites */}
+            <article className="glass card cap-feature" data-anim data-delay="0" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: "450px" }}>
+              <div style={{ padding: "2.5rem" }}>
+                <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "56px", height: "56px", borderRadius: "12px", background: "rgba(0, 229, 255, 0.1)", color: "var(--acc)", marginBottom: "2rem" }}>
+                  <AxioIcon name="web-apps" size={32} aria-hidden="true" />
+                </div>
+                <h3 style={{ fontSize: "2rem", marginBottom: "1rem", lineHeight: 1.1, color: "var(--ink)", letterSpacing: "-0.02em" }}>Websites &amp; Web Experiences</h3>
+                <p style={{ fontSize: "1.1rem", color: "var(--muted)", lineHeight: 1.6, maxWidth: "35ch" }}>
+                  High-performance, search-optimized web architectures on Next.js. Sub-second load times, zero layout shifts, complete code ownership.
+                </p>
+              </div>
+              <div style={{ padding: "0 2.5rem 2.5rem" }}>
+                <Link href="/services/websites" className="btn btn-primary">
+                  Explore websites <span className="gt">&rsaquo;</span>
+                </Link>
               </div>
             </article>
-            <article className="glass card pillar" data-anim data-delay="70">
-              <AxioIcon name="mobile-apps" size={32} className="card__icon" aria-hidden="true" />
-              <span className="idx">02 / App</span>
-              <h3>Digital Products</h3>
-              <p>Interactive web applications, customer portals, and workflow tools engineered with deterministic state and fluid, responsive interfaces.</p>
-              <div className="p-links">
-                <Link href="/services/digital-products" className="pl"><span className="icon-label">Explore digital products <AxioIcon name="arrow-right" size={13} aria-hidden="true" /></span></Link>
-              </div>
-            </article>
-            <article className="glass card pillar" data-anim data-delay="140">
-              <AxioIcon name="integration" size={32} className="card__icon" aria-hidden="true" />
-              <span className="idx">03 / Ops</span>
-              <h3>Business Systems</h3>
-              <p>Internal operations platforms, centralized databases, and automated workflows that eliminate spreadsheet gridlock and manual error.</p>
-              <div className="p-links">
-                <Link href="/services/business-systems" className="pl"><span className="icon-label">Explore business systems <AxioIcon name="arrow-right" size={13} aria-hidden="true" /></span></Link>
-              </div>
-            </article>
-            <article className="glass card pillar" data-anim data-delay="210">
-              <AxioIcon name="platforms" size={32} className="card__icon" aria-hidden="true" />
-              <span className="idx">04 / Platform</span>
-              <h3>Platforms</h3>
-              <p>Scalable transactional systems, custom e-commerce engines, and multi-tenant platforms designed to handle complex business logic.</p>
-              <div className="p-links">
-                <Link href="/services/platforms" className="pl"><span className="icon-label">Explore platforms <AxioIcon name="arrow-right" size={13} aria-hidden="true" /></span></Link>
-              </div>
-            </article>
-            <article className="glass card pillar" data-anim data-delay="0">
-              <AxioIcon name="infrastructure" size={32} className="card__icon" aria-hidden="true" />
-              <span className="idx">05 / Infra</span>
-              <h3>Software Infrastructure</h3>
-              <p>Resilient APIs, relational database schemas, reverse proxy security, and automated deployment pipelines that ensure high availability.</p>
-              <div className="p-links">
-                <Link href="/services/software-infrastructure" className="pl"><span className="icon-label">Explore infrastructure <AxioIcon name="arrow-right" size={13} aria-hidden="true" /></span></Link>
-              </div>
-            </article>
+
+            {/* Supporting Capabilities: Feature Strip List */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+              
+              <Link href="/services/digital-products" className="glass card" data-anim data-delay="60" style={{ display: "flex", alignItems: "center", gap: "1.5rem", padding: "1.5rem", textDecoration: "none", transition: "all 0.2s ease" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "40px", height: "40px", borderRadius: "8px", background: "rgba(255,255,255,0.05)", color: "var(--ink)" }}>
+                  <AxioIcon name="mobile-apps" size={20} aria-hidden="true" />
+                </div>
+                <div>
+                  <h4 style={{ margin: "0 0 0.2rem", fontSize: "1.1rem", color: "var(--ink)", fontWeight: 600 }}>Digital Products</h4>
+                  <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--muted)" }}>Interactive web applications with deterministic state.</p>
+                </div>
+              </Link>
+              
+              <Link href="/services/business-systems" className="glass card" data-anim data-delay="120" style={{ display: "flex", alignItems: "center", gap: "1.5rem", padding: "1.5rem", textDecoration: "none", transition: "all 0.2s ease" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "40px", height: "40px", borderRadius: "8px", background: "rgba(255,255,255,0.05)", color: "var(--ink)" }}>
+                  <AxioIcon name="integration" size={20} aria-hidden="true" />
+                </div>
+                <div>
+                  <h4 style={{ margin: "0 0 0.2rem", fontSize: "1.1rem", color: "var(--ink)", fontWeight: 600 }}>Business Systems</h4>
+                  <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--muted)" }}>Automated workflows that eliminate manual error.</p>
+                </div>
+              </Link>
+
+              <Link href="/services/platforms" className="glass card" data-anim data-delay="180" style={{ display: "flex", alignItems: "center", gap: "1.5rem", padding: "1.5rem", textDecoration: "none", transition: "all 0.2s ease" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "40px", height: "40px", borderRadius: "8px", background: "rgba(255,255,255,0.05)", color: "var(--ink)" }}>
+                  <AxioIcon name="platforms" size={20} aria-hidden="true" />
+                </div>
+                <div>
+                  <h4 style={{ margin: "0 0 0.2rem", fontSize: "1.1rem", color: "var(--ink)", fontWeight: 600 }}>Platforms</h4>
+                  <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--muted)" }}>Scalable transactional systems for complex logic.</p>
+                </div>
+              </Link>
+
+              <Link href="/services/software-infrastructure" className="glass card" data-anim data-delay="240" style={{ display: "flex", alignItems: "center", gap: "1.5rem", padding: "1.5rem", textDecoration: "none", transition: "all 0.2s ease" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "40px", height: "40px", borderRadius: "8px", background: "rgba(255,255,255,0.05)", color: "var(--ink)" }}>
+                  <AxioIcon name="infrastructure" size={20} aria-hidden="true" />
+                </div>
+                <div>
+                  <h4 style={{ margin: "0 0 0.2rem", fontSize: "1.1rem", color: "var(--ink)", fontWeight: 600 }}>Software Infrastructure</h4>
+                  <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--muted)" }}>Resilient APIs, schemas, and high availability pipelines.</p>
+                </div>
+              </Link>
+              
+            </div>
           </div>
         </div>
       </section>
@@ -130,7 +144,7 @@ export function HomeMain() {
             </div>
             <div>
               <p className="lead" data-anim>
-                Explore live systems engineered with production-grade architecture, responsive state management, and deliberate user experience. Every build is fully testable.
+                Live systems. Fully testable.
               </p>
               <Link className="arrow-link" href="/projects" data-anim>View all selected work <span className="gt">&rsaquo;</span></Link>
             </div>
@@ -195,7 +209,7 @@ export function HomeMain() {
               <h2 className="kin-h" data-anim>How we ship software</h2>
             </div>
             <div>
-              <p className="lead" data-anim>A disciplined software engineering lifecycle that eliminates guesswork and delivers predictable production systems.</p>
+              <p className="lead" data-anim>A disciplined engineering lifecycle. Predictable production outcomes.</p>
             </div>
           </div>
           <div className="steps" style={{ borderColor: 'rgba(255,255,255,.16)' }}>
@@ -243,7 +257,7 @@ export function HomeMain() {
               <div className="eyebrow" data-anim>Technology Stack</div>
               <h2 className="kin-h" data-anim>Proven, high-performance stack</h2>
               <p className="lead" data-anim>
-                We do not gamble with unstable frameworks or fragile abstractions. We build on industry-standard technologies that guarantee longevity, security, and developer velocity.
+                Proven technologies. Long-term maintainability. No fragile abstractions.
               </p>
               <div className="mk-row" data-anim>
                 <span className="mk-chip">TypeScript</span>
@@ -289,8 +303,7 @@ export function HomeMain() {
               <div className="rv zoom ar-16"><img className="ph" src="/assets/img/ph-code.webp" alt="Code optimization" width={1600} height={1000} /></div>
               <div className="ac-body">
                 <span className="dt-cat"><span className="icon-label"><AxioIcon name="core-web-vitals" size={12} aria-hidden="true" />Performance</span></span>
-                <h3>Fixing Core Web Vitals in Next.js Apps</h3>
-                <p>A technical guide to eliminating layout shifts and optimizing LCP in React applications for perfect Lighthouse scores.</p>
+                <h3 style={{ marginBottom: "1rem" }}>Fixing Core Web Vitals in Next.js Apps</h3>
                 <span className="dt-cta"><span className="icon-label">Read guide <AxioIcon name="arrow-right" size={12} aria-hidden="true" /></span></span>
               </div>
             </Link>
@@ -298,8 +311,7 @@ export function HomeMain() {
               <div className="rv zoom ar-16"><img className="ph" src="/assets/img/ph-ai.webp" alt="Architecture" width={1600} height={1000} /></div>
               <div className="ac-body">
                 <span className="dt-cat"><span className="icon-label"><AxioIcon name="roi" size={12} aria-hidden="true" />Pricing</span></span>
-                <h3>The real cost of website development in 2026</h3>
-                <p>Breaking down the engineering requirements, hosting renewals, and scope factors behind professional website pricing.</p>
+                <h3 style={{ marginBottom: "1rem" }}>The real cost of website development in 2026</h3>
                 <span className="dt-cta"><span className="icon-label">Read guide <AxioIcon name="arrow-right" size={12} aria-hidden="true" /></span></span>
               </div>
             </Link>
@@ -307,8 +319,7 @@ export function HomeMain() {
               <div className="rv zoom ar-16"><img className="ph" src="/assets/img/ph-social.webp" alt="Security" width={1600} height={1000} /></div>
               <div className="ac-body">
                 <span className="dt-cat"><span className="icon-label"><AxioIcon name="security" size={12} aria-hidden="true" />Security</span></span>
-                <h3>Website security checklist for small businesses</h3>
-                <p>Essential security implementations from SSL configuration to CSP headers and sanitized user inputs.</p>
+                <h3 style={{ marginBottom: "1rem" }}>Website security checklist for small businesses</h3>
                 <span className="dt-cta"><span className="icon-label">Read guide <AxioIcon name="arrow-right" size={12} aria-hidden="true" /></span></span>
               </div>
             </Link>

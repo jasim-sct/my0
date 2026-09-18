@@ -13,6 +13,16 @@ const nextConfig: NextConfig = {
       // Stale covered-renderer URLs (removed) — send users back to portfolio
       { source: "/renderer", destination: "/portfolio", permanent: false },
       { source: "/renderer/:path*", destination: "/portfolio", permanent: false },
+      
+      // Redirects for restructured service pages
+      { source: "/services/product-engineering", destination: "/services/digital-products", permanent: true },
+      { source: "/services/saas-development", destination: "/services/platforms", permanent: true },
+      { source: "/services/enterprise-software", destination: "/services/business-systems", permanent: true },
+      { source: "/services/web-applications", destination: "/services/websites", permanent: true },
+      { source: "/services/api-backend", destination: "/services/software-infrastructure", permanent: true },
+      { source: "/services/cloud-infrastructure", destination: "/services/software-infrastructure", permanent: true },
+      { source: "/services/ui-engineering", destination: "/services/digital-products", permanent: true },
+      { source: "/services/system-modernization", destination: "/services/business-systems", permanent: true },
     ];
   },
 };

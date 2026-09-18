@@ -25,7 +25,7 @@ export function HomeMain() {
             <div className="s-head">
               <div>
                 <div className="eyebrow" data-anim>Our position</div>
-                <p className="manifesto">We are the engineering partner you hire when software needs to actually work at scale.</p>
+                <p className="manifesto">Software isn't just an interface. It's a system.</p>
               </div>
               <div>
                 <p className="lead" data-anim>
@@ -63,58 +63,37 @@ export function HomeMain() {
             <div className="grid g4">
               <article className="glass card pillar" data-anim data-delay="0">
                 <span className="idx">01 / Eng</span>
-                <h3>Product Engineering</h3><p>End-to-end development of digital products that scale.</p>
+                <h3>Websites</h3><p>Professional websites for businesses that need a credible and effective digital presence.</p>
                 <div className="p-links">
-                  <a href="/services/product-engineering" className="pl">Learn more →</a>
+                  <a href="/services/websites" className="pl">Learn more →</a>
                 </div>
               </article>
               <article className="glass card pillar" data-anim data-delay="70">
                 <span className="idx">02 / Eng</span>
-                <h3>SaaS Development</h3><p>Multi-tenant architectures and recurring revenue platforms.</p>
+                <h3>Digital Products</h3><p>Customer-facing and internal products designed around real business problems.</p>
                 <div className="p-links">
-                  <a href="/services/saas-development" className="pl">Learn more →</a>
+                  <a href="/services/digital-products" className="pl">Learn more →</a>
                 </div>
               </article>
               <article className="glass card pillar" data-anim data-delay="140">
                 <span className="idx">03 / Eng</span>
-                <h3>Enterprise Software</h3><p>Secure, compliant systems integrated with core operations.</p>
+                <h3>Business Systems</h3><p>Custom software connecting operations, data, workflows, and people.</p>
                 <div className="p-links">
-                  <a href="/services/enterprise-software" className="pl">Learn more →</a>
+                  <a href="/services/business-systems" className="pl">Learn more →</a>
                 </div>
               </article>
               <article className="glass card pillar" data-anim data-delay="210">
-                <span className="idx">04 / Eng</span>
-                <h3>Web Applications</h3><p>Fast, interactive web apps built on modern frameworks.</p>
+                <span className="idx">04 / Infra</span>
+                <h3>Platforms</h3><p>Scalable systems designed to support multiple users, workflows, and business models.</p>
                 <div className="p-links">
-                  <a href="/services/web-applications" className="pl">Learn more →</a>
+                  <a href="/services/platforms" className="pl">Learn more →</a>
                 </div>
               </article>
               <article className="glass card pillar" data-anim data-delay="0">
                 <span className="idx">05 / Infra</span>
-                <h3>API & Backend</h3><p>Robust microservices, APIs, and data architecture.</p>
+                <h3>Software Infrastructure</h3><p>Backend systems, APIs, integrations, and deployment to operate modern software.</p>
                 <div className="p-links">
-                  <a href="/services/api-backend" className="pl">Learn more →</a>
-                </div>
-              </article>
-              <article className="glass card pillar" data-anim data-delay="70">
-                <span className="idx">06 / Infra</span>
-                <h3>Cloud Systems</h3><p>AWS/GCP deployments, Kubernetes, and CI/CD pipelines.</p>
-                <div className="p-links">
-                  <a href="/services/cloud-infrastructure" className="pl">Learn more →</a>
-                </div>
-              </article>
-              <article className="glass card pillar" data-anim data-delay="140">
-                <span className="idx">07 / Infra</span>
-                <h3>UI Engineering</h3><p>Design systems, component libraries, and accessibility.</p>
-                <div className="p-links">
-                  <a href="/services/ui-engineering" className="pl">Learn more →</a>
-                </div>
-              </article>
-              <article className="glass card pillar" data-anim data-delay="210">
-                <span className="idx">08 / Infra</span>
-                <h3>Modernization</h3><p>Migrating legacy applications to modern cloud stacks.</p>
-                <div className="p-links">
-                  <a href="/services/system-modernization" className="pl">Learn more →</a>
+                  <a href="/services/software-infrastructure" className="pl">Learn more →</a>
                 </div>
               </article>
             </div>
@@ -126,14 +105,14 @@ export function HomeMain() {
           <div className="wrap">
             <div className="s-head">
               <div>
-                <div className="eyebrow" data-anim>Engineering Showcases</div>
-                <h2 className="kin-h" data-anim>Production implementations</h2>
+                <div className="eyebrow" data-anim>Selected Work</div>
+                <h2 className="kin-h" data-anim>Things We've Built</h2>
               </div>
               <div>
                 <p className="lead" data-anim>
-                  We don't just show wireframes. Explore these live, fully-functional web applications built to demonstrate our architectural standards and UI engineering quality.
+                  Explore systems and digital products engineered by Axon Future. We focus on maintainable engineering and problem-solving, not just visual design.
                 </p>
-                <a className="arrow-link" href="/projects" data-anim>All live showcases <span className="gt">&rsaquo;</span></a>
+                <a className="arrow-link" href="/projects" data-anim>Explore selected work <span className="gt">&rsaquo;</span></a>
               </div>
             </div>
           </div>
@@ -143,7 +122,7 @@ export function HomeMain() {
                 <a className="hscroll-panel demo-tile" href="/projects/shop">
                   <div className="dt-thumb">
                     <img className="ph dt-img" src="/assets/img/pj-shop.webp" alt="Lumen Commerce storefront and cart" width={1600} height={1000} />
-                    <span className="proj-live">LIVE</span>
+                    <span className="proj-live">EXPERIMENTAL BUILD</span>
                   </div>
                   <div className="dt-body">
                     <span className="dt-cat">E-Commerce Architecture</span>
@@ -155,7 +134,7 @@ export function HomeMain() {
                 <a className="hscroll-panel demo-tile" href="/projects/flux">
                   <div className="dt-thumb">
                     <img className="ph dt-img" src="/assets/img/pj-flux.webp" alt="FLUX AI studio interface" width={1600} height={1000} />
-                    <span className="proj-live">LIVE</span>
+                    <span className="proj-live">EXPERIMENTAL BUILD</span>
                   </div>
                   <div className="dt-body">
                     <span className="dt-cat">Complex UI · React Flow</span>
@@ -167,7 +146,7 @@ export function HomeMain() {
                 <a className="hscroll-panel demo-tile" href="/projects/relay">
                   <div className="dt-thumb">
                     <img className="ph dt-img" src="/assets/img/pj-relay.webp" alt="RELAY operations platform" width={1600} height={1000} />
-                    <span className="proj-live">LIVE</span>
+                    <span className="proj-live">EXPERIMENTAL BUILD</span>
                   </div>
                   <div className="dt-body">
                     <span className="dt-cat">SaaS Dashboard</span>
@@ -202,54 +181,7 @@ export function HomeMain() {
           </div>
         </section>
 
-        {/* Client Reviews */}
-        <section className="band">
-          <div className="wrap">
-            <div className="s-head">
-              <div>
-                <div className="eyebrow" data-anim>Outcomes</div>
-                <h2 className="kin-h" data-anim>System impact</h2>
-              </div>
-              <div>
-                <p className="note" data-anim>Feedback from CTOs and product leaders on our engineering delivery.</p>
-              </div>
-            </div>
-            <div className="grid g4">
-              <article className="glass card" data-anim data-delay="0">
-                <div className="stars">★★★★★</div>
-                <p className="quote">"Axon Future completely modernized our legacy backend. Response times dropped by 80% and the new microservices architecture is beautifully documented."</p>
-                <div className="who">
-                  <span className="avatar"><img className="ph" src="/assets/img/pf-1.webp" alt="Client portrait" width={400} height={400} /></span>
-                  <div><strong>Michael J.</strong><small>VP Engineering · FinTech</small></div>
-                </div>
-              </article>
-              <article className="glass card" data-anim data-delay="70">
-                <div className="stars">★★★★★</div>
-                <p className="quote">"The SaaS platform they built for us handles thousands of concurrent users flawlessly. The code quality and automated test coverage gave us total confidence."</p>
-                <div className="who">
-                  <span className="avatar"><img className="ph" src="/assets/img/pf-2.webp" alt="Client portrait" width={400} height={400} /></span>
-                  <div><strong>Sarah A.</strong><small>Founder · SaaS Startup</small></div>
-                </div>
-              </article>
-              <article className="glass card" data-anim data-delay="140">
-                <div className="stars">★★★★★</div>
-                <p className="quote">"They didn't just build what we asked for; they pushed back on bad architectural decisions and saved us months of future technical debt."</p>
-                <div className="who">
-                  <span className="avatar"><img className="ph" src="/assets/img/pf-3.webp" alt="Client portrait" width={400} height={400} /></span>
-                  <div><strong>Sana D.</strong><small>CTO · Logistics Platform</small></div>
-                </div>
-              </article>
-              <article className="glass card" data-anim data-delay="210">
-                <div className="stars">★★★★★</div>
-                <p className="quote">"The React design system they delivered accelerated our internal team's velocity by at least 3x. Highly recommend their UI engineering practice."</p>
-                <div className="who">
-                  <span className="avatar"><img className="ph" src="/assets/img/pf-4.webp" alt="Client portrait" width={400} height={400} /></span>
-                  <div><strong>Priya N.</strong><small>Head of Product · HealthTech</small></div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
+
 
         {/* Blog Writing Grid */}
         <section>

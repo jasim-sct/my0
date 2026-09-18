@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { SiteShell } from "@/components/site/SiteShell";
 import { HtmlContent } from "@/components/site/HtmlContent";
-import { html } from "@/content/pages/saas-development";
+import { html, title, description } from "@/content/pages/services/websites";
 
 export const metadata: Metadata = {
-  title: "saas development | Axon Future",
-  description: "Engineering services for saas development",
+  title,
+  description,
 };
 
 export default function Page() {

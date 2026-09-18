@@ -20,63 +20,45 @@ export function Nav() {
               <div className="wrap mega-in">
                 <div className="mm-col">
                   <div className="mm-head">
-                    <i>⬡</i>Engineering
+                    <i>⬡</i>Capabilities
                   </div>
-                  <p className="mm-blurb">End-to-end product and platform development.</p>
-                  <Link href="/services/product-engineering">
-                    <b>Product Engineering</b>
-                    <span>From concept to production-ready software</span>
+                  <p className="mm-blurb">Digital products and platforms engineered to scale.</p>
+                  <Link href="/services/websites">
+                    <b>Websites</b>
+                    <span>Professional business websites</span>
                   </Link>
-                  <Link href="/services/saas-development">
-                    <b>SaaS Development</b>
-                    <span>Multi-tenant, scalable SaaS platforms</span>
+                  <Link href="/services/digital-products">
+                    <b>Digital Products</b>
+                    <span>Customer-facing and internal tools</span>
                   </Link>
-                  <Link href="/services/enterprise-software">
-                    <b>Enterprise Software</b>
-                    <span>Business systems built around real operations</span>
+                  <Link href="/services/business-systems">
+                    <b>Business Systems</b>
+                    <span>Software connecting your operations</span>
                   </Link>
-                  <Link href="/services/web-applications">
-                    <b>Web Applications</b>
-                    <span>Modern, performant web experiences</span>
+                  <Link href="/services/platforms">
+                    <b>Platforms</b>
+                    <span>Scalable systems for multiple users</span>
                   </Link>
-                </div>
-                <div className="mm-col">
-                  <div className="mm-head">
-                    <i>◈</i>Infrastructure
-                  </div>
-                  <p className="mm-blurb">Scalable architecture and production-grade systems.</p>
-                  <Link href="/services/api-backend">
-                    <b>API & Backend Engineering</b>
-                    <span>Secure, scalable APIs and backend systems</span>
-                  </Link>
-                  <Link href="/services/cloud-infrastructure">
-                    <b>Cloud & Infrastructure</b>
-                    <span>Deployment, monitoring, and scalability</span>
-                  </Link>
-                  <Link href="/services/ui-engineering">
-                    <b>UI Engineering</b>
-                    <span>Reusable design systems and interfaces</span>
-                  </Link>
-                  <Link href="/services/system-modernization">
-                    <b>System Modernization</b>
-                    <span>Modernizing legacy systems and applications</span>
+                  <Link href="/services/software-infrastructure">
+                    <b>Software Infrastructure</b>
+                    <span>APIs, backends, and cloud deployment</span>
                   </Link>
                 </div>
               </div>
               <div className="mega-foot">
                 <div className="wrap">
-                  <Link href="/services">All services →</Link>
-                  <Link href="/solutions">Solutions →</Link>
-                  <Link href="/projects">Case studies →</Link>
+                  <Link href="/services">All capabilities →</Link>
+                  <Link href="/pricing">Pricing →</Link>
+                  <Link href="/projects">Selected work →</Link>
                 </div>
               </div>
             </div>
           </div>
-          <Link href="/solutions">Solutions</Link>
+          <Link href="/pricing">Pricing</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/about">About</Link>
           <Link className="btn btn-primary" href="/contact">
-            <span>Start a Project</span>
+            <span>Start a conversation</span>
           </Link>
         </nav>
       </div>

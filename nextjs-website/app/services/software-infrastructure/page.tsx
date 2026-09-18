@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { SiteShell } from "@/components/site/SiteShell";
 import { HtmlContent } from "@/components/site/HtmlContent";
-import { html } from "@/content/pages/api-backend";
+import { html, title, description } from "@/content/pages/services/software-infrastructure";
 
 export const metadata: Metadata = {
-  title: "api backend | Axon Future",
-  description: "Engineering services for api backend",
+  title,
+  description,
 };
 
 export default function Page() {

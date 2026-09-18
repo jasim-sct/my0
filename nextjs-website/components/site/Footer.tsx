@@ -12,8 +12,7 @@ export function Footer() {
             <div className="f-brand">
               <AxonLogo />
               <p className="lead" style={{ fontSize: ".9rem", marginTop: ".9rem" }}>
-                {brand.legalName} designs and builds scalable digital products, SaaS platforms, 
-                enterprise systems, and modern web applications for ambitious companies.
+                {brand.legalName} builds digital products, business systems, websites, and software infrastructure for what comes next.
               </p>
               <p style={{ fontSize: ".88rem", color: "var(--txt-dim)", marginTop: "1rem" }}>
                 <a href={`mailto:${brand.email}`}>{brand.email}</a>
@@ -21,36 +20,22 @@ export function Footer() {
             </div>
             <div className="f-cols">
               <div>
-                <h4>Engineering</h4>
+                <h4>Capabilities</h4>
                 <ul>
                   <li>
-                    <Link href="/services/product-engineering">Product Engineering</Link>
+                    <Link href="/services/websites">Websites</Link>
                   </li>
                   <li>
-                    <Link href="/services/saas-development">SaaS Development</Link>
+                    <Link href="/services/digital-products">Digital Products</Link>
                   </li>
                   <li>
-                    <Link href="/services/enterprise-software">Enterprise Software</Link>
+                    <Link href="/services/business-systems">Business Systems</Link>
                   </li>
                   <li>
-                    <Link href="/services/web-applications">Web Applications</Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4>Infrastructure</h4>
-                <ul>
-                  <li>
-                    <Link href="/services/api-backend">API & Backend</Link>
+                    <Link href="/services/platforms">Platforms</Link>
                   </li>
                   <li>
-                    <Link href="/services/cloud-infrastructure">Cloud & Infrastructure</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/ui-engineering">UI Engineering</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/system-modernization">System Modernization</Link>
+                    <Link href="/services/software-infrastructure">Software Infrastructure</Link>
                   </li>
                 </ul>
               </div>
@@ -58,16 +43,16 @@ export function Footer() {
                 <h4>Company</h4>
                 <ul>
                   <li>
-                    <Link href="/about">About Us</Link>
+                    <Link href="/about">About</Link>
                   </li>
                   <li>
-                    <Link href="/projects">Case Studies</Link>
+                    <Link href="/projects">Selected Work</Link>
                   </li>
                   <li>
-                    <Link href="/solutions">Solutions</Link>
+                    <Link href="/pricing">Pricing</Link>
                   </li>
                   <li>
-                    <Link href="/contact">Start a Project</Link>
+                    <Link href="/contact">Start a conversation</Link>
                   </li>
                 </ul>
               </div>

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { SiteShell } from "@/components/site/SiteShell";
 import { HtmlContent } from "@/components/site/HtmlContent";
-import { html } from "@/content/pages/ui-engineering";
+import { html, title, description } from "@/content/pages/services/digital-products";
 
 export const metadata: Metadata = {
-  title: "ui engineering | Axon Future",
-  description: "Engineering services for ui engineering",
+  title,
+  description,
 };
 
 export default function Page() {

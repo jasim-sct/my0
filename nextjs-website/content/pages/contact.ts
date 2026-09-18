@@ -1,5 +1,5 @@
-export const title = 'Contact Axon Future | Discuss Your Project';
-export const description = 'Have something worth building? Let\'s talk. Reach out to Axon Future for websites, digital products, business systems, and software infrastructure.';
+export const title = 'Contact Axio Future | Discuss Your Project';
+export const description = 'Have something worth building? Let\'s talk. Reach out to Axio Future for websites, digital products, business systems, and software infrastructure.';
 
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Contact</span></nav>
@@ -12,7 +12,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
 
 <section style="padding-top:1rem"><div class="wrap">
  <div class="grid g2" style="background:none;gap:clamp(24px,4vw,48px);align-items:start">
-  <form class="form" id="quoteForm" data-email="hello@axonfuture.com" data-anim="left" novalidate>
+  <form class="form" id="quoteForm" data-email="hello@axiofuture.com" data-anim="left" novalidate>
    <h3>Project Enquiry</h3>
    <div class="row">
     <div class="field"><label for="name">Name *</label><input id="name" name="name" required placeholder="Your name"><span class="msg">Required</span></div>
@@ -48,12 +48,12 @@ export const mainHtml = `<section class="phero"><div class="wrap">
     <p class="note" id="wcount" style="margin-top:.35rem">0 words</p>
    </div>
    <button class="btn btn-primary btn-full" type="submit"><span>Discuss your project</span><span class="gt">&rsaquo;</span></button>
-   <p class="form-note" id="formMsg" style="display:none;color:var(--ok)">Opening your email app with your project enquiry prepared. If nothing opens, please email hello@axonfuture.com directly.</p>
+   <p class="form-note" id="formMsg" style="display:none;color:var(--ok)">Opening your email app with your project enquiry prepared. If nothing opens, please email hello@axiofuture.com directly.</p>
    <p class="form-note center">We respect your privacy. By submitting, you agree to our <a href="/privacy-policy">privacy policy</a>.</p>
   </form>
 
   <div data-anim="right">
-   <div class="rv zoom ar-16"><img class="ph" src="/assets/img/ph-meeting.webp" alt="Axon Future technical consultation" width="1600" height="1000" loading="lazy" decoding="async"></div>
+   <div class="rv zoom ar-16"><img class="ph" src="/assets/img/ph-meeting.webp" alt="Axio Future technical consultation" width="1600" height="1000" loading="lazy" decoding="async"></div>
    <div class="box" style="margin:1.2rem 0 1rem">
     <h3>What to expect</h3>
     <ul class="tick" style="margin-top:.6rem">
@@ -68,7 +68,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
     <ul class="ct-list">
      <li>
       <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 7 9-7"/></svg>
-      <a href="mailto:hello@axonfuture.com">hello@axonfuture.com</a>
+      <a href="mailto:hello@axiofuture.com">hello@axiofuture.com</a>
      </li>
     </ul>
     <p class="note">Remote-first software company serving businesses in India and worldwide.</p>

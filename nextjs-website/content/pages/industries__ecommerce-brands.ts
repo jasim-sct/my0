@@ -1,4 +1,4 @@
-export const title = 'E-Commerce Engineering & Web Development | Axon Future';
+export const title = 'E-Commerce Engineering & Web Development | Axio Future';
 export const description = 'High-converting custom storefronts, checkout optimization, inventory synchronization, and custom commerce systems for online brands.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/industries">Industries</a> / <span aria-current="page">E-Commerce Brands</span></nav>

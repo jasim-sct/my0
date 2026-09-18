@@ -1,12 +1,12 @@
-export const title = 'Selected Work & Interactive Builds | Axon Future';
-export const description = 'Explore working applications and interactive software architectures engineered by Axon Future. E-commerce platforms, AI studio interfaces, and operations dashboards.';
+export const title = 'Selected Work & Interactive Builds | Axio Future';
+export const description = 'Explore working applications and interactive software architectures engineered by Axio Future. E-commerce platforms, AI studio interfaces, and operations dashboards.';
 
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Selected Work</span></nav>
  <div class="hero-grid">
   <div><div class="eyebrow" data-anim>Selected Work · Real Software</div>
    <h1 class="kin-h">Things we've built.</h1></div>
-  <div><p class="lead" data-anim data-delay="120">Working applications and interactive software architectures engineered by Axon Future. We build functional prototypes and platforms to test interactions, prove system design, and verify performance before production deployment.</p></div>
+  <div><p class="lead" data-anim data-delay="120">Working applications and interactive software architectures engineered by Axio Future. We build functional prototypes and platforms to test interactions, prove system design, and verify performance before production deployment.</p></div>
  </div>
 </div></section>
 
@@ -243,7 +243,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
  <div class="s-head">
   <div>
    <div class="eyebrow" data-anim>Engineering Standards</div>
-   <h2 class="kin-h" data-anim>What ships with every Axon Future project</h2>
+   <h2 class="kin-h" data-anim>What ships with every Axio Future project</h2>
   </div>
   <div></div>
  </div>

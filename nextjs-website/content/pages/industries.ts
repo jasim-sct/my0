@@ -1,4 +1,4 @@
-export const title = 'Industries We Serve | E-Commerce, SaaS, B2B & Systems | Axon Future';
+export const title = 'Industries We Serve | E-Commerce, SaaS, B2B & Systems | Axio Future';
 export const description = 'Software engineering and digital systems built for e-commerce brands, SaaS startups, local enterprises, online retailers, agencies, and B2B professional services.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Industries</span></nav>

@@ -1,4 +1,4 @@
-export const title = 'Software Engineering Partner for Agencies & Studios | Axon Future';
+export const title = 'Software Engineering Partner for Agencies & Studios | Axio Future';
 export const description = 'White-label software engineering, web application development, and infrastructure under NDA for creative agencies and product studios.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/industries">Industries</a> / <span aria-current="page">Agencies & Studios</span></nav>

@@ -1,4 +1,4 @@
-export const title = 'Website Development in India | Professional Business Websites | Axon Future';
+export const title = 'Website Development in India | Professional Business Websites | Axio Future';
 export const description = 'Professional, search-friendly website development for businesses in India. Transparent packages from ₹7,999 with 1 year hosting and SSL included.';
 
 export const html = `
@@ -51,7 +51,7 @@ export const html = `
   </div>
 </section>
 
-<!-- 3. What does Axon Future build? & 4. How is it approached? -->
+<!-- 3. What does Axio Future build? & 4. How is it approached? -->
 <section>
   <div class="wrap">
     <div class="s-head">
@@ -105,7 +105,7 @@ export const html = `
         </div>
       </div>
       <div class="rv ar-43" data-anim>
-        <img class="ph" src="/assets/img/ph-desk.webp" alt="Axon Future software workstation" width={1600} height={1000} />
+        <img class="ph" src="/assets/img/ph-desk.webp" alt="Axio Future software workstation" width={1600} height={1000} />
       </div>
     </div>
   </div>

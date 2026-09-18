@@ -63,10 +63,10 @@ export function Footer() {
                 <h4>Connect</h4>
                 <ul>
                   <li>
-                    <a href="https://github.com/axonfuture" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://github.com/axiofuture" target="_blank" rel="noopener">GitHub</a>
                   </li>
                   <li>
-                    <a href="https://linkedin.com/company/axonfuture" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://linkedin.com/company/axiofuture" target="_blank" rel="noopener">LinkedIn</a>
                   </li>
                 </ul>
               </div>

@@ -1,11 +1,11 @@
-/** Canonical brand identity for Axon Future */
+/** Canonical brand identity for Axio Future */
 
 export const brand = {
-  legalName: "Axon Future",
-  shortName: "Axon Future",
+  legalName: "Axio Future",
+  shortName: "Axio Future",
   tagline: "Software Technology & Product Engineering",
-  email: "hello@axonfuture.com",
-  url: "https://www.axonfuture.com",
+  email: "hello@axiofuture.com",
+  url: "https://www.axiofuture.com",
 } as const;
 
 export const brandTitle = (page?: string) =>

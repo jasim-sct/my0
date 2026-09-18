@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 type ProblemMap = {
-  problem: string;
-  symptom: string;
-  impact: string;
+  badge: string;
+  bottleneck: string;
+  context: string;
   solution: string;
   capabilityName: string;
   capabilityHref: string;
@@ -13,60 +13,60 @@ type ProblemMap = {
 
 const PROBLEMS: ProblemMap[] = [
   {
-    problem: "Spreadsheets become a business bottleneck",
-    symptom: "Teams manage critical customer records, orders, or operational queues in shared Google Sheets with no role controls.",
-    impact: "Accidental data overwrites, zero audit history, sluggish sheets under thousands of rows, and manual copy-pasting.",
-    solution: "A dedicated internal business system with a relational database, role-based access, automated audit logging, and custom search filters.",
+    badge: "01 · Operations",
+    bottleneck: "When spreadsheets become a business bottleneck",
+    context: "Shared sheets lack role controls, atomic updates, and data validation—leading to overwritten customer records, lost inventory updates, and manual copy-pasting.",
+    solution: "We replace fragile spreadsheets with centralized relational databases, role-based permissions, and instant audit logging.",
     capabilityName: "Business Systems",
     capabilityHref: "/services/business-systems",
-    proofName: "RELAY Operations Platform",
+    proofName: "RELAY Platform",
     proofHref: "/projects/relay",
   },
   {
-    problem: "Manual, repetitive workflows drain team hours",
-    symptom: "Employees spend hours each week re-entering data between tools, chasing status updates, or manually scraping records.",
-    impact: "High human error rate, delayed customer responses, and inability to handle higher volume without hiring more staff.",
-    solution: "Event-driven background automation connecting data ingestion, status pipelines, automated notifications, and CSV exports.",
+    badge: "02 · Automation",
+    bottleneck: "Manual, repetitive workflows drain team hours",
+    context: "Hours lost re-entering data across tools, chasing status updates, and manually compiling reports—causing delayed customer responses and high operational error.",
+    solution: "Event-driven background pipelines that ingest data, sync third-party tools, and trigger notifications without human intervention.",
     capabilityName: "Business Systems",
     capabilityHref: "/services/business-systems",
     proofName: "RELAY Scraper Pipeline",
     proofHref: "/projects/relay",
   },
   {
-    problem: "A business outgrows off-the-shelf page builders",
-    symptom: "Website relies on heavy plugins and drag-and-drop builders that produce bloated code, layout shifts, and slow loads on mobile.",
-    impact: "Poor Google Core Web Vitals scores, high mobile bounce rates, and lost organic search ranking to faster competitors.",
-    solution: "An engineered Next.js website with strict TypeScript, sub-second LCP, zero layout shift, and semantic SEO architecture.",
+    badge: "03 · Web Infrastructure",
+    bottleneck: "When businesses outgrow off-the-shelf page builders",
+    context: "Plugin bloat and heavy drag-and-drop themes cause cumulative layout shifts, sluggish mobile page loads, and declining search visibility.",
+    solution: "Engineered Next.js architectures with strict TypeScript, sub-second LCP, zero layout shift, and semantic SEO structure.",
     capabilityName: "Websites",
     capabilityHref: "/services/websites",
     proofName: "Terra & Co Commerce",
     proofHref: "/projects/terra",
   },
   {
-    problem: "Multiple software tools cannot communicate",
-    symptom: "Customer data lives in one app, billing in another, and fulfillment in a third, with zero bi-directional sync.",
-    impact: "Data silos, inconsistent customer records, duplicate work, and lack of unified operational visibility for management.",
-    solution: "A custom software integration layer with typed REST APIs, webhook listeners, idempotency guards, and unified data views.",
+    badge: "04 · Integrations",
+    bottleneck: "Disconnected software tools operating in silos",
+    context: "Customer data in one tool, invoicing in another, fulfillment in a third—resulting in inconsistent customer records and fragmented reporting.",
+    solution: "A resilient integration layer with typed REST APIs, webhook listeners, idempotency keys, and unified data pipelines.",
     capabilityName: "Software Infrastructure",
     capabilityHref: "/services/software-infrastructure",
     proofName: "Software Infrastructure",
     proofHref: "/services/software-infrastructure",
   },
   {
-    problem: "E-commerce requires custom business rules & catalog scale",
-    symptom: "Generic storefront templates break down under complex product variants, custom promo engines, or multi-step validation.",
-    impact: "Checkout friction, cart abandonment, and inability to implement business-specific discount or bundle logic.",
-    solution: "A headless e-commerce platform with persistent cart state, dynamic variant matrices, and streamlined checkout wizards.",
+    badge: "05 · E-Commerce",
+    bottleneck: "Generic storefronts breaking under custom business rules",
+    context: "Off-the-shelf commerce templates struggle with dynamic variant matrices, tiered wholesale pricing, or complex multi-step checkout validation.",
+    solution: "Headless e-commerce platforms featuring persistent cart state, custom checkout wizards, and sub-second catalog search.",
     capabilityName: "Platforms",
     capabilityHref: "/services/platforms",
-    proofName: "Lumen Commerce Storefront",
+    proofName: "Lumen Commerce",
     proofHref: "/projects/shop",
   },
   {
-    problem: "Unique company methodology needs to become a digital product",
-    symptom: "A consulting firm, SaaS startup, or creator has unique intellectual property currently delivered through manual decks or spreadsheets.",
-    impact: "Cannot scale revenue without linear human labor; missed opportunity to offer an interactive, sticky self-serve product.",
-    solution: "A customer-facing web application with an interactive interface, workspace canvas, state persistence, and subscription gating.",
+    badge: "06 · Product Architecture",
+    bottleneck: "Turning company methodology into a scalable product",
+    context: "Valuable proprietary knowledge locked in static slide decks or manual consulting, limiting revenue growth to linear employee hours.",
+    solution: "Customer-facing web applications with interactive workspace canvases, state persistence, and self-serve subscriber workflows.",
     capabilityName: "Digital Products",
     capabilityHref: "/services/digital-products",
     proofName: "FLUX AI Studio",
@@ -80,12 +80,12 @@ export function ProblemToSystem() {
       <div className="wrap">
         <div className="s-head">
           <div>
-            <div className="eyebrow" data-anim>Business Architecture</div>
-            <h2 className="kin-h" data-anim>Turning operational problems into systems</h2>
+            <div className="eyebrow" data-anim>Operational Bottlenecks</div>
+            <h2 className="kin-h" data-anim>Turning business problems into systems</h2>
           </div>
           <div>
             <p className="lead" data-anim>
-              Software is most effective when it removes a specific, measurable bottleneck in how your business runs. Here is how we map common operational limits to engineered systems.
+              Software creates value when it resolves a specific constraint in how your company operates. Here is how we map recurring operational bottlenecks to engineered architectures.
             </p>
           </div>
         </div>
@@ -94,19 +94,16 @@ export function ProblemToSystem() {
           {PROBLEMS.map((item, idx) => (
             <article key={idx} className="glass card p2s-card" data-anim data-delay={idx * 50}>
               <div>
-                <span className="p2s-badge">Problem {idx + 1}</span>
-                <h3 style={{ fontSize: "1.15rem", marginBottom: "0.5rem" }}>{item.problem}</h3>
-                <p style={{ fontSize: "0.88rem", color: "var(--muted)", marginBottom: "0.6rem" }}>
-                  <strong>Symptom:</strong> {item.symptom}
-                </p>
-                <p style={{ fontSize: "0.88rem", color: "var(--muted)", margin: 0 }}>
-                  <strong>Operational Impact:</strong> {item.impact}
+                <span className="p2s-badge">{item.badge}</span>
+                <h3 style={{ fontSize: "1.15rem", marginBottom: "0.6rem", lineHeight: 1.35 }}>{item.bottleneck}</h3>
+                <p style={{ fontSize: "0.88rem", color: "var(--muted)", lineHeight: 1.6, margin: 0 }}>
+                  {item.context}
                 </p>
               </div>
 
               <div className="p2s-sol">
                 <div className="p2s-sol-title">Engineered Solution:</div>
-                <p style={{ fontSize: "0.9rem", color: "var(--ink)", margin: "0 0 0.8rem" }}>
+                <p style={{ fontSize: "0.9rem", color: "var(--ink)", lineHeight: 1.55, margin: "0 0 0.8rem" }}>
                   {item.solution}
                 </p>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
@@ -114,7 +111,7 @@ export function ProblemToSystem() {
                     {item.capabilityName} →
                   </Link>
                   <Link href={item.proofHref} className="pl" style={{ fontSize: "0.82rem", color: "var(--muted)" }}>
-                    Inspect build ↗
+                    {item.proofName} ↗
                   </Link>
                 </div>
               </div>

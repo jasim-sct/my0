@@ -13,15 +13,15 @@ export function Hero() {
           </div>
           <div>
             <p className="lead" data-anim data-delay="120">
-              Axon Future is a software technology company. We design and engineer websites, digital products, business systems, platforms, and software infrastructure — turning business problems, ideas, and workflows into working digital systems.
+              We engineer digital products, operational systems, and web infrastructure for companies that have outgrown off-the-shelf templates. Built to perform, scale cleanly, and endure.
             </p>
             <div className="hero-cta" data-anim data-delay="180">
               <Link className="btn btn-primary" href="/projects">
-                <span>Explore what we&apos;re building</span>
+                <span>Explore our work</span>
                 <span className="gt">&rsaquo;</span>
               </Link>
               <Link className="btn" href="/contact">
-                <span>Discuss your project</span>
+                <span>Start a conversation</span>
               </Link>
             </div>
           </div>

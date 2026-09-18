@@ -5,7 +5,7 @@ import { industries } from "@/content/industries";
 import { locations } from "@/content/locations";
 import { listProjectSlugs } from "@/lib/projects";
 
-const base = "https://www.axonfuture.com";
+const base = "https://www.axiofuture.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [

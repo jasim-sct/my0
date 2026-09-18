@@ -1,11 +1,11 @@
-export const title = 'Sitemap | Axon Future';
-export const description = 'Complete sitemap of Axon Future — capabilities, pricing, selected work, technical guides, and company documentation.';
+export const title = 'Sitemap | Axio Future';
+export const description = 'Complete sitemap of Axio Future — capabilities, pricing, selected work, technical guides, and company documentation.';
 
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Sitemap</span></nav>
  <div class="eyebrow" data-anim>Index</div>
  <h1 class="kin-h">Sitemap</h1>
- <p class="lead" data-anim>Every page on the Axon Future website, organized by section.</p>
+ <p class="lead" data-anim>Every page on the Axio Future website, organized by section.</p>
 </div></section>
 
 <section style="padding-top:1rem"><div class="wrap"><div class="sm-grid">
@@ -14,7 +14,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
   <h4>Core Company</h4>
   <ul>
    <li><a href="/">Home</a></li>
-   <li><a href="/about">About Axon Future</a></li>
+   <li><a href="/about">About Axio Future</a></li>
    <li><a href="/services">Capabilities Overview</a></li>
    <li><a href="/pricing">Transparent Pricing</a></li>
    <li><a href="/projects">Selected Work</a></li>

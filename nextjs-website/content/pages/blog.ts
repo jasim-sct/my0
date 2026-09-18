@@ -1,5 +1,5 @@
-export const title = 'Engineering & Digital Strategy Guides | Axon Future';
-export const description = 'In-depth engineering guides on website development, performance optimization, SEO architecture, security, and digital commerce from Axon Future.';
+export const title = 'Engineering & Digital Strategy Guides | Axio Future';
+export const description = 'In-depth engineering guides on website development, performance optimization, SEO architecture, security, and digital commerce from Axio Future.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Blog</span></nav>
  <div class="hero-grid">

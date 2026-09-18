@@ -4,12 +4,12 @@ type Props = {
   className?: string;
 };
 
-/** Reusable Axon Future logo — SVG symbol + wordmark */
+/** Reusable Axio Future logo — SVG symbol + wordmark */
 export function AxonLogo({ className }: Props) {
   return (
-    <Link className={`logo axon-logo ${className ?? ""}`} href="/">
+    <Link className={`logo axio-logo ${className ?? ""}`} href="/">
       <svg
-        className="axon-mark"
+        className="axio-mark"
         viewBox="0 0 32 32"
         width="28"
         height="28"
@@ -45,7 +45,7 @@ export function AxonLogo({ className }: Props) {
         <circle cx="7" cy="24" r="1.5" fill="#2563eb" />
         <circle cx="25" cy="24" r="1.5" fill="#2563eb" />
       </svg>
-      <span className="axon-wordmark">Axon Future</span>
+      <span className="axio-wordmark">Axio Future</span>
     </Link>
   );
 }

@@ -1,4 +1,4 @@
-export const title = 'Professional Websites & Systems for Local Businesses & SMBs | Axon Future';
+export const title = 'Professional Websites & Systems for Local Businesses & SMBs | Axio Future';
 export const description = 'Affordable, high-performance business websites, local search discovery, and automated booking systems for small and medium businesses in India and beyond.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/industries">Industries</a> / <span aria-current="page">Local Service Businesses</span></nav>
@@ -12,7 +12,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
    </div>
   </div>
  </div>
- <div class="phero-img"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-meeting.webp" alt="Local business owner consulting with Axon Future" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-meeting-tiny.webp)"></div></div>
+ <div class="phero-img"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-meeting.webp" alt="Local business owner consulting with Axio Future" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-meeting-tiny.webp)"></div></div>
 </div></section>
 <section><div class="wrap">
  <div class="s-head"><div><div class="eyebrow" data-anim>Capabilities</div>

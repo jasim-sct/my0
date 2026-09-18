@@ -1,4 +1,4 @@
-export const title = 'Platform Engineering & E-Commerce Architectures | Axon Future';
+export const title = 'Platform Engineering & E-Commerce Architectures | Axio Future';
 export const description = 'Scalable e-commerce engines, multi-tenant SaaS platforms, and custom transaction systems engineered for high reliability and scale.';
 
 export const html = `
@@ -51,7 +51,7 @@ export const html = `
   </div>
 </section>
 
-<!-- 3. What does Axon Future build? & 4. How is it approached? -->
+<!-- 3. What does Axio Future build? & 4. How is it approached? -->
 <section>
   <div class="wrap">
     <div class="s-head">

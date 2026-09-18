@@ -146,7 +146,7 @@ export function SystemThinking() {
         <div className="s-head" style={{ borderColor: "rgba(255,255,255,.16)" }}>
           <div>
             <div className="eyebrow" data-anim>System Methodology</div>
-            <h2 className="kin-h" data-anim>How Axon Future thinks</h2>
+            <h2 className="kin-h" data-anim>How Axio Future thinks</h2>
           </div>
           <div>
             <p className="lead" data-anim>

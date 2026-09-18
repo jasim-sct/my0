@@ -1,4 +1,4 @@
-export const title = 'Software & Systems for Multichannel & Amazon Sellers | Axon Future';
+export const title = 'Software & Systems for Multichannel & Amazon Sellers | Axio Future';
 export const description = 'Custom software, inventory synchronization, API integrations, and high-converting storefronts for multichannel e-commerce and Amazon sellers.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/industries">Industries</a> / <span aria-current="page">Amazon Sellers</span></nav>

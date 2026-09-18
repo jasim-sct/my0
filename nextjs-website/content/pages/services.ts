@@ -1,4 +1,4 @@
-export const title = 'Software Engineering Capabilities | Axon Future';
+export const title = 'Software Engineering Capabilities | Axio Future';
 export const description = 'Five core software engineering capabilities: Websites, Digital Products, Business Systems, Platforms, and Software Infrastructure. Transparent pricing and architecture.';
 
 export const mainHtml = `<section class="phero"><div class="wrap">
@@ -6,7 +6,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
  <div class="hero-grid">
   <div><div class="eyebrow" data-anim>Capabilities</div>
    <h1 class="kin-h">Engineering capabilities built for what comes next.</h1></div>
-  <div><p class="lead" data-anim data-delay="120">Axon Future engineers reliable digital systems across five disciplines: accessible business websites, bespoke digital products, internal business systems, multi-user platforms, and software infrastructure.</p></div>
+  <div><p class="lead" data-anim data-delay="120">Axio Future engineers reliable digital systems across five disciplines: accessible business websites, bespoke digital products, internal business systems, multi-user platforms, and software infrastructure.</p></div>
  </div>
  <div class="mk-row" data-anim data-delay="180">
   <a href="#websites" class="mk-chip">01 Websites</a>
@@ -15,7 +15,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
   <a href="#platforms" class="mk-chip">04 Platforms</a>
   <a href="#software-infrastructure" class="mk-chip">05 Software Infrastructure</a>
  </div>
- <div class="phero-img"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-team.webp" alt="Axon Future engineering team planning session" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async"></div></div>
+ <div class="phero-img"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-team.webp" alt="Axio Future engineering team planning session" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async"></div></div>
 </div></section>
 
 <!-- 01 Websites -->

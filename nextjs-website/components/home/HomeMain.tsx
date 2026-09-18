@@ -35,7 +35,7 @@ export function HomeMain() {
             </div>
             <div>
               <p className="lead" data-anim>
-                Businesses do not need more fragile page-builders, disposable prototypes, or layers of agency markup. We engineer clean, dependable digital systems designed to handle real business workflows, load instantly, and remain maintainable for the long term.
+                Most software breaks not from lack of ambition, but from fragile foundations. We engineer systems with strict architecture, clean data contracts, and zero runtime bloat—built around the exact way your business operates.
               </p>
               <Link className="arrow-link" href="/about" data-anim>Our engineering philosophy <span className="gt">&rsaquo;</span></Link>
             </div>
@@ -59,12 +59,12 @@ export function HomeMain() {
         <div className="wrap">
           <div className="s-head">
             <div>
-              <div className="eyebrow" data-anim>Capabilities</div>
-              <h2 className="kin-h" data-anim>What Axon Future builds</h2>
+              <div className="eyebrow" data-anim>Core Capabilities</div>
+              <h2 className="kin-h" data-anim>Engineered around how your business works</h2>
             </div>
             <div>
               <p className="lead" data-anim>
-                From accessible professional websites to custom operational tools and multi-tenant platforms, we engineer across the full software lifecycle.
+                We build across five interconnected software domains—from high-performance web storefronts to internal operations platforms and multi-tier cloud infrastructure.
               </p>
               <Link className="arrow-link" href="/services" data-anim>View all capabilities <span className="gt">&rsaquo;</span></Link>
             </div>
@@ -73,7 +73,7 @@ export function HomeMain() {
             <article className="glass card pillar" data-anim data-delay="0">
               <span className="idx">01 / Web</span>
               <h3>Websites</h3>
-              <p>Professional, search-optimized websites for businesses that need a fast, credible digital presence without agency bloat.</p>
+              <p>High-performance, search-optimized web architectures built on Next.js. Sub-second load times, zero layout shifts, and complete code ownership.</p>
               <div className="p-links">
                 <Link href="/services/websites" className="pl">Explore websites →</Link>
               </div>
@@ -81,7 +81,7 @@ export function HomeMain() {
             <article className="glass card pillar" data-anim data-delay="70">
               <span className="idx">02 / App</span>
               <h3>Digital Products</h3>
-              <p>Customer-facing portals, interactive tools, and web applications built around real user workflows.</p>
+              <p>Interactive web applications, customer portals, and workflow tools engineered with deterministic state and fluid, responsive interfaces.</p>
               <div className="p-links">
                 <Link href="/services/digital-products" className="pl">Explore digital products →</Link>
               </div>
@@ -89,7 +89,7 @@ export function HomeMain() {
             <article className="glass card pillar" data-anim data-delay="140">
               <span className="idx">03 / Ops</span>
               <h3>Business Systems</h3>
-              <p>Internal software, operational dashboards, and automation connecting your data, workflows, and teams.</p>
+              <p>Internal operations platforms, centralized databases, and automated workflows that eliminate spreadsheet gridlock and manual error.</p>
               <div className="p-links">
                 <Link href="/services/business-systems" className="pl">Explore business systems →</Link>
               </div>
@@ -97,7 +97,7 @@ export function HomeMain() {
             <article className="glass card pillar" data-anim data-delay="210">
               <span className="idx">04 / Platform</span>
               <h3>Platforms</h3>
-              <p>Scalable e-commerce and multi-user systems designed for transactions, catalog scale, and custom business rules.</p>
+              <p>Scalable transactional systems, custom e-commerce engines, and multi-tenant platforms designed to handle complex business logic.</p>
               <div className="p-links">
                 <Link href="/services/platforms" className="pl">Explore platforms →</Link>
               </div>
@@ -105,7 +105,7 @@ export function HomeMain() {
             <article className="glass card pillar" data-anim data-delay="0">
               <span className="idx">05 / Infra</span>
               <h3>Software Infrastructure</h3>
-              <p>Resilient APIs, database architectures, Nginx configuration, security headers, and cloud deployments.</p>
+              <p>Resilient APIs, relational database schemas, reverse proxy security, and automated deployment pipelines that ensure high availability.</p>
               <div className="p-links">
                 <Link href="/services/software-infrastructure" className="pl">Explore infrastructure →</Link>
               </div>
@@ -120,11 +120,11 @@ export function HomeMain() {
           <div className="s-head">
             <div>
               <div className="eyebrow" data-anim>Selected Work</div>
-              <h2 className="kin-h" data-anim>Things we&apos;ve built</h2>
+              <h2 className="kin-h" data-anim>Software proven in production</h2>
             </div>
             <div>
               <p className="lead" data-anim>
-                Interactive builds demonstrating real system architecture, state management, and user interaction. Click through each project to see the working software.
+                Explore live systems engineered with production-grade architecture, responsive state management, and deliberate user experience. Every build is fully testable.
               </p>
               <Link className="arrow-link" href="/projects" data-anim>View all selected work <span className="gt">&rsaquo;</span></Link>
             </div>
@@ -141,7 +141,7 @@ export function HomeMain() {
                 <div className="dt-body">
                   <span className="dt-cat">E-Commerce Architecture</span>
                   <h3>Lumen Commerce</h3>
-                  <p>Product catalog, variant selection, persistent cart, promo engine, and three-step validated checkout flow.</p>
+                  <p>Complete headless commerce architecture featuring persistent cart state, dynamic variant matrices, promo engine, and three-step checkout.</p>
                   <span className="dt-cta">Inspect architecture <span className="gt">&rsaquo;</span></span>
                 </div>
               </Link>
@@ -153,7 +153,7 @@ export function HomeMain() {
                 <div className="dt-body">
                   <span className="dt-cat">Digital Product · Canvas UI</span>
                   <h3>FLUX AI Studio</h3>
-                  <p>IDE-shell layout with ⌘K command palette, interactive node-graph canvas, and live workflow runner.</p>
+                  <p>High-density workflow studio with keyboard command palette, interactive node-graph canvas, and real-time execution engine.</p>
                   <span className="dt-cta">Experience the build <span className="gt">&rsaquo;</span></span>
                 </div>
               </Link>
@@ -165,7 +165,7 @@ export function HomeMain() {
                 <div className="dt-body">
                   <span className="dt-cat">Business System · Operations</span>
                   <h3>RELAY Platform</h3>
-                  <p>Operational tooling with Kanban board, scraper status pipeline, and filterable lead table with CSV export.</p>
+                  <p>Operations platform replacing multi-sheet friction with real-time pipeline telemetry, role permissions, and client-side data export.</p>
                   <span className="dt-cta">Explore the system <span className="gt">&rsaquo;</span></span>
                 </div>
               </Link>
@@ -230,10 +230,10 @@ export function HomeMain() {
         <div className="wrap">
           <div className="grid g2" style={{ background: 'none', gap: 'clamp(24px,4vw,56px)', alignItems: 'center' }}>
             <div>
-              <div className="eyebrow" data-anim>Technology</div>
-              <h2 className="kin-h" data-anim>Modern, proven software stack</h2>
+              <div className="eyebrow" data-anim>Technology Stack</div>
+              <h2 className="kin-h" data-anim>Proven, high-performance stack</h2>
               <p className="lead" data-anim>
-                We do not experiment with fragile tools on production software. We choose industry-standard, high-performance technologies with strong community support and long-term viability.
+                We do not gamble with unstable frameworks or fragile abstractions. We build on industry-standard technologies that guarantee longevity, security, and developer velocity.
               </p>
               <div className="mk-row" data-anim>
                 <span className="mk-chip">TypeScript</span>
@@ -256,84 +256,6 @@ export function HomeMain() {
             </div>
             <div className="rv ar-43" data-anim data-para="14">
               <img className="ph" src="/assets/img/ph-desk.webp" alt="Software engineering workstation" width={1600} height={1000} />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Commercial Clarity / Pricing Section */}
-      <section className="band">
-        <div className="wrap">
-          <div className="s-head">
-            <div>
-              <div className="eyebrow" data-anim>Pricing &amp; Value</div>
-              <h2 className="kin-h" data-anim>Accessible website packages</h2>
-            </div>
-            <div>
-              <p className="lead" data-anim>
-                Transparent website packages built specifically for businesses that need high-quality digital execution without hidden fees.
-              </p>
-              <Link className="arrow-link" href="/pricing" data-anim>Compare all packages <span className="gt">&rsaquo;</span></Link>
-            </div>
-          </div>
-          <div className="grid g3">
-            <article className="glass card plan" data-anim data-delay="0">
-              <h3>Starter Website</h3>
-              <div className="price">₹7,999</div>
-              <p className="note">For small businesses needing a clean online presence</p>
-              <ul className="tick">
-                <li>1–3 pages</li>
-                <li>Responsive mobile-first layout</li>
-                <li>Domain setup &amp; SSL included</li>
-                <li>Production deployment</li>
-                <li>1 year hosting coverage</li>
-              </ul>
-              <Link className="btn btn-full" href="/contact"><span>Get started</span></Link>
-            </article>
-
-            <article className="glass card plan featured" data-anim data-delay="60">
-              <span className="badge">Most chosen</span>
-              <h3>Business Website</h3>
-              <div className="price">₹14,999</div>
-              <p className="note">Complete professional website for growing businesses</p>
-              <ul className="tick">
-                <li>5–7 pages</li>
-                <li>Custom visual implementation</li>
-                <li>Search-friendly structure &amp; basic SEO</li>
-                <li>Analytics integration</li>
-                <li>1 year hosting coverage</li>
-              </ul>
-              <Link className="btn btn-primary btn-full" href="/contact"><span>Get started</span></Link>
-            </article>
-
-            <article className="glass card plan" data-anim data-delay="120">
-              <h3>Growth Website</h3>
-              <div className="price">₹24,999</div>
-              <p className="note">Engineered for businesses competing for organic search</p>
-              <ul className="tick">
-                <li>Custom design &amp; multiple pages</li>
-                <li>SEO structure, metadata &amp; sitemap</li>
-                <li>Structured data &amp; Search Console setup</li>
-                <li>Core Web Vitals performance tuning</li>
-                <li>1 year hosting coverage</li>
-              </ul>
-              <Link className="btn btn-full" href="/contact"><span>Get started</span></Link>
-            </article>
-          </div>
-
-          <div className="grid g2" style={{ marginTop: '2rem' }} data-anim>
-            <div className="glass card" style={{ padding: '1.5rem' }}>
-              <h4 style={{ margin: '0 0 0.5rem' }}>Hosting &amp; Maintenance Transparency</h4>
-              <p style={{ fontSize: '0.92rem', color: 'var(--txt-dim)', margin: 0 }}>
-                First-year hosting is included in every website package. Future renewal is transparently priced at <strong>₹2,999–₹5,999/year</strong> covering hosting, SSL renewal, and baseline maintenance. High-traffic and custom platforms are scoped according to infrastructure needs.
-              </p>
-            </div>
-            <div className="glass card" style={{ padding: '1.5rem' }}>
-              <h4 style={{ margin: '0 0 0.5rem' }}>Custom Software &amp; Business Systems</h4>
-              <p style={{ fontSize: '0.92rem', color: 'var(--txt-dim)', margin: 0 }}>
-                Need a custom digital product, operational business system, or software infrastructure? We scope custom solutions based on requirements, complexity, user scale, and integrations. 
-                <Link href="/contact" style={{ display: 'inline-block', marginLeft: '0.5rem', color: 'var(--accent)' }}>Discuss your requirements →</Link>
-              </p>
             </div>
           </div>
         </div>

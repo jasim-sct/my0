@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: {
-    canonical: "https://www.axonfuture.com/engineering",
+    canonical: "https://www.axiofuture.com/engineering",
   },
   openGraph: {
     title,
     description,
-    url: "https://www.axonfuture.com/engineering",
+    url: "https://www.axiofuture.com/engineering",
     type: "website",
   },
 };

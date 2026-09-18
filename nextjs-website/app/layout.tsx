@@ -8,12 +8,12 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Axon Future builds scalable software products, SaaS platforms, enterprise systems, and digital solutions for modern businesses.",
+    "Axio Future builds scalable software products, SaaS platforms, enterprise systems, and digital solutions for modern businesses.",
   icons: {
     icon: "/assets/favicon.svg",
     apple: "/assets/favicon.svg",
   },
-  metadataBase: new URL("https://www.axonfuture.com"),
+  metadataBase: new URL("https://www.axiofuture.com"),
 };
 
 const orgJsonLd = {
@@ -21,20 +21,20 @@ const orgJsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://www.axonfuture.com/#org",
+      "@id": "https://www.axiofuture.com/#org",
       name: brand.legalName,
       alternateName: brand.shortName,
-      url: "https://www.axonfuture.com/",
+      url: "https://www.axiofuture.com/",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.axonfuture.com/assets/favicon.svg",
+        url: "https://www.axiofuture.com/assets/favicon.svg",
       },
       description:
-        "Axon Future is a software technology company building modern websites, digital products, business systems, platforms, and scalable software infrastructure.",
+        "Axio Future is a software technology company building modern websites, digital products, business systems, platforms, and scalable software infrastructure.",
       email: brand.email,
       sameAs: [
-        "https://github.com/axonfuture",
-        "https://linkedin.com/company/axonfuture",
+        "https://github.com/axiofuture",
+        "https://linkedin.com/company/axiofuture",
       ],
       areaServed: [
         {
@@ -66,11 +66,11 @@ const orgJsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://www.axonfuture.com/#website",
-      url: "https://www.axonfuture.com/",
-      name: "Axon Future",
+      "@id": "https://www.axiofuture.com/#website",
+      url: "https://www.axiofuture.com/",
+      name: "Axio Future",
       publisher: {
-        "@id": "https://www.axonfuture.com/#org",
+        "@id": "https://www.axiofuture.com/#org",
       },
     },
   ],

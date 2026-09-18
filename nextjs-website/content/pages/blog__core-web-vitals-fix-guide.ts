@@ -1,4 +1,4 @@
-export const title = 'Core Web Vitals: what to fix first when your scores are red | Axon Future';
+export const title = 'Core Web Vitals: what to fix first when your scores are red | Axio Future';
 export const description = 'The four changes that fix most failing Core Web Vitals, ordered by impact per hour of work.';
 export const mainHtml = `<article class="post">
 <section class="phero" style="padding-bottom:1.4rem"><div class="wrap narrow">
@@ -8,7 +8,7 @@ export const mainHtml = `<article class="post">
  <p class="lead" data-anim data-delay="120" style="margin-inline:0">The four changes that fix most failing Core Web Vitals, ordered by impact per hour of work.</p>
  <div class="post-meta" data-anim data-delay="180">
   <span class="avatar">PA</span>
-  <div><strong>Axon Future Engineering</strong><small>Published 2026-03-07 · 9 min read</small></div>
+  <div><strong>Axio Future Engineering</strong><small>Published 2026-03-07 · 9 min read</small></div>
  </div>
 </div>
 <div class="wrap" style="margin-top:2.2rem"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-ads.webp" alt="Paid campaign performance charts" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-ads-tiny.webp)"></div></div>
@@ -26,7 +26,7 @@ export const mainHtml = `<article class="post">
    <div class="post-cta" data-anim>
    <div class="eyebrow">Next step</div>
    <h3>Need sub-second web performance for your business?</h3>
-   <p class="lead" style="margin-bottom:1rem">Axon Future engineers fast, search-friendly websites with optimal Core Web Vitals out of the box. No bloated page-builders.</p>
+   <p class="lead" style="margin-bottom:1rem">Axio Future engineers fast, search-friendly websites with optimal Core Web Vitals out of the box. No bloated page-builders.</p>
    <div class="hero-cta">
      <a class="btn btn-primary" href="/services/websites"><span>Explore website packages</span><span class="gt">&rsaquo;</span></a>
      <a class="btn" href="/projects/dashboard"><span>View Northwind Analytics demo</span></a>

@@ -692,7 +692,7 @@ export function initSiteEffects(): Cleanup {
         d.forEach((v, k) => body.push(k.toUpperCase() + ": " + v));
         location.href =
           "mailto:" +
-          (form.dataset.email || "hello@axonfuture.com") +
+          (form.dataset.email || "hello@axiofuture.com") +
           "?subject=" +
           encodeURIComponent("Project enquiry — " + (d.get("projectType") || d.get("service") || "General")) +
           "&body=" +

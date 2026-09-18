@@ -31,12 +31,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${name} | Case Study & Interactive Build | ${brand.shortName}`,
     description: desc,
     alternates: {
-      canonical: `https://www.axonfuture.com/projects/${slug}`,
+      canonical: `https://www.axiofuture.com/projects/${slug}`,
     },
     openGraph: {
-      title: `${name} | Axon Future`,
+      title: `${name} | Axio Future`,
       description: desc,
-      url: `https://www.axonfuture.com/projects/${slug}`,
+      url: `https://www.axiofuture.com/projects/${slug}`,
       type: "website",
     },
   };
@@ -68,7 +68,7 @@ export default async function ProjectViewerPage({ params }: Props) {
               </div>
               <div>
                 <p className="lead" data-anim data-delay="120">
-                  {study?.tagline || "Working software build engineered by Axon Future to verify architecture, performance, and interaction models."}
+                  {study?.tagline || "Working software build engineered by Axio Future to verify architecture, performance, and interaction models."}
                 </p>
                 <div className="hero-cta" data-anim data-delay="180">
                   <a className="btn btn-primary" href="#interactive-demo">

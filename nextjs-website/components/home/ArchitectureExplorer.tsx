@@ -150,7 +150,7 @@ const MODES: Mode[] = [
   {
     id: "scaling",
     label: "Evolution & Scaling",
-    lead: "Demonstrating how Axon Future designs systems to scale smoothly from day-one simplicity to high-volume distributed platforms without code rewrites.",
+    lead: "Demonstrating how Axio Future designs systems to scale smoothly from day-one simplicity to high-volume distributed platforms without code rewrites.",
     nodes: [
       {
         id: "sc-one",

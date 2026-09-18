@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /demos/
 
-Sitemap: https://www.axonfuture.com/sitemap.xml
+Sitemap: https://www.axiofuture.com/sitemap.xml

@@ -1,5 +1,5 @@
-export const title = 'Software Infrastructure & Backend Engineering | Axon Future';
-export const description = 'Robust software infrastructure, typed REST APIs, PostgreSQL database architecture, and secure cloud deployment pipelines engineered by Axon Future.';
+export const title = 'Software Infrastructure & Backend Engineering | Axio Future';
+export const description = 'Robust software infrastructure, typed REST APIs, PostgreSQL database architecture, and secure cloud deployment pipelines engineered by Axio Future.';
 
 export const html = `
 <section class="phero">
@@ -51,7 +51,7 @@ export const html = `
   </div>
 </section>
 
-<!-- 3. What does Axon Future build? & 4. How is it approached? -->
+<!-- 3. What does Axio Future build? & 4. How is it approached? -->
 <section>
   <div class="wrap">
     <div class="s-head">

@@ -1,5 +1,5 @@
-export const title = 'Engineering Philosophy & Technical Standards | Axon Future';
-export const description = 'How Axon Future approaches software architecture, TypeScript, Next.js, Node.js, PostgreSQL, API contracts, security, and performance optimization.';
+export const title = 'Engineering Philosophy & Technical Standards | Axio Future';
+export const description = 'How Axio Future approaches software architecture, TypeScript, Next.js, Node.js, PostgreSQL, API contracts, security, and performance optimization.';
 
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Engineering</span></nav>
@@ -10,7 +10,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
   </div>
   <div>
    <p class="lead" data-anim data-delay="120">
-    Software is not an aesthetic wrapper over third-party plugins. It is a connected system of state machines, data integrity guarantees, security boundaries, and infrastructure reliability. Here is how and why Axon Future designs, builds, and deploys every technical layer.
+    Software is not an aesthetic wrapper over third-party plugins. It is a connected system of state machines, data integrity guarantees, security boundaries, and infrastructure reliability. Here is how and why Axio Future designs, builds, and deploys every technical layer.
    </p>
    <div class="hero-cta" data-anim data-delay="180">
     <a class="btn btn-primary" href="/projects"><span>Explore working builds</span><span class="gt">&rsaquo;</span></a>

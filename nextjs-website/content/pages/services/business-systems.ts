@@ -1,4 +1,4 @@
-export const title = 'Business Systems & Workflow Automation | Axon Future';
+export const title = 'Business Systems & Workflow Automation | Axio Future';
 export const description = 'Custom business systems, internal dashboards, and operational automation software engineered to connect workflows and eliminate manual administrative drag.';
 
 export const html = `
@@ -51,7 +51,7 @@ export const html = `
   </div>
 </section>
 
-<!-- 3. What does Axon Future build? & 4. How is it approached? -->
+<!-- 3. What does Axio Future build? & 4. How is it approached? -->
 <section>
   <div class="wrap">
     <div class="s-head">

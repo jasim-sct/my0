@@ -1,4 +1,4 @@
-export const title = 'Digital Products & Web Applications | Axon Future';
+export const title = 'Digital Products & Web Applications | Axio Future';
 export const description = 'Custom digital products, customer portals, and interactive web tools engineered with React, Next.js, and TypeScript.';
 
 export const html = `
@@ -51,7 +51,7 @@ export const html = `
   </div>
 </section>
 
-<!-- 3. What does Axon Future build? & 4. How is it approached? -->
+<!-- 3. What does Axio Future build? & 4. How is it approached? -->
 <section>
   <div class="wrap">
     <div class="s-head">

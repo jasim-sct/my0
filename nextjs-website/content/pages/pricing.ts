@@ -1,4 +1,4 @@
-export const title = 'Pricing | Axon Future';
+export const title = 'Pricing | Axio Future';
 export const description = 'Professional software engineering and website development packages designed for modern businesses. Transparent pricing.';
 
 export const mainHtml = `<section class="phero"><div class="wrap">

@@ -18,21 +18,61 @@ export const metadata: Metadata = {
 
 const orgJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://www.axonfuture.com/#org",
-  name: brand.legalName,
-  alternateName: brand.shortName,
-  url: "https://www.axonfuture.com/",
-  logo: {
-    "@type": "ImageObject",
-    url: "https://www.axonfuture.com/assets/favicon.svg",
-  },
-  description:
-    "Axon Future is a software technology company that designs and builds scalable digital products, SaaS platforms, enterprise systems, and modern web applications.",
-  email: brand.email,
-  sameAs: [
-    "https://github.com/axonfuture",
-    "https://linkedin.com/company/axonfuture",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.axonfuture.com/#org",
+      name: brand.legalName,
+      alternateName: brand.shortName,
+      url: "https://www.axonfuture.com/",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.axonfuture.com/assets/favicon.svg",
+      },
+      description:
+        "Axon Future is a software technology company building modern websites, digital products, business systems, platforms, and scalable software infrastructure.",
+      email: brand.email,
+      sameAs: [
+        "https://github.com/axonfuture",
+        "https://linkedin.com/company/axonfuture",
+      ],
+      areaServed: [
+        {
+          "@type": "Country",
+          name: "India",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Worldwide",
+        },
+      ],
+      knowsAbout: [
+        "Software Engineering",
+        "System Architecture",
+        "Website Development",
+        "Digital Products",
+        "Custom Business Systems",
+        "Web Application Development",
+        "Software Platforms",
+        "Software Infrastructure",
+        "API Design",
+        "Performance Optimization",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "PostgreSQL",
+        "Node.js",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.axonfuture.com/#website",
+      url: "https://www.axonfuture.com/",
+      name: "Axon Future",
+      publisher: {
+        "@id": "https://www.axonfuture.com/#org",
+      },
+    },
   ],
 };
 

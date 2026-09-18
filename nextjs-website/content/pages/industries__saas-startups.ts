@@ -1,44 +1,41 @@
-export const title = 'Digital Agency for SaaS & Startups | Axon Future';
-export const description = 'Product-led growth needs content, onboarding and a site that explains itself. Web, SEO, content, ads and automation for saas & startups. Free audit within 24 ';
+export const title = 'Product Engineering & Platform Architecture for SaaS & Startups | Axon Future';
+export const description = 'Full-stack software engineering, Next.js web applications, multi-tenant SaaS platforms, and cloud infrastructure for funded startups and software founders.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/industries">Industries</a> / <span aria-current="page">SaaS & Startups</span></nav>
  <div class="hero-grid">
-  <div><div class="eyebrow" data-anim>Software companies and funded startups</div>
-   <h1 class="kin-h">Digital services for saas & startups</h1></div>
-  <div><p class="lead" data-anim data-delay="120">Product-led growth needs content, onboarding and a site that explains itself.</p>
+  <div><div class="eyebrow" data-anim>Product Engineering & Architecture</div>
+   <h1 class="kin-h">Software engineering for SaaS & startups</h1></div>
+  <div><p class="lead" data-anim data-delay="120">From production MVPs to scalable multi-tenant architectures, we build typed, documented, and maintainable software systems that scale with your user base.</p>
    <div class="hero-cta" data-anim data-delay="180">
-    <a class="btn btn-primary" href="/contact"><span>Get a free audit</span><span class="gt">&rsaquo;</span></a>
-    <a class="btn" href="/projects"><span>See live builds</span></a>
+    <a class="btn btn-primary" href="/contact"><span>Discuss your project</span><span class="gt">&rsaquo;</span></a>
+    <a class="btn" href="/projects"><span>Explore builds</span></a>
    </div>
   </div>
  </div>
- <div class="phero-img"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-code.webp" alt="Front-end code being written for a client build" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-code-tiny.webp)"></div></div>
+ <div class="phero-img"><div class="rv ar-21 "><img class="ph " src="/assets/img/ph-code.webp" alt="Production software engineering" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchpriority="high" decoding="async" style="background-image:url(../assets/img/ph-code-tiny.webp)"></div></div>
 </div></section>
 <section><div class="wrap">
- <div class="s-head"><div><div class="eyebrow" data-anim>Where we start</div>
-  <h2 class="kin-h" data-anim>Services that move the needle first</h2></div><div></div></div>
- <div class="grid g3"><a class="glass card svc-card" href="/website-development" data-anim data-delay="0">
-     <div class="sc-top"><span class="dt-cat">From $299 · 7–25 days</span></div>
-     <h3>Website Development</h3><p>We build sites that score 90+ on Lighthouse, rank because the structure is right, and turn visitors into enqui…</p>
-     <span class="dt-cta">View <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/web-app-development" data-anim data-delay="70">
-     <div class="sc-top"><span class="dt-cat">From $2,400 · 4–12 weeks</span></div>
-     <h3>Web App Development</h3><p>We build dashboards, portals, SaaS MVPs and internal tools with real architecture — typed data, proper auth, a…</p>
-     <span class="dt-cta">View <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/ui-ux-design" data-anim data-delay="140">
-     <div class="sc-top"><span class="dt-cat">From $899 · 2–5 weeks</span></div>
-     <h3>UI/UX Design</h3><p>We deliver a documented design system — colour tokens with contrast ratios, a type scale, component states inc…</p>
-     <span class="dt-cta">View <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/blog-writing" data-anim data-delay="0">
-     <div class="sc-top"><span class="dt-cat">From $180 · 4–6 days</span></div>
-     <h3>Blog Writing</h3><p>Articles built on search intent and structured to skim, with something on the page that is not already on page…</p>
-     <span class="dt-cta">View <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/seo-services" data-anim data-delay="70">
-     <div class="sc-top"><span class="dt-cat">From $299/mo · results in 4–8 weeks</span></div>
-     <h3>SEO Services</h3><p>On-page, technical and link building run as one programme, reported in pipeline and revenue. We show you the k…</p>
-     <span class="dt-cta">View <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/ai-chatbots" data-anim data-delay="140">
-     <div class="sc-top"><span class="dt-cat">From $2,400 · 2–8 weeks</span></div>
-     <h3>AI Chatbots</h3><p>Retrieval-grounded agents that cite their sources, refuse anything they cannot ground, and escalate below a co…</p>
-     <span class="dt-cta">View <span class="gt">&rsaquo;</span></span></a></div>
+ <div class="s-head"><div><div class="eyebrow" data-anim>Capabilities</div>
+  <h2 class="kin-h" data-anim>Engineering from idea to production scale</h2></div><div></div></div>
+ <div class="grid g3"><a class="glass card svc-card" href="/services/platforms" data-anim data-delay="0">
+     <div class="sc-top"><span class="dt-cat">Multi-Tenant Architecture</span></div>
+     <h3>Platforms</h3><p>End-to-end multi-tenant SaaS architectures, subscription billing via Stripe/Razorpay, organization workspaces, and RBAC security models.</p>
+     <span class="dt-cta">View capability <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/services/digital-products" data-anim data-delay="70">
+     <div class="sc-top"><span class="dt-cat">Web Applications & MVPs</span></div>
+     <h3>Digital Products</h3><p>Fast, typed React and Next.js interfaces, complex state management, data visualization dashboards, and interactive user onboarding.</p>
+     <span class="dt-cta">View capability <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/services/software-infrastructure" data-anim data-delay="140">
+     <div class="sc-top"><span class="dt-cat">APIs & Backend Systems</span></div>
+     <h3>Software Infrastructure</h3><p>High-performance REST APIs in Node.js/NestJS, PostgreSQL schemas, Redis caching, job queues, and automated CI/CD deployments.</p>
+     <span class="dt-cta">View capability <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/services/websites" data-anim data-delay="0">
+     <div class="sc-top"><span class="dt-cat">Marketing & Product Websites · From ₹7,999</span></div>
+     <h3>Websites</h3><p>High-converting product marketing sites that explain complex technical software clearly with optimal SEO discoverability.</p>
+     <span class="dt-cta">View capability <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/services/business-systems" data-anim data-delay="70">
+     <div class="sc-top"><span class="dt-cat">Operational Pipelines</span></div>
+     <h3>Business Systems</h3><p>Internal admin consoles, audit log viewers, customer support tools, and webhook ingestion systems.</p>
+     <span class="dt-cta">View capability <span class="gt">&rsaquo;</span></span></a></div>
 </div></section>
 <section id="faq"><div class="wrap narrow">
- <div class="center"><div class="eyebrow" data-anim>FAQ</div><h2 data-anim>Working with saas & startups</h2></div>
- <div class="faq" style="margin-top:1.8rem"><details class="glass" data-anim data-delay="0"><summary>Do you specialise in saas & startups?</summary><p>We work with saas & startups constantly — it is one of our six core sectors. That means we know the platforms, the typical margins and where the money usually leaks before we start.</p></details><details class="glass" data-anim data-delay="40"><summary>Can we start with one service?</summary><p>Yes, and most clients do. We usually recommend starting with whichever channel your numbers favour rather than buying a bundle on day one.</p></details><details class="glass" data-anim data-delay="80"><summary>Do you sign NDAs?</summary><p>Before any credentials change hands, always. For agency clients we work fully white-label under your branding.</p></details><details class="glass" data-anim data-delay="120"><summary>How is it priced?</summary><p>Published rates per service, or a bundled monthly retainer if you take three or more. Every quote is fixed before work starts.</p></details></div>
+ <div class="center"><div class="eyebrow" data-anim>FAQ</div><h2 data-anim>Engineering for software startups</h2></div>
+ <div class="faq" style="margin-top:1.8rem"><details class="glass" data-anim data-delay="0"><summary>Do we retain 100% intellectual property (IP) of code written?</summary><p>Yes. All source code, repository commits, architecture diagrams, and database schemas belong entirely to your company from day one.</p></details><details class="glass" data-anim data-delay="40"><summary>What technology stack do you specialize in?</summary><p>Our core production stack includes TypeScript, Next.js, React, Node.js, Express/NestJS, PostgreSQL, MongoDB, Redis, Docker, and Nginx on modern cloud infrastructure.</p></details><details class="glass" data-anim data-delay="80"><summary>How do you approach MVP development timelines?</summary><p>We focus on tight, well-defined vertical slices that deliver functional business value in 4 to 8 weeks rather than bloated year-long roadmaps.</p></details></div>
 </div></section>`;
 export const showCta = true;

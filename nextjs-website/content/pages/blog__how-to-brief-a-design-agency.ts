@@ -23,12 +23,16 @@ export const mainHtml = `<article class="post">
   <div class="eyebrow">On this page</div><ol><li><a href="/how-to-brief-a-design-agency.html#s0">Revisions are a briefing failure, usually</a></li><li><a href="/how-to-brief-a-design-agency.html#s1">The six things that must be in it</a></li><li><a href="/how-to-brief-a-design-agency.html#s2">The three that cause revision spirals</a></li><li><a href="/how-to-brief-a-design-agency.html#s3">Approve direction before pixels</a></li><li><a href="/how-to-brief-a-design-agency.html#s4">A test for whether your brief is ready</a></li></ol>
  </nav>
  <div class="prose" data-anim><h2 id="s0">Revisions are a briefing failure, usually</h2><p>When a project goes to round four, the cause is almost never that the designer cannot design. It is that something obvious to you was never said out loud.</p><p>The founder's spouse hates green. There is a competitor you must not resemble. The board has seen a mockup and formed expectations. None of this was in the brief, all of it shapes the outcome.</p><h2 id="s1">The six things that must be in it</h2><p>**Who it is for.** Not demographics. A sentence describing a real person and what they are trying to do when they encounter this.</p><p>**What it must achieve.** One measurable thing. 'Look more premium' is not measurable. 'Justify a 30% price increase against our nearest competitor' is.</p><p>**What exists already.** Every asset, guideline and constraint. Including the ones you are embarrassed by.</p><p>**Three things you dislike.** More useful than what you like. Likes are vague; dislikes are specific and they prevent whole directions being wasted.</p><p>**Who approves.** Named. If it is a committee, say so upfront so the process can be designed around it.</p><p>**Hard constraints.** Print sizes, platform limits, legal requirements, accessibility standards. Anything that cannot flex.</p><h2 id="s2">The three that cause revision spirals</h2><p>**Unstated stakeholders.** Someone who was not in the kickoff sees round two and has opinions. Every one of their comments becomes a revision nobody scoped.</p><p>**Reference images without reasoning.** Sending five links you like tells the designer nothing unless you say what you like about each. Otherwise they guess, and half the time they guess the wrong attribute.</p><p>**Changing the objective mid-project.** Starting with 'make it premium' and moving to 'make it approachable' is not a revision. It is a new brief and it should be priced as one.</p><h2 id="s3">Approve direction before pixels</h2><p>The cheapest place to change your mind is at the outline or wireframe stage. The most expensive is after the design is finished and detailed.</p><p>Any agency worth hiring will show you three flat directions before refining one. Look at them properly, choose deliberately, and be honest if none of them work — that is a much better conversation at week one than at week four.</p><h2 id="s4">A test for whether your brief is ready</h2><p>Read it back and ask: could two different designers read this and produce work with the same objective? If yes, it is ready. If they could produce anything at all, it is not a brief, it is a wish.</p><p>Send it before the kickoff call rather than during. Written first, discussed second. That order produces better questions.</p></div>
- <div class="post-cta" data-anim>
-  <h3>Want this done for you?</h3>
-  <p class="lead" style="margin-bottom:1rem">We do this work every day across 24 services. Free audit, findings yours either way.</p>
-  <a class="btn btn-primary" href="/contact"><span>Get a free audit</span></a>
- </div>
-</div></section>
+   <div class="post-cta" data-anim>
+   <div class="eyebrow">Next step</div>
+   <h3>Planning a custom digital product or web application?</h3>
+   <p class="lead" style="margin-bottom:1rem">We review technical requirements, user journeys, and data models to scope predictable, milestone-driven software delivery.</p>
+   <div class="hero-cta">
+     <a class="btn btn-primary" href="/services/digital-products"><span>Explore digital products</span><span class="gt">&rsaquo;</span></a>
+     <a class="btn" href="/contact"><span>Discuss your project</span></a>
+   </div>
+  </div>
+ </div></section>
 
 <section id="faq"><div class="wrap narrow">
  <div class="center"><div class="eyebrow" data-anim>FAQ</div><h2 data-anim>Related questions</h2></div>

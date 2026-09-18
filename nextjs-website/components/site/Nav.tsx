@@ -48,17 +48,19 @@ export function Nav() {
               <div className="mega-foot">
                 <div className="wrap">
                   <Link href="/services">All capabilities →</Link>
+                  <Link href="/engineering">Engineering →</Link>
                   <Link href="/pricing">Pricing →</Link>
                   <Link href="/projects">Selected work →</Link>
                 </div>
               </div>
             </div>
           </div>
+          <Link href="/engineering">Engineering</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/about">About</Link>
           <Link className="btn btn-primary" href="/contact">
-            <span>Start a conversation</span>
+            <span>Discuss your project</span>
           </Link>
         </nav>
       </div>

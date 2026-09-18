@@ -1,10 +1,79 @@
 export const title = 'Sitemap | Axon Future';
-export const description = 'Every page on this site — all 24 services, 12 guides, 8 locations, 6 industries and 10 live builds, organised by section.';
+export const description = 'Complete sitemap of Axon Future — capabilities, pricing, selected work, technical guides, and company documentation.';
+
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Sitemap</span></nav>
  <div class="eyebrow" data-anim>Index</div>
  <h1 class="kin-h">Sitemap</h1>
- <p class="lead" data-anim>Every page on this site, organised by section.</p>
+ <p class="lead" data-anim>Every page on the Axon Future website, organized by section.</p>
 </div></section>
-<section style="padding-top:1rem"><div class="wrap"><div class="sm-grid"><div class="sm-col"><h4>Main</h4><ul><li><a href="/">Home</a></li><li><a href="/services">All services</a></li><li><a href="/projects">Projects</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/blog">Blog</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/industries">Industries</a></li><li><a href="/locations">Locations</a></li></ul></div><div class="sm-col"><h4>Build</h4><ul><li><a href="/website-development">Website Development</a></li><li><a href="/ecommerce-development">E-Commerce Development</a></li><li><a href="/web-app-development">Web App Development</a></li><li><a href="/ui-ux-design">UI/UX Design</a></li></ul></div><div class="sm-col"><h4>Brand</h4><ul><li><a href="/graphic-design">Graphic Design</a></li><li><a href="/brand-identity">Brand Identity</a></li><li><a href="/video-editing">Video Editing</a></li><li><a href="/motion-graphics">Motion Graphics & Animation</a></li></ul></div><div class="sm-col"><h4>Grow</h4><ul><li><a href="/seo-services">SEO Services</a></li><li><a href="/social-media-management">Social Media Management</a></li><li><a href="/paid-ads-management">Paid Ads Management</a></li><li><a href="/email-marketing">Email Marketing</a></li></ul></div><div class="sm-col"><h4>Words</h4><ul><li><a href="/blog-writing">Blog Writing</a></li><li><a href="/copywriting">Copywriting</a></li><li><a href="/script-writing">Script Writing</a></li><li><a href="/translation-services">Translation & Localisation</a></li></ul></div><div class="sm-col"><h4>Operate</h4><ul><li><a href="/virtual-assistant">Virtual Assistant</a></li><li><a href="/data-entry-scraping">Data Entry & Web Scraping</a></li><li><a href="/lead-generation">Lead Generation</a></li><li><a href="/customer-support">Customer Support</a></li></ul></div><div class="sm-col"><h4>Automate</h4><ul><li><a href="/ai-chatbots">AI Chatbots</a></li><li><a href="/business-automation">Business Automation</a></li><li><a href="/ai-content-systems">AI Content Systems</a></li></ul></div><div class="sm-col"><h4>Frontier</h4><ul><li><a href="/no-code-development">No-Code Development</a></li><li><a href="/blockchain-web3">Blockchain & Web3</a></li><li><a href="/cybersecurity-basics">Cybersecurity Basics</a></li></ul></div><div class="sm-col"><h4>Marketplace</h4><ul><li><a href="/amazon-account-management">Amazon Account Management</a></li></ul></div><div class="sm-col"><h4>Locations</h4><ul><li><a href="/locations/united-states">United States</a></li><li><a href="/locations/united-kingdom">United Kingdom</a></li><li><a href="/locations/canada">Canada</a></li><li><a href="/locations/australia">Australia</a></li><li><a href="/locations/united-arab-emirates">United Arab Emirates</a></li><li><a href="/locations/saudi-arabia">Saudi Arabia</a></li><li><a href="/locations/germany">Germany</a></li><li><a href="/locations/singapore">Singapore</a></li></ul></div><div class="sm-col"><h4>Industries</h4><ul><li><a href="/industries/ecommerce-brands">E-Commerce Brands</a></li><li><a href="/industries/saas-startups">SaaS & Startups</a></li><li><a href="/industries/local-services">Local Service Businesses</a></li><li><a href="/industries/amazon-sellers">Amazon Sellers</a></li><li><a href="/industries/agencies">Agencies & Studios</a></li><li><a href="/industries/b2b-professional">B2B & Professional Services</a></li></ul></div><div class="sm-col"><h4>Guides</h4><ul><li><a href="/blog/how-much-does-a-website-cost">How much does a website cost in 2026? Real numbers, </a></li><li><a href="/blog/seo-vs-paid-ads-which-first">SEO or paid ads first? The honest answer depends on </a></li><li><a href="/blog/why-your-content-is-invisible-to-google">Why your best content is invisible to Google</a></li><li><a href="/blog/shopify-vs-woocommerce-2026">Shopify vs WooCommerce in 2026: the honest compariso</a></li><li><a href="/blog/amazon-acos-reduction-guide">How to cut Amazon ACoS by half in 90 days</a></li><li><a href="/blog/ai-automation-what-actually-works">AI automation: what actually works in a small busine</a></li><li><a href="/blog/website-security-checklist-small-business">The 12-point security checklist that prevents most b</a></li><li><a href="/blog/how-to-brief-a-design-agency">How to brief a design agency so you get what you wan</a></li><li><a href="/blog/local-seo-checklist">Local SEO: the checklist that gets you into the map </a></li><li><a href="/blog/what-a-brand-identity-actually-includes">What a brand identity actually includes (and what it</a></li><li><a href="/blog/outsourcing-vs-hiring-cost-comparison">Outsourcing vs hiring: the cost comparison nobody sh</a></li><li><a href="/blog/core-web-vitals-fix-guide">Core Web Vitals: what to fix first when your scores </a></li></ul></div><div class="sm-col"><h4>Live builds</h4><ul><li><a href="/projects/terra">Terra & Co</a></li><li><a href="/projects/flux">FLUX</a></li><li><a href="/projects/shop">Lumen Commerce</a></li><li><a href="/projects/relay">RELAY</a></li><li><a href="/projects/signal">SIGNAL</a></li><li><a href="/projects/kinetik">KINETIK</a></li><li><a href="/projects/lede">LEDE & CO</a></li><li><a href="/projects/volt">VOLT</a></li><li><a href="/projects/proto">PROTO</a></li><li><a href="/projects/dashboard">Northwind Analytics</a></li></ul></div></div></div></section>`;
+
+<section style="padding-top:1rem"><div class="wrap"><div class="sm-grid">
+
+ <div class="sm-col">
+  <h4>Core Company</h4>
+  <ul>
+   <li><a href="/">Home</a></li>
+   <li><a href="/about">About Axon Future</a></li>
+   <li><a href="/services">Capabilities Overview</a></li>
+   <li><a href="/pricing">Transparent Pricing</a></li>
+   <li><a href="/projects">Selected Work</a></li>
+   <li><a href="/contact">Contact &amp; Consultation</a></li>
+   <li><a href="/blog">Engineering Notes (Blog)</a></li>
+  </ul>
+ </div>
+
+ <div class="sm-col">
+  <h4>Capabilities</h4>
+  <ul>
+   <li><a href="/services/websites">Websites (₹7,999 / ₹14,999 / ₹24,999)</a></li>
+   <li><a href="/services/digital-products">Digital Products</a></li>
+   <li><a href="/services/business-systems">Business Systems</a></li>
+   <li><a href="/services/platforms">Platforms</a></li>
+   <li><a href="/services/software-infrastructure">Software Infrastructure</a></li>
+  </ul>
+ </div>
+
+ <div class="sm-col">
+  <h4>Selected Work (Live Builds)</h4>
+  <ul>
+   <li><a href="/projects/shop">Lumen Commerce</a></li>
+   <li><a href="/projects/flux">FLUX AI Studio</a></li>
+   <li><a href="/projects/relay">RELAY Platform</a></li>
+   <li><a href="/projects/dashboard">Northwind Analytics</a></li>
+   <li><a href="/projects/terra">Terra &amp; Co</a></li>
+   <li><a href="/projects/volt">VOLT Invoicing</a></li>
+   <li><a href="/projects/proto">PROTO Technical Dossier</a></li>
+   <li><a href="/projects/signal">SIGNAL Platform</a></li>
+   <li><a href="/projects/kinetik">KINETIK Studio</a></li>
+   <li><a href="/projects/lede">LEDE &amp; CO</a></li>
+  </ul>
+ </div>
+
+ <div class="sm-col">
+  <h4>Technical Guides</h4>
+  <ul>
+   <li><a href="/blog/how-much-does-a-website-cost">The Real Cost of Website Development</a></li>
+   <li><a href="/blog/core-web-vitals-fix-guide">Core Web Vitals Fix Guide</a></li>
+   <li><a href="/blog/website-security-checklist-small-business">Small Business Website Security Checklist</a></li>
+   <li><a href="/blog/ai-automation-what-actually-works">AI Automation: What Actually Works</a></li>
+   <li><a href="/blog/shopify-vs-woocommerce-2026">Shopify vs WooCommerce in 2026</a></li>
+   <li><a href="/blog/why-your-content-is-invisible-to-google">Why Content Stays Invisible Without Structure</a></li>
+   <li><a href="/blog/local-seo-checklist">Local SEO Checklist for Service Businesses</a></li>
+   <li><a href="/blog/how-to-brief-a-design-agency">How to Brief an Engineering Team</a></li>
+   <li><a href="/blog/outsourcing-vs-hiring-cost-comparison">In-House vs Dedicated Engineering Partner</a></li>
+   <li><a href="/blog/seo-vs-paid-ads-which-first">SEO vs Paid Ads Acquisition Strategy</a></li>
+  </ul>
+ </div>
+
+ <div class="sm-col">
+  <h4>Legal &amp; Policy</h4>
+  <ul>
+   <li><a href="/privacy-policy">Privacy Policy</a></li>
+   <li><a href="/terms">Terms of Service</a></li>
+  </ul>
+ </div>
+
+</div></div></section>`;
+
 export const showCta = true;

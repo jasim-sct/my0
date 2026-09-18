@@ -6,20 +6,19 @@ export function FinalCta() {
       <div className="wrap">
         <div className="cta-band" data-anim="zoom">
           <div className="eyebrow" style={{ justifyContent: "center" }}>
-            Start here
+            Next step
           </div>
           <h2 className="kin-h">
-            Let's build something
+            Have something worth building?
             <br />
-            meaningful.
+            Let&apos;s talk.
           </h2>
           <p className="lead center">
-            Whether you need a new software product, a robust enterprise system, or a technical partner 
-            to scale your engineering capabilities. Let's discuss your requirements.
+            Whether you need a reliable business website, a custom digital product, an internal business system, or software infrastructure engineered to scale.
           </p>
           <div className="hero-cta" style={{ justifyContent: "center" }}>
             <Link className="btn btn-primary" href="/contact">
-              <span>Start a Project</span>
+              <span>Discuss your project</span>
               <span className="gt">&rsaquo;</span>
             </Link>
           </div>

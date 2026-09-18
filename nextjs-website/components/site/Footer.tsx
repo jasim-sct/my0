@@ -46,13 +46,16 @@ export function Footer() {
                     <Link href="/about">About</Link>
                   </li>
                   <li>
+                    <Link href="/engineering">Engineering</Link>
+                  </li>
+                  <li>
                     <Link href="/projects">Selected Work</Link>
                   </li>
                   <li>
                     <Link href="/pricing">Pricing</Link>
                   </li>
                   <li>
-                    <Link href="/contact">Start a conversation</Link>
+                    <Link href="/contact">Discuss your project</Link>
                   </li>
                 </ul>
               </div>

@@ -7,14 +7,41 @@ export type Service = {
 };
 
 export const services: Service[] = [
-  { slug: "product-engineering", name: "Product Engineering", pillar: "Engineering", from: "Custom Scope", blurb: "End-to-end product development." },
-  { slug: "saas-development", name: "SaaS Development", pillar: "Engineering", from: "Custom Scope", blurb: "Multi-tenant scalable SaaS platforms." },
-  { slug: "enterprise-software", name: "Enterprise Software", pillar: "Engineering", from: "Custom Scope", blurb: "Business systems built for operations." },
-  { slug: "web-applications", name: "Web Applications", pillar: "Engineering", from: "Custom Scope", blurb: "Modern, performant web experiences." },
-  { slug: "api-backend", name: "API & Backend Engineering", pillar: "Infrastructure", from: "Custom Scope", blurb: "Secure, scalable backend systems." },
-  { slug: "cloud-infrastructure", name: "Cloud & Infrastructure", pillar: "Infrastructure", from: "Custom Scope", blurb: "Deployment and scalability." },
-  { slug: "ui-engineering", name: "UI Engineering", pillar: "Infrastructure", from: "Custom Scope", blurb: "Reusable interfaces and systems." },
-  { slug: "system-modernization", name: "System Modernization", pillar: "Infrastructure", from: "Custom Scope", blurb: "Modernizing legacy architectures." }
+  {
+    slug: "websites",
+    name: "Websites",
+    pillar: "Engineering",
+    from: "From ₹7,999",
+    blurb: "Fast, search-optimized websites engineered for businesses that need a credible, high-converting digital presence.",
+  },
+  {
+    slug: "digital-products",
+    name: "Digital Products",
+    pillar: "Engineering",
+    from: "Custom Scope",
+    blurb: "Customer-facing portals, interactive tools, and web applications designed around real user workflows.",
+  },
+  {
+    slug: "business-systems",
+    name: "Business Systems",
+    pillar: "Engineering",
+    from: "Custom Scope",
+    blurb: "Custom software connecting operations, data, workflows, and people with high reliability.",
+  },
+  {
+    slug: "platforms",
+    name: "Platforms",
+    pillar: "Infrastructure",
+    from: "Custom Scope",
+    blurb: "Scalable e-commerce and multi-user systems designed to support transactions, catalogs, and custom rules.",
+  },
+  {
+    slug: "software-infrastructure",
+    name: "Software Infrastructure",
+    pillar: "Infrastructure",
+    from: "Custom Scope",
+    blurb: "Backend systems, typed REST APIs, database schemas, and cloud deployment pipelines.",
+  },
 ];
 
 export function getService(slug: string) {

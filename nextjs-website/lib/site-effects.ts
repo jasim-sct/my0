@@ -692,9 +692,9 @@ export function initSiteEffects(): Cleanup {
         d.forEach((v, k) => body.push(k.toUpperCase() + ": " + v));
         location.href =
           "mailto:" +
-          (form.dataset.email || "hello@screenarts.com") +
+          (form.dataset.email || "hello@axonfuture.com") +
           "?subject=" +
-          encodeURIComponent("Project enquiry — " + (d.get("service") || "General")) +
+          encodeURIComponent("Project enquiry — " + (d.get("projectType") || d.get("service") || "General")) +
           "&body=" +
           encodeURIComponent(body.join("\n"));
         const m = doc.getElementById("formMsg");

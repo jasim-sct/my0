@@ -23,12 +23,16 @@ export const mainHtml = `<article class="post">
   <div class="eyebrow">On this page</div><ol><li><a href="/local-seo-checklist.html#s0">Local is a different algorithm</a></li><li><a href="/local-seo-checklist.html#s1">Google Business Profile first</a></li><li><a href="/local-seo-checklist.html#s2">Reviews: velocity over volume</a></li><li><a href="/local-seo-checklist.html#s3">Citations are hygiene, not strategy</a></li><li><a href="/local-seo-checklist.html#s4">Location pages if you have multiple sites</a></li></ol>
  </nav>
  <div class="prose" data-anim><h2 id="s0">Local is a different algorithm</h2><p>The map pack is ranked on proximity, prominence and relevance — a different weighting from organic blue links. You can rank in the map pack while barely ranking organically, and vice versa.</p><p>The practical consequence is that local SEO gives faster results. Eight to twelve weeks to visible movement is normal, against four to six months for competitive national terms.</p><h2 id="s1">Google Business Profile first</h2><p>Complete every field. Not most — every one. Primary category chosen precisely, secondary categories added, services listed individually with descriptions, hours including holiday hours, attributes ticked.</p><p>Add photos monthly. Profiles with recent photos outperform dormant ones. Geotagging is a myth; frequency is not.</p><p>Use Google Posts weekly. They expire after seven days, which tells you how much Google weights freshness here.</p><h2 id="s2">Reviews: velocity over volume</h2><p>A business with 40 reviews gained steadily over a year outranks one with 200 gained in a single month. Google reads bursts as manipulation.</p><p>Ask every customer, systematically, at the moment of maximum satisfaction. Build it into your process rather than remembering occasionally.</p><p>Reply to all of them, including the good ones. Reply text is indexed and it is a free place for relevant keywords used naturally.</p><h2 id="s3">Citations are hygiene, not strategy</h2><p>Get your name, address and phone number identical across the major directories — Apple Maps, Bing Places, Yelp, Facebook, and the significant industry-specific ones for your sector.</p><p>Identical means identical. 'Street' and 'St' are different strings. Fix it once, then stop thinking about it. Citation building is a solved problem and paying monthly for it is usually waste.</p><h2 id="s4">Location pages if you have multiple sites</h2><p>One page per location, each with unique content. Not a template with the city name swapped — Google detects that instantly and it can suppress all of them.</p><p>Each page needs genuinely local content: the actual address, embedded map, staff who work there, local landmarks, reviews from that location's customers, and services specific to that branch.</p></div>
- <div class="post-cta" data-anim>
-  <h3>Want this done for you?</h3>
-  <p class="lead" style="margin-bottom:1rem">We do this work every day across 24 services. Free audit, findings yours either way.</p>
-  <a class="btn btn-primary" href="/contact"><span>Get a free audit</span></a>
- </div>
-</div></section>
+   <div class="post-cta" data-anim>
+   <div class="eyebrow">Next step</div>
+   <h3>Establish local search presence with a professional website</h3>
+   <p class="lead" style="margin-bottom:1rem">Our Growth Website tier (₹24,999) includes full SEO structure, sitemaps, robots configuration, and Google Search Console setup.</p>
+   <div class="hero-cta">
+     <a class="btn btn-primary" href="/services/websites"><span>Explore Growth Website</span><span class="gt">&rsaquo;</span></a>
+     <a class="btn" href="/contact"><span>Discuss your project</span></a>
+   </div>
+  </div>
+ </div></section>
 
 <section id="faq"><div class="wrap narrow">
  <div class="center"><div class="eyebrow" data-anim>FAQ</div><h2 data-anim>Related questions</h2></div>

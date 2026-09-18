@@ -23,12 +23,16 @@ export const mainHtml = `<article class="post">
   <div class="eyebrow">On this page</div><ol><li><a href="/core-web-vitals-fix-guide.html#s0">Do not optimise everything</a></li><li><a href="/core-web-vitals-fix-guide.html#s1">LCP: fix the hero image</a></li><li><a href="/core-web-vitals-fix-guide.html#s2">CLS: width and height on everything</a></li><li><a href="/core-web-vitals-fix-guide.html#s3">INP: the third-party audit</a></li><li><a href="/core-web-vitals-fix-guide.html#s4">The measurement trap</a></li></ol>
  </nav>
  <div class="prose" data-anim><h2 id="s0">Do not optimise everything</h2><p>Performance work has a long tail of diminishing returns. Four changes fix most failing sites, and they take a day. Everything after that takes a week and moves the number by two points.</p><p>Start with what Google actually measures on real users, not what your local Lighthouse run says. Open the Core Web Vitals report in Search Console and work from field data.</p><h2 id="s1">LCP: fix the hero image</h2><p>Largest Contentful Paint is usually your hero image or your headline font. If it is the image, three things fix it.</p><p>Serve it as WebP or AVIF. Set explicit width and height. Add fetchpriority='high' and loading='eager' — and make sure it is not lazy-loaded, which is the single most common self-inflicted LCP problem.</p><p>If it is the font, preload the font file and use font-display: swap. A headline that renders in a fallback face and swaps is far better than one that renders three seconds late.</p><h2 id="s2">CLS: width and height on everything</h2><p>Cumulative Layout Shift happens because the browser does not know how much space to reserve before an asset loads.</p><p>Every img tag needs width and height attributes, even when CSS overrides the actual size. The browser uses the ratio to reserve space.</p><p>Reserve space for ads, embeds and anything injected by JavaScript. A cookie banner that pushes content down after two seconds is a CLS disaster and users hate it independently of the metric.</p><h2 id="s3">INP: the third-party audit</h2><p>Interaction to Next Paint replaced First Input Delay and it is harder to game. It measures how long the page takes to respond when someone actually clicks.</p><p>Open the coverage tab in Chrome DevTools and look at unused JavaScript. Most sites are loading a chat widget, three analytics tools, a heatmap recorder and a personalisation script, and using almost none of them.</p><p>Defer everything non-essential. Load the chat widget on interaction rather than on page load. Question whether you need the heatmap tool running on every session forever.</p><h2 id="s4">The measurement trap</h2><p>Lighthouse on your laptop over office wifi is not what Google measures. It measures field data from real Chrome users, aggregated over 28 days.</p><p>That means two things. First, test on a throttled connection and a mid-range Android. Second, after you deploy a fix, expect to wait several weeks before the field data reflects it. Do not panic and change five more things in week two.</p></div>
- <div class="post-cta" data-anim>
-  <h3>Want this done for you?</h3>
-  <p class="lead" style="margin-bottom:1rem">We do this work every day across 24 services. Free audit, findings yours either way.</p>
-  <a class="btn btn-primary" href="/contact"><span>Get a free audit</span></a>
- </div>
-</div></section>
+   <div class="post-cta" data-anim>
+   <div class="eyebrow">Next step</div>
+   <h3>Need sub-second web performance for your business?</h3>
+   <p class="lead" style="margin-bottom:1rem">Axon Future engineers fast, search-friendly websites with optimal Core Web Vitals out of the box. No bloated page-builders.</p>
+   <div class="hero-cta">
+     <a class="btn btn-primary" href="/services/websites"><span>Explore website packages</span><span class="gt">&rsaquo;</span></a>
+     <a class="btn" href="/projects/dashboard"><span>View Northwind Analytics demo</span></a>
+   </div>
+  </div>
+ </div></section>
 
 <section id="faq"><div class="wrap narrow">
  <div class="center"><div class="eyebrow" data-anim>FAQ</div><h2 data-anim>Related questions</h2></div>

@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /demos/
-Disallow: /projects/
 
 Sitemap: https://www.axonfuture.com/sitemap.xml

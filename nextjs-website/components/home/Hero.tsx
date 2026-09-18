@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Hero() {
   return (
     <section className="hero">
@@ -5,22 +7,22 @@ export function Hero() {
         <div className="hero-grid">
           <div>
             <div className="eyebrow" data-anim>
-              Websites · Digital Products · Business Systems · Platforms
+              Software Technology Company · Systems &amp; Engineering
             </div>
             <h1 className="kin-h">Technology for what comes next.</h1>
           </div>
           <div>
             <p className="lead" data-anim data-delay="120">
-              Axon Future builds digital products, business systems, websites, and software infrastructure.
+              Axon Future is a software technology company. We design and engineer websites, digital products, business systems, platforms, and software infrastructure — turning business problems, ideas, and workflows into working digital systems.
             </p>
             <div className="hero-cta" data-anim data-delay="180">
-              <a className="btn btn-primary" href="/projects">
-                <span>Explore what we're building</span>
+              <Link className="btn btn-primary" href="/projects">
+                <span>Explore what we&apos;re building</span>
                 <span className="gt">&rsaquo;</span>
-              </a>
-              <a className="btn" href="/contact">
-                <span>Start a conversation</span>
-              </a>
+              </Link>
+              <Link className="btn" href="/contact">
+                <span>Discuss your project</span>
+              </Link>
             </div>
           </div>
         </div>

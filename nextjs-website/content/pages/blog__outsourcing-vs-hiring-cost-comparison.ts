@@ -23,12 +23,16 @@ export const mainHtml = `<article class="post">
   <div class="eyebrow">On this page</div><ol><li><a href="/outsourcing-vs-hiring-cost-comparison.html#s0">The number in the job ad is not the cost</a></li><li><a href="/outsourcing-vs-hiring-cost-comparison.html#s1">Run the comparison properly</a></li><li><a href="/outsourcing-vs-hiring-cost-comparison.html#s2">Where hiring genuinely wins</a></li><li><a href="/outsourcing-vs-hiring-cost-comparison.html#s3">Where outsourcing wins</a></li><li><a href="/outsourcing-vs-hiring-cost-comparison.html#s4">The threshold</a></li></ol>
  </nav>
  <div class="prose" data-anim><h2 id="s0">The number in the job ad is not the cost</h2><p>A $60,000 salary is not a $60,000 cost. Employer tax and national insurance add 12 to 22 percent depending on jurisdiction. Equipment is $1,200 to $2,500 in year one. Recruitment through an agency is 15 to 25 percent of first-year salary.</p><p>Add holiday cover, training time before productivity, and the software seats. The real first-year cost of a $60,000 hire is typically $85,000 to $95,000.</p><h2 id="s1">Run the comparison properly</h2><p>Take the hours you actually need. Thirty hours a week at $28 an hour is $43,680 in salary. Add 22% employer overhead: $53,290. Add $3,000 recruitment and $1,200 equipment: $57,490 in year one.</p><p>The same thirty hours outsourced at $9 an hour is $14,040. No recruitment fee, no equipment, no employer tax, no holiday cover cost.</p><p>That is a 76% saving in year one and roughly 70% in subsequent years once recruitment drops out. The gap narrows but never closes.</p><h2 id="s2">Where hiring genuinely wins</h2><p>Immediate availability. An employee at the next desk can be interrupted. An outsourced person on a different continent cannot, and that friction is real.</p><p>Deep institutional knowledge over years. Someone who has been in your business for five years knows things that were never written down.</p><p>Anything requiring physical presence, obviously, and anything where the legal or regulatory position requires an employee rather than a contractor.</p><h2 id="s3">Where outsourcing wins</h2><p>Speed. Two weeks to a working arrangement against two to four months to hire, onboard and reach productivity.</p><p>Flexibility. Scale hours up or down with thirty days notice rather than a redundancy process.</p><p>Cost, obviously — but the more important version of that argument is that it makes previously uneconomic work economic. Tasks you would never hire for become worth doing.</p><h2 id="s4">The threshold</h2><p>Below twenty hours a week, hiring rarely makes sense. The fixed costs — recruitment, equipment, management overhead — do not amortise across enough hours.</p><p>Above thirty hours a week of judgement-heavy work requiring deep context, hiring starts winning on effectiveness even while losing on cost.</p><p>Between those two, it depends on how much of the work is repeatable. Repeatable work outsources well. Judgement work does not.</p></div>
- <div class="post-cta" data-anim>
-  <h3>Want this done for you?</h3>
-  <p class="lead" style="margin-bottom:1rem">We do this work every day across 24 services. Free audit, findings yours either way.</p>
-  <a class="btn btn-primary" href="/contact"><span>Get a free audit</span></a>
- </div>
-</div></section>
+   <div class="post-cta" data-anim>
+   <div class="eyebrow">Next step</div>
+   <h3>Partner with a dedicated software engineering team</h3>
+   <p class="lead" style="margin-bottom:1rem">Axon Future provides dedicated technical execution across websites, digital products, and business software with full code ownership.</p>
+   <div class="hero-cta">
+     <a class="btn btn-primary" href="/about"><span>Our engineering philosophy</span><span class="gt">&rsaquo;</span></a>
+     <a class="btn" href="/contact"><span>Discuss your project</span></a>
+   </div>
+  </div>
+ </div></section>
 
 <section id="faq"><div class="wrap narrow">
  <div class="center"><div class="eyebrow" data-anim>FAQ</div><h2 data-anim>Related questions</h2></div>

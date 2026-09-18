@@ -1,14 +1,14 @@
-export const title = 'Digital Agency for United Arab Emirates | Web, SEO, Brand & AI | Axon Future';
-export const description = 'Web, SEO, brand, ads, content and AI automation for United Arab Emirates businesses. Named staff on GST, invoiced in your currency. Free audit in 24 hours.';
+export const title = 'Software Engineering & Web Development for United Arab Emirates | Axon Future';
+export const description = 'Software engineering, digital products, modern websites, and software infrastructure for businesses in United Arab Emirates businesses.';
 export const mainHtml = `<section class="phero"><div class="wrap">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/locations">Locations</a> / <span aria-current="page">United Arab Emirates</span></nav>
  <div class="hero-grid">
   <div><div class="eyebrow" data-anim>GST coverage</div>
-   <h1 class="kin-h">Digital agency for UAE brands in Dubai and Abu Dhabi</h1></div>
+   <h1 class="kin-h">Software engineering for UAE brands in Dubai and Abu Dhabi</h1></div>
   <div><p class="lead" data-anim data-delay="120">Gulf Standard Time coverage, Arabic and English bilingual delivery, and experience with Noon as well as Amazon.ae.</p>
    <div class="hero-cta" data-anim data-delay="180">
-    <a class="btn btn-primary" href="/contact"><span>Get a free audit</span><span class="gt">&rsaquo;</span></a>
-    <a class="btn" href="/services"><span>All 24 services</span></a>
+    <a class="btn btn-primary" href="/contact"><span>Discuss your project</span><span class="gt">&rsaquo;</span></a>
+    <a class="btn" href="/services"><span>Explore capabilities</span></a>
    </div>
   </div>
  </div>
@@ -18,7 +18,7 @@ export const mainHtml = `<section class="phero"><div class="wrap">
 <section style="padding-top:0"><div class="wrap">
  <div class="hero-stats" style="margin-top:0">
   <div class="stat" data-anim><b>GST</b><small>Working hours</small></div>
-  <div class="stat" data-anim data-delay="70"><b><span data-count="24">0</span></b><small>Services available</small></div>
+  <div class="stat" data-anim data-delay="70"><b>5</b><small>Core capabilities</small></div>
   <div class="stat" data-anim data-delay="140"><b>24h</b><small>Quote turnaround</small></div>
   <div class="stat" data-anim data-delay="210"><b>0</b><small>Time zone surcharge</small></div>
  </div>
@@ -27,44 +27,23 @@ export const mainHtml = `<section class="phero"><div class="wrap">
 <section><div class="wrap">
  <div class="s-head"><div><div class="eyebrow" data-anim>Services</div>
   <h2 class="kin-h" data-anim>What UAE clients hire us for</h2></div>
-  <div><a class="arrow-link" href="/services" data-anim>All 24 services <span class="gt">&rsaquo;</span></a></div></div>
- <div class="grid g3"><a class="glass card svc-card" href="/website-development" data-anim data-delay="0">
-     <div class="sc-top"><span class="dt-cat">From $299 · 7–25 days</span></div>
-     <h3>Website Development in United Arab Emirates</h3><p>We build sites that score 90+ on Lighthouse, rank because the structure is right, and turn visitors into enqui…</p>
-     <span class="dt-cta">View service <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/ecommerce-development" data-anim data-delay="70">
-     <div class="sc-top"><span class="dt-cat">From $499 · 10–30 days</span></div>
-     <h3>E-Commerce Development in United Arab Emirates</h3><p>We build Shopify and WooCommerce stores where the checkout is the design priority — fewer fields, clearer ship…</p>
-     <span class="dt-cta">View service <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/web-app-development" data-anim data-delay="140">
-     <div class="sc-top"><span class="dt-cat">From $2,400 · 4–12 weeks</span></div>
-     <h3>Web App Development in United Arab Emirates</h3><p>We build dashboards, portals, SaaS MVPs and internal tools with real architecture — typed data, proper auth, a…</p>
-     <span class="dt-cta">View service <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/ui-ux-design" data-anim data-delay="0">
-     <div class="sc-top"><span class="dt-cat">From $899 · 2–5 weeks</span></div>
-     <h3>UI/UX Design in United Arab Emirates</h3><p>We deliver a documented design system — colour tokens with contrast ratios, a type scale, component states inc…</p>
-     <span class="dt-cta">View service <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/graphic-design" data-anim data-delay="70">
-     <div class="sc-top"><span class="dt-cat">From $149 · 4–12 days</span></div>
-     <h3>Graphic Design in United Arab Emirates</h3><p>Logos, packaging, editorial and campaign print produced to production standard, with dielines, bleed and colou…</p>
-     <span class="dt-cta">View service <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/brand-identity" data-anim data-delay="140">
-     <div class="sc-top"><span class="dt-cat">From $899 · 3–6 weeks</span></div>
-     <h3>Brand Identity in United Arab Emirates</h3><p>We build the whole system — mark, palette, type scale, applications, motion specification and usage rules — do…</p>
-     <span class="dt-cta">View service <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/video-editing" data-anim data-delay="0">
-     <div class="sc-top"><span class="dt-cat">From $199 · 5–18 days</span></div>
-     <h3>Video Editing in United Arab Emirates</h3><p>We cut to the beat, colour grade to your brand palette, burn in captions for silent viewing and deliver in eve…</p>
-     <span class="dt-cta">View service <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/motion-graphics" data-anim data-delay="70">
-     <div class="sc-top"><span class="dt-cat">From $499 · 2–6 weeks</span></div>
-     <h3>Motion Graphics & Animation in United Arab Emirates</h3><p>We build title systems and animation frameworks that are data-driven — swap the copy or the language and the s…</p>
-     <span class="dt-cta">View service <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/seo-services" data-anim data-delay="140">
-     <div class="sc-top"><span class="dt-cat">From $299/mo · results in 4–8 weeks</span></div>
-     <h3>SEO Services in United Arab Emirates</h3><p>On-page, technical and link building run as one programme, reported in pipeline and revenue. We show you the k…</p>
-     <span class="dt-cta">View service <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/social-media-management" data-anim data-delay="0">
-     <div class="sc-top"><span class="dt-cat">From $249/mo · 12–60 posts</span></div>
-     <h3>Social Media Management in United Arab Emirates</h3><p>Instagram, Facebook and LinkedIn planned around what your audience actually saves and shares, with community m…</p>
-     <span class="dt-cta">View service <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/paid-ads-management" data-anim data-delay="70">
-     <div class="sc-top"><span class="dt-cat">From $399/mo · ROAS reported weekly</span></div>
-     <h3>Paid Ads Management in United Arab Emirates</h3><p>Google and Meta campaigns structured around profit per conversion, with wasted spend cut weekly and a budget m…</p>
-     <span class="dt-cta">View service <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/email-marketing" data-anim data-delay="140">
-     <div class="sc-top"><span class="dt-cat">From $420 · 28% of revenue typical</span></div>
-     <h3>Email Marketing in United Arab Emirates</h3><p>We build the lifecycle flows first, then the campaigns. Subject lines tested against each other rather than gu…</p>
-     <span class="dt-cta">View service <span class="gt">&rsaquo;</span></span></a></div>
+  <div><a class="arrow-link" href="/services" data-anim>Explore capabilities <span class="gt">&rsaquo;</span></a></div></div>
+  <div class="grid g3"><a class="glass card svc-card" href="/services/websites" data-anim data-delay="0">
+     <div class="sc-top"><span class="dt-cat">High-Performance Web · From ₹7,999</span></div>
+     <h3>Websites</h3><p>Production Next.js and static web architectures with 95+ Lighthouse performance scores, semantic markup, and responsive layouts.</p>
+     <span class="dt-cta">View capability <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/services/digital-products" data-anim data-delay="70">
+     <div class="sc-top"><span class="dt-cat">Applications & Portals</span></div>
+     <h3>Digital Products</h3><p>Scalable web applications, customer portals, and internal tools built with TypeScript, React, and Next.js.</p>
+     <span class="dt-cta">View capability <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/services/business-systems" data-anim data-delay="140">
+     <div class="sc-top"><span class="dt-cat">Automated Workflows</span></div>
+     <h3>Business Systems</h3><p>Custom workflow automation, webhook listeners, ERP integrations, and operational backend systems.</p>
+     <span class="dt-cta">View capability <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/services/platforms" data-anim data-delay="0">
+     <div class="sc-top"><span class="dt-cat">Multi-Tenant Software</span></div>
+     <h3>Platforms</h3><p>Multi-tenant SaaS architectures, marketplace engines, and secure subscription software systems.</p>
+     <span class="dt-cta">View capability <span class="gt">&rsaquo;</span></span></a><a class="glass card svc-card" href="/services/software-infrastructure" data-anim data-delay="70">
+     <div class="sc-top"><span class="dt-cat">APIs & Cloud</span></div>
+     <h3>Software Infrastructure</h3><p>High-concurrency RESTful APIs, PostgreSQL/MongoDB schemas, containerization, and cloud deployment pipelines.</p>
+     <span class="dt-cta">View capability <span class="gt">&rsaquo;</span></span></a></div>
 </div></section>
 
 <section id="faq"><div class="wrap narrow">

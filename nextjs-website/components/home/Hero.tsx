@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -29,12 +30,14 @@ export function Hero() {
 
         <div className="hero-media">
           <div className="rv ar-21">
-            <img
+            <Image
               className="ph"
               src="/assets/img/ph-hero.webp"
               alt="Engineering team reviewing software architecture"
               width={1600}
               height={1000}
+              priority
+              sizes="100vw"
             />
           </div>
         </div>

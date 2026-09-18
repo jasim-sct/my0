@@ -42,7 +42,7 @@
   --lux-shadow: 0 28px 64px -28px rgba(12, 12, 13, 0.22);
   --lux-shadow-sm: 0 12px 32px -16px rgba(12, 12, 13, 0.14);
 
-  --sans: "Inter Tight", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --serif: "Instrument Serif", "Times New Roman", Georgia, serif;
+  --sans: var(--font-inter-tight), var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --body: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --serif: var(--font-instrument-serif), "Times New Roman", Georgia, serif;
 }

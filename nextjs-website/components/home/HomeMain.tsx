@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Hero } from "./Hero";
 import { SystemThinking } from "./SystemThinking";
 import { ArchitectureExplorer } from "./ArchitectureExplorer";
@@ -42,7 +43,7 @@ export function HomeMain() {
             </div>
           </div>
           <div className="rv ar-219" style={{ marginTop: '1rem' }} data-anim>
-            <img className="ph" src="/assets/img/ph-workshop.webp" alt="System architecture planning session" width={1600} height={762} />
+            <Image className="ph" src="/assets/img/ph-workshop.webp" alt="System architecture planning session" width={1600} height={762}  sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
         </div>
       </section>
@@ -155,7 +156,7 @@ export function HomeMain() {
             <div className="hscroll-track">
               <Link className="hscroll-panel demo-tile" href="/projects/shop">
                 <div className="dt-thumb">
-                  <img className="ph dt-img" src="/assets/img/pj-shop.webp" alt="Lumen Commerce storefront and cart" width={1600} height={1000} />
+                  <Image className="ph dt-img" src="/assets/img/pj-shop.webp" alt="Lumen Commerce storefront and cart" width={1600} height={1000}  sizes="(max-width: 768px) 100vw, 50vw" />
                   <span className="proj-live">EXPERIMENTAL BUILD</span>
                 </div>
                 <div className="dt-body">
@@ -167,7 +168,7 @@ export function HomeMain() {
               </Link>
               <Link className="hscroll-panel demo-tile" href="/projects/flux">
                 <div className="dt-thumb">
-                  <img className="ph dt-img" src="/assets/img/pj-flux.webp" alt="FLUX AI studio interface" width={1600} height={1000} />
+                  <Image className="ph dt-img" src="/assets/img/pj-flux.webp" alt="FLUX AI studio interface" width={1600} height={1000}  sizes="(max-width: 768px) 100vw, 50vw" />
                   <span className="proj-live">EXPERIMENTAL BUILD</span>
                 </div>
                 <div className="dt-body">
@@ -179,7 +180,7 @@ export function HomeMain() {
               </Link>
               <Link className="hscroll-panel demo-tile" href="/projects/relay">
                 <div className="dt-thumb">
-                  <img className="ph dt-img" src="/assets/img/pj-relay.webp" alt="RELAY operations platform" width={1600} height={1000} />
+                  <Image className="ph dt-img" src="/assets/img/pj-relay.webp" alt="RELAY operations platform" width={1600} height={1000}  sizes="(max-width: 768px) 100vw, 50vw" />
                   <span className="proj-live">EXPERIMENTAL BUILD</span>
                 </div>
                 <div className="dt-body">
@@ -279,7 +280,7 @@ export function HomeMain() {
               </div>
             </div>
             <div className="rv ar-43" data-anim data-para="14">
-              <img className="ph" src="/assets/img/ph-desk.webp" alt="Software engineering workstation" width={1600} height={1000} />
+              <Image className="ph" src="/assets/img/ph-desk.webp" alt="Software engineering workstation" width={1600} height={1000}  sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
           </div>
         </div>
@@ -300,7 +301,7 @@ export function HomeMain() {
           </div>
           <div className="grid g3">
             <Link className="glass card art-card" href="/blog/core-web-vitals-fix-guide" data-anim data-delay="0">
-              <div className="rv zoom ar-16"><img className="ph" src="/assets/img/ph-code.webp" alt="Code optimization" width={1600} height={1000} /></div>
+              <div className="rv zoom ar-16"><Image className="ph" src="/assets/img/ph-code.webp" alt="Code optimization" width={1600} height={1000}  sizes="(max-width: 768px) 100vw, 50vw" /></div>
               <div className="ac-body">
                 <span className="dt-cat"><span className="icon-label"><AxioIcon name="core-web-vitals" size={12} aria-hidden="true" />Performance</span></span>
                 <h3 style={{ marginBottom: "1rem" }}>Fixing Core Web Vitals in Next.js Apps</h3>
@@ -308,7 +309,7 @@ export function HomeMain() {
               </div>
             </Link>
             <Link className="glass card art-card" href="/blog/how-much-does-a-website-cost" data-anim data-delay="70">
-              <div className="rv zoom ar-16"><img className="ph" src="/assets/img/ph-ai.webp" alt="Architecture" width={1600} height={1000} /></div>
+              <div className="rv zoom ar-16"><Image className="ph" src="/assets/img/ph-ai.webp" alt="Architecture" width={1600} height={1000}  sizes="(max-width: 768px) 100vw, 50vw" /></div>
               <div className="ac-body">
                 <span className="dt-cat"><span className="icon-label"><AxioIcon name="roi" size={12} aria-hidden="true" />Pricing</span></span>
                 <h3 style={{ marginBottom: "1rem" }}>The real cost of website development in 2026</h3>
@@ -316,7 +317,7 @@ export function HomeMain() {
               </div>
             </Link>
             <Link className="glass card art-card" href="/blog/website-security-checklist-small-business" data-anim data-delay="140">
-              <div className="rv zoom ar-16"><img className="ph" src="/assets/img/ph-social.webp" alt="Security" width={1600} height={1000} /></div>
+              <div className="rv zoom ar-16"><Image className="ph" src="/assets/img/ph-social.webp" alt="Security" width={1600} height={1000}  sizes="(max-width: 768px) 100vw, 50vw" /></div>
               <div className="ac-body">
                 <span className="dt-cat"><span className="icon-label"><AxioIcon name="security" size={12} aria-hidden="true" />Security</span></span>
                 <h3 style={{ marginBottom: "1rem" }}>Website security checklist for small businesses</h3>

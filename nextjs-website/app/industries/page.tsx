@@ -1,18 +1,38 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SiteShell } from "@/components/site/SiteShell";
-import { HtmlContent } from "@/components/site/HtmlContent";
-import { title, description, mainHtml, showCta } from "@/content/pages/industries";
 
 export const metadata: Metadata = {
-  title,
-  description,
+  title: "Industries We Serve | E-Commerce, SaaS, B2B & Systems | Axio Future",
+  description: "Software engineering and digital systems built for e-commerce brands, SaaS startups, local enterprises, online retailers, agencies, and B2B professional services.",
 };
 
 export default function Page() {
   return (
-    <SiteShell showCta={showCta}>
+    <SiteShell showCta={true}>
       <main id="main">
-        <HtmlContent html={mainHtml} />
+        <section className="phero"><div className="wrap">
+ <nav className="crumbs" aria-label="Breadcrumb"><Link href="/">Home</Link> / <span aria-current="page">Industries</span></nav>
+ <div className="hero-grid">
+  <div><div className="eyebrow" data-anim>Industry Solutions</div>
+   <h1 className="kin-h">Who we build for</h1></div>
+  <div><p className="lead" data-anim data-delay="120">Our core engineering capabilities, structured around the specific architectural, integration, and operational requirements of your sector.</p></div>
+ </div>
+ <div className="phero-img"><div className="rv ar-21 "><img className="ph " src="/assets/img/ph-handshake.webp" alt="Software engineering partnership" width="1600" height="1000" sizes="(max-width:900px) 100vw, 1320px" loading="eager" fetchPriority="high" decoding="async" style={{"backgroundImage":"url(assets/img/ph-handshake-tiny.webp)"}} /></div></div>
+</div></section>
+<section><div className="wrap"><div className="grid g3"><Link className="glass card svc-card" href="/industries/ecommerce-brands" data-anim data-delay="0">
+   <div className="sc-top"><span className="dt-cat">Online Retailers & DTC Labels</span></div>
+   <h3>E-Commerce Brands</h3><p>High-converting storefronts, checkout optimization, and automated inventory sync architectures.</p><span className="dt-cta">Explore industry <span className="gt">&rsaquo;</span></span></Link><Link className="glass card svc-card" href="/industries/saas-startups" data-anim data-delay="70">
+   <div className="sc-top"><span className="dt-cat">Software Companies & Founders</span></div>
+   <h3>SaaS & Startups</h3><p>Scalable web applications, customer portals, subscription billing, and production MVPs.</p><span className="dt-cta">Explore industry <span className="gt">&rsaquo;</span></span></Link><Link className="glass card svc-card" href="/industries/local-services" data-anim data-delay="140">
+   <div className="sc-top"><span className="dt-cat">Enterprises & Professional Services</span></div>
+   <h3>Local Service Businesses</h3><p>Fast, search-optimized business websites, lead capture pipelines, and direct customer booking systems.</p><span className="dt-cta">Explore industry <span className="gt">&rsaquo;</span></span></Link><Link className="glass card svc-card" href="/industries/amazon-sellers" data-anim data-delay="0">
+   <div className="sc-top"><span className="dt-cat">Catalogues & Multichannel Sellers</span></div>
+   <h3>Amazon Sellers</h3><p>Custom inventory management, external landing pages, API integrations, and operations tools.</p><span className="dt-cta">Explore industry <span className="gt">&rsaquo;</span></span></Link><Link className="glass card svc-card" href="/industries/agencies" data-anim data-delay="70">
+   <div className="sc-top"><span className="dt-cat">Technical Partnerships & Studios</span></div>
+   <h3>Agencies & Studios</h3><p>Full engineering execution under NDA, specialized frontend/backend delivery, and infrastructure support.</p><span className="dt-cta">Explore industry <span className="gt">&rsaquo;</span></span></Link><Link className="glass card svc-card" href="/industries/b2b-professional" data-anim data-delay="140">
+   <div className="sc-top"><span className="dt-cat">Consultancies, Legal & Finance</span></div>
+   <h3>B2B & Professional Services</h3><p>Authoritative corporate websites, client portals, and secure workflow automation for complex service cycles.</p><span className="dt-cta">Explore industry <span className="gt">&rsaquo;</span></span></Link></div></div></section>
       </main>
     </SiteShell>
   );

@@ -5,6 +5,12 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+  {
+    rules: {
+      "react/no-unescaped-entities": "off",
+      "@typescript-eslint/no-require-imports": "off"
+    }
+  },
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
@@ -14,6 +20,8 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     "public/**",
     "scripts/**",
+    "scratch.js",
+    "scratch2.js",
   ]),
 ]);
 

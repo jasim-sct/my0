@@ -2,10 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AxioIcon } from "@/components/icons";
+import type { AxioIconName } from "@/components/icons";
 
 type NodeDetail = {
   id: string;
   idx: string;
+  icon: AxioIconName;
   title: string;
   tag: string;
   summary: string;
@@ -17,6 +20,7 @@ type NodeDetail = {
 
 type Mode = {
   id: string;
+  icon: AxioIconName;
   label: string;
   lead: string;
   nodes: NodeDetail[];
@@ -25,12 +29,14 @@ type Mode = {
 const MODES: Mode[] = [
   {
     id: "architecture",
+    icon: "system-architecture",
     label: "System Architecture",
     lead: "A decoupled, five-tier architecture ensuring clean separation between user interaction, security gates, domain rules, data storage, and edge servers.",
     nodes: [
       {
         id: "ui",
         idx: "01",
+        icon: "frontend",
         title: "Frontend Layer",
         tag: "Next.js · React · TypeScript",
         summary: "Prerendered Server Components for instant HTML paint paired with isolated client hydration for interactive state widgets. Strictly typed props and zero unused CSS.",
@@ -42,6 +48,7 @@ const MODES: Mode[] = [
       {
         id: "gateway",
         idx: "02",
+        icon: "security",
         title: "API Gateway & Guard",
         tag: "Edge Routing · Rate Limiting",
         summary: "Ingress proxy enforcing TLS termination, IP token-bucket rate limits, CORS origin isolation, and upfront JSON payload schema validation before requests reach domain services.",
@@ -53,6 +60,7 @@ const MODES: Mode[] = [
       {
         id: "domain",
         idx: "03",
+        icon: "backend",
         title: "Domain Services",
         tag: "Node.js · Express · NestJS",
         summary: "Stateless business logic execution executing domain validation, access authorization, transactional orchestration, and event dispatching to background queues.",
@@ -64,6 +72,7 @@ const MODES: Mode[] = [
       {
         id: "data",
         idx: "04",
+        icon: "database",
         title: "Data & Caching Tier",
         tag: "PostgreSQL · Redis · MongoDB",
         summary: "Normalized relational storage with strict foreign keys and indexed query paths, augmented with Redis for hot in-memory session caches and query results.",
@@ -75,6 +84,7 @@ const MODES: Mode[] = [
       {
         id: "infra",
         idx: "05",
+        icon: "infrastructure",
         title: "Infrastructure & Edge",
         tag: "Docker · Nginx · CDN",
         summary: "Multi-stage Docker containers deployed across high-availability Linux hosts behind reverse proxies with automated TLS 1.3 encryption and global CDN caching.",
@@ -87,12 +97,14 @@ const MODES: Mode[] = [
   },
   {
     id: "dataflow",
+    icon: "data",
     label: "Data Flow Lifecycle",
     lead: "Tracing the end-to-end journey of a single business transaction from client action to guaranteed database commit and verified response.",
     nodes: [
       {
         id: "df-event",
         idx: "01",
+        icon: "engagement",
         title: "User Event Trigger",
         tag: "Input · Form · Click",
         summary: "User triggers a state mutation (checkout submit, task move, configuration save). Client validates fields instantly and shows optimistic UI state.",
@@ -104,6 +116,7 @@ const MODES: Mode[] = [
       {
         id: "df-guard",
         idx: "02",
+        icon: "authentication",
         title: "Schema & Auth Guard",
         tag: "Gateway Validation",
         summary: "Request arrives at backend. Gateway validates JWT session authenticity, checks user organization permissions, and tests payload against strict Zod schema.",
@@ -115,6 +128,7 @@ const MODES: Mode[] = [
       {
         id: "df-proc",
         idx: "03",
+        icon: "automation",
         title: "Business Processing",
         tag: "Domain Logic",
         summary: "Service verifies entity state, checks business rules (inventory availability, discount eligibility, quota limits), and calculates final changes.",
@@ -126,6 +140,7 @@ const MODES: Mode[] = [
       {
         id: "df-commit",
         idx: "04",
+        icon: "database",
         title: "Atomic DB Commit",
         tag: "ACID Transaction",
         summary: "State mutation runs inside an isolated SQL transaction. Writes both the entity update and an audit log row before committing write-ahead log.",
@@ -137,6 +152,7 @@ const MODES: Mode[] = [
       {
         id: "df-resp",
         idx: "05",
+        icon: "api",
         title: "Verified Response",
         tag: "Typed JSON Result",
         summary: "Success response returns with updated resource payload and Cache-Control headers. Client reconciles optimistic UI and confirms operation to user.",
@@ -149,12 +165,14 @@ const MODES: Mode[] = [
   },
   {
     id: "scaling",
+    icon: "scalability",
     label: "Evolution & Scaling",
     lead: "Demonstrating how Axio Future designs systems to scale smoothly from day-one simplicity to high-volume distributed platforms without code rewrites.",
     nodes: [
       {
         id: "sc-one",
         idx: "Stage 01",
+        icon: "deployment",
         title: "Modular Monolith",
         tag: "Day 1 Baseline",
         summary: "Prerendered Next.js pages, consolidated Node.js service, and single PostgreSQL instance. Maximum velocity, zero distributed complexity, sub-second loads.",
@@ -166,6 +184,7 @@ const MODES: Mode[] = [
       {
         id: "sc-two",
         idx: "Stage 02",
+        icon: "cloud",
         title: "Service Boundaries",
         tag: "Growth Stage",
         summary: "Decoupling read-heavy catalog pages from write-heavy transactional APIs. Adding Redis caching for hot data and PgBouncer for database connection pooling.",
@@ -177,6 +196,7 @@ const MODES: Mode[] = [
       {
         id: "sc-three",
         idx: "Stage 03",
+        icon: "cicd",
         title: "Event-Driven Queues",
         tag: "Scale Stage",
         summary: "Offloading intensive tasks (email dispatches, report generation, webhooks, scrapers) to asynchronous background workers backed by Redis queues.",
@@ -188,6 +208,7 @@ const MODES: Mode[] = [
       {
         id: "sc-four",
         idx: "Stage 04",
+        icon: "platforms",
         title: "Distributed Platform",
         tag: "Enterprise Stage",
         summary: "Multi-region CDN caching, read-replica PostgreSQL clusters, auto-scaling stateless application containers, and comprehensive telemetry alerting.",
@@ -245,6 +266,7 @@ export function ArchitectureExplorer() {
                   onClick={() => handleModeChange(idx)}
                 >
                   {m.label}
+                  <AxioIcon name={m.icon} size={14} aria-hidden="true" style={{ opacity: 0.6 }} />
                 </button>
               );
             })}
@@ -268,6 +290,7 @@ export function ArchitectureExplorer() {
                   onClick={() => setSelectedNodeIdx(idx)}
                 >
                   <span className="ae-node-idx">{node.idx}</span>
+                  <AxioIcon name={node.icon} size={18} aria-hidden="true" style={{ opacity: 0.8, marginBottom: "0.3rem" }} />
                   <div className="ae-node-title">{node.title}</div>
                   <span className="ae-node-tag">{node.tag}</span>
                 </button>
@@ -291,11 +314,11 @@ export function ArchitectureExplorer() {
 
                 <div className="ae-spec-grid">
                   <div className="ae-spec-item">
-                    <span className="ae-spec-k">Technology</span>
+                    <span className="ae-spec-k"><span className="icon-label"><AxioIcon name="code-quality" size={12} aria-hidden="true" />Technology</span></span>
                     <span className="ae-spec-v">{activeNode.tech}</span>
                   </div>
                   <div className="ae-spec-item">
-                    <span className="ae-spec-k">Target Latency</span>
+                    <span className="ae-spec-k"><span className="icon-label"><AxioIcon name="performance" size={12} aria-hidden="true" />Target Latency</span></span>
                     <span className="ae-spec-v">{activeNode.latencyTarget}</span>
                   </div>
                 </div>
@@ -303,13 +326,13 @@ export function ArchitectureExplorer() {
 
               <div>
                 <div className="ae-spec-item" style={{ marginBottom: "0.8rem" }}>
-                  <span className="ae-spec-k">Protocols &amp; Standards</span>
+                  <span className="ae-spec-k"><span className="icon-label"><AxioIcon name="api" size={12} aria-hidden="true" />Protocols &amp; Standards</span></span>
                   <span className="ae-spec-v" style={{ fontWeight: 500, fontSize: "0.82rem" }}>
                     {activeNode.protocols}
                   </span>
                 </div>
                 <div className="ae-spec-item">
-                  <span className="ae-spec-k">Failure Mode &amp; Resilience</span>
+                  <span className="ae-spec-k"><span className="icon-label"><AxioIcon name="reliability" size={12} aria-hidden="true" />Failure Mode &amp; Resilience</span></span>
                   <span className="ae-spec-v" style={{ fontWeight: 500, fontSize: "0.82rem", color: "var(--muted)" }}>
                     {activeNode.resilience}
                   </span>

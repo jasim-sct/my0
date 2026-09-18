@@ -1,11 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { AxioIcon } from "@/components/icons";
+import type { AxioIconName } from "@/components/icons";
 
 type Stage = {
   id: string;
   num: string;
   name: string;
+  icon: AxioIconName;
   tagline: string;
   description: string;
   activities: string[];
@@ -18,6 +21,7 @@ const STAGES: Stage[] = [
     id: "problem",
     num: "01",
     name: "Problem",
+    icon: "challenge",
     tagline: "Uncovering root operational bottlenecks",
     description:
       "We interrogate the actual business constraint rather than taking superficial feature lists for granted. We map operational drag, manual repetition, and data loss before proposing any technical intervention.",
@@ -33,6 +37,7 @@ const STAGES: Stage[] = [
     id: "model",
     num: "02",
     name: "Model",
+    icon: "structured-data",
     tagline: "Defining core entities and state boundaries",
     description:
       "Every system is only as good as its domain model. We define real-world entities (users, orders, inventory, workflows), relationship cardinalities, and state transitions before visual mockups begin.",
@@ -48,6 +53,7 @@ const STAGES: Stage[] = [
     id: "design",
     num: "03",
     name: "Design",
+    icon: "frontend",
     tagline: "Accessible, high-density interface ergonomics",
     description:
       "We design interfaces that prioritize cognitive clarity, rapid task completion, and responsive accessibility. No decorative filler or oversized fluff—interfaces are engineered for real daily work.",
@@ -63,6 +69,7 @@ const STAGES: Stage[] = [
     id: "architecture",
     num: "04",
     name: "Architecture",
+    icon: "system-architecture",
     tagline: "Decoupled layers and explicit contracts",
     description:
       "We establish strict boundaries between user interfaces, API services, background queues, and databases. Typed contracts ensure that any upstream change is caught during compile time, not in production.",
@@ -78,6 +85,7 @@ const STAGES: Stage[] = [
     id: "engineering",
     num: "05",
     name: "Engineering",
+    icon: "software-engineering",
     tagline: "Rigorous implementation without dependency bloat",
     description:
       "We write clean, typed TypeScript and backend code. We avoid massive external runtime libraries for trivial tasks, choosing native web standards, optimized queries, and sub-second execution speeds.",
@@ -93,6 +101,7 @@ const STAGES: Stage[] = [
     id: "integration",
     num: "06",
     name: "Integration",
+    icon: "integration",
     tagline: "Resilient connections with third-party ecosystems",
     description:
       "Modern businesses depend on external payment gateways, CRMs, email services, and logistics APIs. We engineer robust integration pipelines with idempotency keys, token-bucket rate limits, and fallback queues.",
@@ -108,6 +117,7 @@ const STAGES: Stage[] = [
     id: "deployment",
     num: "07",
     name: "Deployment",
+    icon: "deployment",
     tagline: "Stateless containers and hardened edge delivery",
     description:
       "We package systems into reproducible Docker containers and deploy behind hardened Nginx reverse proxies on fast CDNs. Automated SSL, security headers, and health checks are standard.",
@@ -123,6 +133,7 @@ const STAGES: Stage[] = [
     id: "evolution",
     num: "08",
     name: "Evolution",
+    icon: "evolution",
     tagline: "Monitoring, telemetry, and non-breaking growth",
     description:
       "Software does not stop at launch. We implement structured JSON telemetry, error alerting, and continuous database query tuning so the system scales cleanly alongside growing business volume.",
@@ -172,6 +183,7 @@ export function SystemThinking() {
                   onClick={() => setActiveIdx(idx)}
                 >
                   <span className="st-num">{s.num}</span>
+                  <AxioIcon name={s.icon} size={14} aria-hidden="true" style={{ opacity: 0.7 }} />
                   <span>{s.name}</span>
                 </button>
               );
@@ -199,9 +211,12 @@ export function SystemThinking() {
                 <h4 style={{ fontSize: "0.88rem", textTransform: "uppercase", letterSpacing: "0.04em", color: "var(--ink-2)", marginBottom: "0.5rem" }}>
                   Key Engineering Activities
                 </h4>
-                <ul className="tick" style={{ margin: 0 }}>
+                <ul className="tick-list" style={{ margin: 0 }}>
                   {current.activities.map((act, i) => (
-                    <li key={i}>{act}</li>
+                    <li key={i}>
+                      <AxioIcon name="solution" size={13} aria-hidden="true" />
+                      <span>{act}</span>
+                    </li>
                   ))}
                 </ul>
               </div>

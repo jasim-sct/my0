@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { AxioIcon } from "@/components/icons";
+import type { AxioIconName } from "@/components/icons";
 
 type ProblemMap = {
+  icon: AxioIconName;
   badge: string;
   bottleneck: string;
   context: string;
@@ -13,6 +16,7 @@ type ProblemMap = {
 
 const PROBLEMS: ProblemMap[] = [
   {
+    icon: "database",
     badge: "01 · Operations",
     bottleneck: "When spreadsheets become a business bottleneck",
     context: "Shared sheets lack role controls, atomic updates, and data validation—leading to overwritten customer records, lost inventory updates, and manual copy-pasting.",
@@ -23,6 +27,7 @@ const PROBLEMS: ProblemMap[] = [
     proofHref: "/projects/relay",
   },
   {
+    icon: "automation",
     badge: "02 · Automation",
     bottleneck: "Manual, repetitive workflows drain team hours",
     context: "Hours lost re-entering data across tools, chasing status updates, and manually compiling reports—causing delayed customer responses and high operational error.",
@@ -33,6 +38,7 @@ const PROBLEMS: ProblemMap[] = [
     proofHref: "/projects/relay",
   },
   {
+    icon: "page-speed",
     badge: "03 · Web Infrastructure",
     bottleneck: "When businesses outgrow off-the-shelf page builders",
     context: "Plugin bloat and heavy drag-and-drop themes cause cumulative layout shifts, sluggish mobile page loads, and declining search visibility.",
@@ -43,6 +49,7 @@ const PROBLEMS: ProblemMap[] = [
     proofHref: "/projects/terra",
   },
   {
+    icon: "integration",
     badge: "04 · Integrations",
     bottleneck: "Disconnected software tools operating in silos",
     context: "Customer data in one tool, invoicing in another, fulfillment in a third—resulting in inconsistent customer records and fragmented reporting.",
@@ -53,6 +60,7 @@ const PROBLEMS: ProblemMap[] = [
     proofHref: "/services/software-infrastructure",
   },
   {
+    icon: "platforms",
     badge: "05 · E-Commerce",
     bottleneck: "Generic storefronts breaking under custom business rules",
     context: "Off-the-shelf commerce templates struggle with dynamic variant matrices, tiered wholesale pricing, or complex multi-step checkout validation.",
@@ -63,6 +71,7 @@ const PROBLEMS: ProblemMap[] = [
     proofHref: "/projects/shop",
   },
   {
+    icon: "web-apps",
     badge: "06 · Product Architecture",
     bottleneck: "Turning company methodology into a scalable product",
     context: "Valuable proprietary knowledge locked in static slide decks or manual consulting, limiting revenue growth to linear employee hours.",
@@ -94,7 +103,10 @@ export function ProblemToSystem() {
           {PROBLEMS.map((item, idx) => (
             <article key={idx} className="glass card p2s-card" data-anim data-delay={idx * 50}>
               <div>
-                <span className="p2s-badge">{item.badge}</span>
+                <span className="p2s-badge">
+                  <AxioIcon name={item.icon} size={13} aria-hidden="true" style={{ marginRight: "0.35em", opacity: 0.75 }} />
+                  {item.badge}
+                </span>
                 <h3 style={{ fontSize: "1.15rem", marginBottom: "0.6rem", lineHeight: 1.35 }}>{item.bottleneck}</h3>
                 <p style={{ fontSize: "0.88rem", color: "var(--muted)", lineHeight: 1.6, margin: 0 }}>
                   {item.context}
@@ -102,16 +114,19 @@ export function ProblemToSystem() {
               </div>
 
               <div className="p2s-sol">
-                <div className="p2s-sol-title">Engineered Solution:</div>
+                <div className="p2s-sol-title">
+                  <AxioIcon name="solution" size={14} aria-hidden="true" style={{ marginRight: "0.35em", opacity: 0.7 }} />
+                  Engineered Solution:
+                </div>
                 <p style={{ fontSize: "0.9rem", color: "var(--ink)", lineHeight: 1.55, margin: "0 0 0.8rem" }}>
                   {item.solution}
                 </p>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
                   <Link href={item.capabilityHref} className="pl" style={{ fontSize: "0.82rem" }}>
-                    {item.capabilityName} →
+                    <span className="icon-label">{item.capabilityName} <AxioIcon name="arrow-right" size={11} aria-hidden="true" /></span>
                   </Link>
                   <Link href={item.proofHref} className="pl" style={{ fontSize: "0.82rem", color: "var(--muted)" }}>
-                    {item.proofName} ↗
+                    <span className="icon-label">{item.proofName} <AxioIcon name="external-link" size={11} aria-hidden="true" /></span>
                   </Link>
                 </div>
               </div>

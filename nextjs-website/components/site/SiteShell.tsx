@@ -12,12 +12,6 @@ type Props = {
 export function SiteShell({ children, showCta = true }: Props) {
   return (
     <>
-      <a className="skip" href="#main">
-        Skip to main content
-      </a>
-      <a className="skip" href="#footer">
-        Skip to footer
-      </a>
       <div className="curtain">
         <div className="load-mark">
           <b>{brand.shortName}</b>

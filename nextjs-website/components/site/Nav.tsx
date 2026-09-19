@@ -1,12 +1,14 @@
 import Link from "next/link";
-import { AxonLogo } from "./AxonLogo";
+import { AxioLogo } from "@/components/brand/AxioLogo";
 import { AxioIcon } from "@/components/icons";
 
 export function Nav() {
   return (
     <header className="nav">
       <div className="wrap nav-in">
-        <AxonLogo />
+        <Link className="logo axio-logo" href="/" aria-label="Axio Future">
+          <AxioLogo variant="full" size={36} decorative />
+        </Link>
         <button className="burger" aria-label="Toggle menu" aria-expanded="false">
           <span />
           <span />

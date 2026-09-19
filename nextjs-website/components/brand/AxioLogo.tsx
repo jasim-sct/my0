@@ -84,7 +84,7 @@ export function AxioLogo({
 }: AxioLogoProps) {
 
   const isSymbolOnly = variant.startsWith("symbol") || variant === "monochrome";
-  const isDark = variant.endsWith("-dark") || variant === "dark" || variant === "symbol-dark" || variant === "full-dark" || variant === "wordmark-dark";
+  const isDark = variant.endsWith("-dark");
 
   // Default sizes
   const defaultSize = isSymbolOnly ? 48 : 52;
@@ -96,7 +96,7 @@ export function AxioLogo({
 
   // Original viewBox for the user's symbol is 576x603.
   const symbolViewBox = "0 0 576 603";
-  const lockupViewBox = "0 0 1000 603"; // Expand width to make room for wordmark.
+  const lockupViewBox = "0 0 2050 603"; // Full width for symbol + AXIO FUTURE wordmark
 
   if (isSymbolOnly) {
     return (
@@ -106,6 +106,7 @@ export function AxioLogo({
         xmlns="http://www.w3.org/2000/svg"
         height={resolvedSize}
         width={resolvedSize}
+        style={{ height: resolvedSize, width: resolvedSize, display: "inline-block", verticalAlign: "middle", ...svgProps.style }}
         {...a11yProps}
         {...svgProps}
       >
@@ -124,6 +125,7 @@ export function AxioLogo({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         height={resolvedSize}
+        style={{ height: resolvedSize, width: "auto", display: "inline-block", verticalAlign: "middle", ...svgProps.style }}
         {...a11yProps}
         {...svgProps}
       >
@@ -164,6 +166,7 @@ export function AxioLogo({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       height={resolvedSize}
+      style={{ height: resolvedSize, width: "auto", display: "inline-block", verticalAlign: "middle", ...svgProps.style }}
       {...a11yProps}
       {...svgProps}
     >

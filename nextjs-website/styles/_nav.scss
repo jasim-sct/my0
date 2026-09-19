@@ -50,6 +50,11 @@ header.nav {
   &:hover .dot {
     transform: scale(1.5);
   }
+
+  @media (max-width: 380px) {
+    font-size: 1rem;
+    gap: 0.4rem;
+  }
 }
 
 footer .logo {

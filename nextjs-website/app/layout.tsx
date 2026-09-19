@@ -28,25 +28,37 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: {
     default: `${brand.shortName} | Software Technology & Product Engineering`,
-    template: "%s",
+    template: `%s | ${brand.shortName}`,
   },
   description:
     "Axio Future builds scalable software products, SaaS platforms, enterprise systems, and digital solutions for modern businesses.",
-  icons: {
-    icon: "/assets/favicon.svg",
-    apple: "/assets/favicon.svg",
-  },
+  applicationName: brand.shortName,
+  authors: [{ name: brand.legalName, url: brand.url }],
+  creator: brand.legalName,
+  publisher: brand.legalName,
   metadataBase: new URL("https://www.axiofuture.com"),
+  icons: {
+    icon: [
+      { url: "/assets/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/manifest.webmanifest",
   openGraph: {
     type: "website",
+    locale: "en_US",
     siteName: brand.shortName,
     title: `${brand.shortName} | Software Technology & Product Engineering`,
     description: "Axio Future builds scalable software products, SaaS platforms, enterprise systems, and digital solutions for modern businesses.",
     images: [
       {
-        url: "/assets/img/ph-hero.webp",
-        width: 1600,
-        height: 1000,
+        url: "/assets/brand/og-image.jpg",
+        width: 1200,
+        height: 630,
         alt: "Axio Future - Software Technology & Product Engineering",
       },
     ],
@@ -55,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${brand.shortName} | Software Technology & Product Engineering`,
     description: "Axio Future builds scalable software products, SaaS platforms, enterprise systems, and digital solutions for modern businesses.",
-    images: ["/assets/img/ph-hero.webp"],
+    images: ["/assets/brand/og-image.jpg"],
   },
 };
 
@@ -70,7 +82,8 @@ const orgJsonLd = {
       url: "https://www.axiofuture.com/",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.axiofuture.com/assets/favicon.svg",
+        url: "https://www.axiofuture.com/assets/brand/axio-symbol.svg",
+        caption: "Axio Future Logo",
       },
       description:
         "Axio Future is a software technology company building modern websites, digital products, business systems, platforms, and scalable software infrastructure.",
@@ -127,6 +140,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${interTight.variable} ${instrumentSerif.variable}`}>
       <head>
+        <meta name="theme-color" content="#0c0c0d" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { TopButton } from "./TopButton";
 import { brand } from "@/lib/brand";
-import { AxonLogo } from "./AxonLogo";
+import { AxioLogo } from "@/components/brand/AxioLogo";
 import { AxioIcon } from "@/components/icons";
 
 export function Footer() {
@@ -11,7 +11,9 @@ export function Footer() {
         <div className="wrap">
           <div className="f-top">
             <div className="f-brand">
-              <AxonLogo />
+              <Link className="logo axio-logo" href="/" aria-label="Axio Future">
+                <AxioLogo variant="full-dark" size={36} decorative />
+              </Link>
               <p className="lead" style={{ fontSize: ".9rem", marginTop: ".9rem" }}>
                 {brand.legalName} builds digital products, business systems, websites, and software infrastructure for what comes next.
               </p>

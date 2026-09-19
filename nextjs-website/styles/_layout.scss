@@ -11,7 +11,7 @@
 }
 
 section {
-  padding: clamp(56px, 6.5vw, 104px) 0;
+  padding: clamp(40px, 6.5vw, 104px) 0;
   position: relative;
 }
 
@@ -151,5 +151,12 @@ section {
   .s-head {
     grid-template-columns: 1fr;
     gap: 1rem;
+    align-items: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .s-head {
+    gap: 0.8rem;
   }
 }
